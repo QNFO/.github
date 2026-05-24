@@ -1,20 +1,17 @@
-- 2025-04-18 · [[CEE-B-OMF-v1]]
-- 2025-04-18 · [[CEE-C-ProcessLog-v1]]
-- 2025-04-18 · [[alpha]]
-- 2025-04-18 · [[CEE]]
-- 2025-04-18 · [[CEE-D-ParkingLot-v1]]
-- 2025-04-18 · [[CEE-E-LessonsLearned-v1]]
-- 2025-04-18 · [[CEE-F-ModelSurvey-v1]]
-- 2025-04-18 · [[CEE-A-Seed]]
-- 2025-04-18 · [[Untitled]]
-- 2025-04-18 · [[Lineage of Information-Based Physics]]
-- 2025-04-18 · [[note]]
-- 2025-04-18 · [[QNFO.org]]
-- 2025-04-17 · [[README]]
-- 2025-04-17 · [[Comparing Fundamental Frameworks]]
-- 2025-04-17 · [[releases]]
-- 2025-04-17 · [[2025]]
-- 2025-04-17 · [[Mathematical Tricks Postulate]]
-- 2025-04-16 · [[Infomatics]]
-- 2025-04-16 · [[Theme 7]]
-- 2025-04-15 · [[Theme 6]]
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
+
+**This file is superseded by GitHub-native project management tools.**
+
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
+
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
+
+**This file will not be updated. Do not edit.**
+
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
