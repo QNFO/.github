@@ -1,55 +1,92 @@
-# QNFO — Ultrametric Quantum Computing & AI
+# QNFO — Scientific Research for the Collective Benefit of All
 
-**Passive fault tolerance. Glass-box AI. One mathematical correction.**
+**QNFO's ultimate aim is to advance scientific understanding and catalyze positive,
+systemic global change for the collective benefit of all.**
 
 ---
 
-QNFO is the open-source organization behind [QWAV](https://qwav.tech), a solo deep-tech research program advancing ultrametric ($p$-adic, tree-based) quantum computing and artificial intelligence. All research is open-access.
+QNFO is a **scientific research incubator** — the research identity of
+[Empowering Change](https://empoweringchange.org), a U.S. 501(c)(3) non-profit.
+We investigate the fundamentals of reality at the intersection of physics,
+information theory, philosophy of science, and artificial intelligence, leveraging
+AI-accelerated exploration to drive discovery.
 
-## What We Build
+All research is conducted for **public good, not private profit**. Everything we
+produce is governed by the [QNFO Content License Agreement](LICENSE) — non-commercial
+use only, attribution required. Our [Code of Conduct](CODE_OF_CONDUCT.md) defines
+the values that govern all QNFO spaces.
 
-**Ultrametric Quantum Computing** — Bruhat-Tits tree architectures that geometrically suppress errors. No active quantum error correction needed. Operation at 4 K.
+---
 
-**Glass-Box AI (Q-PNA)** — Neural architectures on tree topologies. Decisions are traceable by construction. Beats transformers on hierarchical classification.
+## Research Portfolio
+
+QNFO's work spans multiple domains. Each initiative is a distinct line of inquiry,
+organized as an independent repository with its own documentation, tests, and
+publications:
+
+| Initiative | Focus |
+|:-----------|:------|
+| **[QWAV](https://github.com/QNFO/QWAV)** | Ultrametric quantum computing & glass-box AI — passive fault tolerance via Bruhat-Tits tree architectures |
+| **[Q-PNA](https://github.com/QNFO/Q-PNA)** | Quantum-Native p-Adic Neural Architecture — traceable, auditable AI on tree topologies |
+| **[Amsa](https://qnfo.org)** | Global Knowledge Utility Platform — decentralized, AI-powered knowledge synthesis (in development) |
+| **Foundational Theory** | Informational universe frameworks — developing and testing predictive theoretical models |
+
+---
+
+## Core Values
+
+Our work is guided by principles articulated in the [Code of Conduct](CODE_OF_CONDUCT.md):
+
+1. **Collective Benefit** — All work must serve humanity broadly, not narrow interests
+2. **Open Science** — Transparency, reproducibility, shared access to knowledge
+3. **Ethical Integrity** — No work that harms, discriminates, exploits, or concentrates power
+4. **Intellectual Rigor** — Evidence, falsifiability, and honest labeling of speculation
+5. **Interdisciplinary Respect** — Insights from all domains are valued
+6. **Non-Commercial Foundation** — Research for public good, not private profit
+
+---
 
 ## Key Results
 
-- **Zero logical errors at depth 7** — ternary Bruhat-Tits tree encoding, validated at physical error rates up to 40%. DOI: [10.5281/zenodo.20134944](https://doi.org/10.5281/zenodo.20134944)
-- **48× error reduction** — at zero additional qubit cost via $q$-ary scatter. DOI: [10.5281/zenodo.20208437](https://doi.org/10.5281/zenodo.20208437)
+- **Zero logical errors at depth 7** — ternary Bruhat-Tits tree quantum encoding, validated at physical error rates up to 40%. DOI: [10.5281/zenodo.20134944](https://doi.org/10.5281/zenodo.20134944)
 - **Glass-box AI outperforms transformers** — 6.6× on hierarchical classification with 100% verification detection. DOI: [10.5281/zenodo.20287742](https://doi.org/10.5281/zenodo.20287742)
-- **40-atom neutral atom hardware specification** — within demonstrated experimental capabilities at Harvard, Caltech, PASQAL
-
-## Repositories
-
-| Repo | Description |
-|:-----|:------------|
-| [QWAV](https://github.com/QNFO/QWAV) | Program overview, publications, technical documentation |
-| [ultrametric-error-confinement](https://github.com/QNFO/ultrametric-error-confinement) | Tier 0 computational validation — Bruhat-Tits tree error simulation |
-| [Q-PNA](https://github.com/QNFO/Q-PNA) | Quantum-Native $p$-Adic Neural Architecture — research specification v2.0 |
-| [tree-distance](https://github.com/QNFO/tree-distance) | Tree Distance Sandbox — interactive ultrametric vs Euclidean |
-| [ultrametric-convergence](https://github.com/QNFO/ultrametric-convergence) | Convergence Explorer — ultrametric vs Euclidean clustering |
-| [hardware-pathway](https://github.com/QNFO/hardware-pathway) | Hardware Pathway — error suppression demo (Three.js) |
-
-## Publications
-
-All papers are open-access on Zenodo with registered DOIs. See the [full publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html) (35 publications, filterable by domain).
-
-- [Computational Validation of Ultrametric Error Confinement](https://doi.org/10.5281/zenodo.20134944) (2026-05-12)
-- [Symmetric Extension — Ternary Tree Architecture](https://doi.org/10.5281/zenodo.20208437) (2026-05-16)
-- [Ultrametric Quantum Computing Foundations](https://doi.org/10.5281/zenodo.20154557) (2026-05-15)
-- [Q-PNA Research Specification v2.0](https://doi.org/10.5281/zenodo.20287742) (2026-05-19)
-- [Convergence, Consilience, and the Hierarchical Architecture of Reality](https://doi.org/10.5281/zenodo.20302276) (2026-05-20)
-- [The Tree Is Real](https://doi.org/10.5281/zenodo.20325850) (2026-05-21) — Scale-free network evidence from 673-node knowledge graph
-
-Full archive: [zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (145+ records)
-
-## Links
-
-- **Marquee:** [qwav.tech](https://qwav.tech)
-- **Technical Site:** [qnfo.github.io/QWAV](https://qnfo.github.io/QWAV/)
-- **Publication Hub:** [35-publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html)
-- **Contact:** [rowan.quni@outlook.com](mailto:rowan.quni@outlook.com)
+- **40-atom neutral atom hardware specification** — within demonstrated experimental capabilities (Harvard, Caltech, PASQAL)
+- **The Tree Is Real** — Scale-free network evidence from 673-node knowledge graph. DOI: [10.5281/zenodo.20325850](https://doi.org/10.5281/zenodo.20325850)
 
 ---
 
-*QNFO — the open-source home of QWAV.*
+## Organization
+
+QNFO is a solo deep-tech research program founded and directed by
+**Rowan Brad Quni** (ORCID: [0009-0002-4317-5604](https://orcid.org/0009-0002-4317-5604)).
+Rowan operates at the intersection of physics, information science, data science,
+and AI, with a career spanning national-scale data initiatives (AARP Livability Index,
+$10M US DOT National Household Travel Survey), patented quantum computing technology,
+and leadership at Deloitte and Publicis.
+
+The non-profit structure (Empowering Change 501c3) ensures our motivation remains
+scientific advancement and societal benefit.
+
+---
+
+## Publications
+
+All papers are open-access on Zenodo with registered DOIs. See the
+[full publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html)
+(35+ publications, filterable by domain). Community archive:
+[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (145+ records).
+
+---
+
+## Links
+
+- **Home:** [qnfo.org](https://qnfo.org)
+- **QWAV Technical Hub:** [qnfo.github.io/QWAV](https://qnfo.github.io/QWAV/)
+- **License:** [QNFO Content License Agreement v1.1](LICENSE)
+- **Code of Conduct:** [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **Contact:** rowan.quni@qnfo.org
+
+---
+
+*QNFO — advancing scientific understanding for the collective benefit of all.
+Everything open. Everything accountable. Everything for the good.*
