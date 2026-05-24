@@ -1,18 +1,18 @@
-# QNFO â€” Scientific Research for the Collective Benefit of All
+# QNFO -- Scientific Research for the Collective Benefit of All
 
 **QNFO's ultimate aim is to advance scientific understanding and catalyze positive,
 systemic global change for the collective benefit of all.**
 
 ---
 
-QNFO is a **scientific research incubator** â€” the research identity of
+QNFO is a **scientific research incubator** -- the research identity of
 [Empowering Change](https://empoweringchange.org), a U.S. 501(c)(3) non-profit
 founded and directed by Rowan Brad Quni-Gudzinas. We investigate the fundamentals
 of reality at the intersection of physics, information theory, philosophy of science,
 and artificial intelligence, leveraging AI-accelerated exploration to drive discovery.
 
 All research is conducted for **public good, not private profit**. Everything we
-produce is governed by the [QNFO Content License Agreement](LICENSE) â€” non-commercial
+produce is governed by the [QNFO Content License Agreement](LICENSE) -- non-commercial
 use only, attribution required. Our [Code of Conduct](CODE_OF_CONDUCT.md) defines
 the values that govern all QNFO spaces.
 
@@ -23,7 +23,7 @@ the values that govern all QNFO spaces.
 Our mission integrates deep scientific inquiry with a commitment to tangible human benefit:
 
 1. **Advance Foundational Science:** Rigorously investigate the informational
-   underpinnings of the universe â€” developing and testing novel, consistent
+   underpinnings of the universe -- developing and testing novel, consistent
    theoretical frameworks, seeking deeper coherence in physical law, causality,
    and the nature of spacetime. Findings are disseminated openly.
 
@@ -52,10 +52,10 @@ publications:
 
 | Initiative | Focus |
 |:-----------|:------|
-| **[QWAV](https://github.com/QNFO/QWAV)** | Ultrametric quantum computing & glass-box AI â€” passive fault tolerance via Bruhat-Tits tree architectures |
-| **[Q-PNA](https://github.com/QNFO/Q-PNA)** | Quantum-Native p-Adic Neural Architecture â€” traceable, auditable AI on tree topologies |
-| **Foundational Theory** | Informational universe frameworks â€” developing and testing predictive theoretical models grounded in algorithmic information theory |
-| **[Amsa](https://qnfo.org)** | Global Knowledge Utility Platform â€” decentralized, AI-powered ecosystem for knowledge aggregation, verification, and synthesis (in development) |
+| **[QWAV](https://github.com/QNFO/QWAV)** | Ultrametric quantum computing & glass-box AI -- passive fault tolerance via Bruhat-Tits tree architectures |
+| **[Q-PNA](https://github.com/QNFO/Q-PNA)** | Quantum-Native p-Adic Neural Architecture -- traceable, auditable AI on tree topologies |
+| **Foundational Theory** | Informational universe frameworks -- developing and testing predictive theoretical models grounded in algorithmic information theory |
+| **[Amsa](https://qnfo.org)** | Global Knowledge Utility Platform -- decentralized, AI-powered ecosystem for knowledge aggregation, verification, and synthesis (in development) |
 
 ---
 
@@ -88,27 +88,27 @@ QNFO employs a distinct research methodology characterized by:
 
 Our work is guided by principles articulated in the [Code of Conduct](CODE_OF_CONDUCT.md):
 
-1. **Collective Benefit** â€” All work must serve humanity broadly, not narrow interests
-2. **Open Science** â€” Transparency, reproducibility, shared access to knowledge
-3. **Ethical Integrity** â€” No work that harms, discriminates, exploits, or concentrates power
-4. **Intellectual Rigor** â€” Evidence, falsifiability, and honest labeling of speculation
-5. **Interdisciplinary Respect** â€” Insights from all domains are valued
-6. **Constructive Collaboration** â€” Good faith in all interactions. Critique ideas, not people.
-7. **Non-Commercial Foundation** â€” Research for public good, not private profit
+1. **Collective Benefit** -- All work must serve humanity broadly, not narrow interests
+2. **Open Science** -- Transparency, reproducibility, shared access to knowledge
+3. **Ethical Integrity** -- No work that harms, discriminates, exploits, or concentrates power
+4. **Intellectual Rigor** -- Evidence, falsifiability, and honest labeling of speculation
+5. **Interdisciplinary Respect** -- Insights from all domains are valued
+6. **Constructive Collaboration** -- Good faith in all interactions. Critique ideas, not people.
+7. **Non-Commercial Foundation** -- Research for public good, not private profit
 
 ---
 
 ## Key Results
 
-- **Zero logical errors at depth 7** â€” ternary Bruhat-Tits tree quantum encoding,
+- **Zero logical errors at depth 7** -- ternary Bruhat-Tits tree quantum encoding,
   validated at physical error rates up to 40%. DOI: [10.5281/zenodo.20134944](https://doi.org/10.5281/zenodo.20134944)
-- **48Ã— error reduction** â€” at zero additional qubit cost via $q$-ary scatter.
+- **48x error reduction** -- at zero additional qubit cost via $q$-ary scatter.
   DOI: [10.5281/zenodo.20208437](https://doi.org/10.5281/zenodo.20208437)
-- **Glass-box AI outperforms transformers** â€” 6.6Ã— on hierarchical classification
+- **Glass-box AI outperforms transformers** -- 6.6x on hierarchical classification
   with 100% verification detection. DOI: [10.5281/zenodo.20287742](https://doi.org/10.5281/zenodo.20287742)
-- **The Tree Is Real** â€” Scale-free network evidence from 673-node knowledge graph.
+- **The Tree Is Real** -- Scale-free network evidence from 673-node knowledge graph.
   DOI: [10.5281/zenodo.20325850](https://doi.org/10.5281/zenodo.20325850)
-- **40-atom neutral atom hardware specification** â€” within demonstrated experimental
+- **40-atom neutral atom hardware specification** -- within demonstrated experimental
   capabilities (Harvard, Caltech, PASQAL)
 
 ---
@@ -144,7 +144,7 @@ All papers are open-access on Zenodo with registered DOIs. See the
 
 - [Computational Validation of Ultrametric Error Confinement](https://doi.org/10.5281/zenodo.20134944) (2026-05-12)
 - [Ultrametric Quantum Computing Foundations](https://doi.org/10.5281/zenodo.20154557) (2026-05-15)
-- [Symmetric Extension â€” Ternary Tree Architecture](https://doi.org/10.5281/zenodo.20208437) (2026-05-16)
+- [Symmetric Extension -- Ternary Tree Architecture](https://doi.org/10.5281/zenodo.20208437) (2026-05-16)
 - [Q-PNA Research Specification v2.0](https://doi.org/10.5281/zenodo.20287742) (2026-05-19)
 - [Convergence, Consilience, and the Hierarchical Architecture of Reality](https://doi.org/10.5281/zenodo.20302276) (2026-05-20)
 - [The Tree Is Real](https://doi.org/10.5281/zenodo.20325850) (2026-05-21)
@@ -155,7 +155,7 @@ All papers are open-access on Zenodo with registered DOIs. See the
 
 | Feature | Link |
 |:--------|:-----|
-| **QWAV Wiki** | [10 pages â€” architecture, modules, publications](https://github.com/QNFO/QWAV/wiki) |
+| **QWAV Wiki** | [10 pages -- architecture, modules, publications](https://github.com/QNFO/QWAV/wiki) |
 | **Discussions** | [Session records, sprint reports](https://github.com/QNFO/QWAV/discussions) |
 | **Kanban Board** | [Cross-project tracking](https://github.com/orgs/QNFO/projects/1) |
 | **Issues** | [Open issues across repos](https://github.com/QNFO/QWAV/issues) |
@@ -174,5 +174,5 @@ All papers are open-access on Zenodo with registered DOIs. See the
 
 ---
 
-*QNFO â€” advancing scientific understanding for the collective benefit of all.
+*QNFO -- advancing scientific understanding for the collective benefit of all.
 Everything open. Everything accountable. Everything for the good.*
