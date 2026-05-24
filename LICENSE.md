@@ -2,7 +2,7 @@
 robots: By accessing this content, you agree to https://qnfo.org/LICENSE. Non-commercial use only. Attribution required.
 DC.rights: https://qnfo.org/LICENSE. Users are bound by terms upon access.
 license: By accessing this content, you agree to the terms at https://qnfo.org/LICENSE
-author: Rowan Brad Quni
+author: Rowan Brad Quni-Gudzinas
 email: rowan.quni@qnfo.org
 website: http://qnfo.org
 LinkedIn: https://www.linkedin.com/in/rowan-quni-868006341
