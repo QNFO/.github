@@ -6,7 +6,6 @@ on:
       title:
         required: true
         type: string
-        description: "Publication title"
       author:
         required: true
         type: string
@@ -14,12 +13,10 @@ on:
       file_path:
         required: true
         type: string
-        description: "Path to the file to upload"
       abstract:
         required: false
         type: string
         default: ""
-        description: "Publication abstract"
       keywords:
         required: false
         type: string
@@ -28,7 +25,6 @@ on:
         required: false
         type: boolean
         default: false
-        description: "Use Zenodo sandbox (no real DOI)"
       communities:
         required: false
         type: string
@@ -38,18 +34,17 @@ on:
         required: true
     outputs:
       doi:
-        description: "The registered DOI"
         value: ${{ jobs.publish.outputs.doi }}
       zenodo_id:
-        description: "The Zenodo deposition ID"
         value: ${{ jobs.publish.outputs.zenodo_id }}
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     outputs:
-      doi: ${{ steps.publish.outputs.doi }}
-      zenodo_id: ${{ steps.publish.outputs.zenodo_id }}
+      doi: ${{ steps.retry.outputs.doi }}
+      zenodo_id: ${{ steps.retry.outputs.zenodo_id }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -64,40 +59,40 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Publish to Zenodo
-        id: publish
+      - name: Publish to Zenodo (with retry)
+        id: retry
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
         run: |
-          ARGS="--token ${{ secrets.ZENODO_TOKEN }}"
+          ARGS="--token $ZENODO_TOKEN"
           ARGS="$ARGS --title \"${{ inputs.title }}\""
           ARGS="$ARGS --author \"${{ inputs.author }}\""
           ARGS="$ARGS --file \"source-repo/${{ inputs.file_path }}\""
-          if [ -n "${{ inputs.abstract }}" ]; then
-            ARGS="$ARGS --abstract \"${{ inputs.abstract }}\""
-          fi
-          if [ -n "${{ inputs.keywords }}" ]; then
-            ARGS="$ARGS --keywords \"${{ inputs.keywords }}\""
-          fi
-          if [ -n "${{ inputs.communities }}" ]; then
-            ARGS="$ARGS --communities \"${{ inputs.communities }}\""
-          fi
-          if [ "${{ inputs.sandbox }}" = "true" ]; then
-            ARGS="$ARGS --sandbox"
-          fi
+          [ -n "${{ inputs.abstract }}" ] && ARGS="$ARGS --abstract \"${{ inputs.abstract }}\""
+          [ -n "${{ inputs.keywords }}" ] && ARGS="$ARGS --keywords \"${{ inputs.keywords }}\""
+          [ -n "${{ inputs.communities }}" ] && ARGS="$ARGS --communities \"${{ inputs.communities }}\""
+          [ "${{ inputs.sandbox }}" = "true" ] && ARGS="$ARGS --sandbox"
 
-          OUTPUT=$(python zenodo-automation/zenodo_publish.py $ARGS)
-          echo "$OUTPUT" | tee zenodo_output.txt
+          for i in 1 2 3; do
+            echo "=== Attempt $i/3 ==="
+            OUTPUT=$(python zenodo-automation/zenodo_publish.py $ARGS 2>&1)
+            echo "$OUTPUT" | tee zenodo_output.txt
 
-          DOI=$(echo "$OUTPUT" | grep -oP 'doi\.org/\K10\.\d{4,9}/zenodo\.\d+' || echo "")
-          if [ -z "$DOI" ]; then
-            DOI=$(echo "$OUTPUT" | grep -oP 'DOI:?\s*\K10\.\d{4,9}/zenodo\.\d+' || echo "")
-          fi
-          echo "doi=$DOI" >> $GITHUB_OUTPUT
+            if echo "$OUTPUT" | grep -qi "published\|DOI:"; then
+              DOI=$(echo "$OUTPUT" | grep -oP 'doi\.org/\K10\.\d{4,9}/zenodo\.\d+' || echo "")
+              [ -z "$DOI" ] && DOI=$(echo "$OUTPUT" | grep -oP 'DOI:?\s*\K10\.\d{4,9}/zenodo\.\d+' || echo "")
+              echo "doi=$DOI" >> $GITHUB_OUTPUT
+              ZID=$(echo "$DOI" | grep -oP '\d+$' || echo "")
+              echo "zenodo_id=$ZID" >> $GITHUB_OUTPUT
+              echo "SUCCESS: DOI=$DOI"
+              exit 0
+            fi
 
-          ZENODO_ID=$(echo "$DOI" | grep -oP '\d+$' || echo "")
-          echo "zenodo_id=$ZENODO_ID" >> $GITHUB_OUTPUT
-
-      - name: Report failure
-        if: failure()
-        run: |
-          echo "Zenodo publication failed. Check logs above."
-          echo "Ensure ZENODO_TOKEN has deposit:actions and deposit:write scopes."
+            if [ $i -eq 3 ]; then
+              echo "FATAL: Zenodo publish failed after 3 attempts"
+              echo "::error::Zenodo publication failed — check token scopes and file path"
+              exit 1
+            fi
+            echo "Attempt $i failed, retrying in 15s..."
+            sleep 15
+          done
