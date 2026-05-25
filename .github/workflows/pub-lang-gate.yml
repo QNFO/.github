@@ -1,0 +1,69 @@
+name: Publication Language Gate
+
+on:
+  pull_request:
+    paths:
+      - 'releases/papers/**.md'
+  push:
+    paths:
+      - 'releases/papers/**.md'
+    branches-ignore:
+      - master
+  workflow_dispatch:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan papers for publication language violations
+        run: |
+          import os, re, sys, base64
+
+          VIOLATIONS = [
+              (re.compile(r'\b(Module\s+\d+|Task\s+\d+|SPRINT|PROCEED|RESUME)\b', re.IGNORECASE), 'INTERNAL: sprint/task reference'),
+              (re.compile(r'\b0\.\d+\.(?:md|py)\b'), 'INTERNAL: versioned filename'),
+              (re.compile(r'\[(?:LLM-INFERRED|CODE-EXECUTED|EXTERNAL-SOURCE|UNVERIFIED-LLM)\](?!\()', re.IGNORECASE), 'STYLE: generation artifact'),
+              (re.compile(r'\b(?:cp1252|Unicode box)\b', re.IGNORECASE), 'INTERNAL: tooling reference'),
+              (re.compile(r'(ready for handoff|new agent starting)', re.IGNORECASE), 'INTERNAL: process language'),
+              (re.compile(r'^Version:\s*0\.\d+|^Status:\s*Final', re.MULTILINE), 'METADATA: version header'),
+              (re.compile(r'Last Commit:|^Git:', re.IGNORECASE), 'METADATA: commit reference'),
+          ]
+
+          papers_dir = 'releases/papers'
+          papers = [f for f in os.listdir(papers_dir) if f.endswith('.md') and f != 'index.md']
+          
+          violations = []
+          for paper in sorted(papers):
+              with open(os.path.join(papers_dir, paper), 'r', encoding='utf-8') as f:
+                  content = f.read()
+              body = re.sub(r'\x60\x60\x60.*?\x60\x60\x60', '', content, flags=re.DOTALL)
+              if body.startswith('---'):
+                  end = body.find('---', 3)
+                  if end > 0:
+                      body = body[end+3:]
+              for pattern, label in VIOLATIONS:
+                  matches = pattern.findall(body)
+                  if matches:
+                      violations.append(f'{paper}: {label} -> {list(set(matches))[:2]}')
+          
+          if violations:
+              print(f'PUB LANG GATE: FAIL — {len(violations)} violation(s) found:')
+              for v in sorted(violations):
+                  print(f'  {v}')
+              with open(os.environ.get('GITHUB_STEP_SUMMARY', '/dev/stdout'), 'a') as f:
+                  f.write(f'## Publication Language Gate: FAIL\n\n{len(violations)} violation(s):\n')
+                  for v in sorted(violations):
+                      f.write(f'- {v}\n')
+              sys.exit(1)
+          else:
+              print(f'PUB LANG GATE: PASS — {len(papers)} papers clean')
+              with open(os.environ.get('GITHUB_STEP_SUMMARY', '/dev/stdout'), 'a') as f:
+                  f.write(f'## Publication Language Gate: PASS\n\n{len(papers)} papers clean, 0 violations.\n')
+        shell: python
