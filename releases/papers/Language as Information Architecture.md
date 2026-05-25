@@ -168,7 +168,7 @@ Scientific register frequency profiles were generated for eight languages by mod
 
 ### 3.8 Reproducibility
 
-All computations are deterministic with seed = 42. The entire pipeline — data generation, entropy computation, mandatory load classification, PCA, permutation testing, and register simulation — is contained in three self-contained Python scripts (`0.3.py`, `0.5.0.py`, `0.7.0.py`) using only NumPy. No external statistical packages, APIs, or web access are required. All output is machine-readable JSON.
+All computations are deterministic with seed = 42. The entire pipeline — data generation, entropy computation, mandatory load classification, PCA, permutation testing, and register simulation — is contained in three self-contained Python scripts (`[source file]`, `0.5.0.py`, `0.7.0.py`) using only NumPy. No external statistical packages, APIs, or web access are required. All output is machine-readable JSON.
 
 ---
 
@@ -389,7 +389,7 @@ This research was conceived, executed, and documented entirely within a single L
 
 ## Data Availability
 
-All code, synthetic data, and results are available in the project repository at `$G:\text{My Drive}\backslash\text{projects}\backslash\text{Language-Info-Architecture}$`. The three analysis pipelines (`0.3.py`, `0.5.0.py`, `0.7.0.py`) are self-contained Python scripts requiring only NumPy. All output is machine-readable JSON. The complete project history is documented in 14 versioned files and 7 documentation files. The research plan, methodology, and reproducibility protocol are documented in `0.5.0.md`. The capstone retrospective is `0.11.0.md`.
+All code, synthetic data, and results are available in the project repository at `$G:\text{My Drive}\backslash\text{projects}\backslash\text{Language-Info-Architecture}$`. The three analysis pipelines (`[source file]`, `0.5.0.py`, `0.7.0.py`) are self-contained Python scripts requiring only NumPy. All output is machine-readable JSON. The complete project history is documented in 14 versioned files and 7 documentation files. The research plan, methodology, and reproducibility protocol are documented in `0.5.0.md`. The capstone retrospective is `0.11.0.md`.
 
 ---
 
