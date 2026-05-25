@@ -629,7 +629,7 @@ $$\frac{2}{\pi} \cdot g(a)^2 = \frac{g'(a) \cdot \beta_\infty(a)}{S(a)}$$
 
 ### Appendix D: Deliverables Index
 
-**Planning Documents:** `0.1.md` through `1.1.1.md` (11 documents)
+**Planning Documents:** `[source file]` through `1.1.1.md` (11 documents)
 
 **Module Reports (M1–M11):** `module_01_report.md` through `module_11_report.md` and `synthesis_final.md`
 
