@@ -1047,16 +1047,16 @@ These predictions are specific, quantitative in principle, and distinguish the u
 
 The following are not established by this document. They are questions that the framework raises and that further work—mathematical, computational, and experimental—can address. They are not objections to the framework; they are the tasks that any geometric foundation must complete before it can replace an existing one.
 
-**Task 1: Physical instantiation.**
+**the task: Physical instantiation.**
 Can an ultrametric state space be realized in a physical system? What materials, architectures, or natural systems support tree-structured geometries? Candidates include: ultracold atoms in optical lattices with hierarchical tunneling, superconducting circuits with tree-structured coupling graphs, spin systems with ultrametric interaction matrices, and quantum systems defined over $p$-adic numbers. The framework shows what follows if the answer is yes. It does not supply the engineering—the physical implementation of an ultrametric distance in a real laboratory system.
 
-**Task 2: The real place.**
+**the task: The real place.**
 The $p$-adic trees described here are associated with finite primes $p$. But the real numbers $\mathbb{R}$—the “prime at infinity”—also appear in the full adelic picture that encompasses all completions of $\mathbb{Q}$, both Archimedean ($\mathbb{R}$) and ultrametric ($\mathbb{Q}_p$ for each prime $p$). How does the continuous real line relate to the discrete $p$-adic trees? Is the familiar continuous spacetime of relativity an emergent Archimedean description of an underlying product of ultrametric trees? Does the adelic product formula $\prod_{p \leq \infty} |x|_p = 1$ (where the product runs over all primes and the real place) hint at a deeper unity between the Archimedean and ultrametric pictures—a unity in which the continuous and the discrete are two faces of the same underlying structure, related by a projection whose invertibility is guaranteed by the product formula itself? Answering this question would connect the Threshold Principle to the deepest structure of number theory and potentially to the geometry of spacetime.
 
-**Task 3: Dynamics.**
+**the task: Dynamics.**
 This document has described a static geometric structure—containers, thresholds, hierarchies. It has not supplied dynamical laws: equations of motion, rules for how states change over time, or principles governing interactions between states in different containers. The Threshold Principle constrains what perturbations can do (they cannot change containers if they are below threshold); it does not say how states evolve when perturbations are below threshold, or what determines the sequence of branching choices a state follows. A complete physical theory requires dynamics on the tree—a Hamiltonian or unitary operator that respects the ultrametric geometry. Candidate frameworks include $p$-adic quantum mechanics, ultrametric diffusion processes, and hierarchical equations of motion adapted from renormalization-group theory.
 
-**Task 4: Connecting to existing theory.**
+**the task: Connecting to existing theory.**
 The Archimedean framework encompasses theories of extraordinary precision and scope: quantum electrodynamics (predicting the electron’s anomalous magnetic moment to 12 significant figures), the Standard Model of particle physics (classifying all known elementary particles and three of the four fundamental forces), and general relativity (accounting for gravity and spacetime with geometric precision). Any ultrametric alternative must either reproduce their confirmed predictions or explain why those predictions are projection artifacts of a deeper tree-structured theory. This is a substantial requirement—not an impossibility, but a constraint that any viable ultrametric physics must satisfy.
 
 ### The Invitation
