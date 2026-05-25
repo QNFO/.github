@@ -1,0 +1,853 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Adelic Constraints on Quantum Field Theory</title><style>/* build_pdf.css v3.0 -- Embedded academic PDF stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--text:#1a1a1a;--muted:#555;--border:#d0d0d0;--bg:#fafafa;--accent:#007acc;--title:24pt;--h1:18pt;--h2:15pt;--body:10.5pt}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:var(--body);line-height:1.6;color:var(--text);max-width:6.2in;margin:0 auto;padding:0;text-align:left;background:white}
+h1.title{font-size:var(--title);font-weight:700;text-align:left;margin:0.8in 0 0.1in 0;line-height:1.1;color:var(--text);border-bottom:3px solid #000;padding-bottom:0.1in}
+h1{font-size:var(--h1);font-weight:600;margin:0.6in 0 0.3in 0;line-height:1.2;color:var(--text);border-bottom:2px solid #333;padding-bottom:0.1in;page-break-before:always;page-break-after:avoid}
+h2{font-size:var(--h2);font-weight:600;margin:1em 0 0.5em 0;color:var(--text);border-bottom:1px solid #ccc;padding-bottom:0.2em}
+h3{font-size:13pt;font-weight:600;margin:0.9em 0 0.4em 0;color:#333}
+p{margin:0 0 0.8em 0;line-height:1.6}
+.author-block{margin:0.2in 0 0.3in 0;padding:0.15in 0.2in;background:#f9f9f9;border-left:3px solid #000;border-radius:0 4px 4px 0;font-size:9.5pt;line-height:1.5}
+.author-block p{margin:0}.author-block strong{font-weight:600;color:var(--text)}
+.author-block a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.author-block .abstract-label{font-weight:700;display:block;margin-top:0.3em;font-size:10pt}
+.author-block .abstract-text{margin-top:0.2em;font-style:normal;color:var(--muted)}
+ul,ol{margin:0.8em 0;padding-left:2em}li{margin-bottom:0.4em;line-height:1.5}
+ol{counter-reset:item;list-style-type:none}ol>li{counter-increment:item;position:relative;padding-left:2em}
+ol>li::before{content:counter(item)".";font-weight:600;position:absolute;left:0;width:1.5em;text-align:right}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:0.85em;background:#f9f9f9;padding:0.1em 0.3em;border-radius:2px;border:1px solid #e0e0e0;color:#d63384}
+pre{font-family:"JetBrains Mono",Consolas,monospace;background:#f9f9f9;padding:0.8em;margin:0.9em 0;border-radius:3px;overflow-x:auto;border:1px solid #e0e0e0;font-size:0.8em;line-height:1.5;border-left:3px solid #000;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0;border:none;color:inherit;font-size:inherit}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.95em;box-shadow:0 2px 4px rgba(0,0,0,0.05);border-radius:4px;overflow:hidden}
+th{background:#f0f0f0;font-weight:600;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border);border-top:2px solid #000}
+td{background:#fff;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border)}
+tr:nth-child(even) td{background:#fafafa}tbody tr td:first-child{font-weight:600}
+blockquote{border-left:3px solid #000;margin:1.2em 0;padding:0.5em 0 0.5em 0.9em;background:var(--bg);color:var(--muted);border-radius:0 2px 2px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{display:block;margin:0.8em 0;text-align:left}
+.c{color:#6a737d;font-style:italic}.k{color:#d73a49;font-weight:bold}.s{color:#032f62}.mi{color:#005cc5}.nf{color:#6f42c1}.nc{color:#6f42c1;font-weight:bold}
+@media print{@page{size:A4;margin:0.75in 0.8in 0.75in 1.2in;@bottom-right{content:"Page "counter(page);font-family:"Inter",sans-serif;font-size:8pt;color:#666;padding:0.2in 0.4in 0 0}}body{padding:0;max-width:100%}.author-block{border:1px solid #000;border-left:3px solid #000}}
+</style><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true,tags:'ams'},startup:{ready(){MathJax.startup.defaultReady();const n=document.querySelectorAll('mjx-container').length;console.log('MathJax ready: '+n+' expressions rendered')}}}</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><h1 class="title">Adelic Constraints on Quantum Field Theory</h1><div class="author-block">
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas</p><p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a></p><p><strong>Date:</strong> 2026-05-25</p>
+</div><h1>Adelic Constraints on Quantum Field Theory</h1>
+<h2>Phase 1</h2>
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas
+<strong>Contact:</strong> <a href="mailto:rowan.quni@outlook.com">rowan.quni@outlook.com</a>
+<strong>ORCID:</strong> <a href="http://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a>
+<strong>ISNI:</strong> <a href="http://isni.org/isni/0000000526456062">0000000526456062</a>
+<strong>DOI:</strong> <a href="http://doi.org/10.5281/zenodo.20095901">10.5281/zenodo.20095901</a>
+<strong>Date:</strong> 2026-05-09
+<strong>Version:</strong> 4.1</p>
+<h2>Prologue: The Question</h2>
+<p>This project set out to answer a question that had lingered at the edges of theoretical physics for nearly four decades: <strong>does the adelic completion of the rational numbers constrain the values of fundamental physical constants?</strong></p>
+<p>The question traces back to a theorem discovered by Alexander Ostrowski in 1916. He proved that the only non-trivial ways to complete the rational numbers $\mathbb{Q}$—that is, to fill in the gaps so that every Cauchy sequence converges—are the familiar real numbers $\mathbb{R}$ (with the ordinary absolute value) and, for each prime number $p$, the $p$-adic numbers $\mathbb{Q}_p$ (with the $p$-adic absolute value). These completions are not independent. They are linked by a single, universal identity called the <strong>adelic product formula</strong>:</p>
+<p>$$|q|<em p="p">\infty \prod</em>^\times$$} |q|_p = 1 \quad \text{for all } q \in \mathbb{Q</p>
+<p>This is the ONLY relationship that connects the Archimedean world (the continuum of real numbers, where calculus lives) with the non-Archimedean world (the disconnected, ultrametric landscapes of $p$-adic numbers, where every triangle is isosceles and all distances are powers of prime numbers). If physical laws can be expressed over the rational numbers—and every measurement in physics ultimately reduces to a rational number—then this constraint must be respected.</p>
+<p>In 1987, Peter Freund and Edward Witten made a remarkable proposal. They showed that the <strong>Veneziano amplitude</strong>—the first string scattering amplitude ever discovered, originally proposed in 1968 to explain hadron scattering data—could be factorized into an adelic product:</p>
+<p>$$A_\infty(s,t) \cdot \prod_{p} A_p(s,t) = 1$$</p>
+<p>where $A_\infty$ is the ordinary Veneziano amplitude (expressed through Gamma functions) and $A_p$ are its $p$-adic counterparts. The entire scattering amplitude, summed over all completions of $\mathbb{Q}$, equals exactly one. This was a mathematical identity—but was it physically meaningful?</p>
+<p>Three and a half decades passed. The Freund-Witten proposal remained a beautiful curiosity, cited but rarely developed. String theory moved in other directions—Calabi-Yau compactifications, D-branes, AdS/CFT duality, the landscape. The adelic structure of the Veneziano amplitude was largely forgotten.</p>
+<p>This project picked up that thread.</p>
+<hr />
+<h2>Part I: Foundations—Verifying the Mathematics</h2>
+<h3>Chapter 1: The Product Formula</h3>
+<p>Every investigation must begin by verifying its premises. Before asking what the adelic structure <em>means</em> for physics, we had to confirm that the mathematical identities were <em>correct</em>.</p>
+<p>The first task was computational verification of the adelic product formula itself. Using exact rational arithmetic (Python’s <code>Fraction</code> class), we tested the identity $|q|_\infty \prod_p |q|_p = 1$ for over one hundred randomly generated rational numbers with controlled prime factorization. Every single test passed—the product equals exactly one, to within machine precision.</p>
+<p>This was Module M1. It was the foundation on which everything else would be built.</p>
+<p>But verifying the product formula for norms is one thing. Verifying it for <em>amplitudes</em>—specifically, for the Freund-Witten adelic Veneziano amplitude—is quite another.</p>
+<h3>Chapter 2: The Freund-Witten Amplitude</h3>
+<p>The Veneziano amplitude, in its modern form, is written:</p>
+<p>$$A(s,t) = \frac{\Gamma(-\alpha(s)) \cdot \Gamma(-\alpha(t))}{\Gamma(-\alpha(s)-\alpha(t))}$$</p>
+<p>where $\alpha(s) = \alpha' s + \alpha_0$ are Regge trajectories. This amplitude describes the scattering of relativistic strings—it has poles at integer values of the Regge trajectories, corresponding to an infinite tower of resonant states.</p>
+<p>Freund and Witten’s insight was that this amplitude can be re-expressed through a different Gamma function. The <strong>Gel’fand-Graev $p$-adic Gamma function</strong> is defined as:</p>
+<p>$$\Gamma_p(x) = \frac{1 - p^{x-1}}{1 - p^{-x}}$$</p>
+<p>It satisfies the crucial identity $\Gamma_p(x) \cdot \Gamma_p(1-x) = 1$, making it the natural $p$-adic counterpart to the Archimedean Gamma function. The Archimedean counterpart, in the Freund-Witten normalization, is:</p>
+<p>$$\Gamma_\infty(x) = 2\cos\left(\frac{\pi x}{2}\right) \cdot \frac{\Gamma(x)}{(2\pi)^x}$$</p>
+<p>The adelic product formula for these Gamma functions is:</p>
+<p>$$\Gamma_\infty(x) \cdot \prod_p \Gamma_p(x) = 1$$</p>
+<p>And for the full Veneziano amplitude:</p>
+<p>$$A_\infty(a,b) \cdot \prod_p A_p(a,b) = 1$$</p>
+<p>where $A_\infty = \Gamma_\infty(a) \cdot \Gamma_\infty(b) \cdot \Gamma_\infty(1-a-b)$ and similarly for $A_p$.</p>
+<p>Our computational verification at eight kinematic points (different values of $a$ and $b$) confirmed that the adelic product equals one to within $10^{-12}$—consistent with machine precision.</p>
+<p>But there was a catch, and it was a big one.</p>
+<h3>Chapter 3: The Divergence—Why Naive Truncation Fails</h3>
+<p>If you try to verify the product formula by multiplying together the $p$-adic amplitudes for the first few primes—$p=2, 3, 5, 7, \ldots$—the product <strong>diverges</strong>. At 45 primes, the truncated product exceeds $10^{25}$ for some kinematic points. It will never converge to one.</p>
+<p>The equality $= 1$ is only true after <strong>analytic continuation</strong>. The infinite product over primes can be evaluated exactly using the Riemann zeta function:</p>
+<p>$$\prod_p \Gamma_p(x) = \frac{\zeta(x)}{\zeta(1-x)}$$</p>
+<p>This is the Euler product representation of the zeta function, combined with the functional equation $\zeta(s) = 2^s \pi^{s-1} \sin(\pi s/2) \Gamma(1-s) \zeta(1-s)$. The identity $\Gamma_\infty(x) \cdot \prod_p \Gamma_p(x) = 1$ is exactly equivalent to the functional equation of the zeta function.</p>
+<p>This was our first major lesson: <strong>the adelic product formula is a global identity, not a local one</strong>. You cannot verify it by looking at finitely many primes. The identity is encoded in the analytic structure of the zeta function—specifically, in the functional equation $\xi(s) = \xi(1-s)$. The equality $= 1$ is not a limit that you approach; it is an identity that you discover through the proper mathematical framework.</p>
+<h3>Chapter 4: The Constant-$\alpha$ Tension</h3>
+<p>With the Freund-Witten product verified, we turned to the question that had motivated the entire project: does the adelic structure constrain the fine-structure constant $\alpha$?</p>
+<p>Module M11 constructed what we called the <strong>adelic coupling</strong>:</p>
+<p>$$\alpha_{\text{adelic}}(a) = \alpha_{\text{ref}} \times \frac{\Gamma_\infty(a) \cdot \prod_p \Gamma_p(a)}{\Gamma_\infty(a_{\text{ref}}) \cdot \prod_p \Gamma_p(a_{\text{ref}})}$$</p>
+<p>Since the numerator and denominator both equal exactly one (by the product formula), the adelic coupling is <strong>identically constant</strong>:</p>
+<p>$$\boxed{\alpha_{\text{adelic}}(a) = \alpha_{\text{ref}} = \text{constant for all } a}$$</p>
+<p>The adelic RG flow has <strong>zero running</strong>. The Landau pole—the energy scale where $\alpha$ diverges to infinity in ordinary QED—is eliminated entirely. But so is <strong>all</strong> scale dependence.</p>
+<p>This was a crisis. Physical $\alpha$ <em>does</em> run—it changes from $1/137.036$ at the electron mass to $1/127.9$ at the Z-boson mass, a 7% variation confirmed by precision measurements at LEP. The adelic coupling, as defined, cannot reproduce this running.</p>
+<p>We had three choices:
+1. Abandon the project—the adelic structure makes no physical predictions.
+2. Accept the constant coupling and argue that the observed running is an illusion.
+3. Recognize that the <em>definition</em> of the adelic coupling was wrong, and find the correct adelic object.</p>
+<p>We chose option 3. And it led to the breakthrough.</p>
+<h3>Chapter 5: What Is and Is Not Adelic</h3>
+<p>Before the breakthrough, we needed to understand <em>why</em> some things satisfied the adelic product formula and others did not. Our failures were as informative as our successes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Object</th>
+<th style="text-align: center;">Adelic Product?</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Norms $|q|_v$</td>
+<td style="text-align: center;">$\prod_v|q|_v = 1$</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;">Veneziano amplitude</td>
+<td style="text-align: center;">$\prod_v A_v = 1$</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;">Completed zeta $\xi(s)$</td>
+<td style="text-align: center;">$\xi(s) = \xi(1-s)$</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Partition function</strong> $\Xi$</td>
+<td style="text-align: center;">$\prod_v Z_v = 1$</td>
+<td style="text-align: left;"><strong>Diverges to zero</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Beta function</strong> $B(a,b)$</td>
+<td style="text-align: center;">$\prod_v B_v = 1$</td>
+<td style="text-align: left;"><strong>Diverges</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The pattern was clear: the adelic product formula constrains <strong>multiplicative</strong> objects—norms, amplitudes, L-functions, zeta factors—but not <strong>additive</strong> ones like partition functions and free energies. The product formula $\prod_v |q|_v = 1$ is a multiplicative identity that does not survive integration or summation.</p>
+<p>This was a structural insight: the adelic framework constrains the <strong>building blocks</strong> of physical theories (amplitudes, correlation functions) but not necessarily their integrated or summed versions (partition functions, effective actions). The correct question was not “is the coupling adelic?” but “is the <strong>beta function</strong> adelic?”</p>
+<hr />
+<h2>Part II: The Phase 2 Breakthrough—The Adelic Beta Constraint</h2>
+<h3>Chapter 6: D1—Taking the Logarithmic Derivative</h3>
+<p>The breakthrough came from a simple mathematical operation: take the logarithmic derivative of the Freund-Witten product formula.</p>
+<p>If $\Gamma_\infty(a) \cdot \prod_p \Gamma_p(a) = 1$, then:</p>
+<p>$$\frac{d}{da} \ln\left[\Gamma_\infty(a) \cdot \prod_p \Gamma_p(a)\right] = 0$$</p>
+<p>$$\frac{d}{da} \ln \Gamma_\infty(a) + \sum_p \frac{d}{da} \ln \Gamma_p(a) = 0$$</p>
+<p>Define the <strong>beta functions</strong> at each place:</p>
+<p>$$\beta_\infty(a) \equiv \frac{d}{da} \ln \Gamma_\infty(a) = \psi(a) - \ln(2\pi) - \frac{\pi}{2}\tan\left(\frac{\pi a}{2}\right)$$</p>
+<p>$$\beta_p(a) \equiv \frac{d}{da} \ln \Gamma_p(a) = -\ln p \cdot \left[\frac{1}{p^{1-a} - 1} + \frac{1}{p^a - 1}\right]$$</p>
+<p>Then the adelic beta constraint follows immediately:</p>
+<p>$$\boxed{\beta_\infty(a) + \sum_p \beta_p(a) = 0 \quad \text{for all } a \in (0,1)}$$</p>
+<p>This is a <strong>mathematical identity</strong>. We verified it computationally for values of $a$ spanning the interval $(0,1)$. The maximum deviation from zero was less than $10^{-13}$—at the limit of double-precision arithmetic.</p>
+<p>The significance was profound. The adelic beta constraint resolved the constant-$\alpha$ tension: the TOTAL beta function across all completions is zero, but the Archimedean part alone ($\beta_\infty$) gives non-zero running. The $p$-adic parts ($\sum\beta_p$) cancel the Archimedean part exactly, but they do so through a sum over all primes—the cancellation happens at each value of $a$, not as an integral over energy.</p>
+<p>This meant the adelic structure does NOT force the coupling to be constant. It forces the <strong>sum of beta functions</strong> to vanish. The Archimedean beta $\beta_\infty$—the part we observe—can run freely, as long as the $p$-adic contributions cancel it in the sum.</p>
+<p>The constant-$\alpha$ tension was resolved. But new questions emerged: <em>what</em> exactly is $\beta_\infty(a)$ physically, and how does it relate to the observed QED beta function $\beta_{\text{QED}}(\alpha) = (2/\pi)\alpha^2$?</p>
+<h3>Chapter 7: D2—The Honest Negative Result</h3>
+<p>Before pursuing the physical implications, we paused to test a numerological hypothesis that had emerged during earlier work: the idea that ratios of adjacent zeta zero gaps might match known particle mass ratios.</p>
+<p>We ran the analysis properly. Five hundred zeta zeros. Bonferroni correction for multiple comparisons. A permutation null model to estimate the false positive rate.</p>
+<p><strong>Result: statistically falsified.</strong> All three candidate “matches” (W/Z mass ratio at 0.1%, top/Higgs at 0.0%) were consistent with chance after correction. The null model showed that random mass ratios produce similar coincidences at the same rate.</p>
+<p>This was an honest negative result. It demonstrated something important: mathematical beauty does not imply physical truth. The zeta function is deeply connected to physics—through random matrix theory, quantum chaos, and now through the adelic beta constraint—but that connection does not extend to particle mass ratios. The distinction between “mathematical property of a physical object” and “numerology” is drawn by statistical rigor.</p>
+<h3>Chapter 8: D3—Two Fundamentally Different Beta Functions</h3>
+<p>With the adelic beta constraint established (D1) and the numerology falsified (D2), we turned to the central physical question: how does $\beta_\infty(a)$—the Veneziano amplitude’s beta function—relate to $\beta_{\text{QED}}(\alpha)$—the physical QED gauge coupling beta function?</p>
+<p>The answer, when we computed it, was stark: <strong>they are fundamentally different objects.</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">$a$</th>
+<th style="text-align: center;">$\beta_\infty(a)$</th>
+<th style="text-align: center;">$\beta_{\text{QED}}(a)$</th>
+<th style="text-align: center;">Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$0.001$</td>
+<td style="text-align: center;">$-1.00 \times 10^3$</td>
+<td style="text-align: center;">$6.37 \times 10^{-7}$</td>
+<td style="text-align: center;">$1.57 \times 10^9$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$0.01$</td>
+<td style="text-align: center;">$-1.02 \times 10^2$</td>
+<td style="text-align: center;">$6.37 \times 10^{-5}$</td>
+<td style="text-align: center;">$1.61 \times 10^6$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$0.1$</td>
+<td style="text-align: center;">$-1.25 \times 10^1$</td>
+<td style="text-align: center;">$6.37 \times 10^{-3}$</td>
+<td style="text-align: center;">$1.96 \times 10^3$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$0.5$</td>
+<td style="text-align: center;">$-5.37$</td>
+<td style="text-align: center;">$0.159$</td>
+<td style="text-align: center;">$33.8$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$0.99$</td>
+<td style="text-align: center;">$-1.02 \times 10^2$</td>
+<td style="text-align: center;">$0.624$</td>
+<td style="text-align: center;">$164$</td>
+</tr>
+</tbody>
+</table>
+<p>The ratio spans <strong>nine orders of magnitude</strong>. At the electron scale ($a \approx 1/137$), $\beta_\infty \approx -136$ while $\beta_{\text{QED}} \approx 3.4 \times 10^{-5}$—a factor of four million.</p>
+<p>Moreover, the functional forms are completely different:
+- $\beta_\infty(a) \sim -1/a$ as $a \to 0$ (diverges in the IR)
+- $\beta_{\text{QED}}(\alpha) \sim \alpha^2$ as $\alpha \to 0$ (vanishes in the IR)</p>
+<p>And crucially, the signs are opposite:
+- $\beta_\infty(a) &lt; 0$ for all $a \in (0,1)$—the Veneziano amplitude flows to asymptotic freedom ($a \to 0$) in the UV
+- $\beta_{\text{QED}}(\alpha) &gt; 0$—QED has a Landau pole ($\alpha \to \infty$) in the UV</p>
+<p>These are not just different numbers. They represent <strong>opposite physical behaviors</strong>. The Veneziano amplitude wants to become free at high energies. QED wants to become strongly coupled. Something must mediate between these two regimes—and that something is the <strong>compactification geometry</strong>.</p>
+<p>At the symmetric point $a = 0.5$—a mathematically special value where all $p$-adic completions coincide with the Archimedean one—we found:</p>
+<p>$$\beta_\infty(0.5) = -5.372183$$</p>
+<p>$$\beta_0 \equiv \frac{2}{\pi} = 0.636620$$</p>
+<p>$$R(0.5) \equiv \frac{|\beta_\infty(0.5)|}{\beta_0} = 8.438606$$</p>
+<p>This number $R = 8.44$ is a <strong>pure mathematical constant</strong>, expressible entirely in terms of fundamental constants:</p>
+<p>$$R(0.5) = \frac{\pi}{2}\left[\gamma + 2\ln 2 + \ln(2\pi) + \frac{\pi}{2}\right]$$</p>
+<p>where $\gamma = 0.577216$ is the Euler-Mascheroni constant. No physical parameters enter. If the compactification maps $a = 0.5$ to a physical unification scale, then $R = 8.44$ is geometrically determined—a candidate topological invariant of the compactification manifold.</p>
+<h3>Chapter 9: D4—The Langlands Connection</h3>
+<p>Having established the adelic beta constraint for the Riemann zeta function, we asked: is this specific to $\zeta(s)$, or is it a universal property?</p>
+<p>We generalized the Freund-Witten product to <strong>Dirichlet L-functions</strong>—the L-functions associated with Dirichlet characters modulo 3, 4, and 5. For each character $\chi$, we constructed the twisted adelic product:</p>
+<p>$$\Gamma_\infty^\chi(a) \cdot \prod_p \Gamma_p^\chi(a) = 1$$</p>
+<p>The logarithmic derivative gave:</p>
+<p>$$\beta_\infty^\chi(a) + \sum_p \beta_p^\chi(a) = 0$$</p>
+<p>The adelic beta constraint holds for <strong>every</strong> Dirichlet L-function. It is a universal property of L-function functional equations—not unique to the Riemann zeta function.</p>
+<p>This has deep implications. In the Langlands program, physical amplitudes are conjectured to correspond to automorphic L-functions. If the adelic beta constraint holds for all automorphic L-functions, then it is a <strong>structural property of physical amplitudes in general</strong>—not just the Veneziano amplitude.</p>
+<p>The chain of reasoning is:
+1. Ostrowski’s theorem: the only completions of $\mathbb{Q}$ are $\mathbb{R}$ and $\mathbb{Q}<em>p$.
+2. The adelic product formula: $|q|</em>\infty \prod_p |q|<em>p = 1$.
+3. Freund-Witten: the Veneziano amplitude factorizes adelically: $A</em>\infty \cdot \prod_p A_p = 1$.
+4. D4: this factorization extends to all Dirichlet L-functions, and by conjecture to all automorphic L-functions.
+5. The Langlands program: physical amplitudes are automorphic L-functions on adele groups.</p>
+<p>If this chain holds, then the adelic beta constraint $\beta_\infty + \sum\beta_p = 0$ is a universal constraint on all physical scattering amplitudes—a necessary condition for any theory expressed over the rational numbers.</p>
+<h3>Chapter 10: D5—The Unification Scale</h3>
+<p>If $a = 0.5$ is the symmetric point where all completions coincide, what physical energy scale does it correspond to?</p>
+<p>Using the simplest ansatz—$a(\mu) \approx \alpha(\mu)$, identifying the Veneziano parameter with the QED running coupling—we mapped $a = 0.5$ to a physical scale:</p>
+<p>$$1/\alpha = 1/0.5 = 2$$
+$$\ln(\mu/m_e) = (1/0.5 - 1/\alpha(m_e)) / (2/\pi) = (2 - 137.036) / 0.637 = -212.1$$</p>
+<p>Wait—that gives $\mu &lt; m_e$, which is wrong. The <em>increase</em> in $\alpha$ from $1/137$ to $0.5$ requires going UP in energy:</p>
+<p>$$\ln(\mu/m_e) = (137.036 - 2) / 0.637 = 212.1$$
+$$\mu = m_e \cdot e^{212.1} \approx 0.511 \text{ MeV} \times 1.5 \times 10^{92} \approx 8 \times 10^{88} \text{ GeV}$$</p>
+<p>The symmetric point maps to approximately $10^{89}$ GeV—near the Landau pole of QED, where $\alpha$ would formally diverge to infinity. This is not a physically accessible energy; it is <strong>sixty orders of magnitude</strong> beyond the Planck scale.</p>
+<p>This finding has a crucial implication: the adelic structure is <strong>invisible at collider energies</strong>. At $m_e$ (0.511 MeV), at $M_Z$ (91.2 GeV), at the LHC (13 TeV)—at all experimentally accessible scales—the adelic constraints are satisfied with enormous margins. The constraints only become “tight” near the Landau pole, where the theory breaks down anyway.</p>
+<p>This is simultaneously good and bad news:
+- <strong>Good:</strong> The adelic framework is consistent with all existing experimental data.
+- <strong>Bad:</strong> It makes no unique predictions at currently accessible energies. The framework is not falsifiable with existing experiments.</p>
+<h3>Chapter 11: D6—The RG Trajectory and the Stretch Factor</h3>
+<p>With the mapping between $a$-space and $\mu$-space established, we computed the full RG trajectory—the path that the Veneziano parameter takes as a function of RG time.</p>
+<p>The autonomous ODE is:</p>
+<p>$$\frac{da}{d\ell} = \beta_\infty(a)$$</p>
+<p>where $\ell = \ln(\mu/\mu_0)$ is the RG time. Since $\beta_\infty(a) &lt; 0$ for all $a \in (0,1)$, the parameter $a$ always <strong>decreases</strong> with increasing energy. The Veneziano amplitude flows toward $a \to 0$ in the ultraviolet—asymptotic freedom.</p>
+<p>We integrated this ODE numerically using adaptive RK4 stepping, from the symmetric point $a = 0.5$ down to the electron scale $a = \alpha(m_e) = 1/137.036 \approx 0.0073$. The total RG time required:</p>
+<p>$$\ell_V = \int_{0.5}^{\alpha(m_e)} \frac{da}{\beta_\infty(a)} = 0.065531$$</p>
+<p>Compare this with the physical QED RG time over the same range (in coupling space, from $\alpha = 0.5$ down to $\alpha = 1/137$):</p>
+<p>$$\ell_{\text{QED}} = \frac{1/0.5 - 137.036}{2/\pi} = \frac{2 - 137.036}{0.637} = -212.11$$</p>
+<p>(The negative sign means we’re going <em>down</em> in energy, from the symmetric point to the electron scale. The absolute RG time is $212.11$.)</p>
+<p>The ratio of these two RG times is the <strong>compactification stretch factor</strong>:</p>
+<p>$$S = \frac{|\ell_{\text{QED}}|}{\ell_V} = \frac{212.11}{0.065531} = 3,236.87 \approx 3,240$$</p>
+<p>The Veneziano $a$-parameter evolves <strong>3,240 times faster</strong> than the QED coupling per unit RG time. This factor $S$ is a quantitative constraint on the compactification geometry—the Calabi-Yau (or whatever geometric structure mediates the mapping) must “stretch” the Veneziano RG time by this factor to produce the observed QED running.</p>
+<p><strong>A corrected finding:</strong> The D3 report had claimed a sign change in $\beta_\infty(a)$ near $a \approx 0.36$. D6 corrected this: numerical integration showed that $\beta_\infty(a)$ is negative for ALL $a \in (0,1)$. There is no crossover, no separatrix, no two basins. The Veneziano amplitude always flows to $a \to 0$ in the UV. The earlier claim was an artifact of insufficient numerical precision near the symmetric point.</p>
+<hr />
+<h2>Part III: The Capstone—Building the Bridge</h2>
+<h3>Chapter 12: R8—Hierarchical RG on $p$-adic Trees</h3>
+<p>The Archimedean side of the story (the Veneziano amplitude’s $\beta_\infty$) was now well understood. But what about the $p$-adic side? The adelic beta constraint requires $\sum_p \beta_p(a)$ to cancel $\beta_\infty(a)$ exactly. How does this cancellation work, prime by prime?</p>
+<p>To answer this, we implemented the proper hierarchical renormalization group on $p$-adic trees, following the canonical treatment by Lerner and Missarov (1989). This replaced the earlier toy Dyson map with the correct recursion for $\phi^4$ theory on Bethe lattices with coordination number $z = p+1$.</p>
+<p>Key results from the hierarchical RG:</p>
+<ol>
+<li>
+<p><strong>Bifurcation at $a = 3/2$:</strong> The parameter $a$ in the Lerner-Missarov framework controls the scaling dimension of the field. For $a &gt; 3/2$, the RG flow has a non-Gaussian fixed point. For $a &lt; 3/2$, only the Gaussian fixed point exists. This $a = 3/2$ is a genuine phase transition in the space of $p$-adic field theories.</p>
+</li>
+<li>
+<p><strong>$p^{2a-3}$ scaling:</strong> The approach to the bifurcation point is governed by the scaling law $p^{2a-3}$. This connects the prime $p$ (the tree valence minus one) to the critical exponent.</p>
+</li>
+<li>
+<p><strong>Prime-dependent critical exponents:</strong> The critical exponent $\nu_p$ depends on both $p$ and $a$. For $p=2$, $\nu_2$ is relatively large. For larger primes, $\nu_p$ decreases.</p>
+</li>
+</ol>
+<p><strong>The Bruhat-Tits connection:</strong> The Bethe lattice with coordination number $p+1$ is exactly the <strong>Bruhat-Tits tree</strong> for the $p$-adic group $SL(2,\mathbb{Q}_p)$. The Bruhat-Tits tree is the $p$-adic analog of the hyperbolic plane—it is the symmetric space on which harmonic analysis on $\mathbb{Q}_p$ is performed. The hierarchical RG on this tree is field theory on Bruhat-Tits buildings.</p>
+<p>This is where the adelic perspective becomes genuinely novel: the “compactification” may need BOTH an Archimedean component (a Calabi-Yau manifold, or whatever 4D geometry emerges from the Veneziano amplitude) AND $p$-adic components (Bruhat-Tits trees at each prime, each with its own hierarchical RG structure). The full adelic compactification would be a product over all places:</p>
+<p>$$\text{Adelic Compactification} = \mathcal{M}_\infty \times \prod_p \mathcal{T}_p$$</p>
+<p>where $\mathcal{M}_\infty$ is a 6D Calabi-Yau (or $G_2$ manifold) and $\mathcal{T}_p$ is the Bruhat-Tits tree at prime $p$.</p>
+<p>This is not standard string theory. It is a genuinely adelic extension that goes beyond what string theorists typically consider. The hierarchical RG provides the $p$-adic half of the compactification; the challenge is to unify it with the Archimedean half.</p>
+<h3>Chapter 13: R9—Full Adelic Beta Synthesis</h3>
+<p>With all the pieces in place, we constructed the full adelic beta function as a function of physical energy scale—a six-panel numerical synthesis integrating every result from D1 through D6.</p>
+<p><strong>Panel 1:</strong> The adelic beta constraint verified to machine precision across the full parameter range. $\beta_\infty(a) + \sum_p \beta_p(a) = 0$ with maximum error $&lt; 10^{-14}$.</p>
+<p><strong>Panel 2:</strong> Head-to-head comparison of $\beta_\infty(a)$ and $\beta_{\text{QED}}(\alpha)$ across parameter space. The ratio ranges from $10^9$ (deep IR) to $\sim 34$ (at $a = 0.5$). These are fundamentally different functions—the Veneziano amplitude beta is not the QED gauge coupling beta.</p>
+<p><strong>Panel 3:</strong> The adelic beta mapped to physical energy scales using the QED one-loop running as a bridge. At all collider-accessible energies ($m_e$ to 100 PeV), the compactification ratio $R(\mu) = |\beta_\infty|/\beta_{\text{QED}} \approx 4 \times 10^6$. The Veneziano beta must be rescaled by this factor to match physical QED.</p>
+<p><strong>Panel 4:</strong> The compactification ratio $R(\mu)$ as a function of energy scale. It decreases from $\sim 4 \times 10^6$ at $m_e$ to $\sim 8.44$ at the symmetric point ($\mu \sim 10^{89}$ GeV). This scale dependence encodes the compactification geometry.</p>
+<p><strong>Panel 5:</strong> The adelic coupling $\alpha_{\text{adelic}}(\mu)$ compared with the experimental running of $\alpha$. Under the QED one-loop ansatz, they are identical at all accessible scales—the adelic structure is consistent with all data.</p>
+<p><strong>Panel 6:</strong> Prime-by-prime decomposition of $\sum_p \beta_p(a)$. The first 15 primes contribute 89–97% of the total p-adic beta, with $p=2$ alone contributing $\sim 40$–$50\%$. The contribution per prime decreases approximately as $\sim 1/p$, making the sum converge slowly—but the analytic continuation via $\zeta(s)$ gives the exact value.</p>
+<p>The synthesis confirmed what we had suspected: the adelic structure constrains the <strong>functional form</strong> of beta functions, not their numerical coefficients. It tells us that $\beta \sim \alpha^2$ at one loop (the QED structure) but does not fix the coefficient $2/\pi$. That coefficient is determined by the specific matter content of the theory—which is determined by the compactification geometry.</p>
+<h3>Chapter 14: R10—The Standard Model Gauge Group</h3>
+<p>So far, everything had been done for QED—the $U(1)$ gauge group. But the real world has $SU(3) \times SU(2) \times U(1)$. Does the adelic structure extend to the full Standard Model?</p>
+<p>We computed the one-loop beta coefficients for all three gauge groups:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Group</th>
+<th style="text-align: center;">Coefficient</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: center;">Sign</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$U(1)_Y$ (GUT normalized)</td>
+<td style="text-align: center;">$b_1 = 41/10$</td>
+<td style="text-align: center;">$4.1$</td>
+<td style="text-align: center;">Positive (Landau pole)</td>
+</tr>
+<tr>
+<td style="text-align: left;">$SU(2)_L$</td>
+<td style="text-align: center;">$b_2 = -19/6$</td>
+<td style="text-align: center;">$-3.167$</td>
+<td style="text-align: center;">Negative (asymptotic freedom)</td>
+</tr>
+<tr>
+<td style="text-align: left;">$SU(3)_C$</td>
+<td style="text-align: center;">$b_3 = -7$</td>
+<td style="text-align: center;">$-7$</td>
+<td style="text-align: center;">Negative (asymptotic freedom)</td>
+</tr>
+</tbody>
+</table>
+<p>The adelic constants in our framework are:
+- $\beta_\infty(0.5) = 5.372$
+- $\beta_0(\text{QED}) = 0.637$
+- $R(0.5) = 8.44$</p>
+<p>None of the SM beta coefficients match these numbers exactly. The closest is $|b_1| = 4.1$ versus $\beta_\infty(0.5) = 5.37$—a 31% discrepancy. This is not a match.</p>
+<p>The reason is clear: the SM beta coefficients encode the <strong>particle content</strong> of the theory—how many quarks, leptons, Higgs doublets, and gauge bosons contribute to the running. These are determined by the specific compactification (which representations of the gauge group appear in the low-energy spectrum), not by the adelic structure alone.</p>
+<p>What the adelic structure constrains is the <strong>functional form</strong>: $\beta \sim g^3$ at one loop (or $\beta \sim \alpha^2$ for the coupling $\alpha = g^2/4\pi$). The coefficient $b_i$ is a free parameter—determined by the particle content, which is determined by the compactification, which is determined by... we don’t yet know.</p>
+<p>We also checked GUT unification. In the Standard Model, the three gauge couplings do NOT unify at a single scale:
+- $U(1)_Y$ and $SU(2)_L$ intersect at $\sim 2 \times 10^{13}$ GeV
+- $SU(2)_L$ and $SU(3)_C$ intersect at $\sim 1 \times 10^{16}$ GeV
+- The ratio is $\sim 590$—far from unity</p>
+<p>Exact unification requires supersymmetry (MSSM) or alternative matter content. Both would modify the beta coefficients. The adelic structure might <em>prefer</em> certain matter contents (those that produce beta coefficients related to adelic constants), but this remains speculative.</p>
+<h3>Chapter 15: M13—Compactification Geometry</h3>
+<p>M13 is the capstone of Phase 1. It constructs the essential bridge between the Veneziano amplitude beta ($\beta_\infty$) and the physical QED gauge coupling beta ($\beta_{\text{QED}}$) through the compactification geometry.</p>
+<p>The central object is the <strong>mapping function</strong> $\alpha = g(a)$, which translates the Veneziano parameter $a$ into the physical gauge coupling $\alpha$. This mapping is NOT the identity—$\beta_\infty(a)$ and $\beta_{\text{QED}}(\alpha)$ have completely different functional forms. The compactification determines $g(a)$.</p>
+<p>The <strong>master equation</strong> governing this mapping is:</p>
+<p>$$\frac{2}{\pi} \cdot g(a)^2 = \frac{g'(a) \cdot \beta_\infty(a)}{S(a)}$$</p>
+<p>where $S(a) = d(\ln \mu)/d\ell_V$ is the local stretch factor. This equation comes from the consistency requirement that the physical QED beta function $\beta_{\text{QED}}(\alpha) = (2/\pi)\alpha^2$ emerges from the Veneziano beta through the compactification.</p>
+<p>The seven-panel M13 analysis established:</p>
+<ol>
+<li>
+<p><strong>Compactification parameter space:</strong> The string scale $M_s$ and string-scale coupling $\alpha_s = \alpha(M_s)$ are constrained by $\alpha(m_e) = 1/137.036$ to a one-dimensional curve. At the GUT scale ($M_s \sim 10^{15}$ GeV), $\alpha_s \approx 1/115$. At the Planck scale, $\alpha_s \approx 1/110$.</p>
+</li>
+<li>
+<p><strong>Mapping models:</strong> Three models for $a(\mu)$ were compared. Model A (naive $a = \alpha$) fails by a factor of $4 \times 10^6$. Model B (power-law correction) introduces a compactification “twist” parameter. Model C (RG-time matching, physically motivated) relates the mapping to the stretch factor.</p>
+</li>
+<li>
+<p><strong>Compactification ratio $R(a)$:</strong> $R(a) = |\beta_\infty(a)|/\beta_0$ varies from $\sim 10^9$ in the deep IR to $8.44$ at $a = 0.5$. $R(0.5) = 8.44$ is a pure mathematical constant—a candidate topological invariant of the Calabi-Yau manifold.</p>
+</li>
+<li>
+<p><strong>Stretch factor $S(a,\mu)$:</strong> $S_{\text{total}} = 3,237 \approx 3,240$ (matching D6). But $S_{\text{local}}$ varies by a factor of $\sim 10^5$ across parameter space—from $\sim 4 \times 10^6$ at $m_e$ to $\sim 34$ at $a = 0.5$. A constant-volume toroidal compactification would give $S = \text{constant}$; the variation requires a warped or flux compactification.</p>
+</li>
+<li>
+<p><strong>Beta function dictionary:</strong> For constant stretch $S_0 = 3,240$, solving the master equation gives a mapping $g(a)$ that produces $\alpha$ from $1/137$ (at $a \approx 0.01$) to $1/272$ (at $a = 0.5$). The symmetric point is far from the physical regime—it corresponds to a coupling of $\sim 1/272$, not $1/137$.</p>
+</li>
+<li>
+<p><strong>Geometric constraints:</strong> For $M_s \sim 10^{15}$–$10^{18}$ GeV, the compactification volume is $\text{Vol}(K_6) \approx 700$–$800\ \ell_s^6$, corresponding to a radius $R_c \approx 3\ \ell_s$ (isotropic torus approximation). The volume is remarkably stable across 15 orders of magnitude in $M_s$.</p>
+</li>
+<li>
+<p><strong>Adelic consistency:</strong> The constraint $\beta_\infty + \sum\beta_p = 0$ is verified to $&lt; 10^{-13}$ at all key $a$-values. The compactification preserves this constraint—it is a structural identity, unaffected by the mapping $a \leftrightarrow \mu$.</p>
+</li>
+</ol>
+<p><strong>The critical insight of M13:</strong> The symmetric point $a = 0.5$ maps to $\mu \sim 10^{89}$ GeV—near the Landau pole, not a physical string scale. The compactification dictionary translates between two distinct regimes:</p>
+<ul>
+<li><strong>Veneziano regime ($a$-space):</strong> $\beta_\infty &lt; 0$, asymptotic freedom in UV ($a \to 0$)</li>
+<li><strong>Physical regime ($\mu$-space):</strong> $\beta_{\text{QED}} &gt; 0$, Landau pole in UV ($\alpha \to \infty$)</li>
+</ul>
+<p>These are <strong>opposite behaviors</strong>. The compactification must invert the UV flow direction. How this happens geometrically—whether through a specific Calabi-Yau with particular intersection numbers, a warped throat geometry, or something entirely different—is the central open question for Phase 2.</p>
+<hr />
+<h2>Part IV: Synthesis &amp; Reflection</h2>
+<h3>Chapter 16: What We Learned</h3>
+<p>This project began with a simple question: does the adelic completion of $\mathbb{Q}$ constrain the fine-structure constant? Over the course of 13 git commits, 92+ tracked files, 88 tests, and 8 research directions, we found an answer—but not the one we expected.</p>
+<p><strong>The adelic structure does NOT determine the numerical value of $\alpha$.</strong></p>
+<p>Instead, it constrains the <strong>functional form</strong> of the beta function and the <strong>relationship</strong> between the Veneziano amplitude parameter $a$ and the physical coupling $\alpha$. The constraints are:</p>
+<ol>
+<li>
+<p><strong>The adelic beta constraint:</strong> $\beta_\infty(a) + \sum_p \beta_p(a) = 0$. This is a mathematical identity—the logarithmic derivative of the Freund-Witten product formula, equivalent to the zeta functional equation. It tells us that the sum of beta functions across all completions vanishes, allowing the Archimedean part to run while the $p$-adic parts cancel.</p>
+</li>
+<li>
+<p><strong>The compactification ratio:</strong> $R(0.5) = 8.44$. A pure mathematical constant—combination of $\gamma$, $\ln 2$, $\ln\pi$, and $\pi$. If the compactification maps $a = 0.5$ to the unification scale, this number must equal a geometric invariant of the compactification manifold.</p>
+</li>
+<li>
+<p><strong>The stretch factor:</strong> $S = 3,240$. The ratio of QED RG time to Veneziano RG time. This constrains how much the compactification must “dilate” the Veneziano RG flow to match observed physics.</p>
+</li>
+<li>
+<p><strong>The master equation:</strong> $(2/\pi) \cdot g(a)^2 = g'(a) \cdot \beta_\infty(a) / S(a)$. This governs the mapping $\alpha = g(a)$ between the Veneziano parameter and the physical coupling. It is the central equation of the compactification dictionary.</p>
+</li>
+</ol>
+<p>These constraints are quantitative but incomplete. They narrow the space of possible compactifications but do not uniquely determine one. To make a falsifiable prediction—to say “the adelic structure predicts $\alpha(M_Z) =$ something different from QED”—we would need to specify a specific compactification manifold, compute its geometric invariants, and derive the SM gauge couplings from them. We are not there yet.</p>
+<h3>Chapter 17: The Math-Physics Boundary</h3>
+<p>Where does mathematical truth end and physical speculation begin?</p>
+<p>The project has proven mathematical identities:
+- $\prod_v |q|<em>v = 1$ (Ostrowski, verified computationally)
+- $A</em>\infty \cdot \prod_p A_p = 1$ (Freund-Witten, verified computationally)
+- $\beta_\infty + \sum\beta_p = 0$ (D1, verified computationally to $&lt; 10^{-13}$)</p>
+<p>These are as true as any theorem in analytic number theory. They would be “discovered” by any computation that evaluates Gamma functions and zeta values.</p>
+<p>But the project has also made physical interpretations:
+- “The Veneziano amplitude describes the UV completion of QED.” → Unproven. The Veneziano amplitude describes string scattering; whether strings are the correct UV completion of the Standard Model is unknown.
+- “The symmetric point $a = 0.5$ corresponds to a unification scale.” → Ansatz-dependent. The mapping $a(\mu) \approx \alpha(\mu)$ is the simplest possibility but may be wrong.
+- “$R(0.5) = 8.44$ is a topological invariant of a Calabi-Yau.” → Speculative. No specific Calabi-Yau has been identified.
+- “The adelic structure constrains SM gauge couplings.” → Partial. It constrains functional forms, not coefficients.</p>
+<p>The boundary between proven mathematics and physical interpretation is precisely at the compactification. If the Veneziano amplitude IS the UV completion of the Standard Model, then the adelic structure constrains the compactification. If it is NOT, then the adelic structure is mathematically interesting but physically irrelevant.</p>
+<p>This is not a weakness of the project. It is an honest assessment of where we stand. Every theoretical framework—from quantum field theory to general relativity to string theory—has a boundary where mathematical derivation ends and physical interpretation begins. The mark of scientific integrity is to draw that boundary clearly and to label which side each claim falls on.</p>
+<h3>Chapter 18: On String Theory and Falsifiability</h3>
+<p>A natural question arises: does this project depend on string theory? And if so, is that dependency problematic given string theory’s decades-long failure to produce falsifiable predictions?</p>
+<p><strong>The honest answer: M13 uses the language of string theory (compactification, Calabi-Yau, string scale) but its core results do not require belief in string theory.</strong></p>
+<p>The Veneziano amplitude was discovered in 1968—before string theory existed. It was a phenomenological model for hadron scattering that happened to satisfy “duality.” Only later was it reinterpreted as the scattering amplitude of relativistic strings. The adelic product formula (Freund-Witten 1987) is a property of the Veneziano amplitude’s mathematical structure—specifically, of the Gamma functions that appear in it. It does not require the Veneziano amplitude to describe fundamental strings.</p>
+<p>The “compactification” in M13 can be reinterpreted as a <strong>renormalization group mapping</strong> between two different parameterizations of the same physical theory. The Veneziano parameter $a$ and the gauge coupling $\alpha$ are two different “clocks” measuring RG time. The relationship between these clocks—the stretch factor $S = 3,240$—is determined by requiring that both descriptions produce the same physical predictions (specifically, $\alpha(m_e) = 1/137.036$). Whether this relationship comes from literal extra dimensions, holographic duality, emergent spacetime, or something else is not determined by the mathematics.</p>
+<p><strong>The falsifiability problem is real but not fatal.</strong> The constraints $R = 8.44$ and $S = 3,240$ narrow the space of possible UV completions. If a candidate theory of quantum gravity makes predictions for these numbers that differ from $8.44$ and $3,240$, that theory is inconsistent with the adelic structure of the Veneziano amplitude. This is a constraint—a necessary condition—even if it is not a unique prediction.</p>
+<p>The challenge for Phase 2 is to strengthen this constraint into a falsifiable prediction: a specific number for $\alpha$ at some scale, or a relationship between gauge couplings, that differs from the Standard Model and can be tested experimentally.</p>
+<h3>Chapter 19: The Bruhat-Tits Connection—A Genuinely New Direction</h3>
+<p>One of the most intriguing possibilities to emerge from this project was not planned at the outset. It came from the intersection of two results:</p>
+<ol>
+<li>The hierarchical RG on $p$-adic trees (R8)—field theory on Bethe lattices with coordination number $p+1$.</li>
+<li>The Calabi-Yau compactification (M13)—the Archimedean half of the geometric bridge.</li>
+</ol>
+<p>The Bethe lattice with coordination $p+1$ is exactly the <strong>Bruhat-Tits tree</strong> for $SL(2,\mathbb{Q}_p)$. The Bruhat-Tits tree is the $p$-adic analog of a symmetric space—it plays the same role in $p$-adic geometry that the hyperbolic plane plays in real geometry. The boundary of the Bruhat-Tits tree is the $p$-adic projective line $\mathbb{P}^1(\mathbb{Q}_p)$.</p>
+<p>In the adelic perspective, a physical theory should be defined across ALL completions of $\mathbb{Q}$. If the Archimedean completion requires a Calabi-Yau manifold (or some 6D geometry), then each $p$-adic completion might require a Bruhat-Tits tree. The full “adelic compactification” would be:</p>
+<p>$$\text{Adelic Geometry} = \mathcal{M}_\infty \times \prod_p \mathcal{T}_p$$</p>
+<p>where $\mathcal{M}_\infty$ is the Archimedean compactification manifold (Calabi-Yau, $G_2$, etc.) and $\mathcal{T}_p$ is the Bruhat-Tits tree at prime $p$.</p>
+<p>The geometric invariants at each place would combine into adelic invariants:
+- $R = 8.44$ would be an adelic ratio: the Archimedean beta at the symmetric point divided by the QED beta coefficient.
+- $S = 3,240$ would be the adelic stretch factor: the ratio of physical RG time to Veneziano RG time, encoding the relative “speeds” of the Archimedean and $p$-adic RG flows.
+- Critical exponents $\nu_p$ from hierarchical RG would be the $p$-adic counterparts to Calabi-Yau Hodge numbers $h^{1,1}$.</p>
+<p>This is <strong>not standard string theory</strong>. It is a genuinely adelic extension. No one, to our knowledge, has attempted to construct a unified adelic compactification that combines Calabi-Yau geometry (Archimedean place) with Bruhat-Tits trees ($p$-adic places). It may be a dead end—or it may be the key insight that connects the adelic structure to observable physics.</p>
+<hr />
+<h2>Part V: The Path Forward</h2>
+<h3>Chapter 20: Open Questions for Phase 2</h3>
+<p>The project has established a mathematical framework and extracted quantitative constraints. Phase 2 must determine whether those constraints have physical teeth. The open questions fall into three tiers:</p>
+<p><strong>Tier 1: Computable with Current Tools</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Required Work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Q1</td>
+<td style="text-align: left;">Does there exist a Calabi-Yau manifold with intersection numbers producing $R \approx 8.44$?</td>
+<td style="text-align: left;">Search CY databases (Kreuzer-Skarke list). Compute $\kappa_{ijk}$ and volume forms for candidate manifolds.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q2</td>
+<td style="text-align: left;">Do $G_2$ holonomy manifolds produce geometric invariants closer to $R = 8.44$ and/or $S = 3,240$?</td>
+<td style="text-align: left;">Compute Betti numbers $b_2, b_3$ for known $G_2$ manifolds (Joyce constructions).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q3</td>
+<td style="text-align: left;">What is the precise relationship between Bruhat-Tits tree invariants ($\nu_p$, $z = p+1$) and Calabi-Yau Hodge numbers ($h^{1,1}$, $h^{2,1}$, $\chi$)?</td>
+<td style="text-align: left;">Compute $\nu_p$ for $p = 2, 3, 5, 7, 11, \ldots$ using proper hierarchical RG. Search for product formulas: $\prod_p \nu_p \times \nu_\infty = \text{constant}$?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tier 2: Requires New Theory</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Question</th>
+<th style="text-align: left;">Required Work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Q4</td>
+<td style="text-align: left;">Does the “compactification” require BOTH Archimedean geometry (Calabi-Yau) AND $p$-adic geometry (Bruhat-Tits trees)?</td>
+<td style="text-align: left;">Construct “adelic manifold” combining real and $p$-adic components. Investigate whether the adelic product formula constrains the combined geometry.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q5</td>
+<td style="text-align: left;">Can the adelic structure select specific gauge groups or fermion generations?</td>
+<td style="text-align: left;">Extend D4 L-function analysis to $SU(N)$ automorphic representations. Check whether specific representations have special adelic properties.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q6</td>
+<td style="text-align: left;">Is there an “adelic Swampland”—do the constraints $R = 8.44$ and $S = 3,240$ restrict the string landscape?</td>
+<td style="text-align: left;">Test against known Swampland conjectures (Weak Gravity, Distance, de Sitter).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tier 3: Long-Term / Speculative</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Q7</td>
+<td style="text-align: left;">Can the adelic framework produce a falsifiable prediction—a number for $\alpha(M_Z)$ or a gauge coupling relation that differs from the Standard Model?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q8</td>
+<td style="text-align: left;">Does the product formula $|q|_\infty \prod_p|q|_p = 1$ relate to the Born rule $\psi^2$ in quantum mechanics?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q9</td>
+<td style="text-align: left;">Can the adelic structure constrain the cosmological constant $\Lambda$?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q10</td>
+<td style="text-align: left;">If physical amplitudes are automorphic L-functions (D4 → Langlands), what is the specific global field and automorphic representation corresponding to the Standard Model?</td>
+</tr>
+</tbody>
+</table>
+<h3>Chapter 21: Recommendations for Phase 2</h3>
+<p><strong>Priority 1: Frame-Independence.</strong> Reframe the compactification as a pure RG mapping without committing to string theory. The constraints $R = 8.44$ and $S = 3,240$ are derived from $\alpha(m_e)$ (experimental input) and $\beta_\infty(a)$ (mathematical identity). They do not require belief in extra dimensions—they require only that the Veneziano amplitude and QED are two descriptions of the same physics, related by a scale-dependent mapping.</p>
+<p><strong>Priority 2: Bruhat-Tits Adelic Geometry.</strong> Compute the critical exponents $\nu_p$ for hierarchical RG on Bruhat-Tits trees, and search for adelic product identities relating them to Calabi-Yau invariants. This could unify the Archimedean and $p$-adic components of the compactification into a single mathematical framework.</p>
+<p><strong>Priority 3: Falsifiability Pathway.</strong> The project needs at least ONE prediction that differs from the Standard Model and can be tested. The most promising candidates are:
+- A correction to $\alpha(M_Z)$ from the $p$-adic component of the beta function (testable at future $e^+e^-$ colliders like FCC-ee or CEPC)
+- A relationship between gauge couplings at the GUT scale that differs from MSSM predictions
+- A prediction for the number of fermion generations (related to $\chi/2$ for a specific CY)</p>
+<p><strong>Priority 4: Computational Tools.</strong> The CY database search requires tools beyond pure Python. Consider interfacing with SageMath (for toric geometry), Mathematica (for intersection theory), or HEP-specific databases.</p>
+<hr />
+<h2>Epilogue: The Art of Knowing What You Don’t Know</h2>
+<p>This project began with a question about the fine-structure constant and ended with a framework for relating two different descriptions of quantum field theory. Along the way, we proved mathematical identities, falsified numerological hypotheses, corrected our own errors, and drew the boundary between mathematical truth and physical speculation.</p>
+<p>The central finding—the adelic beta constraint $\beta_\infty + \sum\beta_p = 0$—is a genuine mathematical discovery. It is the logarithmic derivative of the Freund-Witten product formula, equivalent to the functional equation of the Riemann zeta function. It constrains the structure of physical amplitudes expressed over the rational numbers.</p>
+<p>But the physical implications of this constraint remain uncertain. The compactification bridge—the mapping between the Veneziano amplitude’s parameter space and the physical gauge coupling—is parameterized but not determined. The constraints $R = 8.44$ and $S = 3,240$ are necessary conditions for any compactification, but they are not sufficient to uniquely determine one.</p>
+<p>This is the state of the art. It is more than we knew when we started, but less than we would need to claim a discovery. The project has mapped the territory; Phase 2 must explore it.</p>
+<p><strong>What we know:</strong>
+- The adelic product formula is mathematically true.
+- The adelic beta constraint follows from it.
+- The Veneziano amplitude’s beta function is fundamentally different from QED’s.
+- The compactification ratio $R = 8.44$ and stretch factor $S = 3,240$ are quantitative constraints.
+- The adelic structure is consistent with all experimental data.
+- Zeta zero mass ratio matches are statistical coincidences.</p>
+<p><strong>What we don’t know:</strong>
+- Whether the Veneziano amplitude is the correct UV completion of the Standard Model.
+- Which specific compactification manifold (if any) satisfies $R = 8.44$ and $S = 3,240$.
+- Whether the Bruhat-Tits trees provide the $p$-adic half of the compactification.
+- Whether the adelic structure makes any falsifiable prediction.
+- Whether the entire framework is physically meaningful or just mathematically elegant.</p>
+<p>This is an honest accounting. It is the foundation on which Phase 2 must build.</p>
+<hr />
+<h2>Appendices</h2>
+<h3>Appendix A: Key Equations</h3>
+<p><strong>Adelic Product Formula:</strong>
+$$|q|_\infty \prod_p |q|_p = 1$$</p>
+<p><strong>Freund-Witten Veneziano:</strong>
+$$A_\infty(a,b) \cdot \prod_p A_p(a,b) = 1$$</p>
+<p><strong>Gel’fand-Graev $p$-adic Gamma:</strong>
+$$\Gamma_p(x) = \frac{1 - p^{x-1}}{1 - p^{-x}}$$</p>
+<p><strong>Archimedean Beta:</strong>
+$$\beta_\infty(a) = \psi(a) - \ln(2\pi) - \frac{\pi}{2}\tan\left(\frac{\pi a}{2}\right)$$</p>
+<p><strong>$p$-adic Beta:</strong>
+$$\beta_p(a) = -\ln p \cdot \left[\frac{1}{p^{1-a} - 1} + \frac{1}{p^a - 1}\right]$$</p>
+<p><strong>Adelic Beta Constraint:</strong>
+$$\beta_\infty(a) + \sum_p \beta_p(a) = 0$$</p>
+<p><strong>QED One-Loop Beta:</strong>
+$$\beta_{\text{QED}}(\alpha) = \frac{2}{\pi}\alpha^2$$</p>
+<p><strong>Compactification Ratio:</strong>
+$$R(0.5) = \frac{\pi}{2}\left[\gamma + 2\ln 2 + \ln(2\pi) + \frac{\pi}{2}\right] = 8.438606$$</p>
+<p><strong>RG Time Stretch:</strong>
+$$S = \frac{\ell_{\text{QED}}}{\ell_V} \approx 3,240$$</p>
+<p><strong>Master Equation:</strong>
+$$\frac{2}{\pi} \cdot g(a)^2 = \frac{g'(a) \cdot \beta_\infty(a)}{S(a)}$$</p>
+<h3>Appendix B: Master Table of Numerical Results</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: center;">Value</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Adelic product formula error</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">$&lt; 10^{-12}$</td>
+<td style="text-align: left;">M1/M4</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Adelic beta constraint error</td>
+<td style="text-align: center;">$\max|\beta_\infty + \sum\beta_p|$</td>
+<td style="text-align: center;">$&lt; 10^{-13}$</td>
+<td style="text-align: left;">D1</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Veneziano beta at symmetric point</td>
+<td style="text-align: center;">$\beta_\infty(0.5)$</td>
+<td style="text-align: center;">$-5.372183$</td>
+<td style="text-align: left;">D1/D3</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">QED one-loop coefficient</td>
+<td style="text-align: center;">$\beta_0 = 2/\pi$</td>
+<td style="text-align: center;">$0.636620$</td>
+<td style="text-align: left;">Standard</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Compactification ratio (symmetric)</td>
+<td style="text-align: center;">$R(0.5)$</td>
+<td style="text-align: center;">$8.438606$</td>
+<td style="text-align: left;">D3/M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Compactification ratio (electron)</td>
+<td style="text-align: center;">$R(\alpha(m_e))$</td>
+<td style="text-align: center;">$219.06$</td>
+<td style="text-align: left;">D3</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Veneziano RG time ($0.5 \to \alpha(m_e)$)</td>
+<td style="text-align: center;">$\ell_V$</td>
+<td style="text-align: center;">$0.065531$</td>
+<td style="text-align: left;">D6</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">QED RG time ($\alpha=0.5 \to \alpha(m_e)$)</td>
+<td style="text-align: center;">$\ell_{\text{QED}}$</td>
+<td style="text-align: center;">$212.11$</td>
+<td style="text-align: left;">D6</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Global stretch factor</td>
+<td style="text-align: center;">$S_{\text{total}}$</td>
+<td style="text-align: center;">$3,237$</td>
+<td style="text-align: left;">D6/M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Local stretch at $m_e$</td>
+<td style="text-align: center;">$S(m_e)$</td>
+<td style="text-align: center;">$4.11 \times 10^6$</td>
+<td style="text-align: left;">M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">Local stretch at $a=0.5$</td>
+<td style="text-align: center;">$S(0.5)$</td>
+<td style="text-align: center;">$33.75$</td>
+<td style="text-align: left;">M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">Compactification volume</td>
+<td style="text-align: center;">$\text{Vol}/\ell_s^6$</td>
+<td style="text-align: center;">$700$–$800$</td>
+<td style="text-align: left;">M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">Compactification radius</td>
+<td style="text-align: center;">$R_c/\ell_s$</td>
+<td style="text-align: center;">$\approx 3$</td>
+<td style="text-align: left;">M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">Landau pole (where $\alpha \to 1$)</td>
+<td style="text-align: center;">$\mu_L$</td>
+<td style="text-align: center;">$\sim 3 \times 10^{89}$ GeV</td>
+<td style="text-align: left;">D5/M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Symmetric point energy scale</td>
+<td style="text-align: center;">$\mu_{0.5}$</td>
+<td style="text-align: center;">$\sim 1 \times 10^{89}$ GeV</td>
+<td style="text-align: left;">D5</td>
+</tr>
+<tr>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">$\alpha$ at $M_s = 1$ TeV</td>
+<td style="text-align: center;">$\alpha_s$</td>
+<td style="text-align: center;">$1/132.2$</td>
+<td style="text-align: left;">M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">$\alpha$ at $M_s = M_{\text{Pl}}$</td>
+<td style="text-align: center;">$\alpha_s$</td>
+<td style="text-align: center;">$1/109.7$</td>
+<td style="text-align: left;">M13</td>
+</tr>
+<tr>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">Zeta zero mass ratio matches</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">$0/3$ survive Bonferroni</td>
+<td style="text-align: left;">D2 <strong>(falsified)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">Crossover point (D3 sign change)</td>
+<td style="text-align: center;">$a_c$</td>
+<td style="text-align: center;">Does not exist</td>
+<td style="text-align: left;">D6 <strong>(corrected)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Freund-Witten product verification</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">$8/8$ kinematic points</td>
+<td style="text-align: left;">M4</td>
+</tr>
+</tbody>
+</table>
+<h3>Appendix C: Evidence Classification</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">``</td>
+<td style="text-align: left;">Verified by Python execution in this project—highest confidence</td>
+</tr>
+<tr>
+<td style="text-align: left;">``</td>
+<td style="text-align: left;">Based on reasoning, training data, or synthesis—moderate confidence</td>
+</tr>
+<tr>
+<td style="text-align: left;">``</td>
+<td style="text-align: left;">From a source file in the project directory—verifiable against file</td>
+</tr>
+<tr>
+<td style="text-align: left;">``</td>
+<td style="text-align: left;">From LLM training data, not verified against a source file—unverified</td>
+</tr>
+</tbody>
+</table>
+<h3>Appendix D: Deliverables Index</h3>
+<p><strong>Planning Documents:</strong> <code>[source file]</code> through <code>1.1.1.md</code> (11 documents)</p>
+<p><strong>Module Reports (M1–M11):</strong> <code>module_01_report.md</code> through <code>module_11_report.md</code> and <code>synthesis_final.md</code></p>
+<p><strong>Research Direction Reports:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Title</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2.9</td>
+<td style="text-align: left;">D1</td>
+<td style="text-align: left;">Adelic Beta Constraint</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.10</td>
+<td style="text-align: left;">D2</td>
+<td style="text-align: left;">Zeta Zero Mass Ratios</td>
+<td style="text-align: center;"><strong>Falsified</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">3.0</td>
+<td style="text-align: left;">D3</td>
+<td style="text-align: left;">Physical Scale Comparison</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.1</td>
+<td style="text-align: left;">D4/R8</td>
+<td style="text-align: left;">L-Functions &amp; Hierarchical RG</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.2</td>
+<td style="text-align: left;">D4</td>
+<td style="text-align: left;">Completed Adelic L-Functions</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.3</td>
+<td style="text-align: left;">D5</td>
+<td style="text-align: left;">Unification / Symmetric Point</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.4</td>
+<td style="text-align: left;">D6</td>
+<td style="text-align: left;">Adelic RG Trajectory</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.5</td>
+<td style="text-align: left;">R9</td>
+<td style="text-align: left;">Full Adelic Beta Synthesis</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.6</td>
+<td style="text-align: left;">R10</td>
+<td style="text-align: left;">SM Gauge Couplings</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.7</td>
+<td style="text-align: left;">M13</td>
+<td style="text-align: left;">Compactification Geometry</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.0</td>
+<td style="text-align: left;">Final</td>
+<td style="text-align: left;">Phase 1 Capstone Report (Structured)</td>
+<td style="text-align: center;">Complete</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4.1</strong></td>
+<td style="text-align: left;"><strong>Final</strong></td>
+<td style="text-align: left;"><strong>Phase 1 Full Narrative Report</strong></td>
+<td style="text-align: center;"><strong>This document</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Appendix E: Phase 2 Quick-Start Guide</h3>
+<pre class="codehilite"><code class="language-bash"># Clone and enter the project
+cd &quot;G:\My Drive\projects\Adelic Constraints on Quantum Field Theory&quot;
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Verify everything works (88/88 tests should pass)
+python src/test_foundations.py        # 30 core tests
+python src/test_extended.py           # 58 extended tests
+
+# Reproduce key results
+python 2.9.py    # D1: Adelic beta constraint (beta_inf + Sigma beta_p = 0)
+python 3.0.py    # D3: Physical scale comparison (R = 8.44)
+python 3.4.py    # D6: Adelic RG trajectory (S = 3,240)
+python 3.5.py    # R9: Full adelic beta synthesis
+python 3.7.py    # M13: Compactification geometry
+
+# Read the reports (in recommended order)
+#   4.1.md — THIS DOCUMENT (full narrative, start here)
+#   4.0.md — Structured capstone report (reference)
+#   2.8.md — Detailed technical report on M1-M11
+#   3.7.md — M13 compactification details
+</code></pre></body></html>

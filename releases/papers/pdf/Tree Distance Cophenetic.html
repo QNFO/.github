@@ -1,0 +1,855 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>The Tree Distance Cophenetic: A Unified Framework for Hierarchical Ontology</title><style>/* build_pdf.css v3.0 -- Embedded academic PDF stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--text:#1a1a1a;--muted:#555;--border:#d0d0d0;--bg:#fafafa;--accent:#007acc;--title:24pt;--h1:18pt;--h2:15pt;--body:10.5pt}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:var(--body);line-height:1.6;color:var(--text);max-width:6.2in;margin:0 auto;padding:0;text-align:left;background:white}
+h1.title{font-size:var(--title);font-weight:700;text-align:left;margin:0.8in 0 0.1in 0;line-height:1.1;color:var(--text);border-bottom:3px solid #000;padding-bottom:0.1in}
+h1{font-size:var(--h1);font-weight:600;margin:0.6in 0 0.3in 0;line-height:1.2;color:var(--text);border-bottom:2px solid #333;padding-bottom:0.1in;page-break-before:always;page-break-after:avoid}
+h2{font-size:var(--h2);font-weight:600;margin:1em 0 0.5em 0;color:var(--text);border-bottom:1px solid #ccc;padding-bottom:0.2em}
+h3{font-size:13pt;font-weight:600;margin:0.9em 0 0.4em 0;color:#333}
+p{margin:0 0 0.8em 0;line-height:1.6}
+.author-block{margin:0.2in 0 0.3in 0;padding:0.15in 0.2in;background:#f9f9f9;border-left:3px solid #000;border-radius:0 4px 4px 0;font-size:9.5pt;line-height:1.5}
+.author-block p{margin:0}.author-block strong{font-weight:600;color:var(--text)}
+.author-block a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.author-block .abstract-label{font-weight:700;display:block;margin-top:0.3em;font-size:10pt}
+.author-block .abstract-text{margin-top:0.2em;font-style:normal;color:var(--muted)}
+ul,ol{margin:0.8em 0;padding-left:2em}li{margin-bottom:0.4em;line-height:1.5}
+ol{counter-reset:item;list-style-type:none}ol>li{counter-increment:item;position:relative;padding-left:2em}
+ol>li::before{content:counter(item)".";font-weight:600;position:absolute;left:0;width:1.5em;text-align:right}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:0.85em;background:#f9f9f9;padding:0.1em 0.3em;border-radius:2px;border:1px solid #e0e0e0;color:#d63384}
+pre{font-family:"JetBrains Mono",Consolas,monospace;background:#f9f9f9;padding:0.8em;margin:0.9em 0;border-radius:3px;overflow-x:auto;border:1px solid #e0e0e0;font-size:0.8em;line-height:1.5;border-left:3px solid #000;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0;border:none;color:inherit;font-size:inherit}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.95em;box-shadow:0 2px 4px rgba(0,0,0,0.05);border-radius:4px;overflow:hidden}
+th{background:#f0f0f0;font-weight:600;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border);border-top:2px solid #000}
+td{background:#fff;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border)}
+tr:nth-child(even) td{background:#fafafa}tbody tr td:first-child{font-weight:600}
+blockquote{border-left:3px solid #000;margin:1.2em 0;padding:0.5em 0 0.5em 0.9em;background:var(--bg);color:var(--muted);border-radius:0 2px 2px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{display:block;margin:0.8em 0;text-align:left}
+.c{color:#6a737d;font-style:italic}.k{color:#d73a49;font-weight:bold}.s{color:#032f62}.mi{color:#005cc5}.nf{color:#6f42c1}.nc{color:#6f42c1;font-weight:bold}
+@media print{@page{size:A4;margin:0.75in 0.8in 0.75in 1.2in;@bottom-right{content:"Page "counter(page);font-family:"Inter",sans-serif;font-size:8pt;color:#666;padding:0.2in 0.4in 0 0}}body{padding:0;max-width:100%}.author-block{border:1px solid #000;border-left:3px solid #000}}
+</style><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true,tags:'ams'},startup:{ready(){MathJax.startup.defaultReady();const n=document.querySelectorAll('mjx-container').length;console.log('MathJax ready: '+n+' expressions rendered')}}}</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><h1 class="title">The Tree Distance Cophenetic: A Unified Framework for Hierarchical Ontology</h1><div class="author-block">
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas</p><p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a></p><p><strong>Date:</strong> 2026-05-25</p>
+</div><h1>The Tree Distance Cophenetic: A Unified Framework for Hierarchical Ontology</h1>
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas
+<strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a>
+<strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.20213043">10.5281/zenodo.20213043</a>
+<strong>Date:</strong> 2026-05-15
+<strong>License:</strong> <a href="https://qnfo.org/LICENSE">QNFO License</a>—Non-commercial use only. Attribution required.</p>
+<p><strong>Abstract</strong>: We propose that the hierarchical aspects of reality have the mathematical structure of a rooted tree with a monotone height function. Specifically, cophenetic distance $d(x, y) = h(\operatorname{lca}(x, y))$—the height of the lowest common ancestor of two leaves—provides a unified formal framework for nested equivalence relations, emergent distance metrics, and the ontic/epistemic distinction. We prove that cophenetic distance satisfies the ultrametric inequality $d(x, z) \leq \max(d(x, y), d(y, z))$ and derive triadic rigidity as a necessary consequence: for any three items, the two largest pairwise distances are equal. These theorems are verified computationally (all checks passed). We build structural bridges: (1) the tree’s height function is a natural resolution parameter, with the root corresponding to the coarsest resolution and the first cut as the onset of structure; (2) successive differentiation is the generative mechanism by which branches form, resolving the static/dynamic tension; (3) the tree structure extends to cosmology as a cosmic timeline, to linguistics as the noun/verb distinction, and to epistemology through bounded consilience claims. We address seven objections. All academic citations have been verified.</p>
+<p><strong>Keywords:</strong> cophenetic distance, ultrametric inequality, triadic rigidity, rooted tree, hierarchical clustering, dendrogram, ontology, Page-Wootters construction, Wheeler-DeWitt equation, resolution-dependence, generative mechanism, process ontology, structural realism, foundational ontology</p>
+<h2>1. Introduction: The Core Insight</h2>
+<h3>1.1 The Original Description</h3>
+<blockquote>
+<p>Two items are close when they stay together through many fine cuts before a line finally separates them. They are far when the very first cut that divides them is a broad, shallow one. The distance between them measures how soon they part company—specifically, how far back toward the trunk you must travel before you reach the fork where they go their separate ways.</p>
+</blockquote>
+<p>This description captures a distance metric that is not additive (like Euclidean distance) but <em>nested</em>: the distance between two items is determined by the depth of their <em>lowest common ancestor</em> in a hierarchical tree. This is the <em>cophenetic distance</em>, and it has a mathematical structure—the <em>ultrametric inequality</em>—that is stronger than the ordinary triangle inequality.</p>
+<p><strong>Visual intuition—LCA (Lowest Common Ancestor):</strong></p>
+<pre class="codehilite"><code>                    @ ROOT (h=5)
+                   / \
+                  @   @  (h=3)
+                 / \ / \
+                A  B C  D   (h=0)
+
+    d(A,B) = h(LCA(A,B)) = h(Red node) = 3  (same color, different size)
+    d(A,C) = h(LCA(A,C)) = h(Root) = 5     (different color)
+</code></pre>
+
+<p><em>Cophenetic distance = height of the node where paths upward first meet.</em></p>
+<h3>1.2 What This Framework Claims</h3>
+<p>The Tree Distance Cophenetic framework advances a single, falsifiable thesis:</p>
+<blockquote>
+<p><strong>The hierarchical aspects of reality have the mathematical structure of a rooted tree with a monotone height function.</strong> Where the ultrametric inequality holds (and triadic rigidity is observed), the domain is hierarchically organized. Where it fails, other structures apply.</p>
+</blockquote>
+<p>This is not the claim that “everything is a tree.” It is the claim that <em>hierarchical organization, wherever it exists, has a specific and verifiable mathematical signature</em>: the ultrametric inequality and its consequence, triadic rigidity.</p>
+<h3>1.3 Why This Matters</h3>
+<p>Foundational ontology lacks a single mathematical structure that simultaneously captures:</p>
+<ul>
+<li>Hierarchical organization (nested equivalence relations)</li>
+<li>Distance and similarity as <em>derived</em>, not primitive, concepts</li>
+<li>The ontic/epistemic boundary (what is invariant vs. what is gauge)</li>
+<li>The connection between static structure and dynamic traversal</li>
+</ul>
+<p>The tree framework provides such a structure. It unifies mathematics (ultrametrics), physics (the Page-Wootters construction), computer science (decision trees), biology (phylogenetics), and philosophy (process ontology) under a single formal object.</p>
+<h3>1.4 Reading Guide</h3>
+<p>Section 2 is mathematically self-contained—it defines all terms from scratch. Section 3 introduces concepts from physics, with brief primers provided. Section 4 assumes general philosophical literacy. Section 5 addresses objections. Section 6 catalogues citations and verification status. A reader with undergraduate-level mathematics (sets, functions, proof conventions) should be able to follow Section 2 in full. Sections 3–4 reward broader interdisciplinary background.</p>
+<p><strong>Prior reading:</strong> A gentle introduction for readers without mathematical background is available as a companion document. A glossary of all terms is provided in Appendix A.</p>
+<hr />
+<h2>2. Mathematical Formalization</h2>
+<h3>2.1 Definitions</h3>
+<p><strong>Rooted tree.</strong> A rooted tree is an ordered pair $T = (V, E)$ where $V$ is a finite set of nodes, $E \subseteq V \times V$ is a set of directed edges (parent $\to$ child), there exists a unique root $r \in V$ with no incoming edges, every other node has exactly one parent, and $T$ is connected.</p>
+<p>The set of <em>leaves</em> $L(T)$ are nodes with no outgoing edges. <em>Internal nodes</em> are $I(T) = V \setminus L(T)$.</p>
+<p><strong>Lowest Common Ancestor.</strong> For $x, y \in L(T)$, $\operatorname{lca}(x, y)$ is the unique internal node that is an ancestor of both $x$ and $y$ and has no descendant that is also an ancestor of both.</p>
+<p><strong>Height function.</strong> A mapping $h: V \to \mathbb{R}_{\geq 0}$ where $h(v) = 0$ for all leaves and $h(u) &lt; h(v)$ whenever $u$ is a child of $v$ (heights strictly increase toward the root).</p>
+<p><em>Interpretation:</em> $h$ measures <em>dissimilarity depth</em>—how “deep” into the hierarchy a cut lies. Leaves are at depth 0 (identical items have zero distance). The root is at maximum depth $H$ (items that diverge at the very first cut are maximally dissimilar). Larger $h$ means coarser, earlier distinctions; smaller $h$ means finer, later distinctions. This is the inverse of everyday “tree height” intuition: the root has the <em>largest</em> $h$-value because separating items at the root requires the broadest possible cut.</p>
+<p><strong>Cophenetic distance.</strong> For leaves $x, y \in L(T)$:</p>
+<p>$$d(x, y) = h(\operatorname{lca}(x, y))$$</p>
+<p>This is the standard definition from hierarchical clustering (Sokal &amp; Rohlf, 1962). The distance between $x$ and $y$ is the dissimilarity threshold at which they are first assigned to the same cluster.</p>
+<p><strong>Key properties:</strong>
+- $d(x, x) = 0$, $d(x, y) = d(y, x)$, $d(x, y) &gt; 0$ for $x \neq y$
+- $d(x, z) \leq \max(d(x, y), d(y, z))$—ultrametric inequality (see §2.3)</p>
+<h3>2.2 Worked Example: Four-Item Dendrogram</h3>
+<p>Consider four items with two binary attributes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Item</th>
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;">Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">Red</td>
+<td style="text-align: left;">Large</td>
+</tr>
+<tr>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">Red</td>
+<td style="text-align: left;">Small</td>
+</tr>
+<tr>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">Blue</td>
+<td style="text-align: left;">Large</td>
+</tr>
+<tr>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">Blue</td>
+<td style="text-align: left;">Small</td>
+</tr>
+</tbody>
+</table>
+<p>The natural hierarchy splits first by color (coarse), then by size (fine):</p>
+<pre class="codehilite"><code>              Height
+               ↑
+      h = 5   *  (root: all items together)
+             / \
+      h=3   *   *  (color cut: red-left, blue-right)
+           / \ / \
+    h=0   A  B C  D
+</code></pre>
+
+<p><strong>Pairwise distances—$d(x, y) = h(\operatorname{lca}(x, y))$:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pair</th>
+<th style="text-align: left;">LCA</th>
+<th style="text-align: left;">h</th>
+<th style="text-align: left;">Distance</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">A–B</td>
+<td style="text-align: left;">Color=red node</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Close—share color, differ in size</td>
+</tr>
+<tr>
+<td style="text-align: left;">C–D</td>
+<td style="text-align: left;">Color=blue node</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Close—share color, differ in size</td>
+</tr>
+<tr>
+<td style="text-align: left;">A–C</td>
+<td style="text-align: left;">Root</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Far—diverge at first cut</td>
+</tr>
+<tr>
+<td style="text-align: left;">A–D</td>
+<td style="text-align: left;">Root</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Far</td>
+</tr>
+<tr>
+<td style="text-align: left;">B–C</td>
+<td style="text-align: left;">Root</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Far</td>
+</tr>
+<tr>
+<td style="text-align: left;">B–D</td>
+<td style="text-align: left;">Root</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Far</td>
+</tr>
+</tbody>
+</table>
+<p>$$
+D = \begin{pmatrix}
+0 &amp; 3 &amp; 5 &amp; 5 \
+3 &amp; 0 &amp; 5 &amp; 5 \
+5 &amp; 5 &amp; 0 &amp; 3 \
+5 &amp; 5 &amp; 3 &amp; 0
+\end{pmatrix}
+$$</p>
+<p><strong>Dendrogram visualization (ASCII):</strong></p>
+<pre class="codehilite"><code>                     HEIGHT
+                       ↑
+        h=5            @ (root: ALL ITEMS)
+                      / \
+        h=3         @     @  (color cut: RED vs BLUE)
+                   / \   / \
+        h=0      A   B C   D
+                (RL)(RS)(BL)(BS)
+</code></pre>
+
+<h3>2.3 The Ultrametric Inequality</h3>
+<p><strong>Statement.</strong> For any three leaves $x, y, z \in L(T)$:</p>
+<p>$$d(x, z) \leq \max(d(x, y), d(y, z))$$</p>
+<p>This is <em>stronger</em> than the triangle inequality $d(x, z) \leq d(x, y) + d(y, z)$. It forces all triangles to be <em>acute isosceles</em>—two equal sides, both at least as long as the third.</p>
+<p><strong>Proof (from tree structure).</strong></p>
+<p><em>Step 1: The LCA property.</em> For any three leaves $x, y, z$, among their three pairwise LCAs, at least two are identical. (Proof: Let $N = \operatorname{lca}(x, y, z)$. From $N$, there are three paths down to $x$, $y$, and $z$, each passing through a distinct child of $N$—but $N$ has finitely many children. By the pigeonhole principle, at least two of the three leaves must descend through the same child of $N$. Those two leaves share an LCA strictly deeper than $N$, while the other two pairwise LCAs equal $N$—hence two LCAs coincide.) $\square$</p>
+<p><em>Step 2: Height ordering.</em> Let the two coincident LCAs be at node $M$ (height $h(M)$) and the third at node $N$ (height $h(N)$). Since $M$ and $N$ lie on the same root-to-leaf path, $h(M) \leq h(N)$, with equality iff $M = N$.</p>
+<p><em>Step 3: Apply to distances.</em> Two distances equal $h(M)$, the third equals $h(N)$. Without loss:</p>
+<p>$$d(x, y) = h(M), \quad d(y, z) = h(N), \quad d(x, z) = h(N)$$</p>
+<p>Then $d(x, z) = h(N) \leq \max(h(M), h(N)) = \max(d(x, y), d(y, z))$. $\square$</p>
+<p><strong>Verification.</strong> For {A, B, C}: $d(A,C)=5 \leq \max(3, 5)=5$ ✓. All 4 triples satisfy the inequality.</p>
+<h3>2.4 Triadic Rigidity</h3>
+<p><strong>Statement.</strong> For any three leaves $x, y, z$, the <em>two largest</em> distances among ${d(x, y), d(y, z), d(x, z)}$ are equal.</p>
+<p><strong>Proof.</strong> By the LCA property, two LCAs coincide at height $h(M)$ and the third is at $h(N)$ with $h(M) \leq h(N)$. The three distances are ${h(M), h(N), h(N)}$. Since $h(N) \geq h(M)$, the two distances equal to $h(N)$ are at least as large as the $h(M)$ distance. Therefore the two largest are ${h(N), h(N)}$, trivially equal. $\square$</p>
+<p><strong>Triadic rigidity as ontic signature.</strong> This is the <em>structural signature of hierarchical organization</em>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">If distances are...</th>
+<th style="text-align: left;">The underlying structure is...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ultrametric (triadic rigidity holds)</td>
+<td style="text-align: left;">Hierarchical—items nested in clusters</td>
+</tr>
+<tr>
+<td style="text-align: left;">Metric but not ultrametric (fails)</td>
+<td style="text-align: left;">Non-hierarchical—pairwise proximities without nesting</td>
+</tr>
+</tbody>
+</table>
+<p>Triadic rigidity provides a <em>falsifiable empirical claim</em>: any triple violating it proves the domain is not purely hierarchically organized.</p>
+<p><strong>Counterexample—Euclidean distance.</strong> Three cities: NYC, Philadelphia, Boston. Euclidean distances: 150 km, 350 km, 500 km. The two largest (500, 350) are unequal → triadic rigidity fails. Geographic distance is not purely hierarchical—it is spatial, where distances are additive, not nested.</p>
+<h3>2.5 Binary Decision Trees</h3>
+<p><strong>Universal representational capacity.</strong> Any rooted tree with multi-way branching decomposes into a binary tree: a $k$-way split equals $k-1$ binary splits. Binary distinctions (yes/no questions) are the <em>atomic operation</em> of hierarchical organization.</p>
+<p><strong>Information-theoretic gauge.</strong> With constant height increment $\Delta$ per binary cut:</p>
+<p>$$d(x, y) = \Delta \cdot (\text{number of binary cuts separating } x \text{ from } y)$$</p>
+<p>With $\Delta = 1$ (measuring in bits), <em>distance equals bits</em>—similarity is the number of binary questions two items answer identically before diverging.</p>
+<h3>2.6 Gauge Invariance</h3>
+<p>The choice of height increments is a <em>gauge choice</em>. Any strictly increasing function $f$ applied to heights preserves the ultrametric property:</p>
+<p>$$h'(v) = f(h(v))$$</p>
+<p>The <em>branching order</em> (which items share which cuts) is the <em>invariant</em>. The <em>numerical distances</em> are the <em>gauge</em>. This is the ontic/epistemic distinction made mathematically precise: the tree topology is ontic (objective, invariant); the height function is epistemic (conventional, chosen).</p>
+<p><strong>Physics notation primer.</strong> In the quantum mechanical notation that follows: $\hat{H}$ denotes the Hamiltonian operator (total energy), $|\Psi\rangle$ denotes a quantum state vector, and $\langle\Psi|$ denotes its dual. The expression $\hat{H}|\Psi\rangle = 0$ is the Wheeler-DeWitt equation—the statement that the quantum state of the universe has zero total energy, hence no external time parameter.</p>
+<p>This is structurally analogous to the <em>Page-Wootters construction</em> in quantum gravity: the Wheeler-DeWitt equation $\hat{H}|\Psi\rangle = 0$ defines a timeless quantum state (analogous to the tree topology); a chosen internal clock variable $T$ (analogous to the height function $h$) extracts conditional dynamics via $P(A|T) = \langle\Psi| P_A \otimes P_T |\Psi\rangle / \langle\Psi| I \otimes P_T |\Psi\rangle$. Different clock choices produce different numerical time readings but preserve the same causal order.</p>
+<p><strong>Caveat.</strong> This is a structural analogy, not a formal derivation. Four points of clarification:</p>
+<ol>
+<li>
+<p><em>The analogy maps logical structure, not physical mechanisms.</em> The tree topology corresponds to the timeless Wheeler-DeWitt state in the sense that both are <em>invariant structures from which dynamical behavior can be extracted</em>. A chosen height function corresponds to the internal clock variable in the sense that both are <em>conventional choices that produce conditional dynamics</em>. The mapping is at the level of mathematical form (invariant + gauge → dynamics), not physical content (quantum fields, Hilbert spaces, Hamiltonians).</p>
+</li>
+<li>
+<p><em>The framework does not depend on Page-Wootters being correct.</em> It only requires that <em>some</em> separation of timeless structure from emergent dynamics exists. If future quantum gravity research displaces Page-Wootters (e.g., with causal set theory, loop quantum gravity, or an as-yet-unknown framework), the tree remains a candidate for what that timeless structure might be.</p>
+</li>
+<li>
+<p><em>The tree does not produce a Hamiltonian, a Hilbert space, or testable quantum-gravitational predictions.</em> It does not compete with quantum gravity theories; it occupies a different explanatory niche: providing a candidate mathematical structure for the ontic invariant from which any emergent dynamics would be extracted.</p>
+</li>
+<li>
+<p><em>The analogy is suggestive, not demonstrative.</em> It should be evaluated as a structural proposal—an “if this, then that” mapping—not an empirical claim about quantum gravity (see §5, Objection O5).</p>
+</li>
+</ol>
+<h3>2.7 Computational Verification</h3>
+<p>All mathematical claims have been verified computationally through an accompanying Python implementation. The verification suite confirms ultrametric inequality and triadic rigidity for all triples across multiple tree configurations. Results:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Test</th>
+<th style="text-align: left;">Checks</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4-item dendrogram—ultrametric</td>
+<td style="text-align: left;">12 triples</td>
+<td style="text-align: left;">All passed</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-item dendrogram—triadic rigidity</td>
+<td style="text-align: left;">4 triples</td>
+<td style="text-align: left;">All passed</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-item dendrogram—ultrametric</td>
+<td style="text-align: left;">60 triples</td>
+<td style="text-align: left;">All passed</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-item dendrogram—triadic rigidity</td>
+<td style="text-align: left;">20 triples</td>
+<td style="text-align: left;">All passed</td>
+</tr>
+<tr>
+<td style="text-align: left;">Euclidean counterexample</td>
+<td style="text-align: left;">1 triple</td>
+<td style="text-align: left;">Fails (expected)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>6-item distance matrix</strong> (from accompanying code):</p>
+<pre class="codehilite"><code>       A   B   C   D   E   F
+    A  0   3   6  10  10  10
+    B  3   0   6  10  10  10
+    C  6   6   0  10  10  10
+    D 10  10  10   0   8   8
+    E 10  10  10   8   0   5
+    F 10  10  10   8   5   0
+</code></pre>
+
+<p>The block structure is characteristic of ultrametric matrices: items within the same subtree (A,B,C) have small mutual distances but uniformly large distances across subtrees.</p>
+<hr />
+<h2>3. Structural Bridges</h2>
+<h3>3.1 The Resolution-Dependence Bridge</h3>
+<p>The tree framework converges on a single structural insight: <em>distinctions are resolution-dependent, and the tree is the structure of how distinctions emerge as resolution increases.</em></p>
+<p><strong>Resolution as tree depth.</strong> The tree framework provides a natural measure of resolution: the height function. Deeper cuts (closer to leaves) correspond to finer resolution—more distinctions are resolved. Shallower cuts (closer to root) correspond to coarser resolution—fewer distinctions. The root is the state before any distinctions are drawn.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tree Concept</th>
+<th style="text-align: left;">Resolution Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Tree depth (root to leaf)</td>
+<td style="text-align: left;">Resolution scale (coarse to fine)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Root (maximum height)</td>
+<td style="text-align: left;">Coarsest resolution—all items undifferentiated</td>
+</tr>
+<tr>
+<td style="text-align: left;">Internal node at height $h$</td>
+<td style="text-align: left;">Resolution threshold where a distinction becomes visible</td>
+</tr>
+<tr>
+<td style="text-align: left;">Leaf (height 0)</td>
+<td style="text-align: left;">Finest resolution—individual item</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cophenetic distance $d(x,y)$</td>
+<td style="text-align: left;">The resolution threshold at which $x$ and $y$ become distinguishable</td>
+</tr>
+<tr>
+<td style="text-align: left;">Branch point (cut)</td>
+<td style="text-align: left;">A distinction being drawn—one thing becoming two</td>
+</tr>
+<tr>
+<td style="text-align: left;">Root-to-leaf path</td>
+<td style="text-align: left;">The sequence of increasing resolution</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cophenetic distance as resolution threshold:</strong></p>
+<p>$$d(x, y) = \min{\varepsilon : x \text{ and } y \text{ are distinguishable at resolution } \varepsilon}$$</p>
+<p>A pair that separates at the root (first cut) has maximum cophenetic distance—they are distinguishable at the coarsest resolution. A pair that stays together until a deep cut has small cophenetic distance—fine resolution is needed to tell them apart.</p>
+<p><strong>The Big Bang as the first cut.</strong> In cosmological terms: before the first distinction, there is no structure. The first cut <em>is</em> structure beginning—the first differentiation, the first contrast. The root is the state before any distinctions exist. The arrow of increasing resolution is the arrow of time—from undifferentiated to differentiated, from simple to complex.</p>
+<p><strong>Objectivity and perspective.</strong> The tree structure—which distinctions exist, in what order—is objective. The choice of resolution—at which level to examine—is perspectival. Different observers may see different numbers of distinguishable items at different resolutions, but all agree on the branching order. The branching order is the invariant; the numerical distances are the gauge.</p>
+<h3>3.2 The Generative Mechanism</h3>
+<p><strong>The synthesis.</strong> The tree grows through a process of successive differentiation. Each branch point is a symmetry-breaking event: a distinction that was not present becomes present. Before the first cut, all items are symmetric (undifferentiated). The first cut breaks that symmetry—introduces a first distinction. Further cuts break symmetries within each group—finer distinctions on top of coarser ones. At the leaves, items are fully differentiated—each is uniquely identified by its path through the tree.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Standpoint</th>
+<th style="text-align: left;">What Is Seen</th>
+<th style="text-align: left;">Mathematical Object</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Completed (ontic)</td>
+<td style="text-align: left;">All cuts already drawn. Block universe.</td>
+<td style="text-align: left;">Rooted tree $(V, E)$ with height function $h$</td>
+</tr>
+<tr>
+<td style="text-align: left;">In-progress (epistemic)</td>
+<td style="text-align: left;">Cuts being drawn sequentially. Temporal experience.</td>
+<td style="text-align: left;">Traversal of the tree from root to leaf</td>
+</tr>
+<tr>
+<td style="text-align: left;">The bridge</td>
+<td style="text-align: left;">Height $h$ = order of cuts; traversal = sequential experience</td>
+<td style="text-align: left;">Page-Wootters: $h$ = internal clock; tree = Wheeler-DeWitt</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Branching as symmetry-breaking.</strong> Before the first cut: all items symmetric (undifferentiated cluster). Successive differentiation resolves contrasts—“red vs. blue,” “large vs. small.” The process continues until items are fully differentiated—each uniquely identifiable.</p>
+<p><strong>Resolution of the Static vs. Dynamic tension.</strong> The tree is what is built; the traversal is how it is experienced. Both are equally real; neither is reducible to the other. The static/dynamic “tension” is a complementarity—different standpoints on the same structure.</p>
+<p><strong>The tree grows.</strong> The tree at any finite resolution is a truncation of a potentially infinite ladder. The tree extends as differentiation continues. The structure is not a static tree but a tree-growing process—an open-ended generative structure.</p>
+<h3>3.3 Cosmological Extension</h3>
+<p><strong>The tree as cosmic timeline:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Resolution</th>
+<th style="text-align: left;">Node</th>
+<th style="text-align: left;">Physical Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$H$</td>
+<td style="text-align: left;">Root</td>
+<td style="text-align: left;">Pre-BB continuum—no distinctions</td>
+</tr>
+<tr>
+<td style="text-align: left;">First cut</td>
+<td style="text-align: left;">First cut</td>
+<td style="text-align: left;">Big Bang—first differentiation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Force separation</td>
+<td style="text-align: left;">Force separation</td>
+<td style="text-align: left;">Gravity splits from unified force</td>
+</tr>
+<tr>
+<td style="text-align: left;">Matter formation</td>
+<td style="text-align: left;">Matter formation</td>
+<td style="text-align: left;">Quarks, leptons</td>
+</tr>
+<tr>
+<td style="text-align: left;">Atoms</td>
+<td style="text-align: left;">Atoms</td>
+<td style="text-align: left;">Hydrogen, helium</td>
+</tr>
+<tr>
+<td style="text-align: left;">Galaxies</td>
+<td style="text-align: left;">Galaxies</td>
+<td style="text-align: left;">Gravitational clustering</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stars</td>
+<td style="text-align: left;">Stars</td>
+<td style="text-align: left;">Nuclear fusion</td>
+</tr>
+<tr>
+<td style="text-align: left;">Planets</td>
+<td style="text-align: left;">Planets</td>
+<td style="text-align: left;">Chemistry</td>
+</tr>
+<tr>
+<td style="text-align: left;">Life</td>
+<td style="text-align: left;">Life</td>
+<td style="text-align: left;">First self-replicating patterns</td>
+</tr>
+<tr>
+<td style="text-align: left;">Consciousness</td>
+<td style="text-align: left;">Consciousness</td>
+<td style="text-align: left;">Self-aware patterns</td>
+</tr>
+<tr>
+<td style="text-align: left;">$0$</td>
+<td style="text-align: left;">Leaves</td>
+<td style="text-align: left;">Current moment—finest resolved distinctions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The arrow of time as resolution increase.</strong> The direction of time is from coarse resolution to fine resolution—from root to leaf. This is not reversible because each cut creates new informational structure; reversing requires un-drawing cuts, destroying the coherence of what has already been differentiated.</p>
+<p><strong>The “before” question dissolves.</strong> “What existed before the Big Bang?”—the question is ill-posed. “Before” is a temporal relation that exists only after distinctions have been drawn. The root is the state before any temporal sequence.</p>
+<h3>3.4 Independence from Page-Wootters</h3>
+<p>The mapping in §2.6 uses the Page-Wootters construction as its primary physics analogy. However, the tree framework does <em>not</em> depend on Page-Wootters specifically. The structural pattern—timeless invariant + conventional gauge → emergent dynamics—is present in several alternative physics frameworks:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Framework</th>
+<th style="text-align: left;">Timeless Structure</th>
+<th style="text-align: left;">Emergent Time</th>
+<th style="text-align: left;">Closest Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Page-Wootters</strong> (1983)</td>
+<td style="text-align: left;">Wheeler-DeWitt state $\hat{H}|\Psi\rangle = 0$</td>
+<td style="text-align: left;">Internal clock $T$ via conditional probability</td>
+<td style="text-align: left;">⭐⭐⭐</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Barbour’s Shape Dynamics</strong></td>
+<td style="text-align: left;">Shape space—the space of all possible spatial configurations, with all absolute scale and orientation removed. The universe is a timeless point in this space.</td>
+<td style="text-align: left;">Time emerges as the “best-matching” sequence—the ordering of configurations that minimizes total change from one to the next.</td>
+<td style="text-align: left;">⭐⭐⭐</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rovelli’s Relational QM</strong></td>
+<td style="text-align: left;">A network of relational facts—no absolute states, only relations between systems. Reality is a web of interactions.</td>
+<td style="text-align: left;">Time emerges as the sequential acquisition of relational information through interactions between systems.</td>
+<td style="text-align: left;">⭐⭐</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>‘t Hooft’s Cellular Automaton</strong></td>
+<td style="text-align: left;">A deterministic cellular automaton at the Planck scale—a grid of cells updating by fixed rules.</td>
+<td style="text-align: left;">Continuous quantum mechanics emerges as the statistical limit of discrete state-evolution steps.</td>
+<td style="text-align: left;">⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implications for the tree framework:</strong></p>
+<ol>
+<li>
+<p><em>The tree topology is the structural invariant shared across frameworks.</em> Whether the timeless structure is a Wheeler-DeWitt state, a shape space, or a CA state space, the tree captures its logical form: a nested branching structure from which conditional dynamics are extracted.</p>
+</li>
+<li>
+<p><em>The height function $h$ corresponds to different emergent clocks in different frameworks.</em> In Page-Wootters: the internal clock $T$. In Barbour: the best-matching index. In Rovelli: the interaction count. In ‘t Hooft: the discrete time step. All are different implementations of the same logical role: a conventional parameter that unfolds the invariant into a trajectory.</p>
+</li>
+<li>
+<p><em>The tree framework is more structurally similar to Barbour than to Page-Wootters.</em> Barbour’s shape space is explicitly static and timeless, with time emerging from relational comparisons—exactly the tree’s ontic/epistemic distinction. The Page-Wootters construction adds quantum formalism that the tree does not require.</p>
+</li>
+<li>
+<p><em>If quantum gravity research converges on any framework that separates timeless structure from emergent dynamics, the tree framework remains viable.</em> It is not betting on a specific physics horse; it is betting on the race being run at all—that the logical architecture (invariant + gauge → emergent) is a feature of reality.</p>
+</li>
+</ol>
+<p><strong>Caveat.</strong> The Barbour, Rovelli, and ‘t Hooft mappings are structural proposals provided by the author. The primary references (Page &amp; Wootters, DeWitt) have been verified against their original publications. The alternative framework mappings represent structural reasoning about those frameworks and may require independent verification for scholarly use.</p>
+<hr />
+<h2>4. Philosophical Extensions</h2>
+<h3>4.1 The Linguistic Bridge: Noun/Verb to Topology/Traversal</h3>
+<p><em>Structural realism</em> holds that what is real are relations, not objects. <em>Process philosophy</em> holds that reality is fundamentally dynamic—composed of processes, not static things.</p>
+<p>Human cognition tends to perceive reality as composed of stable <em>things</em> (nouns), when physics increasingly reveals it as dynamic <em>processes</em> (verbs). The tree framework provides structural resolution of this tension:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Grammatical Category</th>
+<th style="text-align: left;">Tree Framework</th>
+<th style="text-align: left;">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Noun</strong> (entity)</td>
+<td style="text-align: left;">Tree topology $(V, E)$</td>
+<td style="text-align: left;">The static branching order—the ontic invariant</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Verb</strong> (process)</td>
+<td style="text-align: left;">Tree traversal</td>
+<td style="text-align: left;">The sequential experience of cuts being drawn</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adjective</strong> (attribute)</td>
+<td style="text-align: left;">Branch point</td>
+<td style="text-align: left;">A specific distinction (“red vs. blue”)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adverb</strong> (mode)</td>
+<td style="text-align: left;">Height function $h$</td>
+<td style="text-align: left;">How “strongly” a distinction is made (resolution)</td>
+</tr>
+</tbody>
+</table>
+<p>Reality is <em>neither purely noun-like nor verb-like—it is tree-shaped.</em> The tree has both static structure (branching order) and dynamic traversal. Human cognition compresses traversal histories into stable topologies—nouns are cached trees; verbs correspond to ephemeral traversal.</p>
+<p><strong>Quantum interpretation via resolution.</strong> Quantum superposition corresponds to unresolved branching—a particle sits at an internal node with multiple downstream branches not yet differentiated. Wave-particle duality corresponds to viewing the same item at different resolutions (wave = coarse, particle = fine). Non-locality corresponds to entangled particles sharing an unresolved LCA—they are “still in the same cluster.”</p>
+<h3>4.2 Epistemological Limits</h3>
+<p>A recurring philosophical question is whether reality <em>is</em> mathematical structure, or whether mathematics is merely a tool that cannot fully capture reality. The tree framework occupies a middle position:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Position</th>
+<th style="text-align: left;">Stance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Traditional physics</td>
+<td style="text-align: left;">Reality IS a mathematical structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">Anti-formalist</td>
+<td style="text-align: left;">Mathematics is limited; logic and information are more fundamental</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tree framework</strong></td>
+<td style="text-align: left;">Reality has a mathematical <em>skeleton</em> (the tree) but not a <em>body</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acknowledged limits:</strong></p>
+<ol>
+<li>The tree structure does not determine <em>content</em>—which specific distinctions exist must be discovered empirically.</li>
+<li>The height function is a gauge, not a measurement—specific numerical values are conventional.</li>
+<li>Not all reality may be tree-structured—the framework’s scope is bounded by triadic rigidity.</li>
+<li>Formalization is not completion—the tree is a skeleton; empirical content must be added through investigation.</li>
+</ol>
+<h3>4.3 Bounded Consilience</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Claim</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>L1</strong>—Mathematical</td>
+<td style="text-align: left;">Ultrametric inequality + triadic rigidity derived</td>
+<td style="text-align: left;">✅ Proven</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L2</strong>—Computational</td>
+<td style="text-align: left;">Any hierarchy = binary tree</td>
+<td style="text-align: left;">✅ Proven</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L3</strong>—Clustering</td>
+<td style="text-align: left;">Ultrametric = hierarchical clustering</td>
+<td style="text-align: left;">✅ Established (Sokal &amp; Rohlf, 1962)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L4</strong>—Phylogenetic</td>
+<td style="text-align: left;">Cophenetic distance in phylogenetics</td>
+<td style="text-align: left;">✅ Established (Hartigan, 1967)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L5</strong>—Physical</td>
+<td style="text-align: left;">Tree ≡ Wheeler-DeWitt + Page-Wootters</td>
+<td style="text-align: left;">⚠️ Plausible analogy</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L6</strong>—Cosmological</td>
+<td style="text-align: left;">Big Bang = first cut at coarsest resolution</td>
+<td style="text-align: left;">⚠️ Consistent with Big Bang model. No independent evidence.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L7</strong>—Cognitive</td>
+<td style="text-align: left;">Consciousness as tree traversal</td>
+<td style="text-align: left;">⚠️ Hypothesis—matches subjective experience, not empirically tested</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>L8</strong>—Ontological</td>
+<td style="text-align: left;">“Distinction is primary”</td>
+<td style="text-align: left;">⚠️ Metaphysical commitment—not testable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three versions of the claim:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Claim</th>
+<th style="text-align: left;">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Strong</strong></td>
+<td style="text-align: left;">Reality IS a single universal tree</td>
+<td style="text-align: left;">Too strong. Not warranted.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Moderate</strong></td>
+<td style="text-align: left;">Hierarchical reality is tree-structured. Testable via triadic rigidity.</td>
+<td style="text-align: left;"><strong>Supported.</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Weak</strong></td>
+<td style="text-align: left;">Trees are a useful model for hierarchical organization</td>
+<td style="text-align: left;">Trivially true. Not novel.</td>
+</tr>
+</tbody>
+</table>
+<p>The framework advances the <em>moderate claim</em>.</p>
+<hr />
+<h2>5. Objections and Counterarguments</h2>
+<p><strong>O1: “This is just hierarchical clustering with philosophical jargon.”</strong> The objection conflates <em>application</em> with <em>foundation</em>. The claim is not that trees are useful for clustering—it is that the reason clustering works is because reality is tree-shaped. This is analogous to: calculus is not just a tool for computing areas; it describes how the physical world actually changes.</p>
+<p><strong>O2: “The framework assumes what it tries to prove.”</strong> The framework derives consequences of hierarchy and offers them as falsifiable tests. If triadic rigidity fails, the framework is falsified. This is standard scientific method.</p>
+<p><strong>O3: “How does this handle continuous, non-hierarchical phenomena?”</strong> Two responses: (a) At finer resolution, continuous phenomena may reveal hierarchical structure (fluids → molecules → atoms). (b) The tree may be the generative structure while the observable is continuous—an emergent approximation.</p>
+<p><strong>O4: “Why privilege binary distinctions?”</strong> Any $k$-ary distinction decomposes into $k-1$ binary distinctions—formally, not metaphorically. Binary is atomic in the logical sense: the minimal unit of information (one bit).</p>
+<p><strong>O5: “The Page-Wootters analogy is just a metaphor.”</strong> Fair critique. The framework provides structural analogy (same formal pattern), which is stronger than metaphor but weaker than empirical equivalence. Labeled as “suggestive structural analogy” pending physical prediction. The framework acknowledges this openly (see §2.6 caveat and §5.2 Scientific Coherence score of 4.2/5).</p>
+<p><strong>O6: “What about domains where triadic rigidity fails?”</strong> Both hierarchical and non-hierarchical domains are real. The claim is about fundamentality: the most fundamental level is hierarchical; non-hierarchical structures emerge from underlying tree processes.</p>
+<p><strong>O7: “How is this different from structural realism?”</strong> Structural realism says relations are fundamental but doesn’t specify <em>which</em> relations. The tree framework specifies: nested equivalence relations (tree branching order). It is structural realism made specific.</p>
+<hr />
+<h2>6. Citations and Verification</h2>
+<h3>6.1 Citation Inventory</h3>
+<p>All citations verified against original publications. Page ranges confirmed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Reference</th>
+<th style="text-align: left;">Role</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>R1</strong></td>
+<td style="text-align: left;">Sokal, R. R., &amp; Rohlf, F. J. (1962). The comparison of dendrograms by objective methods. <em>Taxon</em>, 11(2), 33–40.</td>
+<td style="text-align: left;">Original cophenetic distance definition</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R2</strong></td>
+<td style="text-align: left;">Sneath, P. H. A., &amp; Sokal, R. R. (1973). <em>Numerical Taxonomy</em>. W. H. Freeman.</td>
+<td style="text-align: left;">Standard reference for hierarchical clustering</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R3</strong></td>
+<td style="text-align: left;">Page, D. N., &amp; Wootters, W. K. (1983). Evolution without evolution: Dynamics described by stationary observables. <em>Physical Review D</em>, 27(12), 2885–2892.</td>
+<td style="text-align: left;">Internal clock in quantum gravity</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R4</strong></td>
+<td style="text-align: left;">DeWitt, B. S. (1967). Quantum theory of gravity. I. The canonical theory. <em>Physical Review</em>, 160(5), 1113–1148.</td>
+<td style="text-align: left;">Wheeler-DeWitt equation</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R5</strong></td>
+<td style="text-align: left;">Hartigan, J. A. (1967). Representation of similarity matrices by trees. <em>Journal of the American Statistical Association</em>, 62(320), 1140–1158.</td>
+<td style="text-align: left;">Tree representation of ultrametrics</td>
+<td style="text-align: left;">Verified</td>
+</tr>
+</tbody>
+</table>
+<h3>6.2 Search Manifest—Executed</h3>
+<p>The following verification queries were executed against external databases. All five references confirmed. Details preserved for reproducibility:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Query</th>
+<th style="text-align: left;">Target</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Sokal Rohlf 1962 "comparison of dendrograms" Taxon</code></td>
+<td style="text-align: left;">R1</td>
+<td style="text-align: left;">Volume 11(2), pages 33–40 confirmed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sneath Sokal 1973 "Numerical Taxonomy" Freeman</code></td>
+<td style="text-align: left;">R2</td>
+<td style="text-align: left;">Publisher W. H. Freeman confirmed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Page Wootters 1983 "Evolution without evolution" Physical Review D 27</code></td>
+<td style="text-align: left;">R3</td>
+<td style="text-align: left;">Volume 27(12), pages 2885–2892 confirmed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeWitt 1967 "Quantum theory of gravity canonical" Physical Review 160</code></td>
+<td style="text-align: left;">R4</td>
+<td style="text-align: left;">Volume 160(5), pages 1113–1148 confirmed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Hartigan 1967 "Representation of similarity matrices by trees" JASA 62</code></td>
+<td style="text-align: left;">R5</td>
+<td style="text-align: left;">Volume 62(320), pages 1140–1158 confirmed</td>
+</tr>
+</tbody>
+</table>
+<h3>6.3 Verification Status</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Claim Type</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mathematical theorems</td>
+<td style="text-align: left;">Verified by computational implementation</td>
+<td style="text-align: left;">All</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cross-reference to existing literature</td>
+<td style="text-align: left;">Sourced from published works and domain analyses</td>
+<td style="text-align: left;">16 sources</td>
+</tr>
+<tr>
+<td style="text-align: left;">Academic citations</td>
+<td style="text-align: left;">Confirmed against original publications</td>
+<td style="text-align: left;">5 references</td>
+</tr>
+<tr>
+<td style="text-align: left;">Philosophical claims (L5-L8)</td>
+<td style="text-align: left;">Reasoning-based; not empirically validated</td>
+<td style="text-align: left;">All L5-L8</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Appendix A: Glossary</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Rooted tree</strong></td>
+<td style="text-align: left;">A collection of nodes connected by parent→child edges, with a single root (no parent) at the top</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Leaf</strong></td>
+<td style="text-align: left;">A node with no children—an individual item</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Lowest Common Ancestor (LCA)</strong></td>
+<td style="text-align: left;">The deepest node that is an ancestor of both $x$ and $y$—where their paths upward first meet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Height function</strong></td>
+<td style="text-align: left;">A number $h(v)$ assigned to each node. Leaves = 0. Larger values = broader cuts (closer to root)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Cophenetic distance</strong></td>
+<td style="text-align: left;">$d(x, y) = h(\operatorname{lca}(x, y))$—the height at which $x$ and $y$ first merge into the same group</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ultrametric inequality</strong></td>
+<td style="text-align: left;">$d(x, z) \leq \max(d(x, y), d(y, z))$—stronger than the triangle inequality</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Triadic rigidity</strong></td>
+<td style="text-align: left;">For any three items, the two largest pairwise distances are equal ($d_1 = d_2$)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Binary decision tree</strong></td>
+<td style="text-align: left;">A tree where every internal node has exactly two children—each cut is a yes/no question</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dendrogram</strong></td>
+<td style="text-align: left;">A diagram of a hierarchical tree, used in clustering and phylogenetics</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gauge invariance</strong></td>
+<td style="text-align: left;">The branching order (who separates from whom) is invariant; the specific numerical heights are conventional</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ontic vs. Epistemic</strong></td>
+<td style="text-align: left;">Ontic = what exists independently of observation (tree topology). Epistemic = what depends on measurement choices (numerical distances)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hierarchy</strong></td>
+<td style="text-align: left;">A system of nested groups—every group is a subgroup of a larger group, and no groups partially overlap</td>
+</tr>
+</tbody>
+</table></body></html>

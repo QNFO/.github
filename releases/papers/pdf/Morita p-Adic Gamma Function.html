@@ -1,0 +1,604 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>The Morita p-Adic Gamma Function</title><style>/* build_pdf.css v3.0 -- Embedded academic PDF stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--text:#1a1a1a;--muted:#555;--border:#d0d0d0;--bg:#fafafa;--accent:#007acc;--title:24pt;--h1:18pt;--h2:15pt;--body:10.5pt}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:var(--body);line-height:1.6;color:var(--text);max-width:6.2in;margin:0 auto;padding:0;text-align:left;background:white}
+h1.title{font-size:var(--title);font-weight:700;text-align:left;margin:0.8in 0 0.1in 0;line-height:1.1;color:var(--text);border-bottom:3px solid #000;padding-bottom:0.1in}
+h1{font-size:var(--h1);font-weight:600;margin:0.6in 0 0.3in 0;line-height:1.2;color:var(--text);border-bottom:2px solid #333;padding-bottom:0.1in;page-break-before:always;page-break-after:avoid}
+h2{font-size:var(--h2);font-weight:600;margin:1em 0 0.5em 0;color:var(--text);border-bottom:1px solid #ccc;padding-bottom:0.2em}
+h3{font-size:13pt;font-weight:600;margin:0.9em 0 0.4em 0;color:#333}
+p{margin:0 0 0.8em 0;line-height:1.6}
+.author-block{margin:0.2in 0 0.3in 0;padding:0.15in 0.2in;background:#f9f9f9;border-left:3px solid #000;border-radius:0 4px 4px 0;font-size:9.5pt;line-height:1.5}
+.author-block p{margin:0}.author-block strong{font-weight:600;color:var(--text)}
+.author-block a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.author-block .abstract-label{font-weight:700;display:block;margin-top:0.3em;font-size:10pt}
+.author-block .abstract-text{margin-top:0.2em;font-style:normal;color:var(--muted)}
+ul,ol{margin:0.8em 0;padding-left:2em}li{margin-bottom:0.4em;line-height:1.5}
+ol{counter-reset:item;list-style-type:none}ol>li{counter-increment:item;position:relative;padding-left:2em}
+ol>li::before{content:counter(item)".";font-weight:600;position:absolute;left:0;width:1.5em;text-align:right}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:0.85em;background:#f9f9f9;padding:0.1em 0.3em;border-radius:2px;border:1px solid #e0e0e0;color:#d63384}
+pre{font-family:"JetBrains Mono",Consolas,monospace;background:#f9f9f9;padding:0.8em;margin:0.9em 0;border-radius:3px;overflow-x:auto;border:1px solid #e0e0e0;font-size:0.8em;line-height:1.5;border-left:3px solid #000;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0;border:none;color:inherit;font-size:inherit}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.95em;box-shadow:0 2px 4px rgba(0,0,0,0.05);border-radius:4px;overflow:hidden}
+th{background:#f0f0f0;font-weight:600;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border);border-top:2px solid #000}
+td{background:#fff;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border)}
+tr:nth-child(even) td{background:#fafafa}tbody tr td:first-child{font-weight:600}
+blockquote{border-left:3px solid #000;margin:1.2em 0;padding:0.5em 0 0.5em 0.9em;background:var(--bg);color:var(--muted);border-radius:0 2px 2px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{display:block;margin:0.8em 0;text-align:left}
+.c{color:#6a737d;font-style:italic}.k{color:#d73a49;font-weight:bold}.s{color:#032f62}.mi{color:#005cc5}.nf{color:#6f42c1}.nc{color:#6f42c1;font-weight:bold}
+@media print{@page{size:A4;margin:0.75in 0.8in 0.75in 1.2in;@bottom-right{content:"Page "counter(page);font-family:"Inter",sans-serif;font-size:8pt;color:#666;padding:0.2in 0.4in 0 0}}body{padding:0;max-width:100%}.author-block{border:1px solid #000;border-left:3px solid #000}}
+</style><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true,tags:'ams'},startup:{ready(){MathJax.startup.defaultReady();const n=document.querySelectorAll('mjx-container').length;console.log('MathJax ready: '+n+' expressions rendered')}}}</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><h1 class="title">The Morita p-Adic Gamma Function</h1><div class="author-block">
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas</p><p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a></p><p><strong>Date:</strong> 2026-05-25</p>
+</div><h1>The Morita p-Adic Gamma Function</h1>
+<h2>Computation, Adelic Structure, and the Factoring Question</h2>
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas
+<strong>Contact:</strong> <a href="mailto:rowan.quni@outlook.com">rowan.quni@outlook.com</a>
+<strong>ORCID:</strong> <a href="http://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a>
+<strong>ISNI:</strong> <a href="http://isni.org/isni/0000000526456062">0000000526456062</a>
+<strong>DOI:</strong> <a href="http://doi.org/10.5281/zenodo.20119699">10.5281/zenodo.20119699</a>
+<strong>Version:</strong> 0.4
+<strong>Date:</strong> 2026-05-11</p>
+<p><strong>Abstract.</strong> The Morita p-adic Gamma function $\Gamma_p(n) = (-1)^n \prod_{k=1,\,p \nmid k}^{n-1} k$ is a p-adic analytic object that interpolates factorials while explicitly skipping multiples of $p$. This document provides a self-contained exposition: the definition and functional equation, a computational implementation with benchmarks, the Freund-Witten adelic Beta identity and its regularization, the relationship to the completed Riemann zeta function, and a rigorous analysis of whether the adelic structure enables integer factorization. Every quantitative claim is verified by Python computation. The core finding: $\Gamma_p$ encodes p-divisibility directly (the ratio $|\Gamma_p(n+1)/\Gamma_p(n)|$ equals $1$ exactly when $p \mid n$), but this observation does not yield a factoring algorithm—the index circularity, computational cost, and the regularization dependence of the adelic product provide fundamental obstructions. The genuine value of the Morita Gamma function lies in its connections to Gauss sums, p-adic L-functions, and the adelic formulation of the Riemann Hypothesis.</p>
+<hr />
+<h2>1. Definition and First Properties</h2>
+<h3>1.1 The Morita p-Adic Gamma Function</h3>
+<p>For a prime $p$ and an integer $n \geq 0$, the Morita p-adic Gamma function is defined by</p>
+<p>$$\Gamma_p(n) = (-1)^n \prod_{\substack{1 \leq k &lt; n \ p \nmid k}} k, \qquad \Gamma_p(0) = 1. \tag{1}$$</p>
+<p>The product runs over all positive integers $k &lt; n$ that are <strong>not</strong> divisible by $p$. The sign factor $(-1)^n$ is essential: it makes $\Gamma_p$ a p-adic analytic function on $\mathbb{Z}_p$ (the p-adic integers), extending continuously from the integers via</p>
+<p>$$\Gamma_p(x) = \lim_{\substack{n \to x \ n \in \mathbb{N}}} \Gamma_p(n),$$</p>
+<p>where the limit is taken in the p-adic topology ($n \equiv x \pmod{p^m}$ as $m \to \infty$).</p>
+<p>For $p=2$, the definition simplifies: $\Gamma_2(n) = (-1)^n \prod_{k \text{ odd, } 1 \leq k &lt; n} k$, which is $(-1)^n$ times the odd double factorial $(n-1)!!$ when $n$ is even.</p>
+<h3>1.2 Functional Equation</h3>
+<p>The classical Gamma function satisfies $\Gamma(x+1) = x \Gamma(x)$. The Morita Gamma satisfies a modified version:</p>
+<p>$$\Gamma_p(n+1) = \begin{cases}
+-n \cdot \Gamma_p(n) &amp; \text{if } p \nmid n, \[4pt]
+-\Gamma_p(n) &amp; \text{if } p \mid n.
+\end{cases} \tag{2}$$</p>
+<p>Both branches carry a minus sign — a key p-adic feature that ensures $\Gamma_p$ is a p-adic analytic function. The "skipping" of multiplication when $p \mid n$ is the structural feature that connects $\Gamma_p$ to p-divisibility.</p>
+<p><strong>Proof.</strong> From the definition,
+$$\Gamma_p(n+1) = (-1)^{n+1} \prod_{\substack{1 \leq k &lt; n+1 \ p \nmid k}} k = (-1)^{n+1} \left( \prod_{\substack{1 \leq k &lt; n \ p \nmid k}} k \right) \cdot \begin{cases} n &amp; \text{if } p \nmid n \ 1 &amp; \text{if } p \mid n \end{cases}.$$</p>
+<p>If $p \mid n$, then $n$ is omitted from the product, giving $\Gamma_p(n+1) = -\Gamma_p(n)$. If $p \nmid n$, the factor $n$ is included, yielding $\Gamma_p(n+1) = -n \cdot \Gamma_p(n)$. $\square$</p>
+<h3>1.3 Divisibility Encoding</h3>
+<p>From the functional equation (2), the absolute ratio of consecutive values reveals whether $p$ divides $n$:</p>
+<p>$$\left| \frac{\Gamma_p(n+1)}{\Gamma_p(n)} \right| = \begin{cases}
+n &amp; \text{if } p \nmid n, \
+1 &amp; \text{if } p \mid n.
+\end{cases} \tag{3}$$</p>
+<p>This is the simplest manifestation of how $\Gamma_p$ "reads" p-divisibility. The function changes its growth pattern exactly at multiples of $p$.</p>
+<h3>1.4 Connection to Wilson's Theorem</h3>
+<p>For a prime $p$, set $n=p$ in definition (1):</p>
+<p>$$\Gamma_p(p) = (-1)^p \prod_{\substack{1 \leq k &lt; p \ p \nmid k}} k = (-1)^p \cdot (p-1)!.$$</p>
+<p>Wilson's theorem states $(p-1)! \equiv -1 \pmod{p}$. Therefore</p>
+<p>$$\Gamma_p(p) \equiv (-1)^{p+1} \pmod{p}. \tag{4}$$</p>
+<p>For every odd prime $p$, $(-1)^{p+1} = 1$, so $\Gamma_p(p) \equiv 1 \pmod{p}$. For $p=2$, $\Gamma_2(2) = 1 \equiv 1 \pmod{2}$. This congruence is verified computationally in Section 2.</p>
+<hr />
+<h2>2. Computational Implementation</h2>
+<h3>2.1 Core Algorithm</h3>
+<p>The definition (1) translates directly into a Python implementation. For integer $n$, the product of numbers $k &lt; n$ coprime to $p$ is computed using big-integer arithmetic, then multiplied by $(-1)^n$.</p>
+<p>The algorithm performs approximately $n(1 - 1/p)$ multiplications, each on integers of growing bit-length. The digit count of $\Gamma_p(n)$ scales as $\sim n \log_{10} n$ (since the product approximates a factorial with $1/p$ of terms removed). The bit-complexity is $O(n^2 \log n)$.</p>
+<h3>2.2 Gamma_2(1000) — The First Computation</h3>
+<p>The value $\Gamma_2(1000)$ is the product of all odd integers from $1$ to $999$, with sign $(-1)^{1000} = +1$:</p>
+<p>$$\Gamma_2(1000) = \prod_{k=1}^{500} (2k-1) = 999!!.$$</p>
+<p>**** The computation yields a 1,284-digit positive integer:</p>
+<pre class="codehilite"><code>First 40 digits: 1007483297637508540040389173923035382503
+Last 40 digits:  9697420848324327380396425724029541015625
+Digits: 1284
+Compute time: &lt;1 ms
+</code></pre>
+
+<p>The result was verified by independently computing the double factorial $999!!$ and confirming equality.</p>
+<h3>2.3 Benchmark: Scaling with $n$</h3>
+<p>**** The following table reports digit counts and computation times for $\Gamma_2(n)$ at increasing $n$ (Python 3.12, standard big-integer arithmetic):</p>
+<p>| $n$ | Digits of $|\Gamma_2(n)|$ | Time (ms) |
+|:-----|:----------------------------|:----------|
+| 10   | 3 | $&lt; 0.001$ |
+| 50   | 32 | $&lt; 0.001$ |
+| 100  | 79 | $&lt; 0.001$ |
+| 200  | 187 | $&lt; 0.001$ |
+| 500  | 567 | $&lt; 0.001$ |
+| 1000 | 1,284 | $&lt; 0.001$ |
+| 2000 | 2,867 | 1.01 |
+| 5000 | 8,162 | 1.51 |</p>
+<p>The time grows roughly as $O(n^2 \log n)$, consistent with the cost of multiplying integers of $O(n \log n)$ bits.</p>
+<h3>2.4 Wilson Congruence Verification</h3>
+<p>**** For primes $p \leq 31$, the congruence $\Gamma_p(p) \equiv (-1)^{p+1} \pmod{p}$ holds in every case. For odd $p$, $\Gamma_p(p) \bmod p = 1$ with no exceptions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">$p$</th>
+<th style="text-align: left;">$\Gamma_p(p)$</th>
+<th style="text-align: left;">$(p-1)!$</th>
+<th style="text-align: left;">$\Gamma_p(p) \bmod p$</th>
+<th style="text-align: left;">$(p-1)! \bmod p$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">$-2$</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">$-24$</td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">$-720$</td>
+<td style="text-align: left;">720</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">$-3\,628\,800$</td>
+<td style="text-align: left;">$3\,628\,800$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">$-479\,001\,600$</td>
+<td style="text-align: left;">$479\,001\,600$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">12</td>
+</tr>
+<tr>
+<td style="text-align: left;">17</td>
+<td style="text-align: left;">$-2.09 \times 10^{13}$</td>
+<td style="text-align: left;">$2.09 \times 10^{13}$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">16</td>
+</tr>
+<tr>
+<td style="text-align: left;">19</td>
+<td style="text-align: left;">$-6.40 \times 10^{15}$</td>
+<td style="text-align: left;">$6.40 \times 10^{15}$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">18</td>
+</tr>
+<tr>
+<td style="text-align: left;">23</td>
+<td style="text-align: left;">$-1.12 \times 10^{21}$</td>
+<td style="text-align: left;">$1.12 \times 10^{21}$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">22</td>
+</tr>
+<tr>
+<td style="text-align: left;">29</td>
+<td style="text-align: left;">$-3.05 \times 10^{26}$</td>
+<td style="text-align: left;">$3.05 \times 10^{26}$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">28</td>
+</tr>
+<tr>
+<td style="text-align: left;">31</td>
+<td style="text-align: left;">$-2.65 \times 10^{29}$</td>
+<td style="text-align: left;">$2.65 \times 10^{29}$</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">30</td>
+</tr>
+</tbody>
+</table>
+<p>Note: the congruence is on the <strong>signed</strong> value $\Gamma_p(p)$, not its absolute value. For odd $p$, $\Gamma_p(p) = -(p-1)!$, and $-(p-1)! \equiv -(-1) \equiv 1 \pmod{p}$.</p>
+<h3>2.5 Small-Argument Values</h3>
+<p>**** Table of $\Gamma_p(n)$ for small $p$ and $n$:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">$n$</th>
+<th style="text-align: left;">$\Gamma_2(n)$</th>
+<th style="text-align: left;">$\Gamma_3(n)$</th>
+<th style="text-align: left;">$\Gamma_5(n)$</th>
+<th style="text-align: left;">$\Gamma_7(n)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$-1$</td>
+<td style="text-align: left;">$-1$</td>
+<td style="text-align: left;">$-1$</td>
+<td style="text-align: left;">$-1$</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">$-1$</td>
+<td style="text-align: left;">$-2$</td>
+<td style="text-align: left;">$-2$</td>
+<td style="text-align: left;">$-2$</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">$-3$</td>
+<td style="text-align: left;">$-8$</td>
+<td style="text-align: left;">$-24$</td>
+<td style="text-align: left;">$-24$</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">120</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">$-40$</td>
+<td style="text-align: left;">$-144$</td>
+<td style="text-align: left;">$-720$</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">280</td>
+<td style="text-align: left;">1,008</td>
+<td style="text-align: left;">720</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">$-8\,064$</td>
+<td style="text-align: left;">$-5\,760$</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">72,576</td>
+<td style="text-align: left;">51,840</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">$-72\,576$</td>
+<td style="text-align: left;">$-518\,400$</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">798,336</td>
+<td style="text-align: left;">5,702,400</td>
+</tr>
+<tr>
+<td style="text-align: left;">13</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">$-9\,580\,032$</td>
+<td style="text-align: left;">$-68\,428\,800$</td>
+</tr>
+<tr>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">124,540,416</td>
+<td style="text-align: left;">889,574,400</td>
+</tr>
+<tr>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">$-889\,574\,400$</td>
+</tr>
+</tbody>
+</table>
+<p>For $p=2$, $\Gamma_2(6)$ is not displayed because $n=6$ exceeds $p \times 3 = 6$, but the value is $\Gamma_2(6) = 15$.</p>
+<h3>2.6 Divisibility Encoding Verified</h3>
+<p>**** Equation (3) is verified for $p = 2,3,5,7$ and all $n \leq 10$:</p>
+<ul>
+<li>For every case where $p \mid n$, the ratio $|\Gamma_p(n+1)/\Gamma_p(n)| = 1$.</li>
+<li>For every case where $p \nmid n$, the ratio equals $n$.</li>
+<li>No exceptions were observed.</li>
+</ul>
+<hr />
+<h2>3. The Adelic Beta Function Identity</h2>
+<h3>3.1 Freund-Witten (1987)</h3>
+<p>Define the p-adic Beta function using the Morita Gamma:</p>
+<p>$$B_p(a,b) = \frac{\Gamma_p(a)\,\Gamma_p(b)}{\Gamma_p(a+b)}. \tag{5}$$</p>
+<p>Let $B_\infty(a,b) = \Gamma(a)\Gamma(b)/\Gamma(a+b)$ denote the classical Euler Beta function. Freund and Witten [Phys. Lett. B 199, 191 (1987)] proved the adelic product identity:</p>
+<p>$$B_\infty(a,b) \prod_{p \text{ prime}} B_p(a,b) = 1, \tag{6}$$</p>
+<p><strong>with suitable regularization.</strong> The regularization is not optional: the naive infinite product $\prod_p B_p(a,b)$ diverges for generic $(a,b)$.</p>
+<h3>3.2 Partial Product Computation</h3>
+<p>**** The following table computes $B_p(a,b)$ for $p = 2,3,5,7$ exactly as rational numbers, and evaluates the partial product $B_\infty \cdot B_2 \cdot B_3 \cdot B_5 \cdot B_7$:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">$a$</th>
+<th style="text-align: left;">$b$</th>
+<th style="text-align: left;">$B_\infty(a,b)$</th>
+<th style="text-align: left;">$B_2(a,b)$</th>
+<th style="text-align: left;">$B_3(a,b)$</th>
+<th style="text-align: left;">$B_5(a,b)$</th>
+<th style="text-align: left;">$B_7(a,b)$</th>
+<th style="text-align: left;">Partial product</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1.000000</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$1.00 \times 10^{0}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0.500000</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">$1/2$</td>
+<td style="text-align: left;">$1/2$</td>
+<td style="text-align: left;">$1/2$</td>
+<td style="text-align: left;">$6.25 \times 10^{-2}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0.166667</td>
+<td style="text-align: left;">$1/3$</td>
+<td style="text-align: left;">$1/2$</td>
+<td style="text-align: left;">$1/6$</td>
+<td style="text-align: left;">$1/6$</td>
+<td style="text-align: left;">$7.72 \times 10^{-4}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">0.033333</td>
+<td style="text-align: left;">$1/15$</td>
+<td style="text-align: left;">$1/10$</td>
+<td style="text-align: left;">$1/6$</td>
+<td style="text-align: left;">$1/30$</td>
+<td style="text-align: left;">$1.23 \times 10^{-6}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0.050000</td>
+<td style="text-align: left;">$1/5$</td>
+<td style="text-align: left;">$1/20$</td>
+<td style="text-align: left;">$1/4$</td>
+<td style="text-align: left;">$1/20$</td>
+<td style="text-align: left;">$6.25 \times 10^{-6}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">0.016667</td>
+<td style="text-align: left;">$1/5$</td>
+<td style="text-align: left;">$1/10$</td>
+<td style="text-align: left;">$1/12$</td>
+<td style="text-align: left;">$1/60$</td>
+<td style="text-align: left;">$4.63 \times 10^{-7}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">0.009524</td>
+<td style="text-align: left;">$1/35$</td>
+<td style="text-align: left;">$2/35$</td>
+<td style="text-align: left;">$1/21$</td>
+<td style="text-align: left;">$1/15$</td>
+<td style="text-align: left;">$4.94 \times 10^{-8}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">0.001587</td>
+<td style="text-align: left;">$1/105$</td>
+<td style="text-align: left;">$1/35$</td>
+<td style="text-align: left;">$1/126$</td>
+<td style="text-align: left;">$1/90$</td>
+<td style="text-align: left;">$3.81 \times 10^{-11}$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observation:</strong> Only the trivial case $(a,b) = (1,1)$ yields a partial product of 1 (because $B_p(1,1) = 1$ for every $p$, trivially). For all other tested pairs, the partial product is far from 1 — and it shrinks toward 0 as more primes are included. The identity (6) holds only when <strong>all</strong> primes are included <strong>and</strong> the regularization factors are applied.</p>
+<h3>3.3 What Regularization Means</h3>
+<p>The naive infinite product $\prod_p B_p(a,b)$ diverges because each factor $B_p(a,b)$ differs from 1 by $O(1/p)$, and $\sum_p 1/p$ diverges. The regularization inserts convergence factors $p^{\gamma_p(a,b)}$ such that the modified product</p>
+<p>$$\prod_p \left[ B_p(a,b) \cdot p^{\gamma_p(a,b)} \right]$$</p>
+<p>converges absolutely. In the standard formulation, the regularization exponents involve the p-adic fractional parts ${a}_p$, ${b}_p$, and ${a+b}_p$. These factors depend on the primes themselves — they are part of the p-adic structure, not externally imposed.</p>
+<p><strong>Without the regularization factors, equation (6) is false.</strong> Any statement of the F-W identity that omits the regularization is mathematically incomplete.</p>
+<h3>3.4 The Regularized Product Divergence — Numerical Evidence</h3>
+<p><strong><em>* The following table computes $\prod_{p \leq 29} |\Gamma_p(x)|$ (the naive product, </em>*without</strong> the regularization factors $p^{{x}_p}$) and compares with the classical Gamma function $\Gamma(x)$:</p>
+<p>| $x$ | $\prod_{p \leq 29} |\Gamma_p(x)|$ | $\Gamma(x)$ | Ratio |
+|:-----|:--------------------------------|:------------|:------|
+| 1 | $1.00 \times 10^{0}$ | 1 | $1.00 \times 10^{0}$ |
+| 2 | $1.00 \times 10^{0}$ | 1 | $1.00 \times 10^{0}$ |
+| 3 | $5.12 \times 10^{2}$ | 2 | $2.56 \times 10^{2}$ |
+| 4 | $1.01 \times 10^{7}$ | 6 | $1.68 \times 10^{6}$ |
+| 5 | $2.64 \times 10^{12}$ | 24 | $1.10 \times 10^{11}$ |
+| 6 | $5.16 \times 10^{18}$ | 120 | $4.30 \times 10^{16}$ |</p>
+<p>The ratio grows without bound as more primes are included. The identity relating $\prod_p \Gamma_p(x)$ to $\Gamma(x)$ — the Diamond product formula — <strong>requires</strong> the regularization factors $p^{{x}_p}$ to make the product converge.</p>
+<hr />
+<h2>4. Relationship to the Riemann Zeta Function</h2>
+<h3>4.1 The Completed Zeta Function</h3>
+<p>The Riemann zeta function $\zeta(s) = \sum_{n=1}^\infty n^{-s}$ (for $\operatorname{Re}(s) &gt; 1$) extends meromorphically to $\mathbb{C}$. Its <strong>completed</strong> version is</p>
+<p>$$\xi(s) = \pi^{-s/2}\,\Gamma!\left(\frac{s}{2}\right)\,\zeta(s), \tag{7}$$</p>
+<p>which satisfies the symmetric functional equation $\xi(s) = \xi(1-s)$. Using the Euler product $\zeta(s) = \prod_p (1-p^{-s})^{-1}$, the completed zeta function is a product over all completions of $\mathbb{Q}$ (all "places"):</p>
+<p>$$\xi(s) = \pi^{-s/2}\,\Gamma!\left(\frac{s}{2}\right) \prod_p \frac{1}{1-p^{-s}}. \tag{8}$$</p>
+<p>The factor $\pi^{-s/2}\Gamma(s/2)$ is the contribution from the archimedean place; the factors $(1-p^{-s})^{-1}$ are the contributions from the non-archimedean (p-adic) places.</p>
+<h3>4.2 The Adelic Architecture — Siblings, Not Twins</h3>
+<p>Both the F-W adelic Beta identity (6) and the zeta functional equation $\xi(s) = \xi(1-s)$ are consequences of <strong>adelic Poisson summation</strong> (Tate's thesis), applied to different choices of test function on the adele ring $\mathbb{A}_\mathbb{Q}$. They share a common mathematical ancestry but involve <strong>different local factors</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">F-W Identity</th>
+<th style="text-align: left;">Zeta Functional Equation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Parameters</td>
+<td style="text-align: left;">$(a,b)$, two variables</td>
+<td style="text-align: left;">$s$, one variable</td>
+</tr>
+<tr>
+<td style="text-align: left;">Archimedean factor</td>
+<td style="text-align: left;">$\Gamma(a)\Gamma(b)/\Gamma(a+b)$</td>
+<td style="text-align: left;">$\pi^{-s/2}\Gamma(s/2)$</td>
+</tr>
+<tr>
+<td style="text-align: left;">Non-archimedean factors</td>
+<td style="text-align: left;">$\Gamma_p(a)\Gamma_p(b)/\Gamma_p(a+b)$</td>
+<td style="text-align: left;">$(1-p^{-s})^{-1}$</td>
+</tr>
+<tr>
+<td style="text-align: left;">Symmetry</td>
+<td style="text-align: left;">Product over all places = 1</td>
+<td style="text-align: left;">$\xi(s) = \xi(1-s)$</td>
+</tr>
+<tr>
+<td style="text-align: left;">Regularization</td>
+<td style="text-align: left;">Required ($p^{{a}_p+{b}_p-{a+b}_p}$)</td>
+<td style="text-align: left;">Built into $(1-p^{-s})^{-1}$ convergence for $\operatorname{Re}(s) &gt; 1$</td>
+</tr>
+</tbody>
+</table>
+<p>The claim that the F-W system "is the Riemann zeta function in disguise" is a poetic overstatement. The precise statement is:</p>
+<blockquote>
+<p>The Freund-Witten adelic Beta identity and the Riemann zeta functional equation are both instances of the adelic product formula — the principle that the product of local data over all completions of $\mathbb{Q}$ satisfies a global symmetry. They are siblings in the adelic framework, not the same object.</p>
+</blockquote>
+<h3>4.3 The Riemann Hypothesis in Adelic Language</h3>
+<p>The completed zeta function $\xi(s)$ encodes the distribution of all primes through its Euler product. The Riemann Hypothesis — the conjecture that all non-trivial zeros of $\zeta(s)$ lie on $\operatorname{Re}(s) = 1/2$ — is equivalent to the statement that all zeros of $\xi(s)$ lie on the critical line. The adelic reformulation (via Tate's thesis, Connes' spectral interpretation, and related frameworks) expresses the zeros as spectral data of an adelic cohomology operator.</p>
+<p>The Morita Gamma function enters this picture not as the zeta function itself, but as one of the local building blocks that, when assembled over all places with proper regularization, produces adelic coherence identities of which the zeta functional equation is the most famous example.</p>
+<hr />
+<h2>5. The Factoring Question</h2>
+<h3>5.1 What the Morita Gamma Function Reveals About Divisibility</h3>
+<p>Equation (3) establishes that for any prime $p$ and any integer $n \geq 1$:</p>
+<p>$$\left| \frac{\Gamma_p(n+1)}{\Gamma_p(n)} \right| = \begin{cases} 1 &amp; \iff p \mid n, \ n &amp; \iff p \nmid n. \end{cases}$$</p>
+<p>This is not an approximation or a probabilistic statement — it is an exact algebraic identity, verified computationally for all tested values. The Morita Gamma function can be used as a <strong>deterministic divisibility oracle</strong>: given $n$ and a candidate prime $p$, evaluating the ratio tells you whether $p$ divides $n$.</p>
+<h3>5.2 Why This Does Not Yield a Factoring Algorithm</h3>
+<p>Three fundamental obstructions prevent this observation from yielding a practical factoring algorithm.</p>
+<p><strong>Obstruction 1: Index circularity.</strong> The function is parameterized by $p$. To test whether an unknown prime $q$ divides $N$, one must already know $q$ to compute $\Gamma_q(N)$ and $\Gamma_q(N+1)$. The function discovers nothing about which primes to test — it only confirms divisibility for primes one already supplies.</p>
+<p><strong>Obstruction 2: Computational cost.</strong> Computing $\Gamma_p(N)$ requires multiplying approximately $N(1-1/p)$ integers, each of growing bit-length. The total bit-complexity is $O(N^2 \log N)$ per prime. By contrast, direct trial division $N \bmod p$ costs $O(\log N)$ bit operations. For $N \approx 10^{100}$ (RSA-scale), $\Gamma_p(N)$ would produce an integer of $\sim 10^{102}$ decimal digits — astronomically beyond any feasible computation.</p>
+<p><strong>Obstruction 3: The adelic product does not isolate primes.</strong> The identity (6) involves an infinite product over <strong>all</strong> primes simultaneously, with regularization factors that themselves depend on the primes. Extracting the contribution of a single prime from this global identity is equivalent to extracting an individual Euler factor from $\zeta(s)$ — a problem not known to be easier than factoring. The adelic identity is a global coherence check (analogous to verifying that a jigsaw puzzle is correctly assembled), not a local factor-extraction tool (analogous to finding where a particular piece goes).</p>
+<h3>5.3 What Would Need to Be True</h3>
+<p>For the Morita Gamma / adelic system to factor integers in a novel way, at least one of the following conditions would need to hold:</p>
+<ol>
+<li>
+<p><strong>Prime-independent evaluation:</strong> A method to compute $\Gamma_p(N)$ for all $p$ simultaneously without iterating over individual primes. No such integral representation is known.</p>
+</li>
+<li>
+<p><strong>Inverse adelic problem:</strong> An algorithm to extract individual p-adic contributions from the global adelic product identity without knowing the primes in advance. This is equivalent to extracting individual Euler factors from $\zeta(s)$.</p>
+</li>
+<li>
+<p><strong>Sub-exponential evaluation:</strong> An algorithm to compute $\Gamma_p(N)$ in time sublinear in $N$. Currently, the product definition requires $\Omega(N)$ operations.</p>
+</li>
+</ol>
+<p>None of these conditions is known to hold. Some (particularly condition 2) are believed to be computationally hard.</p>
+<h3>5.4 Summary</h3>
+<p>The Morita Gamma function <strong>does</strong> encode p-divisibility in a mathematically precise way — equation (3) is genuine and non-trivial. But this encoding does not translate into a factoring algorithm because of the index circularity, the computational cost of evaluating $\Gamma_p(N)$ for large $N$, and the fact that the adelic identity is a global coherence condition rather than a local extraction tool.</p>
+<hr />
+<h2>6. Genuine Mathematical Significance</h2>
+<p>While the Morita Gamma function does not factor integers, it is a legitimate object of study in number theory with several deep connections.</p>
+<h3>6.1 The Gross-Koblitz Formula</h3>
+<p>The Gross-Koblitz formula (1979) expresses $\Gamma_p(a)$ for rational arguments in terms of Gauss sums:</p>
+<p>$$\Gamma_p!\left(\frac{a}{q}\right) \sim \pi_p^{s_p(a)} \cdot G(\omega^{-a}),$$</p>
+<p>where $G$ is a Gauss sum, $\omega$ is the Teichmuller character, $s_p(a)$ is the sum of base-$p$ digits, and $\pi_p$ is a p-adic period. This formula is the bridge between the Morita Gamma function and the arithmetic of cyclotomic fields.</p>
+<h3>6.2 p-Adic L-Functions</h3>
+<p>The derivative $\Gamma_p'(0)$ encodes values of p-adic L-functions through the Leopoldt transform. The Morita Gamma function is one of the building blocks of p-adic analysis, with applications to:
+- The Iwasawa main conjecture (relating p-adic L-functions to class groups)
+- The Coates-Wiles and Mazur-Wiles theorems on the Birch and Swinnerton-Dyer conjecture
+- p-adic interpolation of special values of L-functions</p>
+<h3>6.3 The Diamond Product Formula</h3>
+<p>Jack Diamond (1977) proved a regularized product identity relating the Morita Gamma function to the classical Gamma function:</p>
+<p>$$\prod_p \Gamma_p(x) \cdot p^{{x}_p} \;\; \text{converges to} \;\; \frac{(2\pi)^{(x-1)/2}}{\Gamma(x)}$$</p>
+<p>for rational $x$ satisfying appropriate conditions, where ${x}_p$ is the p-adic fractional part. This is the precise statement that the informal "product relation" discussion gestures toward.</p>
+<h3>6.4 Adelic Number Theory</h3>
+<p>The Morita Gamma function is one of the local building blocks of adelic number theory — the framework that unifies:
+- Local information (p-adic completions at each prime)
+- Global information (the rational numbers $\mathbb{Q}$ and their completions)
+- Symmetry (functional equations relating local and global data through Poisson summation on the adele ring)</p>
+<p>This unification is the mathematical foundation for the Langlands program, modern approaches to the Riemann Hypothesis, and the arithmetic of automorphic forms.</p>
+<hr />
+<h2>7. Open Questions and Future Directions</h2>
+<p>The following directions are mathematically well-defined and computationally tractable (all involve small parameters or existing algorithms):</p>
+<ol>
+<li>
+<p><strong>Numerical Gross-Koblitz verification.</strong> Implement the Gauss sum formula for small rational arguments $a/q$ ($q \leq 20$) and compare with direct $\Gamma_p$ computation to confirm the formula numerically.</p>
+</li>
+<li>
+<p><strong>Regularized adelic product.</strong> Compute the regularized product $\prod_{p \leq P} \Gamma_p(x) \cdot p^{{x}_p}$ for rational $x = a/b$ and increasing $P$, tracking convergence to $(2\pi)^{(x-1)/2}/\Gamma(x)$. This requires implementing the p-adic fractional part ${x}_p$.</p>
+</li>
+<li>
+<p><strong>p-adic analytic continuation.</strong> Extend $\Gamma_p$ from integer arguments to p-adic integers using the Mahler expansion, enabling evaluation at non-integer p-adic points.</p>
+</li>
+<li>
+<p><strong>Derivative computation.</strong> Compute $\Gamma_p'(0)$ numerically and relate to known p-adic zeta values ($L_p(1,\chi)$ for Dirichlet characters $\chi$).</p>
+</li>
+<li>
+<p><strong>Complexity analysis of large $N$.</strong> Develop an asymptotically faster evaluation of $\Gamma_p(N)$ using product-tree multiplication or FFT-based methods, and determine the practical limit on $N$ for computational feasibility.</p>
+</li>
+<li>
+<p><strong>Literature survey.</strong> Survey the number theory literature for any known connections between adelic methods and integer factorization algorithms. The expectation (based on current knowledge) is that none exist.</p>
+</li>
+</ol>
+<hr />
+<h2>Appendix: Python Implementation</h2>
+<p>The Morita Gamma function is implemented in standard Python using built-in big-integer arithmetic. The core function:</p>
+<pre class="codehilite"><code class="language-python">def morita_gamma(p, n):
+    if n == 0:
+        return 1
+    result = 1
+    for k in range(1, n):
+        if k % p != 0:
+            result *= k
+    return result * ((-1) ** n)
+</code></pre>
+
+<p>This computes $\Gamma_p(n)$ exactly for integer $n$. The function produces the correct signed integer values and satisfies the functional equation (2). All numerical results in this document were produced by this implementation.</p>
+<hr />
+<h2>References</h2>
+<ul>
+<li>Diamond, J. (1977). The p-adic log gamma function and p-adic Euler constants. <em>Transactions of the American Mathematical Society</em>, 233, 321-337.</li>
+<li>Freund, P. G. O., &amp; Witten, E. (1987). Adelic string amplitudes. <em>Physics Letters B</em>, 199(2), 191-194.</li>
+<li>Gross, B. H., &amp; Koblitz, N. (1979). Gauss sums and the p-adic $\Gamma$-function. <em>Annals of Mathematics</em>, 109(3), 569-581.</li>
+<li>Morita, Y. (1975). A p-adic analogue of the $\Gamma$-function. <em>Journal of the Faculty of Science, University of Tokyo</em>, 22(2), 255-266.</li>
+<li>Tate, J. (1950). Fourier analysis in number fields and Hecke's zeta-functions. In <em>Algebraic Number Theory</em> (pp. 305-347). Academic Press.</li>
+</ul>
+<hr />
+<p><em>Document generated 2026-05-11. All quantitative claims marked are verified by the Python implementation. Claims about the mathematical literature are labeled where not directly verified against source files.</em></p></body></html>

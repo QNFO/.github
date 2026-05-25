@@ -1,0 +1,700 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Untitled</title><style>/* build_pdf.css v3.0 -- Embedded academic PDF stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--text:#1a1a1a;--muted:#555;--border:#d0d0d0;--bg:#fafafa;--accent:#007acc;--title:24pt;--h1:18pt;--h2:15pt;--body:10.5pt}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:var(--body);line-height:1.6;color:var(--text);max-width:6.2in;margin:0 auto;padding:0;text-align:left;background:white}
+h1.title{font-size:var(--title);font-weight:700;text-align:left;margin:0.8in 0 0.1in 0;line-height:1.1;color:var(--text);border-bottom:3px solid #000;padding-bottom:0.1in}
+h1{font-size:var(--h1);font-weight:600;margin:0.6in 0 0.3in 0;line-height:1.2;color:var(--text);border-bottom:2px solid #333;padding-bottom:0.1in;page-break-before:always;page-break-after:avoid}
+h2{font-size:var(--h2);font-weight:600;margin:1em 0 0.5em 0;color:var(--text);border-bottom:1px solid #ccc;padding-bottom:0.2em}
+h3{font-size:13pt;font-weight:600;margin:0.9em 0 0.4em 0;color:#333}
+p{margin:0 0 0.8em 0;line-height:1.6}
+.author-block{margin:0.2in 0 0.3in 0;padding:0.15in 0.2in;background:#f9f9f9;border-left:3px solid #000;border-radius:0 4px 4px 0;font-size:9.5pt;line-height:1.5}
+.author-block p{margin:0}.author-block strong{font-weight:600;color:var(--text)}
+.author-block a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.author-block .abstract-label{font-weight:700;display:block;margin-top:0.3em;font-size:10pt}
+.author-block .abstract-text{margin-top:0.2em;font-style:normal;color:var(--muted)}
+ul,ol{margin:0.8em 0;padding-left:2em}li{margin-bottom:0.4em;line-height:1.5}
+ol{counter-reset:item;list-style-type:none}ol>li{counter-increment:item;position:relative;padding-left:2em}
+ol>li::before{content:counter(item)".";font-weight:600;position:absolute;left:0;width:1.5em;text-align:right}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:0.85em;background:#f9f9f9;padding:0.1em 0.3em;border-radius:2px;border:1px solid #e0e0e0;color:#d63384}
+pre{font-family:"JetBrains Mono",Consolas,monospace;background:#f9f9f9;padding:0.8em;margin:0.9em 0;border-radius:3px;overflow-x:auto;border:1px solid #e0e0e0;font-size:0.8em;line-height:1.5;border-left:3px solid #000;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0;border:none;color:inherit;font-size:inherit}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.95em;box-shadow:0 2px 4px rgba(0,0,0,0.05);border-radius:4px;overflow:hidden}
+th{background:#f0f0f0;font-weight:600;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border);border-top:2px solid #000}
+td{background:#fff;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border)}
+tr:nth-child(even) td{background:#fafafa}tbody tr td:first-child{font-weight:600}
+blockquote{border-left:3px solid #000;margin:1.2em 0;padding:0.5em 0 0.5em 0.9em;background:var(--bg);color:var(--muted);border-radius:0 2px 2px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{display:block;margin:0.8em 0;text-align:left}
+.c{color:#6a737d;font-style:italic}.k{color:#d73a49;font-weight:bold}.s{color:#032f62}.mi{color:#005cc5}.nf{color:#6f42c1}.nc{color:#6f42c1;font-weight:bold}
+@media print{@page{size:A4;margin:0.75in 0.8in 0.75in 1.2in;@bottom-right{content:"Page "counter(page);font-family:"Inter",sans-serif;font-size:8pt;color:#666;padding:0.2in 0.4in 0 0}}body{padding:0;max-width:100%}.author-block{border:1px solid #000;border-left:3px solid #000}}
+</style><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true,tags:'ams'},startup:{ready(){MathJax.startup.defaultReady();const n=document.querySelectorAll('mjx-container').length;console.log('MathJax ready: '+n+' expressions rendered')}}}</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><h1 class="title">Untitled</h1><div class="author-block">
+<p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a></p><p><strong>Date:</strong> 2026-05-25</p>
+</div><h1>One Pattern</h1>
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas
+<strong>Contact:</strong> <a href="mailto:rowan.quni@outlook.com">rowan.quni@outlook.com</a>
+<strong>ORCID:</strong> <a href="http://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a>
+<strong>ISNI:</strong> <a href="http://isni.org/isni/0000000526456062">0000000526456062</a>
+<strong>DOI:</strong> <a href="http://doi.org/10.5281/zenodo.20080980">10.5281/zenodo.20080980</a>
+<strong>Date:</strong> 2026-05-08
+<strong>Version:</strong> 0.20</p>
+<p><em>A single grammar — draw distinctions, arrange them, demand closure — generates the Cartan classification of all continuous symmetries, the anomaly cancellation that forces the Standard Model gauge group, the geometric accidents of three and four dimensions, the arithmetic architecture of primes and Galois groups, and the boundary question that may force nature's free parameters. Five independent domains. One structure. The convergence is the evidence.</em></p>
+<h2>Prologue: The Function</h2>
+<p>There is one pattern. It is not a thing. It is a relationship — a function that maps inputs to outputs:</p>
+<p>$$\boxed{\text{distinctions} \;+\; \text{arrangement} \;+\; \text{ruler} \;\xrightarrow{\text{closure}}\; \text{pattern}}$$</p>
+<p>The function is invariant. The inputs are contingent. The output is forced — <strong>given the inputs.</strong></p>
+<p>Change what you count, and the output changes. Change how you arrange them, and the output changes. Change which ruler you measure with, and the output changes. But the function — the rule that relates inputs to outputs — is the same in every domain, at every scale, under every ruler. It is the logic of patterns.</p>
+<p>This document traces that function through five independent domains and demonstrates that each arrives at the same structure by its own path, unaware of the others. The convergence is not a metaphor. It is evidence that the function is real.</p>
+<hr />
+<h2>1. The Act</h2>
+<p>Draw a line.</p>
+<p>You have divided the world into this side and that side. The line itself — the boundary — is neither this nor that. It is the relationship between them. It is the simplest thing you can do. You cannot do less.</p>
+<p>This is a distinction. The recognition that two states are different. The content of the difference — what makes this distinct from that — varies by domain. In geometry: this point, that point. In physics: this particle state, that particle state. In arithmetic: this prime factor, that prime factor. The structure of the act does not vary. A distinction is always a line.</p>
+<p>Now draw another line. The two lines meet in a relationship. Ask a question: if I reflect the first line across the second, where does the reflection land? On a line you already have? Or somewhere in between — a fractional position, a new distinction you did not draw?</p>
+<p>If it lands in between, you must add it. The act of reflection has revealed a line you did not know was there. Add it, and ask again. Keep going. When every reflection of every line across every other line lands on an existing line — when the system contains all the consequences of its own structure — you stop. The set of lines, closed under reflection, is your output.</p>
+<p>This is the grammar. Three levers. One invariant operation.</p>
+<h3>The Three Levers</h3>
+<p><strong>Lever 1: what you count.</strong> Two lines? Three? The number of distinctions you start with determines the size of the output space. Count two distinctions and the simplest non-trivial symmetry has three independent moves — the pattern behind electron spin and the weak force. Count three and you get eight moves — the strong nuclear force. Count four and the possibilities branch depending on arrangement.</p>
+<p><strong>Lever 2: how you arrange them.</strong> The arrangement is not about absolute positions. It is about relationships. Specifically: how many times must you reflect before the pattern closes? This number — the closure cycle — is the fundamental invariant. It is a ratio, not a measurement. Two lines whose mutual relationship closes after four reflections produce a square. Two lines whose relationship closes after six produce a hexagon. Three lines in a closed cycle — each reflecting across the other two — produce something that cannot be extended: an exceptional case. Same count. Different relationships. Different output.</p>
+<p><strong>Lever 3: which ruler you use.</strong> Two numbers can be close because their difference is small in magnitude. Or they can be close because their difference is divisible by a high power of a prime — 0 and 1024 are close under the 2-adic ruler because $1024 = 2^{10}$. The first is the Archimedean ruler — complete the rationals by magnitude, yielding the real numbers $\mathbb{R}$. The second is the p-adic ruler — complete by divisibility, yielding the p-adic numbers $\mathbb{Q}_p$, one for each prime. Ostrowski proved in 1916 that these are the only consistent rulers on the rational numbers. He did not prove which one to use. That is a choice.</p>
+<p>But the deeper question — the one that drives the final section of this argument — is what exists before any ruler is chosen. The answer is: ratios. A ratio — $\frac{3}{2}$, $\frac{22}{7}$, the cross ratio of four collinear points — is the same number in $\mathbb{R}$ and in every $\mathbb{Q}_p$. Ratios are the common core of all completions. The Archimedean real numbers, with their infinite non-repeating decimal expansions, are an artifact of one particular way to fill the gaps between rationals. The p-adic numbers are infinitely many others. The ruler is a choice of how to complete the rationals. Ratios are what exist before completion.</p>
+<h3>The Operation</h3>
+<p><strong>Closure.</strong> The rule that every move you can make using the distinctions you have must produce a result already among the distinctions you have. No gaps. No fractional landing zones. The system must contain all consequences of its own structure.</p>
+<p>This is the crystallographic condition in its mathematical form: the Cartan integers — the ratios $2(\alpha_i, \alpha_j)/(\alpha_i, \alpha_i)$ of inner products between reflecting lines — must be integers. Not angles. Not absolute positions. Ratios. The allowed values of these ratios (0, −1, −2, −3) determine everything that follows — the four infinite families, the five exceptional cases, the entire Cartan classification. Closure is a constraint on ratios. The fact that the constraint produces integers is why the classification is discrete and exhaustive rather than continuous and arbitrary.</p>
+<h3>The Synthesis</h3>
+<p>All three levers converge on a single mathematical structure: the cross ratio. A distinction — this, not that — is the simplest cross ratio: one thing measured against its absence. An arrangement — how distinctions relate — is a cross ratio between distinctions. A ruler — how you measure distance — is itself a cross ratio: you compare one interval to another interval chosen as your standard. Closure — the Cartan integers must be integers — is a constraint on which cross ratios can coexist within a single system.</p>
+<p>Cross ratios are the mathematical form of correlation itself: the invariant that remains when you strip away coordinate choices, basis choices, reference frames. This is why they appear at the foundation of every domain. In projective geometry: the invariant preserved under all changes of perspective. In quantum mechanics: entanglement — correlations between subsystems that survive any local change of basis. In quantum gravity: the emergence of spacetime geometry from the pattern of those correlations. In machine learning: the contractions of tensor networks that extract structure. Wherever there is a distinction, there is a cross ratio. Wherever there is a pattern, there is a consistent set of them.</p>
+<p>The grammar is logic: premises force conclusions. It does not choose the premises. It only guarantees the relationship. But the relationship is invariant — it is the same in every domain, at every scale, under every ruler. The invariance is what we are about to trace.</p>
+<hr />
+<h2>2. Convergence I: The Taxonomy — All Possible Continuous Patterns</h2>
+<p>Apply the grammar to all possible arrangements of reflecting lines, under the Archimedean ruler. Closure selects which arrangements survive. The survivors are the Cartan-Killing classification — the complete enumeration of all continuous symmetry patterns.</p>
+<p><strong>Four infinite families.</strong> These are arrangements whose relationships can be extended. Add another line, get the next member.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Relationship Pattern</th>
+<th style="text-align: center;">Family</th>
+<th style="text-align: center;">Dimension</th>
+<th style="text-align: left;">Physical Instance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Linear chain, $n$ lines</td>
+<td style="text-align: center;">$A_n$</td>
+<td style="text-align: center;">$n(n+2)$</td>
+<td style="text-align: left;">$A_1 = SU(2)$: weak force, electron spin. $A_2 = SU(3)$: strong force</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chain, last link double</td>
+<td style="text-align: center;">$B_n$</td>
+<td style="text-align: center;">$n(2n+1)$</td>
+<td style="text-align: left;">$B_1 = SO(3)$: rotations in 3D space</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chain, first link double</td>
+<td style="text-align: center;">$C_n$</td>
+<td style="text-align: center;">$n(2n+1)$</td>
+<td style="text-align: left;">Symplectic groups of classical mechanics</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chain with fork at end</td>
+<td style="text-align: center;">$D_n$</td>
+<td style="text-align: center;">$n(2n-1)$</td>
+<td style="text-align: left;">$D_5 = SO(10)$: grand unification candidate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Five exceptional cases.</strong> These are arrangements where closure is barely satisfied — the Cartan integers form a configuration that cannot be extended. Add one more line, and no consistent set of integer ratios exists.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Relationship Pattern</th>
+<th style="text-align: center;">Group</th>
+<th style="text-align: center;">Dimension</th>
+<th style="text-align: left;">Where It Appears</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">3-line closed cycle</td>
+<td style="text-align: center;">$G_2$</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">M-theory compactifications</td>
+</tr>
+<tr>
+<td style="text-align: left;">4-line branching</td>
+<td style="text-align: center;">$F_4$</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: left;">Exceptional Jordan algebra</td>
+</tr>
+<tr>
+<td style="text-align: left;">5-line branching</td>
+<td style="text-align: center;">$E_6$</td>
+<td style="text-align: center;">78</td>
+<td style="text-align: left;">Calabi-Yau compactifications</td>
+</tr>
+<tr>
+<td style="text-align: left;">6-line branching</td>
+<td style="text-align: center;">$E_7$</td>
+<td style="text-align: center;">133</td>
+<td style="text-align: left;">$N=8$ supergravity</td>
+</tr>
+<tr>
+<td style="text-align: left;">8-line branching</td>
+<td style="text-align: center;">$E_8$</td>
+<td style="text-align: center;">248</td>
+<td style="text-align: left;">Heterotic string gauge group</td>
+</tr>
+</tbody>
+</table>
+<p>This is the first convergence. A single rule — the ratios of inner products between reflecting lines must be integers — applied to all possible line arrangements, produces an exhaustive catalog. Every smooth transformation-preserving structure is one of these. There are no others.</p>
+<p>But this classification assumes the Archimedean ruler. Change the ruler to p-adic, and the output is p-adic Lie groups — different objects, different properties. Change the substrate from continuous to discrete (finite fields), and the output is finite groups of Lie type — the building blocks of all finite simple groups. Same function. Different input. Different output.</p>
+<p>The taxonomy does not tell you which pattern nature uses. It tells you what is possible. Our universe occupies a few points on this map. Other points correspond to other possible universes. The function would hold in all of them.</p>
+<hr />
+<h2>3. Convergence II: The Quantum — Closure in Another Language</h2>
+<p>Now consider a completely different domain: quantum field theory. The question is different. The mathematical language is different. The practitioners are different. They do not know they are doing the same thing.</p>
+<p>In quantum field theory, particles are described by fields that transform under gauge groups. The Standard Model uses three: $SU(3)$ for color, $SU(2)$ for weak isospin, $U(1)$ for hypercharge. Each particle is assigned a representation — a specification of how it transforms.</p>
+<p>The theory must be internally consistent. Certain combinations of gauge transformations — triangle diagrams in the quantum theory — must sum to zero over all particles. If they do not, quantum effects break the gauge symmetry, and the theory contradicts itself. This is anomaly cancellation.</p>
+<p>The constraints, for one generation of Standard Model particles:</p>
+<ul>
+<li>
+<p><strong>$SU(3)^3$:</strong> The product of three color transformations, summed over all particles, must vanish. It does: two quark states contribute $+1$ each, balanced by one anti-up and one anti-down at $-1$ each. $2 - 1 - 1 = 0$.</p>
+</li>
+<li>
+<p><strong>$SU(2)^3$:</strong> Vanishes automatically for any number of doublets.</p>
+</li>
+<li>
+<p><strong>$SU(2)^2 \times U(1)$:</strong> The sum of hypercharge over all $SU(2)$ doublets must vanish: $3 \times Y_{q_L} + Y_{\ell_L} = 0$. The factor 3 counts the three quark colors.</p>
+</li>
+<li>
+<p><strong>$U(1)^3$:</strong> The sum of hypercharge cubed over all particles must vanish: $\sum Y^3 = 0$.</p>
+</li>
+<li>
+<p><strong>Gravitational $\times$ $U(1)$:</strong> The sum of hypercharge over all particles must vanish: $\sum Y = 0$.</p>
+</li>
+</ul>
+<p>Now introduce the observed electric charges. Electric charge $Q$ is related to hypercharge by $Q = T_3 + Y$, where $T_3 = +1/2$ for up-type particles and $-1/2$ for down-type. From the known charges, the hypercharge values are uniquely determined — each is a rational number, a ratio of small integers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Particle</th>
+<th style="text-align: center;">$SU(3)$</th>
+<th style="text-align: center;">$SU(2)$</th>
+<th style="text-align: center;">$Y$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$q_L$ (up, down)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$+1/6$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$u_R$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$+2/3$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$d_R$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$-1/3$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\ell_L$ ($\nu, e$)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$-1/2$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$e_R$</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$-1$</td>
+</tr>
+</tbody>
+</table>
+<p>Verify: $SU(2)^2 \times U(1)$ gives $3 \times \frac{1}{6} + (-\frac{1}{2}) = 0$ ✓. $U(1)^3$ gives zero ✓. Gravitational $\times$ $U(1)$ gives zero ✓. Change any hypercharge, and closure fails.</p>
+<p>This is the second convergence. The Cartan classification and anomaly cancellation are the same requirement expressed in different mathematical languages. In geometry: integer ratios between inner products must close. In quantum field theory: weighted sums over representations must vanish. Both are closure conditions. Both select which structures survive. Both operate on the same logical skeleton.</p>
+<p>The practitioners in one domain do not need to know about the other. The group theorist classifying Dynkin diagrams and the particle physicist computing triangle anomalies are uncovering the same grammar, applied to different inputs.</p>
+<hr />
+<h2>4. Convergence III: The Geometric — Space as Input</h2>
+<p>Consider space itself. Not as a backdrop for physics, but as an input to the grammar.</p>
+<p>Take $n$ spatial dimensions. The distinctions are directions. The moves are rotations preserving distances. The ruler is Archimedean. The closure condition: compose any two rotations, and the result must be a rotation in the same group.</p>
+<p><strong>Input: $n = 3$.</strong> Output: the rotation group $SO(3)$, isomorphic to $SU(2)/\mathbb{Z}_2$.</p>
+<p>This isomorphism is a convergence that no one designed. Quantum spin — described by $SU(2)$ — and classical rotation in three-dimensional space — described by $SO(3)$ — are the same pattern. An electron rotates in 3D space because the space and the object in it are made of the same distinctions, seen from different sides. The relationship is a 2-to-1 covering: $SU(2)$ wraps around $SO(3)$ twice. This covering degree is the invariant; the familiar fact that an electron's wavefunction changes sign after one full rotation follows from it.</p>
+<p><strong>Input: $n = 4$.</strong> Output: $SO(4)$, which factors uniquely: $SO(4) \cong (SU(2) \times SU(2))/\mathbb{Z}_2$.</p>
+<p>This factoring is unique to four dimensions. In no other dimensionality does the rotation group split into two independent pieces. From this single relational fact, three seemingly unrelated phenomena follow:</p>
+<ol>
+<li>
+<p><strong>The hydrogen atom's hidden symmetry.</strong> The non-relativistic electron in a Coulomb potential has energy levels that repeat in ways that only make sense if the electron moves in a space with four rotation directions, not three. The extra conserved quantity is the Laplace-Runge-Lenz vector.</p>
+</li>
+<li>
+<p><strong>The quaternionic structure of spacetime.</strong> Four-dimensional Euclidean space can be identified with the quaternions $\mathbb{H}$. The factoring of $SO(4)$ corresponds to left and right multiplication by unit quaternions. This underlies spinor representations and the algebraic structure of supersymmetry.</p>
+</li>
+<li>
+<p><strong>Instantons in gauge theory.</strong> After Wick rotation, the Lorentz group becomes $SO(4)$. Its factorization is essential for classifying topological solutions in Yang-Mills theory — solutions that describe quantum tunneling between different vacua.</p>
+</li>
+</ol>
+<p>The grammar does not explain why space has three dimensions. It explains what symmetries exist GIVEN the dimensionality. The dimensionality is an input — a contingent fact about the universe we inhabit. A universe with five spatial dimensions would have different rotation groups, different hydrogen-like atoms, different possible gauge theories. The function would still apply. The outputs would be different.</p>
+<hr />
+<h2>5. Convergence IV: The Arithmetic — Same Grammar, Different Substrate</h2>
+<p>Change the substrate. Instead of continuous distinctions, consider discrete ones: the solutions of polynomial equations, the prime factors of integers.</p>
+<p><strong>Input:</strong> The natural numbers. Distinctions: prime factors. Operation: multiplication. Closure: every number must factor uniquely into primes. Output: the fundamental theorem of arithmetic. Primes are the atomic distinctions of arithmetic.</p>
+<p><strong>Input:</strong> A polynomial equation, say $x^5 - x + 1 = 0$. Distinctions: the five solutions. Moves: permutations that preserve all arithmetic relationships among the solutions. Closure: compose two allowed permutations, and the result must be allowed.</p>
+<p>The output is the Galois group of the equation. For a generic quintic, the Galois group is $S_5$ — all 120 permutations. For special quintics, it is smaller — $A_5$ (60 permutations) or a solvable subgroup. The structure is identical to a Lie group: closure under composition, an identity, inverses for every move. The difference is only whether the distinctions are continuous (points → Lie groups) or discrete (solutions → Galois groups). The grammar does not distinguish.</p>
+<p>This is the fourth convergence: Galois groups and Lie groups are the same kind of object applied to different substrates.</p>
+<p>Now the deepest connection. The Langlands program proposes a dictionary between the geometric column (Lie groups, automorphic forms) and the arithmetic column (Galois groups, L-functions, motives). It claims that the two columns carry the same rational data — they are the same pattern expressed in different languages. If true, it reveals that the function is not just structurally similar across domains. It is the same underlying reality, accessed through different inputs. Fermat's Last Theorem was proved using a special case. The geometric Langlands program has deep connections to quantum field theory — S-duality in $N=4$ super Yang-Mills. The convergence was discovered, not constructed.</p>
+<hr />
+<h2>6. Convergence V: The Physical — Why This Group</h2>
+<p>We now have four independent lines of evidence — geometric, quantum, spatial, arithmetic — all converging on the same grammatical structure. The fifth is the most consequential: the gauge group of the Standard Model.</p>
+<p>Nature presents us with specific distinctions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Distinction</th>
+<th style="text-align: center;">Count</th>
+<th style="text-align: left;">Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Color</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Quarks come in three varieties. Labels arbitrary.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Weak isospin</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Left-handed particles come in pairs. Right-handed are singlets.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hypercharge</td>
+<td style="text-align: center;">Continuous</td>
+<td style="text-align: left;">A real-valued distinction on each particle.</td>
+</tr>
+</tbody>
+</table>
+<p>These are observations, not derivations. The grammar does not explain why there are three colors rather than two, four, or ten. It does not explain why the weak force is chiral. It takes these as inputs.</p>
+<p>Given these inputs, what labeling freedom do we have?</p>
+<ul>
+<li>
+<p>Three color distinctions → the group of all label-reshufflings that preserves the three-valued structure is $SU(3)$, with $3^2 - 1 = 8$ independent moves. Eight gluons.</p>
+</li>
+<li>
+<p>Two weak isospin distinctions → $SU(2)$, with $2^2 - 1 = 3$ independent moves. Three weak bosons.</p>
+</li>
+<li>
+<p>Continuous hypercharge → $U(1)$, with 1 independent move. One hypercharge boson.</p>
+</li>
+</ul>
+<p>The total labeling freedom is the direct product: $G_{\text{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$. Twelve independent moves. Twelve force carriers. This group is forced by the number and type of distinctions nature presents, combined with the requirement that labels be arbitrary.</p>
+<p>But the group structure alone is not enough. The particles must be assigned specific hypercharge values $Y$. The assignment is not arbitrary. It is forced by anomaly cancellation — the quantum field theory version of closure. As shown in Section 3, given the observed electric charges and the relation $Q = T_3 + Y$, the five hypercharge values are uniquely determined — each a rational number:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Particle</th>
+<th style="text-align: center;">$SU(3)$</th>
+<th style="text-align: center;">$SU(2)$</th>
+<th style="text-align: center;">$Y$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$q_L$ (up, down)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$+1/6$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$u_R$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$+2/3$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$d_R$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$-1/3$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\ell_L$ ($\nu, e$)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$-1/2$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$e_R$</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$-1$</td>
+</tr>
+</tbody>
+</table>
+<p>Change any one, and closure fails. The output is forced — <strong>given the inputs.</strong></p>
+<p><strong>A note on $U(1)$.</strong> The crystallographic condition generates semisimple Lie algebras — those with non-trivial root systems. $U(1)$ is abelian: no root system, no Dynkin diagram, no reflecting surfaces. It arises from a different closure condition: charge quantization. If hypercharge could vary continuously, the theory would be arbitrarily adjustable. The observation that electric charges are integer multiples of $e/3$ constrains the $U(1)$ factor to be compact. The grammar handles both closure types — reflections must close, and rescaling must be consistent — but they are different operations on different types of input.</p>
+<hr />
+<h2>7. The Breaking: When the Vacuum Chooses</h2>
+<p>The gauge group $SU(3) \times SU(2) \times U(1)$ is the symmetry of the laws. The symmetry of the world we observe is smaller: $SU(3) \times U(1)_{\text{EM}}$. Three of the twelve moves are hidden. Something broke the symmetry.</p>
+<p>The breaking is an additional input: the Higgs field, a doublet under $SU(2)$ with $Y = +1/2$. The vacuum must choose a value for this field. The energy function has its minimum not at zero but at a nonzero value, approximately 246 GeV. The vacuum chooses one point on this circle.</p>
+<p>The choice breaks the symmetry. A move survives if it leaves the vacuum unchanged; it is broken if it changes the vacuum. The electric charge operator $Q = T_3 + Y$ gives the vacuum $Q = 0$. The photon remains massless. Three moves that do not commute with $Q$ are absorbed by the $W^+, W^-, Z$, which acquire mass:</p>
+<p>$$m_W \approx 80.4 \text{ GeV}, \quad m_Z \approx 91.2 \text{ GeV}, \quad \sin^2\theta_W \approx 0.231$$</p>
+<p>The same Higgs field gives mass to fermions through Yukawa couplings — inputs whose values the grammar does not predict. The pattern is consistent: the grammar tells us which breaking patterns are possible. It does not tell us which one nature selected.</p>
+<hr />
+<h2>8. The Convergence: Evidence That the Pattern Is Real</h2>
+<p>Five independent domains. Five different communities of inquiry. Five different mathematical languages. One structure.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Domain</th>
+<th style="text-align: left;">Input</th>
+<th style="text-align: left;">Closure Condition</th>
+<th style="text-align: left;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Group theory</strong></td>
+<td style="text-align: left;">Lines in space, arranged</td>
+<td style="text-align: left;">Integer Cartan ratios must close</td>
+<td style="text-align: left;">Cartan classification: $A_n, B_n, C_n, D_n, G_2, F_4, E_{6,7,8}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quantum field theory</strong></td>
+<td style="text-align: left;">Particle representations</td>
+<td style="text-align: left;">Anomalies must cancel</td>
+<td style="text-align: left;">Viable gauge theories; uniquely determines hypercharges</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Geometry</strong></td>
+<td style="text-align: left;">Spatial dimensions</td>
+<td style="text-align: left;">Rotations must compose</td>
+<td style="text-align: left;">$SO(n)$; low-dimensional isomorphisms with $SU(2)$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Number theory</strong></td>
+<td style="text-align: left;">Primes, solutions of equations</td>
+<td style="text-align: left;">Permutations must close</td>
+<td style="text-align: left;">Galois groups; Langlands correspondence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Particle physics</strong></td>
+<td style="text-align: left;">Observed distinctions</td>
+<td style="text-align: left;">Anomalies must cancel</td>
+<td style="text-align: left;">$SU(3) \times SU(2) \times U(1)$ with specific rational $Y$ assignments</td>
+</tr>
+</tbody>
+</table>
+<p>The convergence is the evidence. When five independent lines of inquiry, pursued by different people for different reasons, all produce the same underlying structure, the structure is not a human projection. It is not a metaphor. It is something that must be — something forced by the logic of distinction-making itself, regardless of the substrate.</p>
+<p>The practitioners in each domain do not need to know about the others. The group theorist classifying Dynkin diagrams in 1894, the particle physicist computing triangle anomalies in 1972, the number theorist developing the Langlands program in 1967 — they were all uncovering the same grammar. They were all applying the same function to different inputs. The convergence was not coordinated. It was inevitable.</p>
+<p>This is what the nineteenth-century philosopher of science William Whewell called <em>consilience</em> — the convergence of independent lines of evidence on a single conclusion. Consilience is the strongest form of evidence, stronger than any single experiment or observation, because it cannot be manufactured. You cannot force five independent domains to converge unless the underlying structure is real.</p>
+<hr />
+<h2>9. The Honest Demarcation: What the Grammar Does Not Determine</h2>
+<p>The grammar is logic: premises force conclusions. It guarantees that the conclusions follow. It does not choose the premises. Here is what remains undetermined — the premises nature provides, unexplained by the grammar:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Premise</th>
+<th style="text-align: left;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Number of colors (3)</td>
+<td style="text-align: left;">Observed. Any $N \geq 2$ gives a consistent gauge theory.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Number of generations (3)</td>
+<td style="text-align: left;">Observed. Each independently cancels anomalies. No grammatical bound.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chirality (left-handed doublets)</td>
+<td style="text-align: left;">Observed. Parity violation is an empirical fact, not a grammatical necessity.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fermion masses (0.511 MeV to 173 GeV)</td>
+<td style="text-align: left;">Observed. Span a factor of 340,000. Yukawa couplings are free parameters.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mixing angles (CKM matrix, 4 parameters)</td>
+<td style="text-align: left;">Observed. Any unitary matrix is grammatically consistent.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gauge couplings ($\alpha, \alpha_s$, etc.)</td>
+<td style="text-align: left;">Observed. Free parameters at the real place.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dimensionality of space (3+1)</td>
+<td style="text-align: left;">Observed. Grammar describes symmetries in $n$ dimensions but not why $n=3$.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vacuum choice (Higgs VEV, potential shape)</td>
+<td style="text-align: left;">Observed. Breaking pattern forced given the choice; choice itself is input.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hierarchy problem</td>
+<td style="text-align: left;">Unexplained. $10^{34}$ fine-tuning if SM valid to Planck scale.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Strong CP problem</td>
+<td style="text-align: left;">Unexplained. Why $\theta &lt; 10^{-10}$?</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dark matter, dark energy</td>
+<td style="text-align: left;">Unaddressed. Outside the grammar's scope.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gravity</td>
+<td style="text-align: left;">Not a gauge symmetry of distinctions. If spacetime emerges from entanglement — a cross-ratio structure — the grammar's core operation may apply here.</td>
+</tr>
+</tbody>
+</table>
+<p>The demarcation is sharp. The grammar explains what must be, given what is. It does not explain what is. The premises could have been otherwise. The function would still hold. The universe would be different. We would not be here to observe it — but that is an anthropic observation, not a grammatical one.</p>
+<hr />
+<h2>10. The Frontier: Can the Premises Be Forced?</h2>
+<p>The grammar forces conclusions from premises. It does not force the premises. But is that the end of the story?</p>
+<p>Ostrowski proved that the only completions of the rational numbers are the real numbers $\mathbb{R}$ and the p-adic numbers $\mathbb{Q}_p$ — one for each prime. The real numbers are the Archimedean completion — fill the gaps by magnitude. The p-adic numbers are the non-Archimedean completions — fill the gaps by divisibility. Both are equally consistent. Both are equally valid.</p>
+<p>But the Standard Model is formulated under the Archimedean completion alone. Its free parameters — masses, couplings, mixing angles — are specified as arbitrary real numbers. Under a p-adic completion, an arbitrary real number has no meaning. Only rational numbers exist in every completion. Only ratios are ruler-independent.</p>
+<p>This is not a technical convenience. It is the consequence of the ontological hierarchy established in Section 1: ratios are what exist before any completion is chosen. The ruler is derivative — a choice of how to fill the gaps between rationals. The ratio is primary — it is the same in every completion. A physical parameter that is an arbitrary real number depends on the choice of ruler. A physical parameter that is a ratio does not.</p>
+<p>Consider the ratio of the muon mass to the electron mass: $m_\mu / m_e \approx 207$. This number is the same whether you measure by magnitude or by divisibility. It transcends the choice of completion. It is ruler-independent. The individual masses — 105.66 MeV and 0.511 MeV — are Archimedean artifacts. The ratio is what is real.</p>
+<p>Now the question: if physical law must be expressible under ALL completions — if the grammar must close across every completion, not just the Archimedean one — then the free parameters cannot be arbitrary real numbers. They must be ratios. Rational or algebraic numbers. The premises would no longer be free.</p>
+<p>The Langlands program operates at precisely this level — the level of rational structures that exist in all completions. It provides a dictionary between geometric patterns (Lie groups, automorphic forms) and arithmetic patterns (Galois groups, L-functions). If the dictionary is complete enough, it may determine which rational structures are consistent — which ratios are allowed.</p>
+<p>If so, the premises at the real place are not free. They are forced by closure at all places simultaneously. The function, applied comprehensively across all rulers, would determine its own inputs.</p>
+<p>This is a research program, not a result. The first steps are solid. Ostrowski's theorem is rigorously proven. Ratios are indeed ruler-invariant — a mathematical fact. The remaining steps are speculative. No Standard Model parameter has been shown to follow from adelic constraints. The connection between the Langlands program and physical parameters is not established. The adelic formulation of quantum field theory does not exist.</p>
+<p>But the question is the right one. It is the deepest question the grammar permits: <strong>can logic close on itself?</strong> Can the requirement of consistency, applied comprehensively enough, force not just the conclusions but the premises? If the answer is yes, the apparent contingency of nature's inputs is an illusion — an artifact of looking at only one completion. If the answer is no, the premises are irreducibly contingent. The grammar would remain what it is: a perfect mapping from premises to conclusions, with the premises themselves beyond its reach.</p>
+<p>Either outcome is meaningful. Either way, the grammar stands.</p>
+<hr />
+<h2>11. What Is Real?</h2>
+<p>If the grammar is logic — if symmetry is a property of how we describe things, not of the things themselves — what, then, is real?</p>
+<p><strong>The function is real.</strong> It is the necessity of the consequence given the premises. It is not a physical law. It is not even a mathematical theorem. It is the structure of any possible world in which distinctions can be drawn and consistency can be demanded. The function would hold in any universe, with any laws, described in any language, under any ruler. It is the one thing that cannot be otherwise.</p>
+<p><strong>The specific symmetries we observe are not real in the same way.</strong> The gauge group $SU(3) \times SU(2) \times U(1)$ is real as a fact about our descriptive framework, given nature's inputs. If you describe nature using three color distinctions, two weak isospin distinctions, and continuous hypercharge, under the Archimedean ruler, with the observed electric charges, and demand anomaly cancellation — then this is the group you must get. The "must" is real. The "if" is contingent.</p>
+<p><strong>The five convergences are real.</strong> They are evidence that the function is not a projection. When group theory, quantum field theory, geometry, number theory, and particle physics independently converge on the same structure, the structure is not something we imposed. It is something we discovered — something that was always there, waiting to be seen.</p>
+<p><strong>The premises are real but unexplained.</strong> We do not know why there are three colors. We do not know why the weak force violates parity. We do not know why there are three generations. We do not know why the masses and couplings have the values they do. These are what we observe. They could have been otherwise. The grammar explains what follows from them. It does not explain them.</p>
+<p><strong>The deepest hope</strong> — that closure across all rulers forces the premises themselves — is the attempt to eliminate this last contingency. Whether it succeeds is unknown.</p>
+<hr />
+<h2>Epilogue</h2>
+<p>Draw a line.</p>
+<p>You have done the only thing that can be done. You have made a distinction. Everything that follows — every symmetry, every force, every geometric space, every arithmetic structure — is a consequence of this act, repeated, structured, and forced to close.</p>
+<p>But what follows depends on what you drew. Draw a different line. Arrange it differently. Measure it by a different ruler. Everything that follows changes. The function does not. The function is the same — always. It is the one thing that cannot be otherwise.</p>
+<p>The grammar is not a theory of everything. It is the theory of the relationship between any description and its necessary consequences. It is the logic of patterns. It is the only pattern that must hold — because it is the pattern of what must be, given what is.</p>
+<p><strong>Draw a line. Demand closure. Everything else is input.</strong></p>
+<hr />
+<h2>Appendix A: The Cartan Classification</h2>
+<h3>Infinite Families</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Family</th>
+<th style="text-align: left;">Relationship Pattern</th>
+<th style="text-align: center;">Dimension</th>
+<th style="text-align: left;">Key Member</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$A_n$</td>
+<td style="text-align: left;">$n$ lines in chain</td>
+<td style="text-align: center;">$n(n+2)$</td>
+<td style="text-align: left;">$A_1 = SU(2)$, $A_2 = SU(3)$, $A_4 = SU(5)$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$B_n$</td>
+<td style="text-align: left;">Last link double</td>
+<td style="text-align: center;">$n(2n+1)$</td>
+<td style="text-align: left;">$B_1 = SO(3)$, $B_2 = SO(5)$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$C_n$</td>
+<td style="text-align: left;">First link double</td>
+<td style="text-align: center;">$n(2n+1)$</td>
+<td style="text-align: left;">$C_2 = Sp(4) \cong SO(5)$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$D_n$</td>
+<td style="text-align: left;">Fork at end</td>
+<td style="text-align: center;">$n(2n-1)$</td>
+<td style="text-align: left;">$D_3 = SO(6) \cong SU(4)$, $D_5 = SO(10)$</td>
+</tr>
+</tbody>
+</table>
+<h3>Exceptional Cases</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Group</th>
+<th style="text-align: left;">Relationship Pattern</th>
+<th style="text-align: center;">Dimension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$G_2$</td>
+<td style="text-align: left;">3-line closed cycle</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: left;">$F_4$</td>
+<td style="text-align: left;">4-line branching</td>
+<td style="text-align: center;">52</td>
+</tr>
+<tr>
+<td style="text-align: left;">$E_6$</td>
+<td style="text-align: left;">5-line branching</td>
+<td style="text-align: center;">78</td>
+</tr>
+<tr>
+<td style="text-align: left;">$E_7$</td>
+<td style="text-align: left;">6-line branching</td>
+<td style="text-align: center;">133</td>
+</tr>
+<tr>
+<td style="text-align: left;">$E_8$</td>
+<td style="text-align: left;">8-line branching</td>
+<td style="text-align: center;">248</td>
+</tr>
+</tbody>
+</table>
+<h3>Accidental Isomorphisms (Low-Dimensional Coincidences)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Isomorphism</th>
+<th style="text-align: left;">Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$SO(3) \cong SU(2)/\mathbb{Z}_2$</td>
+<td style="text-align: left;">$A_1 = B_1$: same Dynkin diagram in rank 1</td>
+</tr>
+<tr>
+<td style="text-align: left;">$SO(4) \cong (SU(2) \times SU(2))/\mathbb{Z}_2$</td>
+<td style="text-align: left;">$D_2 = A_1 \times A_1$: fork collapses to two independent chains</td>
+</tr>
+<tr>
+<td style="text-align: left;">$SO(6) \cong SU(4)/\mathbb{Z}_2$</td>
+<td style="text-align: left;">$D_3 = A_3$: Dynkin diagrams match</td>
+</tr>
+<tr>
+<td style="text-align: left;">$SO(5) \cong Sp(4)$</td>
+<td style="text-align: left;">$B_2 = C_2$: diagrams match in rank 2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Appendix B: Anomaly Cancellation — Complete Calculation</h2>
+<p><strong>Input (one generation, right-handed convention):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Particle</th>
+<th style="text-align: center;">$SU(3)$</th>
+<th style="text-align: center;">$SU(2)$</th>
+<th style="text-align: center;">$Y$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$q_L$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$+1/6$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$u_R$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$+2/3$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$d_R$</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$-1/3$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\ell_L$</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$-1/2$</td>
+</tr>
+<tr>
+<td style="text-align: left;">$e_R$</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$-1$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraints verified:</strong></p>
+<ul>
+<li>$SU(3)^3$: $2(+1) + (-1) + (-1) = 0$ ✓</li>
+<li>$SU(2)^3$: Automatic for any number of doublets ✓</li>
+<li>$SU(2)^2 \times U(1)$: $3 \cdot \frac{1}{6} + (-\frac{1}{2}) = 0$ ✓</li>
+<li>$U(1)^3$: $3(2(\frac{1}{6})^3 - (\frac{2}{3})^3 - (-\frac{1}{3})^3) + (2(-\frac{1}{2})^3 - (-1)^3) = 0$ ✓</li>
+<li>Gravitational $\times$ $U(1)$: $3(2 \cdot \frac{1}{6} - \frac{2}{3} + \frac{1}{3}) + (2(-\frac{1}{2}) - (-1)) = 0$ ✓</li>
+</ul>
+<hr />
+<h2>Appendix C: Key Physical Parameters</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Approximate Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">W boson mass</td>
+<td style="text-align: center;">$m_W$</td>
+<td style="text-align: left;">80.4 GeV</td>
+</tr>
+<tr>
+<td style="text-align: left;">Z boson mass</td>
+<td style="text-align: center;">$m_Z$</td>
+<td style="text-align: left;">91.2 GeV</td>
+</tr>
+<tr>
+<td style="text-align: left;">Weinberg angle</td>
+<td style="text-align: center;">$\sin^2\theta_W$</td>
+<td style="text-align: left;">0.231</td>
+</tr>
+<tr>
+<td style="text-align: left;">Higgs VEV</td>
+<td style="text-align: center;">$v$</td>
+<td style="text-align: left;">246 GeV</td>
+</tr>
+<tr>
+<td style="text-align: left;">Strong coupling at $m_Z$</td>
+<td style="text-align: center;">$\alpha_s$</td>
+<td style="text-align: left;">0.118</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fine structure constant</td>
+<td style="text-align: center;">$\alpha$</td>
+<td style="text-align: left;">1/137</td>
+</tr>
+<tr>
+<td style="text-align: left;">Top quark mass</td>
+<td style="text-align: center;">$m_t$</td>
+<td style="text-align: left;">173 GeV</td>
+</tr>
+<tr>
+<td style="text-align: left;">Electron mass</td>
+<td style="text-align: center;">$m_e$</td>
+<td style="text-align: left;">0.511 MeV</td>
+</tr>
+<tr>
+<td style="text-align: left;">CKM matrix (magnitudes)</td>
+<td style="text-align: center;">$\lvert V_{\text{CKM}} \rvert$</td>
+<td style="text-align: left;">$\begin{pmatrix} 0.974 &amp; 0.225 &amp; 0.004 \ 0.224 &amp; 0.974 &amp; 0.042 \ 0.009 &amp; 0.041 &amp; 0.999 \end{pmatrix}$</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>The function is invariant. The inputs are contingent. The convergence is evidence. The grammar is logic — the one pattern that must hold, because it is the pattern of what must be, given what is.</em></p></body></html>

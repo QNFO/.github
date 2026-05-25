@@ -1,0 +1,1086 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Q-PNA: Quantum-Native p-Adic Neural Architecture — Research Specification v2.0</title><style>/* build_pdf.css v3.0 -- Embedded academic PDF stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--text:#1a1a1a;--muted:#555;--border:#d0d0d0;--bg:#fafafa;--accent:#007acc;--title:24pt;--h1:18pt;--h2:15pt;--body:10.5pt}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:var(--body);line-height:1.6;color:var(--text);max-width:6.2in;margin:0 auto;padding:0;text-align:left;background:white}
+h1.title{font-size:var(--title);font-weight:700;text-align:left;margin:0.8in 0 0.1in 0;line-height:1.1;color:var(--text);border-bottom:3px solid #000;padding-bottom:0.1in}
+h1{font-size:var(--h1);font-weight:600;margin:0.6in 0 0.3in 0;line-height:1.2;color:var(--text);border-bottom:2px solid #333;padding-bottom:0.1in;page-break-before:always;page-break-after:avoid}
+h2{font-size:var(--h2);font-weight:600;margin:1em 0 0.5em 0;color:var(--text);border-bottom:1px solid #ccc;padding-bottom:0.2em}
+h3{font-size:13pt;font-weight:600;margin:0.9em 0 0.4em 0;color:#333}
+p{margin:0 0 0.8em 0;line-height:1.6}
+.author-block{margin:0.2in 0 0.3in 0;padding:0.15in 0.2in;background:#f9f9f9;border-left:3px solid #000;border-radius:0 4px 4px 0;font-size:9.5pt;line-height:1.5}
+.author-block p{margin:0}.author-block strong{font-weight:600;color:var(--text)}
+.author-block a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.author-block .abstract-label{font-weight:700;display:block;margin-top:0.3em;font-size:10pt}
+.author-block .abstract-text{margin-top:0.2em;font-style:normal;color:var(--muted)}
+ul,ol{margin:0.8em 0;padding-left:2em}li{margin-bottom:0.4em;line-height:1.5}
+ol{counter-reset:item;list-style-type:none}ol>li{counter-increment:item;position:relative;padding-left:2em}
+ol>li::before{content:counter(item)".";font-weight:600;position:absolute;left:0;width:1.5em;text-align:right}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:0.85em;background:#f9f9f9;padding:0.1em 0.3em;border-radius:2px;border:1px solid #e0e0e0;color:#d63384}
+pre{font-family:"JetBrains Mono",Consolas,monospace;background:#f9f9f9;padding:0.8em;margin:0.9em 0;border-radius:3px;overflow-x:auto;border:1px solid #e0e0e0;font-size:0.8em;line-height:1.5;border-left:3px solid #000;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0;border:none;color:inherit;font-size:inherit}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.95em;box-shadow:0 2px 4px rgba(0,0,0,0.05);border-radius:4px;overflow:hidden}
+th{background:#f0f0f0;font-weight:600;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border);border-top:2px solid #000}
+td{background:#fff;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border)}
+tr:nth-child(even) td{background:#fafafa}tbody tr td:first-child{font-weight:600}
+blockquote{border-left:3px solid #000;margin:1.2em 0;padding:0.5em 0 0.5em 0.9em;background:var(--bg);color:var(--muted);border-radius:0 2px 2px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{display:block;margin:0.8em 0;text-align:left}
+.c{color:#6a737d;font-style:italic}.k{color:#d73a49;font-weight:bold}.s{color:#032f62}.mi{color:#005cc5}.nf{color:#6f42c1}.nc{color:#6f42c1;font-weight:bold}
+@media print{@page{size:A4;margin:0.75in 0.8in 0.75in 1.2in;@bottom-right{content:"Page "counter(page);font-family:"Inter",sans-serif;font-size:8pt;color:#666;padding:0.2in 0.4in 0 0}}body{padding:0;max-width:100%}.author-block{border:1px solid #000;border-left:3px solid #000}}
+</style><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true,tags:'ams'},startup:{ready(){MathJax.startup.defaultReady();const n=document.querySelectorAll('mjx-container').length;console.log('MathJax ready: '+n+' expressions rendered')}}}</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><h1 class="title">Q-PNA: Quantum-Native p-Adic Neural Architecture — Research Specification v2.0</h1><div class="author-block">
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas</p><p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a></p><p><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.20287742">10.5281/zenodo.20287742</a></p><p><strong>Date:</strong> 2026-05-19</p><p class="abstract-label">Abstract</p><p class="abstract-text">></p>
+</div><h1>Q-PNA: Quantum-Native p-Adic Neural Architecture</h1>
+<h2>Research Specification v2.0</h2>
+<p><strong>Author</strong>: <a href="mailto://rowan.quni@outlook.com">Rowan Brad Quni-Gudzinas</a>
+<strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a>
+<strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.20287742">10.5281/zenodo.20287742</a>
+<strong>Repository:</strong> <a href="https://github.com/QNFO/Q-PNA">github.com/QNFO/Q-PNA</a>
+<strong>Date</strong>: 2026-05-19</p>
+<p><strong>Abstract</strong>: Q-PNA is a neural network architecture that replaces the continuous embedding spaces of standard deep learning with ultrametric geometry on Bruhat-Tits trees. The architecture consists of four integrated components: p-adic valuation encoding, ultrametric attention with zero learned parameters, tree-walk optimization (a discrete analog of backpropagation), and a syntactic token calculus providing formal verification of every decision. The architecture shares its mathematical foundation with the QWAV quantum computing framework, enabling a unified computing paradigm where the geometry that passively suppresses quantum errors also produces glass-box AI decisions with fully traceable audit trails. This research specification is grounded in prior work including a working proof-of-concept demonstration, a book-length token calculus treatment, and computationally verified cophenetic distance theory, but the full architecture has not yet been computationally validated.</p>
+<h2>1. Motivation: The Gauge Problem in Continuous AI</h2>
+<h3>1.1 The Archimedean Assumption</h3>
+<p>Contemporary AI rests on an invisible mathematical assumption: that the space of representations is continuous, smooth, and Archimedean (the real numbers $\mathbb{R}^n$). Every gradient descent step, every backpropagated weight update, every attention score in a transformer, and every latent vector in a variational autoencoder operates within the familiar continuum <code>[ARCHIVE: Ultrametric Intelligence]</code>.</p>
+<p>This foundation has carried the field remarkably far. Yet it imposes structural limitations that are consequences of the geometry, not of insufficient scale or data:</p>
+<h3>1.2 Gauge Dependence</h3>
+<p><code>[ARCHIVE: Auditable Attention PoC]</code></p>
+<p>Embeddings in $\mathbb{R}^d$ are <strong>gauge-dependent</strong>: if $\phi: \mathbb{R}^d \to \mathbb{R}^d$ is any diffeomorphism, the embedding $v \in \mathbb{R}^d$ for concept $C$ can be replaced by $\phi(v)$ without changing intrinsic meaning. Yet neural networks treat these as distinct inputs. Formally:</p>
+<p><strong>Definition (Gauge dependence):</strong> A representation scheme $R: \mathcal{C} \to \mathbb{R}^d$ mapping concepts to vectors is gauge-dependent if there exists a diffeomorphism $\phi$ such that training converges to different parameters when trained on ${R(c)}$ vs. ${\phi(R(c))}$, even though $\phi$ preserves all relational structure.</p>
+<p>This leads to:
+- <strong>Adversarial fragility:</strong> Infinitesimal perturbations exploit the continuous corridors in the decision landscape
+- <strong>Opaque decision-making:</strong> The path from input to output is a composition of nonlinearities with no geometric interpretation
+- <strong>Poor analogical reasoning:</strong> Similarity in $\mathbb{R}^d$ (cosine, Euclidean) does not correspond to hierarchical similarity</p>
+<h3>1.3 The Ultrametric Alternative</h3>
+<p>Ultrametric spaces replace the Archimedean triangle inequality:</p>
+<p>$$d(x, z) \leq d(x, y) + d(y, z) \quad \text{(Archimedean)}$$</p>
+<p>with the strong triangle inequality:</p>
+<p>$$d(x, z) \leq \max(d(x, y), d(y, z)) \quad \text{(Ultrametric)}$$</p>
+<p>In an ultrametric space, every triangle is isosceles with the two longest sides equal — a property called <strong>triadic rigidity</strong> <code>[DOI: 10.5281/zenodo.20213043]</code>. All balls are clopen (both open and closed). Points are organized in a strict nested hierarchy rather than a continuous manifold.</p>
+<p>The natural geometry of ultrametric spaces is a <strong>rooted tree</strong>. The Bruhat–Tits tree $\mathcal{T}_p$ for prime $p$ is the universal ultrametric space: an infinite regular tree with branching factor $p+1$, where the ultrametric distance between two leaves is the $p$-adic valuation of their difference.</p>
+<hr />
+<h2>2. Mathematical Foundations</h2>
+<h3>2.1 The Bruhat–Tits Tree $\mathcal{T}_p$</h3>
+<p><code>[QWAV-INTERNAL: Technical Deep-Dive §4]</code></p>
+<p>For a prime $p$, the Bruhat–Tits tree $\mathcal{T}_p$ is the infinite regular tree where each vertex has exactly $p+1$ neighbors. The boundary of $\mathcal{T}_p$ is the projective line over the $p$-adic numbers $\mathbb{P}^1(\mathbb{Q}_p)$.</p>
+<p><strong>Key properties:</strong>
+- <strong>Regularity:</strong> Every vertex has degree $p+1$
+- <strong>Ultrametric:</strong> Distances satisfy the strong triangle inequality
+- <strong>Group action:</strong> $\operatorname{PGL}(2, \mathbb{Q}_p)$ acts transitively on the vertices
+- <strong>Langlands connection:</strong> The tree encodes representations of the $p$-adic group</p>
+<p>For computation, we truncate $\mathcal{T}_p$ to finite depth $D$:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Typical Value</th>
+<th style="text-align: left;">Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Prime</td>
+<td style="text-align: left;">$p$</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Branching factor $p+1 = 4$ (ternary tree)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Depth</td>
+<td style="text-align: left;">$D$</td>
+<td style="text-align: left;">5–10</td>
+<td style="text-align: left;">Number of levels</td>
+</tr>
+<tr>
+<td style="text-align: left;">Leaf count</td>
+<td style="text-align: left;">$L$</td>
+<td style="text-align: left;">$(p+1) \cdot p^{D-1}$</td>
+<td style="text-align: left;">For $p=3$, $D=5$: $4 \cdot 3^4 = 324$ leaves</td>
+</tr>
+<tr>
+<td style="text-align: left;">Semantic primes</td>
+<td style="text-align: left;">$k$</td>
+<td style="text-align: left;">5–12</td>
+<td style="text-align: left;">Number of prime dimensions for encoding</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 Cophenetic Distance</h3>
+<p><code>[DOI: 10.5281/zenodo.20213043]</code></p>
+<p>For leaves $a, b$ in a rooted tree with height function $h$, the <strong>cophenetic distance</strong> is the height of their lowest common ancestor (LCA):</p>
+<p>$$d_C(a, b) = h(\operatorname{lca}(a, b))$$</p>
+<p><strong>Theorem (Cophenetic ultrametric):</strong> Cophenetic distance satisfies the strong triangle inequality:</p>
+<p>$$d_C(a, c) \leq \max(d_C(a, b), d_C(b, c))$$</p>
+<p><strong>Theorem (Triadic rigidity):</strong> For any three leaves, the two largest pairwise cophenetic distances are equal. <code>[DOI: 10.5281/zenodo.20213043]</code></p>
+<p>The cophenetic distance IS the ultrametric distance on the Bruhat–Tits tree. The distinction between “Bruhat–Tits trees” and “cophenetic trees” is a framing choice — they are the same mathematical structure. The tree is Bruhat–Tits; the distance function is cophenetic. <code>[LLM-INFERRED — see q-pna/[source file] §4 for full argument]</code></p>
+<h3>2.3 $p$-Adic Valuation Encoding</h3>
+<p><code>[ARCHIVE: ultrametric-ai-poc]</code></p>
+<p>The bridge from tokens to tree leaves is the $p$-adic valuation. Let $\Sigma = {p_1, p_2, \ldots, p_k}$ be a set of distinct primes called <strong>semantic primes</strong>. Each semantic prime represents a fundamental dimension of meaning.</p>
+<p><strong>Definition (Prime product):</strong> For token $t$ with semantic prime strengths $f_i(t) \in \mathbb{N}$:</p>
+<p>$$P(t) = \prod_{i=1}^{k} p_i^{f_i(t)}$$</p>
+<p><strong>Definition ($p$-adic valuation vector):</strong></p>
+<p>$$\vec{v}(t) = (v_{p_1}(P(t)), v_{p_2}(P(t)), \ldots, v_{p_k}(P(t)))$$</p>
+<p>where $v_{p_i}(n)$ is the exponent of $p_i$ in the prime factorization of $n$.</p>
+<p><strong>Definition (Ultrametric distance on valuation vectors):</strong></p>
+<p>$$d_{\text{ultra}}(t_1, t_2) = \max_{i} |v_{p_i}(P(t_1)) - v_{p_i}(P(t_2))|$$</p>
+<p>This is the Chebyshev distance on valuation vectors, which inherits ultrametricity from the $p$-adic valuation.</p>
+<p><strong>Demonstration (working code):</strong> The <code>ultrametric-ai-poc</code> uses $\Sigma = {2, 3, 5, 7, 11}$ mapped to semantic categories ${\text{good}, \text{bad}, \text{not}, \text{very}, \text{but}}$ via WordNet hypernym paths. Each English word is assigned semantic primes, the prime product is computed, and the valuation vector is used for ultrametric attention. Cocycle verification (strong triangle inequality) passes on all token triplets <code>[ARCHIVE: ultrametric-ai-poc]</code>.</p>
+<h3>2.4 Distinction Calculus (Spencer-Brown)</h3>
+<p><code>[ARCHIVE: Auditable Attention PoC]</code></p>
+<p>The syntactic token calculus is built on Spencer-Brown’s Laws of Form (1969) primitives:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Primitive</th>
+<th style="text-align: left;">Notation</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mark</strong></td>
+<td style="text-align: left;"><code>#</code></td>
+<td style="text-align: left;">The act of drawing a distinction</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Enclosure</strong></td>
+<td style="text-align: left;"><code>[A]</code></td>
+<td style="text-align: left;">A boundary containing expression $A$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Void</strong></td>
+<td style="text-align: left;">(blank)</td>
+<td style="text-align: left;">The absence of any distinction — not a symbol</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two axioms (rewrite rules):</strong></p>
+<ol>
+<li>
+<p><strong>Calling (Idempotence):</strong> ## $\to$ # — adjacent marks condense into one. Repetition of the same distinction is idle. Corresponds to $A \land A = A$.</p>
+</li>
+<li>
+<p><strong>Crossing (Involution):</strong> <code>[[A]]</code> $\to$ A — an enclosure containing only another enclosure cancels. To cross a boundary twice is to uncross it. Corresponds to $\neg\neg A = A$.</p>
+</li>
+</ol>
+<p><strong>Key insight (Q5 from <code>Ultrametric Intelligence/[source file]</code>):</strong> The Bruhat–Tits tree $\mathcal{T}_p$ is isomorphic to the set of all finite bracket expressions under Spencer-Brown’s calculus. Every token path in the tree is a normal form of some distinction expression. The LCA of two leaves is the longest common prefix of their normal forms. This means the distinction calculus IS the formal verification substrate for operations on the Bruhat–Tits tree.</p>
+<hr />
+<h2>3. Architecture</h2>
+<h3>3.1 Overview</h3>
+<pre class="codehilite"><code>                    ┌─────────────────────────┐
+   Raw Input ──&gt;    │  p-adic Valuation        │
+   (text, data)     │  Encoding                │
+                    │  token -&gt; P(t) -&gt; v⃗(t)    │
+                    └──────────┬──────────────┘
+                               │ valuation vectors
+                               ▼
+                    ┌─────────────────────────┐
+                    │  Bruhat–Tits Tree T_p     │
+                    │  • ultrametric attention  │
+                    │  • tree-walk propagation  │
+                    │  • cocycle verification   │
+                    └──────────┬──────────────┘
+                               │ decision path
+                               ▼
+                    ┌─────────────────────────┐
+   Output +         │  Syntactic Token Calc    │
+   Audit Trail ←──  │  • token history DAG     │
+                    │  • type verification      │
+                    │  • confluence check       │
+                    └─────────────────────────┘
+</code></pre>
+
+<h3>3.2 Token Encoding</h3>
+<p><strong>Step 1 — Semantic prime assignment:</strong> Map each input token $t$ to a set of semantic primes with strengths. For text: WordNet hypernym paths determine which semantic categories apply (as in <code>ultrametric-ai-poc</code>). For structured data: feature hierarchy determines the encoding levels. For unstructured data (images, audio): hierarchical clustering on training data determines the prime assignment ``.</p>
+<p><strong>Step 2 — Prime product computation:</strong></p>
+<p>$$P(t) = \prod_{i=1}^{k} p_i^{f_i(t)}$$</p>
+<p>where $f_i(t) \in \mathbb{N}$ is the strength of semantic prime $p_i$. A larger exponent means stronger association with that semantic dimension.</p>
+<p><strong>Step 3 — Valuation vector extraction:</strong></p>
+<p>$$\vec{v}(t) = (v_{p_1}(P(t)), v_{p_2}(P(t)), \ldots, v_{p_k}(P(t)))$$</p>
+<p>Each component $v_{p_i}(P(t)) = f_i(t)$ — the exponent is exactly the strength. This yields a vector in $\mathbb{N}^k$.</p>
+<p><strong>Step 4 — Leaf activation mapping:</strong> The valuation vector $\vec{v}(t)$ for a single token does NOT directly map to a single leaf. Instead, the encoding for an entire input sequence produces a distributed <strong>leaf activation vector</strong> $\mathbf{a} = (a_1, \ldots, a_L) \in [0,1]^L$ across all $L$ leaves. The activation $a_\ell$ at leaf $\ell$ is determined by the ultrametric attention mechanism (§3.3): tokens attend to each other based on tree distances, and the resulting attended valuations are distributed across leaves whose positions correspond to the semantic prime combinations present in the input.</p>
+<p><strong>Concrete mapping (from <code>ultrametric-ai-poc</code>):</strong> In the working PoC, each unique valuation vector $\vec{v}(t)$ corresponds to a leaf whose path from root is determined by the sequence of valuation component values. Tokens with identical valuation vectors map to the same leaf. The leaf activation $a_\ell$ is the aggregated attention weight from all tokens whose valuation vectors map to leaf $\ell$. This ensures that the leaf activation vector $\mathbf{a}$ inherits the ultrametric structure of the tree — similar tokens produce activations at nearby leaves.</p>
+<p><strong>Encoding properties:</strong>
+- <strong>Ultrametric:</strong> Distance between any two encodings satisfies the strong triangle inequality
+- <strong>Hierarchical:</strong> Similar tokens (sharing semantic primes) produce activations at nearby leaves
+- <strong>Discrete:</strong> The encoding space is a finite set of $L$ leaves, not a continuous manifold
+- <strong>Interpretable:</strong> Each dimension of $\vec{v}(t)$ is a named semantic category; each leaf corresponds to a specific combination of categories</p>
+<h3>3.3 Ultrametric Attention</h3>
+<p><code>[ARCHIVE: ultrametric-ai-poc]</code></p>
+<p>Attention weights on the Bruhat–Tits tree are computed from ultrametric distances between token encodings. <strong>No learned parameters</strong> — the attention pattern emerges purely from tree geometry.</p>
+<p><strong>Algorithm:</strong></p>
+<p><strong>Input:</strong> Sequence of tokens ${t_1, \ldots, t_n}$, temperature $T &gt; 0$<br />
+<strong>Output:</strong> Attention matrix $A \in \mathbb{R}^{n \times n}$, attended representations $\vec{v}^{\text{out}}_i$</p>
+<ol>
+<li>
+<p>Encode tokens: $\vec{v}_i = \vec{v}(t_i)$ for $i = 1, \ldots, n$</p>
+</li>
+<li>
+<p>Compute pairwise ultrametric distances:
+   $$d_{ij} = d_{\text{ultra}}(t_i, t_j) = \max_k |v_{p_k}(P(t_i)) - v_{p_k}(P(t_j))|$$</p>
+</li>
+<li>
+<p>Compute attention weights (exponential decay):
+   $$A_{ij} = \frac{\exp(-d_{ij} / T)}{\sum_{\ell=1}^{n} \exp(-d_{i\ell} / T)}$$</p>
+</li>
+<li>
+<p>Compute attended output:
+   $$\vec{v}^{\text{out}}<em j="1">i = \sum</em>_j$$}^{n} A_{ij} \cdot \vec{v</p>
+</li>
+</ol>
+<p><strong>Properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Standard Attention (Dot-Product)</th>
+<th style="text-align: left;">Ultrametric Attention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Parameter count</strong></td>
+<td style="text-align: left;">$O(d^2)$ (query, key, value matrices)</td>
+<td style="text-align: left;">$0$ (no learned parameters)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Similarity</strong></td>
+<td style="text-align: left;">$\langle q_i, k_j \rangle / \sqrt{d}$</td>
+<td style="text-align: left;">$\exp(-d_{\text{ultra}}(t_i, t_j) / T)$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Interpretability</strong></td>
+<td style="text-align: left;">Opaque — learned projections</td>
+<td style="text-align: left;">Transparent — distance = LCA depth</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gauge invariance</strong></td>
+<td style="text-align: left;">No — rotation changes attention</td>
+<td style="text-align: left;">Yes — ultrametric distance is invariant under tree automorphisms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auditability</strong></td>
+<td style="text-align: left;">No traceable explanation</td>
+<td style="text-align: left;">Every weight traces to a specific LCA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cocycle condition:</strong> For any three tokens $t_i, t_j, t_k$, the ultrametric distances must satisfy:</p>
+<p>$$d_{ik} \leq \max(d_{ij}, d_{jk})$$</p>
+<p>This is computationally verified at inference time. Violations indicate inconsistency in the cognitive representation <code>[ARCHIVE: ultrametric-ai-poc]</code>.</p>
+<p><strong>Temperature interpretation:</strong> The temperature $T$ controls attention sharpness:
+- $T \to 0$: Hard attention — only tokens at identical leaves attend to each other
+- $T \to \infty$: Uniform attention — all tokens attend equally
+- $T \approx 1$: Soft attention — tokens at nearby leaves (deep LCA) attend strongly</p>
+<h3>3.4 Output Decoding — Decision Paths</h3>
+<p>A Q-PNA output is not a probability distribution over class labels. It is a <strong>decision path</strong> — a traceable sequence of nodes from root to leaf:</p>
+<p>$$\text{Path} = v_0 \xrightarrow{c_1} v_1 \xrightarrow{c_2} v_2 \xrightarrow{c_3} \cdots \xrightarrow{c_D} v_D = \text{leaf}$$</p>
+<p>where $v_0$ is the root, each $v_i$ is a node at depth $i$, and $c_i \in {0, 1, \ldots, p}$ is the child index followed.</p>
+<p><strong>Decoding procedure:</strong>
+1. Start at root $v_0$ with the attended representation of the input
+2. At each internal node $v$, compute the activation of each child $c$ as the sum of attention-weighted valuations in that subtree
+3. Select the child with maximal activation (greedy) or sample proportionally (stochastic, with temperature)
+4. Recurse until a leaf is reached
+5. The leaf’s associated label/action is the output. The path from root to leaf IS the audit trail.</p>
+<p><strong>The decision path IS the explanation.</strong> No post-hoc interpretability method (LIME, SHAP) is needed. Every decision is a geometric path whose meaning is grounded in the tree structure — the shared LCA relationships with training examples, the semantic primes activated at each branch, and the token history that produced the leaf activation.</p>
+<hr />
+<p><strong>From attention to leaf activations:</strong> The attended valuation vectors $\vec{v}^{\text{out}}<em>i$ produced by ultrametric attention (§3.3) are aggregated into a leaf activation vector $\mathbf{a} \in [0,1]^L$ as follows: each valuation vector $\vec{v}^{\text{out}}_i$ is mapped to its corresponding leaf $\ell(i)$ in $\mathcal{T}_p$, and the leaf activation is the sum of attention weights directed to that leaf: $a</em>\ell = \sum_{i: \ell(i) = \ell} \sum_j A_{ji}$. This aggregated leaf activation vector is what the cophenetic loss (§4) compares against the target encoding $\mathbf{a}^*$.</p>
+<h2>4. Loss Function on Ultrametric Trees</h2>
+<h3>4.1 Cophenetic Loss</h3>
+<p><code>[QWAV-INTERNAL: Q-PNA v0.1 specification]</code></p>
+<p>For a training example with input encoding $\mathbf{a} = (a_1, \ldots, a_L)$ (leaf activations) and target encoding $\mathbf{a}^<em> = (a_1^</em>, \ldots, a_L^<em>)$, the </em><em>expected cophenetic distance</em>* is:</p>
+<p>$$D_C(\mathbf{a}, \mathbf{a}^<em>) = \sum_{i=1}^{L} \sum_{j=1}^{L} a_i a_j^</em> \cdot d_C(i, j)$$</p>
+<p>where $d_C(i, j) = h(\operatorname{lca}(\text{leaf}_i, \text{leaf}_j))$ is the cophenetic distance between leaves $i$ and $j$.</p>
+<p><strong>Cophenetic loss:</strong></p>
+<p>$$\mathcal{L}_{\text{coph}}(\mathbf{a}, \mathbf{a}^<em>) = D_C(\mathbf{a}, \mathbf{a}^</em>)$$</p>
+<p><strong>Intuition:</strong> If the predicted activation and target activation are concentrated on leaves that share a deep LCA (close in the tree), the loss is small. If they’re on distant branches (shallow LCA), the loss is large. This is naturally hierarchical — errors at coarser levels of the hierarchy are penalized more heavily.</p>
+<h3>4.2 Multi-Resolution Decomposition</h3>
+<p>The cophenetic loss can be decomposed by tree level:</p>
+<p>$$\mathcal{L}<em _ell="1">{\text{MR}} = \sum</em>_\ell$$}^{D} w_\ell \cdot \mathcal{L</p>
+<p>where $w_\ell = 2^{-\ell}$ (emphasizing coarser levels) and $\mathcal{L}_\ell$ measures error at depth $\ell$:</p>
+<p>$$\mathcal{L}<em _in="\in" _text_nodes="\text{nodes" v="v">\ell = \sum</em>^*_v \right|_1$$}(\ell)} \left| \mathbf{a}_v - \mathbf{a</p>
+<p>with $\mathbf{a}<em _in="\in" _text_leaves="\text{leaves" i="i">v = \sum</em> a_i$ being the aggregated activation in the subtree rooted at $v$.}(v)</p>
+<h3>4.3 Properties</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Cross-Entropy (Standard)</th>
+<th style="text-align: left;">Cophenetic Loss (Q-PNA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Space</strong></td>
+<td style="text-align: left;">Continuous $\mathbb{R}^n$</td>
+<td style="text-align: left;">Discrete tree $\mathcal{T}_p$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hierarchy awareness</strong></td>
+<td style="text-align: left;">None — all output dimensions are independent</td>
+<td style="text-align: left;">Errors weighted by tree distance — hierarchical structure respected</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Decomposability</strong></td>
+<td style="text-align: left;">Single scalar</td>
+<td style="text-align: left;">Decomposable by tree level (multi-resolution)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Formal verifiability</strong></td>
+<td style="text-align: left;">Approximate (gradients)</td>
+<td style="text-align: left;">Exact — the error at each node has geometric meaning</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Triadic rigidity</strong></td>
+<td style="text-align: left;">Not applicable</td>
+<td style="text-align: left;">Inherent: for any three examples, two loss pairings are equal</td>
+</tr>
+</tbody>
+</table>
+<p>`` The cophenetic loss is defined but has not been computationally validated as a training objective. Convergence properties, relationship to classification accuracy, and comparison to cross-entropy on standard benchmarks are open questions. The definition is provided as the specification — validation is Phase 0 below.</p>
+<hr />
+<h2>5. Optimization: Tree-Walk Algorithm</h2>
+<h3>5.1 Why Gradient Descent Doesn’t Apply</h3>
+<p>Gradient descent requires a differentiable manifold. The Bruhat–Tits tree is a discrete metric space — derivatives are not defined. Q-PNA replaces gradient-based optimization with <strong>tree-walk optimization</strong>: a discrete search algorithm that redistributes edge weights by decomposing error through the tree hierarchy.</p>
+<p><code>[QWAV-INTERNAL: Q-PNA v0.1 specification]</code></p>
+<h3>5.2 Algorithm</h3>
+<p><strong>Input:</strong> Training example $(x, y)$, current tree with edge weights $W = {w_{v \to c}}$ for all internal nodes $v$ and children $c$<br />
+<strong>Output:</strong> Updated edge weights $W’$, leaf activations $\mathbf{a}’$<br />
+<strong>Hyperparameters:</strong> Learning rate $\eta &gt; 0$, convergence threshold $\varepsilon &gt; 0$, temperature $T &gt; 0$</p>
+<p><strong>Algorithm (one training step):</strong></p>
+<pre class="codehilite"><code>1. FORWARD PASS:
+   a. Encode input x $\to$ leaf activations a
+   b. For each internal node v (bottom-up):
+      For each child c of v:
+          Aggregate activation: A_c = sum(attended activations in subtree(c))
+      Normalize across children: A_c = A_c / sum(A_*)
+   c. Decode output: greedy path from root $\to$ leaf $\to$ output activations a^out
+
+2. COMPUTE LOSS:
+   L = L_coph(a^out, a^*)   # cophenetic distance to target
+
+3. ERROR DECOMPOSITION (top-down):
+   For each internal node v at depth ℓ:
+       E_v = sum_{i in leaves(v)} |a^out_i - a^*_i|
+       # This is the total error originating in subtree v
+
+4. EDGE WEIGHT UPDATE (discrete gradient analog):
+   For each internal node v:
+       E_bar_v = mean(E_c for each child c of v)
+       For each child c of v:
+           w_{v$\to$c} ← w_{v$\to$c} - η · (E_c - E_bar_v)
+       # Redistribute weight away from high-error subtrees
+       # Normalize: sum(w_{v$\to$*}) = 1
+
+5. LEAF ACTIVATION REFINEMENT:
+   For each leaf i where |a^out_i - a^*_i| &gt; τ:
+       a_i ← a_i + η · (a^*_i - a_i)
+       # Move leaf activation toward target for large errors
+
+6. REPEAT steps 1–5 for T iterations or until L &lt; ε
+</code></pre>
+
+<h3>5.3 Relationship to Backpropagation</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Backpropagation</th>
+<th style="text-align: left;">Tree-Walk Optimization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Gradient $\partial \mathcal{L} / \partial w$</td>
+<td style="text-align: left;">Subtree error $E_v$</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chain rule through layers</td>
+<td style="text-align: left;">Tree-walk from root to leaves (top-down decomposition)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Continuous weight update</td>
+<td style="text-align: left;">Discrete weight redistribution</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vanishing gradients in deep networks</td>
+<td style="text-align: left;">Error naturally attenuates with tree depth (strong triangle inequality: errors at deep nodes are contained within their subtree)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Requires differentiable activations</td>
+<td style="text-align: left;">Works on any activation — only distances and aggregations needed</td>
+</tr>
+</tbody>
+</table>
+<h3>5.4 Convergence Conditions</h3>
+<p>`` The following convergence conditions are hypothesized but not proven:</p>
+<ol>
+<li>
+<p><strong>Monotonicity:</strong> $\mathcal{L}_{\text{coph}}$ should decrease monotonically if $\eta$ is sufficiently small. The error propagation through the tree via $E_v$ is conservative (total error is preserved, only redistributed). This is the discrete analog of the gradient being a descent direction.</p>
+</li>
+<li>
+<p><strong>Learning rate bound:</strong> $\eta$ must be bounded by the minimum edge weight divided by the maximum subtree error difference. Too large $\eta$ causes weight oscillation (weights flip between extreme values).</p>
+</li>
+<li>
+<p><strong>Tree depth stability:</strong> Deeper trees ($D &gt; 10$) may suffer from error dilution — the error signal at deep nodes becomes small relative to the total error, slowing convergence. This is analogous to vanishing gradients but structurally different: the error is diluted spatially (across many subtrees) rather than multiplicatively.</p>
+</li>
+<li>
+<p><strong>Convexity analog:</strong> The cophenetic loss is not convex in the standard sense (the domain is discrete). However, the loss landscape on the tree may exhibit a property analogous to geodesic convexity in ultrametric spaces.</p>
+</li>
+</ol>
+<h3>5.5 Computational Complexity</h3>
+<p>For a truncated tree $\mathcal{T}_p$ of depth $D$ with $L = (p+1) \cdot p^{D-1}$ leaves:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Complexity</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Encoding (per token)</td>
+<td style="text-align: left;">$O(k \cdot \log M)$</td>
+<td style="text-align: left;">$k$ semantic primes, $M$ max product value</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ultrametric attention ($n$ tokens)</td>
+<td style="text-align: left;">$O(n^2 \cdot k)$</td>
+<td style="text-align: left;">Pairwise distances, $k$ valuation dimensions</td>
+</tr>
+<tr>
+<td style="text-align: left;">Forward pass (tree propagation)</td>
+<td style="text-align: left;">$O(L)$</td>
+<td style="text-align: left;">Each leaf aggregated once, bottom-up</td>
+</tr>
+<tr>
+<td style="text-align: left;">Error decomposition</td>
+<td style="text-align: left;">$O(L)$</td>
+<td style="text-align: left;">Each node visited once, top-down</td>
+</tr>
+<tr>
+<td style="text-align: left;">Edge weight update</td>
+<td style="text-align: left;">$O(L)$</td>
+<td style="text-align: left;">Each edge updated once</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Per training step</strong></td>
+<td style="text-align: left;">$O(n^2 k + L)$</td>
+<td style="text-align: left;">Quadratic in sequence length, linear in tree size</td>
+</tr>
+<tr>
+<td style="text-align: left;">Standard transformer (comparison)</td>
+<td style="text-align: left;">$O(n^2 d)$</td>
+<td style="text-align: left;">Quadratic in sequence length, $d$ = embedding dimension</td>
+</tr>
+</tbody>
+</table>
+<p>For near-term feasibility: $p=3$, $D=5$ gives 324 leaves — computationally tractable on a laptop. $D=10$ gives ~80,000 leaves — still feasible for batch processing. The dominant cost is not the tree but the $O(n^2 k)$ pairwise attention.</p>
+<h3>5.6 Quantum Walk Speedup</h3>
+<p><code>[LLM-INFERRED — aspirational, not validated]</code></p>
+<p>When implemented on quantum hardware, the forward pass benefits from quantum walk speedup: $O(\sqrt{n})$ time to traverse the tree vs. $O(n)$ classically. This is the primary quantum advantage — not in the optimization step, but in the inference (forward pass) step. The quantum walk is a continuous-time quantum walk on the tree graph, which can reach target leaves quadratically faster than classical random walks.</p>
+<p><strong>Honest note:</strong> This depends on fault-tolerant quantum hardware not currently available. The classical simulation path (tree-walk on a CPU/GPU) is the near-term implementation strategy.</p>
+<hr />
+<h2>6. Syntactic Token Calculus</h2>
+<h3>6.1 Purpose</h3>
+<p><code>[ARCHIVE: Syntactic Token Calculus v2/v3]</code></p>
+<p>The Syntactic Token Calculus (STC) is a formal framework for reasoning about computations on the Bruhat–Tits tree. It provides:</p>
+<ol>
+<li><strong>Deterministic confluence:</strong> Every computation has a unique, traceable path through the tree</li>
+<li><strong>Formal verification:</strong> Decisions can be proven correct (or incorrect) by examining the token transformations along the path</li>
+<li><strong>Elimination of singularities:</strong> By treating reality as discrete topological enclosures (tokens), the calculus avoids singularities that plague continuous models</li>
+<li><strong>Gauge-invariant meaning:</strong> Cross-ratio invariants define meaning independent of tree automorphisms <code>[ARCHIVE: Syntactic Token Calculus v3.1]</code></li>
+</ol>
+<h3>6.2 Token Definition</h3>
+<p>A <strong>token</strong> $\tau$ is a discrete topological enclosure — a labeled node in the Bruhat–Tits tree with associated data:</p>
+<p>$$\tau = (v, \text{type}, \text{data}, \text{parent})$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">$v$</td>
+<td style="text-align: left;">$\mathcal{T}_p$ node</td>
+<td style="text-align: left;">Position in the tree (depth, path from root)</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\text{type}$</td>
+<td style="text-align: left;">$\mathcal{T}$ (finite type system)</td>
+<td style="text-align: left;">The token’s type — determines valid operations</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\text{data}$</td>
+<td style="text-align: left;">Discrete payload</td>
+<td style="text-align: left;">The token’s information content (integer, string, or nested tokens)</td>
+</tr>
+<tr>
+<td style="text-align: left;">$\text{parent}$</td>
+<td style="text-align: left;">Token reference or $\varnothing$</td>
+<td style="text-align: left;">The parent token — $\varnothing$ for root tokens</td>
+</tr>
+</tbody>
+</table>
+<h3>6.3 Token Operations</h3>
+<p>All computation in STC is expressed as token operations on the tree:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Type Constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Spawn</strong></td>
+<td style="text-align: left;">$\tau \to {\tau_1, \ldots, \tau_{p+1}}$</td>
+<td style="text-align: left;">A token splits into child tokens at depth $\ell+1$</td>
+<td style="text-align: left;">Children inherit parent type</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Merge</strong></td>
+<td style="text-align: left;">${\tau_1, \ldots, \tau_{p+1}} \to \tau$</td>
+<td style="text-align: left;">Child tokens combine into a parent token at depth $\ell$</td>
+<td style="text-align: left;">All children must have compatible types</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transform</strong></td>
+<td style="text-align: left;">$\tau \xrightarrow{f} \tau’$</td>
+<td style="text-align: left;">Token data is transformed by function $f$</td>
+<td style="text-align: left;">Type and position unchanged</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Move</strong></td>
+<td style="text-align: left;">$\tau \xrightarrow{v \to v’} \tau’$</td>
+<td style="text-align: left;">Token moves to adjacent node (parent, child, or sibling)</td>
+<td style="text-align: left;">Must respect tree adjacency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Annihilate</strong></td>
+<td style="text-align: left;">$\tau \to \varnothing$</td>
+<td style="text-align: left;">Token is removed</td>
+<td style="text-align: left;">Parent reference must be updated</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Type compatibility for Merge:</strong> Two types $T_1$ and $T_2$ are compatible if they share a common supertype in the type lattice. The merged token receives the least upper bound type: $\operatorname{lub}(T_1, T_2)$.</p>
+<h3>6.4 Computation as Token History</h3>
+<p>A computation is a <strong>token history</strong> — a directed acyclic graph (DAG) of token operations, where each edge represents an operation and each node represents a token state:</p>
+<p>$$H = ({\tau_t}, {\text{op}_e})$$</p>
+<p><strong>Properties:</strong>
+- <strong>Causality:</strong> Every operation has well-defined inputs and outputs
+- <strong>Traceability:</strong> Every output token can be traced back to its originating input tokens
+- <strong>Deterministic confluence:</strong> For any two paths through $H$ that reach the same token, the resulting token state is identical</p>
+<h3>6.5 Verification Protocol</h3>
+<p>To verify that output $y$ is correct for input $x$:</p>
+<ol>
+<li><strong>Reconstruct the token history</strong> $H$ from the Q-PNA’s decision trace</li>
+<li><strong>Check type consistency:</strong> Every token operation respects the type system — spawn preserves types, merge requires compatible types, transform preserves type</li>
+<li><strong>Check path validity:</strong> Every Move operation respects the tree structure — tokens may only move to parent, child, or sibling nodes</li>
+<li><strong>Check confluence:</strong> For any two paths through $H$ that reach the same token, the resulting token state is identical (determinism)</li>
+<li><strong>Check against specification:</strong> The final output token’s data matches the specification for input $x$</li>
+</ol>
+<p><strong>Result:</strong> If all checks pass, the computation is <strong>provably correct</strong> — the decision path IS the proof.</p>
+<h3>6.6 Relationship to Distinction Calculus</h3>
+<p><code>[ARCHIVE: Auditable Attention PoC]</code></p>
+<p>The STC operations can be expressed as Spencer-Brown distinction calculus operations:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">STC Operation</th>
+<th style="text-align: left;">Distinction Calculus</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Spawn</strong></td>
+<td style="text-align: left;">$\tau \to {\tau_1, \ldots, \tau_{p+1}}$</td>
+<td style="text-align: left;">Enclose: $\tau \to [\tau_1 \tau_2 \ldots \tau_{p+1}]$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Merge</strong></td>
+<td style="text-align: left;">${\tau_1, \ldots, \tau_{p+1}} \to \tau$</td>
+<td style="text-align: left;">Cross: $[[\tau_1 \ldots \tau_{p+1}]] \to \text{reduced form}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transform</strong></td>
+<td style="text-align: left;">$\tau \xrightarrow{f} \tau’$</td>
+<td style="text-align: left;">Calling: repeated marks condense, or a function application</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Annihilate</strong></td>
+<td style="text-align: left;">$\tau \to \varnothing$</td>
+<td style="text-align: left;">Void: the token returns to the unmarked state</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Move</strong></td>
+<td style="text-align: left;">$\tau \xrightarrow{v \to v’} \tau’$</td>
+<td style="text-align: left;">Re-entry: the token appears at a different structural position</td>
+</tr>
+</tbody>
+</table>
+<p>This connection means that every STC computation has a purely syntactic interpretation — it can be expressed without real numbers, only marks and enclosures. The distinction calculus is the formal verification substrate.</p>
+<hr />
+<h2>7. Glass-Box Verification Protocol</h2>
+<h3>7.1 Glass-Box Definition</h3>
+<p>A Q-PNA model is <strong>glass-box</strong> (as opposed to black-box) if it satisfies all five conditions:</p>
+<ol>
+<li><strong>Path traceability:</strong> Every output includes the full decision path from root to leaf</li>
+<li><strong>Operation auditability:</strong> Every token operation along the path is logged and inspectable</li>
+<li><strong>Type consistency:</strong> All operations respect the STC type system</li>
+<li><strong>Deterministic confluence:</strong> The same input always produces the same decision path (up to stochastic sampling, where the sampling distribution is logged)</li>
+<li><strong>Cocycle satisfaction:</strong> The strong triangle inequality holds for all token triplets encountered</li>
+</ol>
+<h3>7.2 Audit Trail Format</h3>
+<p>Every Q-PNA decision produces an audit trail:</p>
+<pre class="codehilite"><code>Decision: [output label]
+Path: root $\to$ node[2] $\to$ node[2,1] $\to$ node[2,1,3] $\to$ leaf[47]
+
+Token operations:
+  [spawn]  root $\to$ {τ_1, τ_2, τ_3, τ_4}
+  [transform] τ_2 $\to$ f_embed(τ_2)
+  [move]   τ_2 $\to$ child[2,1]
+  [merge]  {τ_2, τ_aux} $\to$ τ_out
+  [transform] τ_out $\to$ classifier(τ_out) = [output label]
+
+Tree context:
+  LCA(τ_2, τ_aux) = node[2] at depth 2
+  d_ultra(τ_2, τ_aux) = 2
+
+Verification:
+  type-consistent ✓  |  path-valid ✓  |  confluent ✓  |  cocycle ✓
+</code></pre>
+
+<p>This audit trail is <strong>human-readable</strong> (a regulator can understand the decision) AND <strong>machine-verifiable</strong> (automated checks pass/fail each condition).</p>
+<h3>7.3 Comparison: Black-Box vs. Glass-Box</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Black-Box AI (Standard DNN)</th>
+<th style="text-align: left;">Glass-Box AI (Q-PNA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Decision path</strong></td>
+<td style="text-align: left;">Opaque composition of nonlinearities</td>
+<td style="text-align: left;">Geometric path root $\to$ leaf</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Audit trail</strong></td>
+<td style="text-align: left;">Approximate (LIME, SHAP, attention viz)</td>
+<td style="text-align: left;">Exact — the path is the explanation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Formal verification</strong></td>
+<td style="text-align: left;">Impossible in general</td>
+<td style="text-align: left;">Possible via token calculus type checking</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Regulatory compliance</strong></td>
+<td style="text-align: left;">Requires external auditing</td>
+<td style="text-align: left;">Self-documenting by construction</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Error attribution</strong></td>
+<td style="text-align: left;">Statistical (which input features?)</td>
+<td style="text-align: left;">Structural (which subtree?)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bias detection</strong></td>
+<td style="text-align: left;">Post-hoc statistical analysis</td>
+<td style="text-align: left;">Pre-computation: biased paths visible in tree structure</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adversarial robustness</strong></td>
+<td style="text-align: left;">Fragile to $\varepsilon$-perturbations</td>
+<td style="text-align: left;">Gauge-invariant — no continuous corridors to exploit <code>[ARCHIVE: Auditable Attention PoC v0.2.1]</code></td>
+</tr>
+</tbody>
+</table>
+<h3>7.4 Cocycle Condition as Consistency Check</h3>
+<p><code>[ARCHIVE: ultrametric-ai-poc]</code></p>
+<p>The cocycle condition is a runtime verification that the cognitive representation is internally consistent. For any three tokens $t_i, t_j, t_k$:</p>
+<p>$$d_{\text{ultra}}(t_i, t_k) \leq \max(d_{\text{ultra}}(t_i, t_j), d_{\text{ultra}}(t_j, t_k))$$</p>
+<p>If this fails for any triple, the representation contains an inconsistency — the tokens cannot be simultaneously embedded in an ultrametric space. The violation is logged and flagged for investigation.</p>
+<p><strong>Interpretation:</strong> The cocycle condition is to cognitive consistency what conservation laws are to physics — a structural invariant that must hold. A violation indicates that the semantic prime assignment or the token encoding has produced a contradictory representation.</p>
+<hr />
+<h2>8. Relationship to Quantum Architecture</h2>
+<h3>8.1 Shared Mathematical Foundation</h3>
+<p><code>[QWAV-INTERNAL: Technical Deep-Dive §4]</code></p>
+<p>Both Q-PNA (AI) and UQC (Quantum Computing) operate on the same mathematical structure — the Bruhat–Tits tree $\mathcal{T}_p$ — but exploit different properties:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">UQC (Quantum)</th>
+<th style="text-align: left;">Q-PNA (AI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Primary use of tree</strong></td>
+<td style="text-align: left;">Error confinement via strong triangle inequality</td>
+<td style="text-align: left;">Hierarchical feature organization</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Encoding</strong></td>
+<td style="text-align: left;">$q$-ary scatter across leaves</td>
+<td style="text-align: left;">$p$-adic valuation vectors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Propagation</strong></td>
+<td style="text-align: left;">Holographic tensor network (perfect tensors)</td>
+<td style="text-align: left;">Classical tree-walk (quantum walk optionally)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Key mechanism</strong></td>
+<td style="text-align: left;">Passive fault tolerance — no active QEC needed</td>
+<td style="text-align: left;">Glass-box explainability by construction</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Verification</strong></td>
+<td style="text-align: left;">Logical error rate (LER) simulation</td>
+<td style="text-align: left;">Token calculus formal verification</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hardware</strong></td>
+<td style="text-align: left;">40-atom neutral atom at 4 K (validated computationally)</td>
+<td style="text-align: left;">Room temperature (classical simulation)</td>
+</tr>
+</tbody>
+</table>
+<h3>8.2 The Common Thesis</h3>
+<blockquote>
+<p>Continuous manifolds are the wrong mathematical foundation for computation. Ultrametric (tree-based) geometry provides structural properties — error confinement for quantum, hierarchical transparency for AI — that are unavailable in Archimedean spaces.</p>
+</blockquote>
+<h3>8.3 Complementary Roles</h3>
+<ul>
+<li><strong>Quantum side</strong> provides the hardware pathway: 40-atom neutral atom implementation at 4 K, passive fault tolerance, $q$-ary scatter amplification, with computational validation published (Tier 0 + Tier 1 papers, DOI: <a href="https://doi.org/10.5281/zenodo.20134944">10.5281/zenodo.20134944</a>, <a href="https://doi.org/10.5281/zenodo.20208437">10.5281/zenodo.20208437</a>) ``</li>
+<li><strong>AI side</strong> provides the software pathway: glass-box decision-making, formal verifiability, token calculus for regulatory compliance — specified here, not yet validated</li>
+<li><strong>Together:</strong> A complete computing architecture — hardware AND software — built on a single mathematical correction to the Archimedean assumption</li>
+</ul>
+<hr />
+<h2>9. Computational Validation Plan</h2>
+<p>`` The following phases are specified but not yet executed. This is a research roadmap, not a progress report.</p>
+<h3>9.1 Phase 0: Tree-Walk Optimization Simulation</h3>
+<p><strong>Goal:</strong> Demonstrate that tree-walk optimization converges on a toy hierarchical classification task.</p>
+<p><strong>Setup:</strong>
+- Tree: $p=3$, depth $D=5$ (324 leaves)
+- Task: Synthetic hierarchical classification (e.g., 3-level taxonomy with 27 classes)
+- Encoding: $p$-adic valuation vectors with $k=5$ semantic primes
+- Metrics: Cophenetic loss over training epochs, classification accuracy, audit trail completeness</p>
+<p><strong>Success criterion:</strong> Loss decreases monotonically over 100 epochs on synthetic data. Classification accuracy exceeds random baseline by significant margin.</p>
+<h3>9.2 Phase 1: Token Calculus Implementation</h3>
+<p><strong>Goal:</strong> Implement the STC type system and verification protocol in Python.</p>
+<p><strong>Setup:</strong>
+- Define token types, operations, and verification rules
+- Generate token histories from simulated Q-PNA decisions
+- Verify type consistency, path validity, and confluence</p>
+<p><strong>Success criterion:</strong> 100% of valid token histories pass verification. 100% of intentionally corrupted histories (type mismatch, invalid move, non-confluent paths) fail verification.</p>
+<h3>9.3 Phase 2: Integration with Quantum Simulation</h3>
+<p><strong>Goal:</strong> Demonstrate that the same tree topology used for quantum error confinement can encode hierarchical features for AI classification — proving the shared-geometry thesis.</p>
+<p><strong>Setup:</strong>
+- Use the <code>ultrametric_v2</code> codebase’s Bruhat–Tits tree implementation <code>[QWAV-INTERNAL: ultrametric_v2 codebase]</code>
+- Encode a hierarchical dataset on the SAME tree used for quantum error simulation ($p=3$, $D=7$)
+- Run both quantum error simulation AND AI classification on the same tree</p>
+<p><strong>Success criterion:</strong> The tree simultaneously suppresses quantum errors AND organizes hierarchical features. (This is the strongest form of the common thesis.)</p>
+<h3>9.4 Phase 3: Comparative Benchmarking</h3>
+<p><strong>Goal:</strong> Compare Q-PNA against standard architectures on glass-box metrics.</p>
+<p><strong>Metrics:</strong>
+- Audit trail completeness (% of decisions with full trace)
+- Verification success rate (% of outputs provably correct via STC)
+- Decision path length vs. model depth
+- Training convergence (cophenetic loss vs. cross-entropy)
+- Adversarial robustness (accuracy under perturbation, compared to equivalent-capacity MLP)</p>
+<hr />
+<h2>10. Honest Limitations &amp; Open Questions</h2>
+<h3>10.1 What This Specification Does NOT Claim</h3>
+<ul>
+<li>❌ Q-PNA has not been implemented or computationally validated as a full architecture</li>
+<li>❌ No empirical results exist for tree-walk optimization convergence</li>
+<li>❌ Quantum walk speedup assumes fault-tolerant quantum hardware not yet available</li>
+<li>❌ Token calculus has not been formalized in a proof assistant (Lean/Coq)</li>
+<li>❌ The AI side is less developed than the quantum side — this specification is a starting point, not a finished product</li>
+<li>❌ No comparison to transformers, GNNs, or other architectures on standard benchmarks</li>
+</ul>
+<h3>10.2 What IS Validated</h3>
+<ul>
+<li>✅ Ultrametric attention with $p$-adic valuation encoding: demonstrated in working Streamlit app (<code>ultrametric-ai-poc</code>)</li>
+<li>✅ Cophenetic distance ultrametric inequality: proven and computationally verified (<code>Tree Distance Cophenetic.md</code>)</li>
+<li>✅ Syntactic token calculus: book-length formal treatment exists (STC v2, v3)</li>
+<li>✅ Distinction calculus primitives: formalized (Spencer-Brown 1969, STC [source file])</li>
+<li>✅ Cocycle verification: implemented and tested (<code>cocycle.py</code>)</li>
+<li>✅ Quantum side: two published papers with computational validation of error confinement</li>
+</ul>
+<h3>10.3 Open Research Questions</h3>
+<ol>
+<li>
+<p><strong>Convergence guarantees:</strong> Under what conditions does tree-walk optimization converge? Is there a discrete analog of the universal approximation theorem?</p>
+</li>
+<li>
+<p><strong>Scalability:</strong> What is the computational complexity of tree-walk optimization as a function of tree depth $D$ and branching factor $p+1$? Can it scale to ImageNet-size problems?</p>
+</li>
+<li>
+<p><strong>Quantum advantage threshold:</strong> At what tree size does quantum walk speedup become practically significant? What is the crossover point vs. classical simulation?</p>
+</li>
+<li>
+<p><strong>Expressiveness:</strong> What function classes can Q-PNA represent? Is the tree structure a limitation or a feature?</p>
+</li>
+<li>
+<p><strong>Learned hierarchies:</strong> For unstructured data (images, raw audio), how should the semantic prime assignment be learned? Is hierarchical clustering sufficient, or is end-to-end learning required?</p>
+</li>
+<li>
+<p><strong>Token calculus completeness:</strong> Is the STC type system expressive enough for general computation, or is it restricted to a specific class of problems?</p>
+</li>
+<li>
+<p><strong>Hybrid architectures:</strong> Can Q-PNA be combined with standard neural components? E.g., CNN for feature extraction $\to$ Q-PNA for classification with glass-box audit trail?</p>
+</li>
+<li>
+<p><strong>Distinction calculus bridge:</strong> The five open questions from <code>Ultrametric Intelligence/[source file]</code> remain open — the formal bridge between Spencer-Brown primitives and ultrametric attention has not been completed.</p>
+</li>
+<li>
+<p><strong>Batch semantics:</strong> The STC assumes single-token operations. Batch computation semantics for training efficiency have not been defined.</p>
+</li>
+<li>
+<p><strong>Optimal semantic prime selection:</strong> The current semantic prime set ${2, 3, 5, 7, 11}$ is heuristic. Is there a principled method for selecting semantic primes from data?</p>
+</li>
+</ol>
+<h3>10.4 What Closes These Questions</h3>
+<ul>
+<li>Computational validation (Phases 0–3 in §9)</li>
+<li>Formal analysis of the tree-walk optimization algorithm</li>
+<li>Comparative benchmarking against standard architectures</li>
+<li>Reader review and critique from the AI/ML community</li>
+<li>Formalization of the token calculus in Lean 4 or Coq</li>
+</ul>
+<hr />
+<h2>11. Comparison to Standard Architectures</h2>
+<h3>11.1 Transformers</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Transformer</th>
+<th style="text-align: left;">Q-PNA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Representation space</strong></td>
+<td style="text-align: left;">$\mathbb{R}^d$ (continuous)</td>
+<td style="text-align: left;">Bruhat–Tits tree $\mathcal{T}_p$ (discrete)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Attention</strong></td>
+<td style="text-align: left;">Learned $Q, K, V$ projections ($O(d^2)$ params)</td>
+<td style="text-align: left;">Ultrametric distance decay ($0$ learned params)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Position encoding</strong></td>
+<td style="text-align: left;">Sinusoidal or learned</td>
+<td style="text-align: left;">Inherent in tree position</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Interpretability</strong></td>
+<td style="text-align: left;">Attention visualization (post-hoc)</td>
+<td style="text-align: left;">Decision path (inherent)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Training</strong></td>
+<td style="text-align: left;">Gradient descent via backprop</td>
+<td style="text-align: left;">Tree-walk optimization (discrete)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adversarial robustness</strong></td>
+<td style="text-align: left;">Fragile</td>
+<td style="text-align: left;">Gauge-invariant embedding</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scaling</strong></td>
+<td style="text-align: left;">Demonstrated at 100B+ params</td>
+<td style="text-align: left;">Not yet demonstrated</td>
+</tr>
+</tbody>
+</table>
+<h3>11.2 Graph Neural Networks (GNNs)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">GNN</th>
+<th style="text-align: left;">Q-PNA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Graph structure</strong></td>
+<td style="text-align: left;">Input-dependent (arbitrary graph)</td>
+<td style="text-align: left;">Fixed tree $\mathcal{T}_p$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Message passing</strong></td>
+<td style="text-align: left;">Learned aggregations over neighbors</td>
+<td style="text-align: left;">Ultrametric attention over tree paths</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hierarchy</strong></td>
+<td style="text-align: left;">Must be learned or provided</td>
+<td style="text-align: left;">Inherent in tree structure</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Explainability</strong></td>
+<td style="text-align: left;">GNNExplainer, post-hoc</td>
+<td style="text-align: left;">Decision path IS the explanation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Formal verification</strong></td>
+<td style="text-align: left;">Not available</td>
+<td style="text-align: left;">Token calculus verification protocol</td>
+</tr>
+</tbody>
+</table>
+<h3>11.3 Decision Trees / Random Forests</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;">Decision Tree</th>
+<th style="text-align: left;">Q-PNA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tree structure</strong></td>
+<td style="text-align: left;">Learned from data (greedy splits)</td>
+<td style="text-align: left;">Fixed Bruhat–Tits tree (mathematically structured)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Decision</strong></td>
+<td style="text-align: left;">Single path (hard)</td>
+<td style="text-align: left;">Soft path (attention-weighted)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Interpretability</strong></td>
+<td style="text-align: left;">High (if shallow) — path is readable</td>
+<td style="text-align: left;">High — path is readable + formally verifiable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Expressiveness</strong></td>
+<td style="text-align: left;">Limited (axis-aligned splits)</td>
+<td style="text-align: left;">Potentially richer (ultrametric combinations)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Training</strong></td>
+<td style="text-align: left;">Greedy recursive partitioning</td>
+<td style="text-align: left;">Tree-walk optimization (global error redistribution)</td>
+</tr>
+</tbody>
+</table>
+<h3>11.4 Where Q-PNA Could Excel</h3>
+<p>Q-PNA is not proposed as a universal replacement for all neural architectures. Its advantages are specific:</p>
+<ol>
+<li>
+<p><strong>Regulated domains</strong> (healthcare, finance, law): Where decisions must be explainable and auditable. The glass-box audit trail meets regulatory requirements that black-box models cannot.</p>
+</li>
+<li>
+<p><strong>Hierarchical data</strong> (taxonomies, ontologies, biological classification): Where the tree structure naturally matches the data structure. The cophenetic loss directly optimizes hierarchical accuracy.</p>
+</li>
+<li>
+<p><strong>Adversarial environments</strong> (security, fraud detection): Where gauge invariance provides inherent robustness to perturbation-based attacks.</p>
+</li>
+<li>
+<p><strong>Formal verification requirements</strong> (safety-critical systems): Where the token calculus enables machine-verifiable correctness proofs.</p>
+</li>
+<li>
+<p><strong>Quantum-classical hybrid systems</strong> (future): Where the shared tree geometry with QWAV’s quantum architecture enables a unified computing stack.</p>
+</li>
+</ol>
+<hr />
+<h2>12. Prior Work Attribution</h2>
+<p>This specification synthesizes the following prior work:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Work</th>
+<th style="text-align: left;">Location</th>
+<th style="text-align: left;">Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Ultrametric AI PoC</strong></td>
+<td style="text-align: left;"><code>[ARCHIVE] ultrametric-ai-poc</code></td>
+<td style="text-align: left;">Working demonstration: $p$-adic valuation encoding, ultrametric attention, cocycle verification, distinction calculus integration</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Auditable Attention PoC</strong></td>
+<td style="text-align: left;"><code>[ARCHIVE] Auditable Attention PoC</code></td>
+<td style="text-align: left;">Technical narrative: gauge-invariance framing, STC v3.1 foundations, Spencer-Brown primitives</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ultrametric Intelligence</strong></td>
+<td style="text-align: left;"><code>[ARCHIVE] Ultrametric Intelligence</code></td>
+<td style="text-align: left;">Synthesis: non-Archimedean geometry + AI. Five open questions bridging distinction calculus and ultrametric attention</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>STC v2/v3</strong></td>
+<td style="text-align: left;"><code>[ARCHIVE] Syntactic Token Calculus v2/v3</code></td>
+<td style="text-align: left;">Book-length formal treatment of token calculus — type system, operations, verification</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tree Distance Cophenetic</strong></td>
+<td style="text-align: left;"><code>[DOI: 10.5281/zenodo.20213043]</code></td>
+<td style="text-align: left;">Mathematical foundation: cophenetic distance, triadic rigidity, ultrametric inequality proofs</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Language as Information Architecture</strong></td>
+<td style="text-align: left;"><code>[DOI: 10.5281/zenodo.20137616]</code></td>
+<td style="text-align: left;">Empirical linguistics: token encoding theory, mutual exclusion</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PANN</strong></td>
+<td style="text-align: left;"><code>[ARCHIVE] PANN (github.com/rwnq8/PANN)</code></td>
+<td style="text-align: left;">Prior art: $p$-adic attention in PyTorch, hierarchical loss functions, topological regularization</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>QWAV Quantum Papers</strong></td>
+<td style="text-align: left;"><code>[Zenodo](https://zenodo.org/communities/qwav/)</code></td>
+<td style="text-align: left;">Quantum side validation: error confinement at $p=3$, $D=7$, zero logical errors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>QWAV v0.1 Spec</strong></td>
+<td style="text-align: left;"><code>[QWAV-INTERNAL] Q-PNA v0.1</code></td>
+<td style="text-align: left;">Original Q-PNA specification — starting point for this document</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Data Availability</h2>
+<p>All archival project files referenced in this specification are publicly available through Google Drive:</p>
+<p><strong><a href="https://drive.google.com/drive/folders/14ptOFwZWsQWn6ezbncPWuXEW_6MYsX0Z">QWAV Public Archive</a></strong></p>
+<p>All code, specifications, and computational results for this project are available at the public repository: <strong><a href="https://github.com/QNFO/Q-PNA">github.com/QNFO/Q-PNA</a></strong></p>
+<p>This archive includes: ultrametric-ai-poc (working Streamlit demonstration), Proof-of-Concept for Auditable Attention using Ultrametric Tree Distances, Ultrametric Intelligence, Syntactic Token Calculus v2 and v3, Formal Ontology of Distinction and Invariance, and related projects. PANN is available at <a href="https://github.com/rwnq8/PANN">github.com/rwnq8/PANN</a>.</p>
+<p>Published works with DOIs are available through Zenodo at the links provided. QWAV internal working documents (<code>QWAV-INTERNAL</code>) are available upon request.</p>
+<h2>References</h2>
+<ol>
+<li>Quni-Gudzinas, R. B. (2026). <em>The Tree Distance Cophenetic: A Unified Framework for Hierarchical Ontology.</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.20213043">DOI: 10.5281/zenodo.20213043</a></li>
+<li>Quni-Gudzinas, R. B. (2026). <em>Language as Information Architecture.</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.20137616">DOI: 10.5281/zenodo.20137616</a></li>
+<li>Quni-Gudzinas, R. B. (2026). <em>Computational Validation of Ultrametric Error Confinement in Bruhat–Tits Tree Quantum Circuits.</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.20134944">DOI: 10.5281/zenodo.20134944</a></li>
+<li>Quni-Gudzinas, R. B. (2026). <em>Symmetric Extension of Ultrametric Error Confinement.</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.20208437">DOI: 10.5281/zenodo.20208437</a></li>
+<li>Spencer-Brown, G. (1969). <em>Laws of Form.</em> George Allen and Unwin.</li>
+<li>[ARCHIVE] ultrametric-ai-poc — Ultrametric AI Proof of Concept. Public archive: <a href="https://drive.google.com/drive/folders/14ptOFwZWsQWn6ezbncPWuXEW_6MYsX0Z">Google Drive</a></li>
+<li>[ARCHIVE] Proof-of-Concept for Auditable Attention using Ultrametric Tree Distances. Public archive.</li>
+<li>[ARCHIVE] Ultrametric Intelligence — Synthesis of Non-Archimedean Geometry and AI. Public archive.</li>
+<li>[ARCHIVE] Syntactic Token Calculus v2 and v3. Public archive.</li>
+<li>[ARCHIVE] PANN — Prime-Attentive Neural Networks. <a href="https://github.com/rwnq8/PANN">github.com/rwnq8/PANN</a></li>
+<li>[QWAV-INTERNAL] Q-PNA v0.1 Specification. Available upon request.</li>
+<li>[QWAV-INTERNAL] Technical Deep-Dive — Ultrametric Quantum Computing and AI. Available upon request.</li>
+</ol></body></html>

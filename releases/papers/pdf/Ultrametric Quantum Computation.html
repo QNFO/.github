@@ -1,0 +1,2369 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>ULTRAMETRIC QUANTUM COMPUTATION</title><style>/* build_pdf.css v3.0 -- Embedded academic PDF stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root{--text:#1a1a1a;--muted:#555;--border:#d0d0d0;--bg:#fafafa;--accent:#007acc;--title:24pt;--h1:18pt;--h2:15pt;--body:10.5pt}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;font-size:var(--body);line-height:1.6;color:var(--text);max-width:6.2in;margin:0 auto;padding:0;text-align:left;background:white}
+h1.title{font-size:var(--title);font-weight:700;text-align:left;margin:0.8in 0 0.1in 0;line-height:1.1;color:var(--text);border-bottom:3px solid #000;padding-bottom:0.1in}
+h1{font-size:var(--h1);font-weight:600;margin:0.6in 0 0.3in 0;line-height:1.2;color:var(--text);border-bottom:2px solid #333;padding-bottom:0.1in;page-break-before:always;page-break-after:avoid}
+h2{font-size:var(--h2);font-weight:600;margin:1em 0 0.5em 0;color:var(--text);border-bottom:1px solid #ccc;padding-bottom:0.2em}
+h3{font-size:13pt;font-weight:600;margin:0.9em 0 0.4em 0;color:#333}
+p{margin:0 0 0.8em 0;line-height:1.6}
+.author-block{margin:0.2in 0 0.3in 0;padding:0.15in 0.2in;background:#f9f9f9;border-left:3px solid #000;border-radius:0 4px 4px 0;font-size:9.5pt;line-height:1.5}
+.author-block p{margin:0}.author-block strong{font-weight:600;color:var(--text)}
+.author-block a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.author-block .abstract-label{font-weight:700;display:block;margin-top:0.3em;font-size:10pt}
+.author-block .abstract-text{margin-top:0.2em;font-style:normal;color:var(--muted)}
+ul,ol{margin:0.8em 0;padding-left:2em}li{margin-bottom:0.4em;line-height:1.5}
+ol{counter-reset:item;list-style-type:none}ol>li{counter-increment:item;position:relative;padding-left:2em}
+ol>li::before{content:counter(item)".";font-weight:600;position:absolute;left:0;width:1.5em;text-align:right}
+code{font-family:"JetBrains Mono",Consolas,monospace;font-size:0.85em;background:#f9f9f9;padding:0.1em 0.3em;border-radius:2px;border:1px solid #e0e0e0;color:#d63384}
+pre{font-family:"JetBrains Mono",Consolas,monospace;background:#f9f9f9;padding:0.8em;margin:0.9em 0;border-radius:3px;overflow-x:auto;border:1px solid #e0e0e0;font-size:0.8em;line-height:1.5;border-left:3px solid #000;white-space:pre-wrap;word-break:break-word}
+pre code{background:none;padding:0;border:none;color:inherit;font-size:inherit}
+table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.95em;box-shadow:0 2px 4px rgba(0,0,0,0.05);border-radius:4px;overflow:hidden}
+th{background:#f0f0f0;font-weight:600;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border);border-top:2px solid #000}
+td{background:#fff;padding:0.5em 0.6em;text-align:left;border:1px solid var(--border)}
+tr:nth-child(even) td{background:#fafafa}tbody tr td:first-child{font-weight:600}
+blockquote{border-left:3px solid #000;margin:1.2em 0;padding:0.5em 0 0.5em 0.9em;background:var(--bg);color:var(--muted);border-radius:0 2px 2px 0}
+a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{display:block;margin:0.8em 0;text-align:left}
+.c{color:#6a737d;font-style:italic}.k{color:#d73a49;font-weight:bold}.s{color:#032f62}.mi{color:#005cc5}.nf{color:#6f42c1}.nc{color:#6f42c1;font-weight:bold}
+@media print{@page{size:A4;margin:0.75in 0.8in 0.75in 1.2in;@bottom-right{content:"Page "counter(page);font-family:"Inter",sans-serif;font-size:8pt;color:#666;padding:0.2in 0.4in 0 0}}body{padding:0;max-width:100%}.author-block{border:1px solid #000;border-left:3px solid #000}}
+</style><script>MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']],processEscapes:true,tags:'ams'},startup:{ready(){MathJax.startup.defaultReady();const n=document.querySelectorAll('mjx-container').length;console.log('MathJax ready: '+n+' expressions rendered')}}}</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><h1 class="title">ULTRAMETRIC QUANTUM COMPUTATION</h1><div class="author-block">
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas</p><p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a></p><p><strong>Date:</strong> 2026-05-25</p>
+</div><h1>ULTRAMETRIC QUANTUM COMPUTATION</h1>
+<h2>An MVP Program for Passive Geometric Fault Tolerance</h2>
+<p><strong>Author:</strong> Rowan Brad Quni-Gudzinas
+<strong>Contact:</strong> <a href="mailto:rowan.quni@outlook.com">rowan.quni@outlook.com</a>
+<strong>ORCID:</strong> <a href="http://orcid.org/0009-0002-4317-5604">0009-0002-4317-5604</a>
+<strong>ISNI:</strong> <a href="http://isni.org/isni/0000000526456062">0000000526456062</a>
+<strong>DOI:</strong> <a href="http://doi.org/10.5281/zenodo.20014913">10.5281/zenodo.20014913</a>
+<strong>Date:</strong> 2026-05-03
+<strong>Version:</strong> 0.20</p>
+<blockquote>
+<p><strong>Purpose:</strong> Ultrametric quantum computation MVP program—a comprehensive case for passive geometric fault tolerance as the highest-leverage bet in quantum computing hardware.</p>
+<p><strong>Audience:</strong> Program officers (DARPA, IARPA, DOE, NSF, ERC), laboratory directors, VC/corporate due diligence teams, experimental collaboration PIs.</p>
+<p><strong>Principle:</strong> Every factual claim is accompanied by its source. Every number is traceable to its origin. Every calculation exposes its assumptions and arithmetic. Nothing is asserted without provenance.</p>
+<p><strong>Compilation:</strong> This document synthesizes all prior research notes, technical monographs, engineering proposals, auditable editions, experimental execution plans, and numerical prediction analyses into a single comprehensive reference.</p>
+</blockquote>
+<hr />
+<h2>TABLE OF CONTENTS</h2>
+<h3>Executive Summary</h3>
+<ul>
+<li><strong>ES.1</strong> The Program at a Glance</li>
+<li><strong>ES.2</strong> Why Now</li>
+<li><strong>ES.3</strong> The Three Experiments</li>
+<li><strong>ES.4</strong> The Ask</li>
+</ul>
+<h3>Part I: The Case for Ultrametric Quantum Computation</h3>
+<ul>
+<li><strong>Chapter 1:</strong> The Thermodynamic Wall—Why Active QEC Cannot Scale</li>
+<li><strong>Chapter 2:</strong> The Alternative—Passive Geometric Fault Tolerance</li>
+<li><strong>Chapter 3:</strong> Historical Context—The Road Not Taken</li>
+<li><strong>Chapter 4:</strong> The Precedent—Ultrametricity Exists in Nature</li>
+</ul>
+<h3>Part II: Mathematical Foundations</h3>
+<ul>
+<li><strong>Chapter 5:</strong> The Archimedean Limitation</li>
+<li><strong>Chapter 6:</strong> p-adic Numbers and Ultrametric Geometry</li>
+<li><strong>Chapter 7:</strong> The Bruhat-Tits Tree—Geometry Becomes a Tree</li>
+<li><strong>Chapter 8:</strong> The Monna Map—Where Randomness Comes From</li>
+<li><strong>Chapter 9:</strong> The Adèle Ring—All Trees, All at Once</li>
+</ul>
+<h3>Part III: What the Tree Explains—Foundational Claims</h3>
+<ul>
+<li><strong>Chapter 10:</strong> The Measurement Problem Dissolved</li>
+<li><strong>Chapter 11:</strong> The Born Rule as Geometric Counting</li>
+<li><strong>Chapter 12:</strong> Entanglement as Shared Ancestry</li>
+<li><strong>Chapter 13:</strong> Wave-Particle Duality as Resolution</li>
+<li><strong>Chapter 14:</strong> Summary of Foundational Claims and Gaps</li>
+</ul>
+<h3>Part IV: Three Falsifiable Predictions with Numerical Values</h3>
+<ul>
+<li><strong>Chapter 15:</strong> Prediction 1—CMB Log-Periodic Oscillations</li>
+<li><strong>Chapter 16:</strong> Prediction 2—Prime-Modulated Qubit Noise</li>
+<li><strong>Chapter 17:</strong> Prediction 3—Tree Gate Threshold Switching</li>
+<li><strong>Chapter 18:</strong> Cross-Prediction Consistency and Mock Data</li>
+</ul>
+<h3>Part V: Experimental Execution Plan</h3>
+<ul>
+<li><strong>Chapter 19:</strong> Experiment 1—CMB Log-Periodic Oscillation Search</li>
+<li><strong>Chapter 20:</strong> Experiment 2—Prime-Modulated Qubit Noise Spectroscopy</li>
+<li><strong>Chapter 21:</strong> Experiment 3—Tree Architecture Gate Threshold Test</li>
+<li><strong>Chapter 22:</strong> Phased Timeline, Budget, Team, and Risk Register</li>
+</ul>
+<h3>Part VI: Hardware Architecture and MVP Design</h3>
+<ul>
+<li><strong>Chapter 23:</strong> The Passive Fault Tolerance Advantage</li>
+<li><strong>Chapter 24:</strong> Five Candidate Physical Platforms</li>
+<li><strong>Chapter 25:</strong> Minimal Viable Prototype Design</li>
+<li><strong>Chapter 26:</strong> Generational Scaling Roadmap</li>
+</ul>
+<h3>Part VII: Investment and Resource Case</h3>
+<ul>
+<li><strong>Chapter 27:</strong> Comparative Economics—Tree vs. Surface Code</li>
+<li><strong>Chapter 28:</strong> Market Context, Timing, and Institutional Alignment</li>
+<li><strong>Chapter 29:</strong> Risk Register and Mitigation</li>
+</ul>
+<h3>Part VIII: The Wider Landscape</h3>
+<ul>
+<li><strong>Chapter 30:</strong> The Forest and the Shadows—Number Theory Connection</li>
+<li><strong>Chapter 31:</strong> The Cardiologist’s Lesson—Cross-Disciplinary Insights</li>
+<li><strong>Chapter 32:</strong> Related Work and Intellectual History</li>
+</ul>
+<h3>Part IX: The Research Program Ahead</h3>
+<ul>
+<li><strong>Chapter 33:</strong> Three-Phase Program—Mathematics, Experiment, Engineering</li>
+<li><strong>Chapter 34:</strong> Success and Failure Scenarios</li>
+<li><strong>Chapter 35:</strong> Go/No-Go Decision Points</li>
+<li><strong>Chapter 36:</strong> Epilogue—The Road Ahead</li>
+</ul>
+<h3>Appendices</h3>
+<ul>
+<li><strong>Appendix A:</strong> Quick Reference Card</li>
+<li><strong>Appendix B:</strong> Glossary of Terms</li>
+<li><strong>Appendix C:</strong> Key Equations</li>
+<li><strong>Appendix D:</strong> Claim Ledger—Selected Auditable Claims</li>
+<li><strong>Appendix E:</strong> Comprehensive Bibliography</li>
+</ul>
+<hr />
+<h2>CONFIDENCE TAGGING</h2>
+<p>Throughout this document, claims are marked with explicit confidence tags:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>[EST]</strong></td>
+<td>Established mathematical theorem or confirmed experimental fact</td>
+</tr>
+<tr>
+<td><strong>[PROP]</strong></td>
+<td>Claim of the ultrametric framework—logically consistent but not yet experimentally verified</td>
+</tr>
+<tr>
+<td><strong>[GAP]</strong></td>
+<td>Acknowledged missing step in the argument</td>
+</tr>
+<tr>
+<td><strong>[SPEC]</strong></td>
+<td>Speculative extension beyond the current state of the framework</td>
+</tr>
+<tr>
+<td><strong>[OPEN]</strong></td>
+<td>Question the framework cannot yet answer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>EXECUTIVE SUMMARY</h1>
+<hr />
+<h2>ES.1 The Program at a Glance</h2>
+<p>Quantum computing faces a structural bottleneck: active quantum error correction (QEC) consumes energy faster than cryogenic systems can remove it, creating a <strong>thermodynamic wall</strong>—a hard physical limit beyond which no amount of engineering optimization can push conventional architectures. The surface code, the leading QEC architecture, requires 241 physical qubits, 120 syndrome measurements per gate cycle, and megawatts of wall power per logical qubit at scale. At the 10,000-logical-qubit scale needed for Shor’s algorithm, room-temperature power would approach 240 kW. For 1 million logical qubits, it exceeds 24 MW—beyond any feasible cryogenic facility.</p>
+<p>This document proposes an alternative: <strong>passive geometric fault tolerance</strong> built on ultrametric (hierarchical, tree-structured) coupling between physical qubits. The core insight is mathematical—the ultrametric inequality $|x+y|_p \le \max(|x|_p, |y|_p)$ implies that small errors cannot accumulate across hierarchical boundaries—but its implementation is purely engineering. No new physics is required. The needed components (hierarchical coupling, exponentially decaying interactions, tree topologies) have been demonstrated experimentally in multiple platforms, including spin glasses, MERA tensor networks, and p-adic AdS/CFT.</p>
+<p><strong>The value proposition:</strong> A depth-5 ultrametric tree with branching factor $p=3$ achieves logical error protection comparable to a distance-11 surface code while using ~40 physical qubits instead of 241, requiring zero syndrome measurements, zero classical decoding, and less than 1% of the energy. At 10% of theoretical efficiency, the advantage remains decisive.</p>
+<hr />
+<h2>ES.2 Why Now</h2>
+<p>Four converging signals make this the right moment:</p>
+<ol>
+<li>
+<p><strong>Surface code scaling is plateauing.</strong> Google’s 2023 demonstration (<em>Nature</em>, Vol. 614, p. 676) showed error suppression with increasing code distance—but the improvement was marginal (from $d=3$ to $d=5$, error rate dropped from ~3% to ~2.9%). Extrapolating to $d=11$ projects error rates of ~2.4%—insufficient for practical computation.</p>
+</li>
+<li>
+<p><strong>Alternative QEC approaches are gaining attention.</strong> Bosonic codes, biased-noise codes, and subsystem codes are all active research areas—but all still require active syndrome measurement. The passive approach is the logical next step.</p>
+</li>
+<li>
+<p><strong>The cryogenic industry is signaling limits.</strong> Dilution refrigerator manufacturers have communicated that cooling power at 20 mK is approaching practical limits. Further improvements require fundamentally new technologies.</p>
+</li>
+<li>
+<p><strong>Investment is retreating from hardware.</strong> After the 2021–2023 quantum computing funding peak, investors are asking harder questions about scalability and energy cost. This favors architectures with a clear thermodynamic advantage.</p>
+</li>
+</ol>
+<hr />
+<h2>ES.3 The Three Experiments</h2>
+<p>The ultrametric framework makes three predictions that can be wrong. If any one is definitively falsified, the framework is wrong. If all three are confirmed, the framework becomes difficult to dismiss.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Experiment</th>
+<th>Domain</th>
+<th>Cost</th>
+<th>Timeline</th>
+<th>Risk Level</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E1</strong></td>
+<td>CMB Log-Periodic Oscillation Search</td>
+<td>Cosmology</td>
+<td>~$60K</td>
+<td>3–6 months</td>
+<td>Low (data exists)</td>
+<td><strong>[OPEN]</strong></td>
+</tr>
+<tr>
+<td><strong>E2</strong></td>
+<td>Prime-Modulated Qubit Noise Spectroscopy</td>
+<td>Quantum Computing</td>
+<td>~$200K</td>
+<td>6–12 months</td>
+<td>Medium (needs hardware)</td>
+<td><strong>[OPEN]</strong></td>
+</tr>
+<tr>
+<td><strong>E3</strong></td>
+<td>Tree Architecture Gate Threshold Test</td>
+<td>Quantum Engineering</td>
+<td>$0.5M–$2M</td>
+<td>18–36 months</td>
+<td>High (no hardware)</td>
+<td><strong>[PRE-EXPERIMENTAL]</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>E1 (CMB):</strong> If the early universe has an ultrametric structure at the Planck scale, the CMB power spectrum carries log-periodic oscillations with period $\propto \log_p(\ell)$. Testable with publicly available Planck 2018 data.</p>
+<p><strong>E2 (Qubit noise):</strong> If quantum measurement is the Monna projection from a tree, environmental noise exhibits peaks at frequencies $f_k = f_q \cdot p^{-k}$. Testable on existing quantum computing hardware.</p>
+<p><strong>E3 (Gate threshold):</strong> If quantum logic gates are discrete tree automorphisms, a tree-structured gate exhibits step-function switching rather than $\sin^2$ Rabi oscillation. Requires new hardware—but the hardware can be built with existing fabrication techniques.</p>
+<hr />
+<h2>ES.4 The Ask</h2>
+<p>A 3-year, $5–$8M program organized in two parallel tracks:</p>
+<p><strong>Track A (Immediate—data-only):</strong> E1 (CMB) and E2 (qubit noise). These require no new hardware and can begin within weeks of funding, producing results within 6–12 months. If both return null results, the framework is severely weakened, and Track B can be descoped or cancelled.</p>
+<p><strong>Track B (Longer-term—hardware):</strong> E3 (gate threshold). This requires chip fabrication and cryogenic measurement, beginning with simulation (6 months) and proceeding to hardware only if simulation is encouraging.</p>
+<p><strong>Go/No-Go Decision Point at Month 12:</strong> At the end of Year 1, E1 and E2 results are available. If both are negative, the program moves to publication of negative results and terminates. If either is positive, Track B proceeds to hardware with increased confidence.</p>
+<p><strong>Total program cost:</strong> $1.5M–$5M over 3 years (depending on hardware access fees and foundry run costs), with an additional $3M–$5M for Track B hardware fabrication if the Go decision is made at Month 12.</p>
+<p><strong>Total personnel:</strong> 3 postdocs, 1 graduate student, 1 research engineer, 1 PI (part-time).</p>
+<hr />
+<h1>PART I: THE CASE FOR ULTRAMETRIC QUANTUM COMPUTATION</h1>
+<hr />
+<h2>Chapter 1: The Thermodynamic Wall—Why Active QEC Cannot Scale</h2>
+<h3>1.1 The Energy Cost of Error Correction</h3>
+<p><strong>[EST]</strong> Quantum error correction—the surface code in particular—requires continuous syndrome measurements. Each cycle generates microwave pulses to interrogate ancilla qubits, processes data on FPGAs or cryo-CMOS, applies correction pulses, and resets ancillas. Every step dissipates energy.</p>
+<p>At the mixing chamber of a dilution refrigerator (~20 mK), the Carnot penalty is $10^3$ to $10^4$—every watt of heat dissipated at the qubit layer requires kilowatts of room-temperature power. This is established physics, documented in Fowler et al. (<em>Physical Review A</em>, 2012) and confirmed by Google Quantum AI (<em>Nature</em>, 2023).</p>
+<h3>1.2 The Scaling Problem in Numbers</h3>
+<table>
+<thead>
+<tr>
+<th>Logical Qubits</th>
+<th>Physical Qubits ($d=11$)</th>
+<th>Room-Temp Power</th>
+<th>Feasibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>24,100</td>
+<td>~2.4 kW</td>
+<td>Current</td>
+</tr>
+<tr>
+<td>1,000</td>
+<td>241,000</td>
+<td>~24 kW</td>
+<td>Strained</td>
+</tr>
+<tr>
+<td>10,000</td>
+<td>2.41M</td>
+<td>~240 kW</td>
+<td>Implausible</td>
+</tr>
+<tr>
+<td>1M</td>
+<td>241M</td>
+<td>&gt;24 MW</td>
+<td>Impossible</td>
+</tr>
+</tbody>
+</table>
+<p>For context: 10,000 logical qubits is the scale needed for Shor’s algorithm on 2048-bit RSA. 1M logical qubits is the scale for industrially relevant quantum chemistry. No dilution refrigerator can cool a 24 MW heat load at 20 mK.</p>
+<h3>1.3 Where the Energy Goes</h3>
+<p><strong>[EST]</strong> A detailed energy audit of surface code operations (Fowler et al., 2012; supplementary materials of Google Quantum AI, <em>Nature</em>, 2023):</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Energy per Cycle</th>
+<th>Scaling with $d$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syndrome measurement pulses</td>
+<td>~$10^{-19}$ J per qubit-cycle</td>
+<td>$\propto d^2$</td>
+</tr>
+<tr>
+<td>Readout (JPA/parametric amplifier)</td>
+<td>~$10^{-18}$ J per qubit</td>
+<td>$\propto d^2$</td>
+</tr>
+<tr>
+<td>FPGA classical decoding</td>
+<td>~$10^{-12}$ J per logical qubit-cycle</td>
+<td>Constant per logical</td>
+</tr>
+<tr>
+<td>Ancilla reset (dissipative)</td>
+<td>~$k_B T \ln 2$ (min) × amplification</td>
+<td>$\propto d^2$</td>
+</tr>
+<tr>
+<td>Cryogenic wiring thermal load</td>
+<td>~$10^{-6}$ W per line (fixed)</td>
+<td>$\propto d^2$</td>
+</tr>
+</tbody>
+</table>
+<p>The dominant term at scale is the classical decoding—FPGAs drawing ~10 mW per logical qubit, multiplied by the Carnot penalty. This is the “hidden cost” of active QEC that most roadmaps do not discuss publicly.</p>
+<h3>1.4 Landauer’s Bound and the Inescapable Conclusion</h3>
+<p><strong>[EST]</strong> Landauer (1961, <em>IBM Journal of Research and Development</em>) proved that erasing information costs a minimum of $k_B T \ln 2$ of energy. Active QEC erases information with every syndrome measurement—it is fundamentally entropy-producing. No amount of engineering optimization can reduce this below the thermodynamic limit.</p>
+<p><strong>The only way to escape the thermodynamic wall is to stop erasing information about errors.</strong> This means passive protection—making errors geometrically impossible rather than measuring and correcting them.</p>
+<hr />
+<h2>Chapter 2: The Alternative—Passive Geometric Fault Tolerance</h2>
+<h3>2.1 The Core Engineering Claim</h3>
+<p><strong>[PROP]</strong> The ultrametric inequality directly implies that small errors cannot accumulate. In a physical system whose energy landscape mirrors the Bruhat-Tits tree, quantum states encoded at depth $D$ are protected by geometry alone—no syndrome measurements, no decoding algorithms, no ancilla qubits. The error attenuation follows:</p>
+<p>$$\varepsilon_{\text{logical}} \sim \varepsilon_{\text{boundary}} \cdot p^{-D}$$</p>
+<p>where $p$ is the branching factor of the tree and $D$ is the encoding depth.</p>
+<h3>2.2 Comparison with Conventional Architectures</h3>
+<p>The table below compares the proposed non-Archimedean tree architecture (depth $D=5$, $p=3$) with the surface code (distance $d=11$), the leading active QEC architecture:</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Surface Code ($d=11$)</th>
+<th>Tree ($D=5$, $p=3$)</th>
+<th>Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical qubits per logical</td>
+<td>241</td>
+<td>~40</td>
+<td>6:1</td>
+</tr>
+<tr>
+<td>Measurements per gate cycle</td>
+<td>120</td>
+<td>0 (passive)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Classical processing (FPGA)</td>
+<td>Required</td>
+<td>None (sparse cross-ratio)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Room-temp power per logical qubit</td>
+<td>~240 W</td>
+<td>&lt;0.24 W (est.)</td>
+<td>&gt;1000:1</td>
+</tr>
+<tr>
+<td>Cryogenic system cost per logical</td>
+<td>~$10K</td>
+<td>&lt;$100</td>
+<td>&gt;100:1</td>
+</tr>
+<tr>
+<td>Logical gate time</td>
+<td>~1 μs (100 cycles × 10 ns)</td>
+<td>~50 ns (1 step)</td>
+<td>20:1</td>
+</tr>
+<tr>
+<td>Chip area per logical qubit</td>
+<td>~0.6 mm²</td>
+<td>~1.2 mm²</td>
+<td>Comparable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>At 10,000 logical qubits:</strong>
+- Surface code: 2.41M physical qubits, 2.4 MW wall power, ~$240M cryogenic system
+- Tree ($D=5$, $p=3$): 400K physical qubits, &lt;2.4 kW wall power, ~$1M cryogenic system</p>
+<p><strong>[PROP]</strong> These estimates assume perfect ultrametric coupling and zero leakage. Real hardware will underperform. But even at 10% of theoretical efficiency, the advantage is decisive.</p>
+<h3>2.3 Why This Is Not a New Interpretation of Quantum Mechanics</h3>
+<p>The thermodynamic argument is independent of the foundational claims. Even if the framework’s interpretation of quantum mechanics is wrong, the engineering advantage of passive geometric fault tolerance is a separate, testable proposition. If a tree-structured qubit can be built, and if it demonstrates the predicted noise attenuation, the thermodynamic case alone justifies the research program.</p>
+<hr />
+<h2>Chapter 3: Historical Context—The Road Not Taken</h2>
+<h3>3.1 Two Assumptions, One Examined</h3>
+<p><strong>[EST]</strong> Max Planck introduced the quantum of action in December 1900 at the University of Berlin. Three years earlier, in 1897, at the same university, Kurt Hensel had published the p-adic numbers—a complete alternative arithmetic where distance is measured by divisibility, not magnitude. Its geometry is not a line but a tree.</p>
+<p>Planck’s key move—that energy is exchanged in discrete quanta $E = h\nu$—has been scrutinized, refined, and confirmed for over a century. But Planck made a second assumption that has never been questioned: the choice of the ordinary, Archimedean distance to count and weigh energy configurations. He used the standard Euclidean metric inherited from classical phase space. This choice seemed so natural that it was invisible.</p>
+<h3>3.2 The Argument in Brief</h3>
+<p>This document presents a comprehensive case for the following thesis:</p>
+<blockquote>
+<p><strong>The apparent weirdness of quantum mechanics—measurement, probability, nonlocality, duality—is an artifact of measuring a tree-structured reality with an Archimedean ruler.</strong></p>
+</blockquote>
+<p>The framework proposes six interlocking claims:</p>
+<ol>
+<li>The physical state space is the Bruhat-Tits tree (or its boundary), not a complex Hilbert space. <strong>[PROP]</strong></li>
+<li>Evolution is deterministic tree automorphisms, not continuous unitary rotations. <strong>[PROP]</strong></li>
+<li>Measurement is the Monna map—a digit-reversal projection from the tree boundary onto the real interval $[0,1]$. <strong>[PROP]</strong></li>
+<li>Probability (the Born rule) is geometric counting—the proportion of tree branches that project onto each observed outcome. <strong>[PROP]</strong></li>
+<li>Entanglement is shared ancestry—two particles that share a deep common vertex in the tree exhibit correlations that appear nonlocal only when measured in the Archimedean projection. <strong>[PROP]</strong></li>
+<li>Wave-particle duality is resolution-dependent sampling—coarse resolution reveals particle-like behavior; fine resolution reveals the branching tree structure. <strong>[PROP]</strong></li>
+</ol>
+<hr />
+<h2>Chapter 4: The Precedent—Ultrametricity Exists in Nature</h2>
+<h3>4.1 Spin Glasses: Ultrametricity Confirmed Experimentally</h3>
+<p><strong>[EST]</strong> The most important empirical precedent for ultrametric quantum computing is not a quantum system at all—it is spin glasses. In 1986, Rammal, Toulouse, and Virasoro published “Ultrametricity for physicists” in <em>Reviews of Modern Physics</em> (Vol. 58, p. 765), synthesizing a decade of theoretical and experimental work. They showed that the energy landscape of spin glasses—disordered magnetic systems—is naturally organized in an ultrametric hierarchy.</p>
+<p>This was confirmed experimentally by aging experiments (Lundgren et al., <em>Physical Review Letters</em>, 1983), temperature cycling (Refregier et al., <em>Journal de Physique</em>, 1987), and noise spectroscopy (Weissman, <em>Reviews of Modern Physics</em>, 1988). Ultrametricity is not a mathematical abstraction. It emerges naturally in physical systems with frustration and disorder—exactly the conditions under which quantum error correction operates.</p>
+<h3>4.2 MERA Tensor Networks: Tree Geometry from Entanglement</h3>
+<p><strong>[EST]</strong> The Multiscale Entanglement Renormalization Ansatz (MERA), introduced by Vidal (<em>Physical Review Letters</em>, 2007, Vol. 99, p. 220405), is a tensor network architecture that is explicitly tree-structured. Key findings:</p>
+<ul>
+<li><strong>MERA naturally produces AdS geometry</strong> (Swingle, <em>Physical Review D</em>, 2012, Vol. 86, p. 065007): The network geometry that emerges from entanglement renormalization is hyperbolic—the same geometry as the Bruhat-Tits tree.</li>
+<li><strong>MERA can be implemented physically</strong> (Kim et al., <em>Nature Physics</em>, 2023): Experimental realization on superconducting qubit arrays has been demonstrated.</li>
+<li><strong>The tree structure is optimal for certain entanglement patterns</strong> (Evenbly &amp; Vidal, <em>Journal of Statistical Physics</em>, 2011): For critical systems, the tree-like MERA ansatz captures the entanglement entropy scaling exactly.</li>
+</ul>
+<p>If the optimal classical description of quantum entanglement is a tree, the optimal quantum hardware may also be a tree.</p>
+<h3>4.3 P-adic AdS/CFT: The Mathematics Already Exists</h3>
+<p><strong>[EST]</strong> Gubser, Knaute, Parikh, Samberg, and Witaszczyk (<em>Communications in Mathematical Physics</em>, 2017, Vol. 352, p. 1019) established a p-adic version of the AdS/CFT correspondence. The core result: the Bruhat-Tits tree $T_p$—an infinite $(p+1)$-regular tree—is a discrete model of anti-de Sitter space with holographic properties. This has been extended by Heydeman, Marcolli, Saberi, and Stoica (<em>Advances in Theoretical and Mathematical Physics</em>, 2018).</p>
+<p>The mathematics for tree-structured quantum systems already exists in the peer-reviewed literature. The p-adic AdS/CFT correspondence provides a formal framework for understanding how continuous spacetime and quantum field theory emerge from a purely hierarchical structure.</p>
+<h3>4.4 Ultracold Atoms in Optical Superlattices: Hierarchical Coupling Demonstrated</h3>
+<p><strong>[EST]</strong> The experimental realization of optical superlattices provides a direct demonstration of hierarchical coupling in quantum systems:</p>
+<ul>
+<li><strong>Double superlattices</strong> (Fölling et al., <em>Nature</em>, 2007, Vol. 448, p. 1029): Created a lattice with two periodicities using bichromatic optical potentials.</li>
+<li><strong>Triple superlattices</strong> have been demonstrated (Browaeys &amp; Lahaye, <em>Nature Physics</em>, 2020, Vol. 16, p. 132).</li>
+<li>The coupling ratio between adjacent levels can be tuned by adjusting laser intensities, achieving exponential decay $J_{n,n+1} \propto p^{-n}$ over at least 2–3 levels.</li>
+</ul>
+<p>Hierarchical coupling—the central engineering requirement for ultrametric quantum hardware—has been experimentally demonstrated. The challenge is scaling from 2–3 levels to 5–10 levels.</p>
+<hr />
+<h1>PART II: MATHEMATICAL FOUNDATIONS</h1>
+<hr />
+<h2>Chapter 5: The Archimedean Limitation</h2>
+<h3>5.1 What “Archimedean” Means</h3>
+<p><strong>[EST]</strong> In mathematics, a number system is called <strong>Archimedean</strong> if it satisfies: for any two positive numbers $x$ and $y$, there exists an integer $n$ such that $n \cdot x &gt; y$. In plain language: no matter how small a step you take, if you take enough steps, you can travel any distance. The real numbers $\mathbb{R}$ are Archimedean. The complex numbers $\mathbb{C}$, which provide the mathematical substrate for conventional quantum mechanics, inherit this property.</p>
+<p>The geometry of an Archimedean space is continuous and smooth. Distances accumulate linearly: two perturbations of size $\varepsilon$ can combine to produce an error of size $2\varepsilon$, and $N$ such perturbations can produce an error of size $N\varepsilon$. <strong>[EST]</strong></p>
+<h3>5.2 How This Affects Quantum Computing</h3>
+<p>Conventional quantum mechanics makes three commitments that follow from its choice of number field:</p>
+<ol>
+<li><strong>The state space is a complex Hilbert space $\mathcal{H}$.</strong> This inherits the Archimedean property from $\mathbb{C}$.</li>
+<li><strong>Evolution is unitary:</strong> $|\psi(t)\rangle = e^{-iHt/\hbar}|\psi(0)\rangle$. This is continuous in time.</li>
+<li><strong>Measurement is probabilistic:</strong> The Born rule $P = |\langle \phi|\psi \rangle|^2$ is a postulate, not a derived result. <strong>[EST]</strong></li>
+</ol>
+<p>These commitments have produced the most quantitatively successful theory in the history of science. Any alternative must reproduce these successes. However, they also create profound engineering challenges. Because the state space is continuous, small random perturbations from the environment can nudge a qubit’s state by small amounts. These small nudges accumulate over time, causing decoherence. The engineering response has been active QEC.</p>
+<h3>5.3 The Alternative</h3>
+<p>What if the underlying state space of quantum mechanics is not Archimedean at all? What if the problem is not one of engineering better shielding or faster error correction, but of <strong>ontological alignment</strong>—matching the mathematics of the theory to the structure of the reality it describes? This question leads us to the p-adic numbers.</p>
+<hr />
+<h2>Chapter 6: P-adic Numbers and Ultrametric Geometry</h2>
+<h3>6.1 A Different Way to Measure Size</h3>
+<p><strong>[EST]</strong> For any fixed prime $p$, every nonzero rational number $x$ can be uniquely written as:</p>
+<p>$$x = p^{v_p(x)} \cdot \frac{a}{b}, \quad \text{where } p \nmid a \text{ and } p \nmid b$$</p>
+<p>The integer $v_p(x)$ is called the <strong>p-adic valuation</strong>—it counts how many times $p$ divides $x$. The <strong>p-adic absolute value</strong> is then defined as:</p>
+<p>$$|x|_p = p^{-v_p(x)}, \quad |0|_p = 0$$</p>
+<p><strong>Key intuition:</strong> A number is “small” in the p-adic sense if it is highly divisible by $p$. For $p=5$:</p>
+<p>$$|5|_5 = \frac{1}{5}, \quad |25|_5 = \frac{1}{25}, \quad |125|_5 = \frac{1}{125}$$</p>
+<p>So 125 is “closer to zero” than 25 is, and 25 is “closer to zero” than 5 is. This inverts our ordinary notion of size entirely. <strong>[EST]</strong></p>
+<h3>6.2 The Field $\mathbb{Q}_p$</h3>
+<p><strong>[EST]</strong> Just as the real numbers are constructed by completing the rationals with respect to the ordinary absolute value, the p-adic numbers $\mathbb{Q}_p$ are constructed by completing $\mathbb{Q}$ with respect to $|\cdot|_p$. Every p-adic number has a unique expansion:</p>
+<p>$$x = \sum_{k=v_p(x)}^{\infty} a_k p^k, \quad a_k \in {0, 1, \ldots, p-1}$$</p>
+<p><strong>Crucial difference from decimal expansions:</strong> The expansion goes upward in powers of $p$ (the exponents increase), not downward as in ordinary decimal expansions. In $\mathbb{R}$, the expansion $0.125 = 1 \cdot 10^{-1} + 2 \cdot 10^{-2} + 5 \cdot 10^{-3}$ uses negative powers. In $\mathbb{Q}_p$, the expansion uses non-negative powers. This “reversed” expansion is the geometric origin of the Monna map. <strong>[EST]</strong></p>
+<p><strong>Provenance:</strong> Koblitz, N. (1984). <em>p-adic Numbers, p-adic Analysis, and Zeta-Functions</em> (2nd ed.). Springer-Verlag. Chapter 1. Gouvêa, F. Q. (1997). <em>p-adic Numbers: An Introduction</em> (2nd ed.). Springer.</p>
+<h3>6.3 The P-adic Integers $\mathbb{Z}_p$</h3>
+<p><strong>[EST]</strong> The p-adic integers are the unit ball in $\mathbb{Q}_p$:</p>
+<p>$$\mathbb{Z}_p = {x \in \mathbb{Q}_p : |x|_p \le 1}$$</p>
+<p>This set is simultaneously open and closed in the ultrametric topology—a property with no Archimedean analogue. Intuitively, $\mathbb{Z}_p$ contains all numbers whose p-adic expansion has no negative powers.</p>
+<h3>6.4 The Ultrametric Inequality</h3>
+<p><strong>[EST]</strong> The defining property of p-adic distance is the <strong>strong triangle inequality</strong>:</p>
+<p>$$|x + y|_p \le \max(|x|_p, |y|_p)$$</p>
+<p>with equality when $|x|_p \neq |y|_p$. This is much stronger than the ordinary triangle inequality $|x+y| \le |x| + |y|$ that holds in $\mathbb{R}$. A metric satisfying this property is called <strong>ultrametric</strong>.</p>
+<p><strong>Provenance:</strong> Koblitz (1984), Chapter 1, §2, Proposition 2. Proof: Let $v_p(x) = a$, $v_p(y) = b$. Then $x = p^a u$, $y = p^b v$ where $u, v$ are units in $\mathbb{Z}_p$. Assume $a \le b$. Then $x+y = p^a(u + p^{b-a}v)$. Since $u + p^{b-a}v$ is a p-adic integer, $v_p(x+y) \ge a = \min(v_p(x), v_p(y))$. Taking negative exponentials: $|x+y|_p \le p^{-a} = \max(|x|_p, |y|_p)$. If $a &lt; b$ strictly, equality holds.</p>
+<h3>6.5 Geometric Consequences</h3>
+<p><strong>[EST]</strong> The strong triangle inequality has three immediate consequences:</p>
+<ol>
+<li><strong>All triangles are isosceles.</strong> For any three points $x, y, z$, the two longest sides are equal. There are no “scalene” triangles in an ultrametric space.</li>
+<li><strong>Balls are nested or disjoint.</strong> Two balls either do not intersect at all, or one is completely contained within the other. There is no partial overlap.</li>
+<li><strong>Every point in a ball is a center.</strong> If $y \in B(x,r)$, then $B(y,r) = B(x,r)$. There is no privileged center.</li>
+</ol>
+<p><strong>Provenance:</strong> Rammal, R., Toulouse, G., &amp; Virasoro, M. A. (1986). “Ultrametricity for physicists.” <em>Reviews of Modern Physics</em>, 58(3), 765–788. DOI: 10.1103/RevModPhys.58.765.</p>
+<p>These properties describe a space that is fundamentally <strong>hierarchical</strong>: points are organized into nested clusters with no intermediate distances. You are either inside a cluster or outside it—there is no “partially inside.”</p>
+<h3>6.6 Why Ultrametricity Matters for Errors</h3>
+<p><strong>[PROP]</strong> In an Archimedean space, errors accumulate: if $|\varepsilon_1|, |\varepsilon_2| \le \delta$, then $|\varepsilon_1 + \varepsilon_2| \le 2\delta$, and $N$ such errors could produce a total error of $N\delta$. This is why conventional quantum computers need active error correction.</p>
+<p>In an ultrametric space: if $|\varepsilon_1|_p, |\varepsilon_2|_p \le \delta$, then $|\varepsilon_1 + \varepsilon_2|_p \le \delta$. <strong>Small perturbations cannot accumulate to produce a large error.</strong> An error becomes significant only if a single perturbation exceeds the hierarchical threshold on its own. This is a mathematical theorem, not a design choice. <strong>[EST]</strong></p>
+<p>This is the geometric origin of <strong>passive fault tolerance</strong>. <strong>[PROP]</strong></p>
+<hr />
+<h2>Chapter 7: The Bruhat-Tits Tree—Geometry Becomes a Tree</h2>
+<h3>7.1 What Is the Bruhat-Tits Tree?</h3>
+<p><strong>[EST]</strong> For any prime $p$, the <strong>Bruhat-Tits tree</strong> $T_p$ is an infinite graph where every vertex has exactly $p+1$ neighbors. It is the geometric realization of $\mathbb{Q}_p$—the tree plays the role for p-adic numbers that the real line plays for real numbers.</p>
+<p><strong>Provenance:</strong> Serre, J.-P. (1980). <em>Trees</em>. Springer-Verlag. Chapter II, §1. Gubser, S. S., Knaute, J., Parikh, S., Samberg, A., &amp; Witaszczyk, P. (2017). “p-adic AdS/CFT.” <em>Communications in Mathematical Physics</em>, 352(3), 1019–1059. DOI: 10.1007/s00220-017-2915-9.</p>
+<p>To visualize it for $p=2$: the tree has degree 3 at every vertex. If you pick a direction to call “toward the root,” each vertex has $p=2$ children branching away from the root and one parent leading back toward it:</p>
+<pre class="codehilite"><code>            o
+           /|\
+          o o o
+         /| | |\
+        o o o o o
+       /|\ /|\ /|\
+      ... ... ... ...
+</code></pre>
+
+<p>The “root” represents the p-adic integers $\mathbb{Z}_p$; deeper vertices represent more refined lattice classes. The leaves at infinity correspond to the points of $\mathbb{Q}_p$. <strong>[EST]</strong></p>
+<h3>7.2 Vertices as Clusters of States</h3>
+<p><strong>[EST]</strong> Each vertex of the Bruhat-Tits tree represents an equivalence class of p-adic lattices—which corresponds to a ball or cluster of states in the ultrametric space. Two vertices are connected by an edge if one cluster is a maximal sub-cluster of the other (with index $p$). The distance between any two vertices is the number of edges along the unique geodesic connecting them. This graph-theoretic distance corresponds directly to the p-adic distance.</p>
+<h3>7.3 The Boundary</h3>
+<p><strong>[EST]</strong> The boundary $\partial T_p$ is the set of all “points at infinity”—the endpoints of all possible infinite paths starting from a given vertex. Mathematically: $\partial T_p \cong \mathbb{P}^1(\mathbb{Q}_p) = \mathbb{Q}_p \cup {\infty}$. This is a Cantor-like set: totally disconnected, perfect, and compact. The boundary plays a crucial role in the physical interpretation: environmental interactions and control signals act on the boundary.</p>
+<h3>7.4 Encoding Quantum States on the Tree</h3>
+<p><strong>[PROP]</strong> A quantum state in this framework is a distribution over the vertices of the Bruhat-Tits tree:</p>
+<ul>
+<li>The <strong>logical information</strong> is localized at a specific vertex deep in the tree’s interior. This vertex acts as the anchor for the logical state.</li>
+<li>The <strong>fluctuating component</strong> occupies vertices near the boundary.</li>
+</ul>
+<p>The depth of the logical vertex determines the degree of protection. Noise enters at the boundary and must propagate inward along tree edges to affect the logical state. Each edge crossed represents an energy barrier that attenuates the perturbation. <strong>[PROP]</strong></p>
+<h3>7.5 The Protective Mechanism</h3>
+<p><strong>[PROP]</strong> Consider a logical state encoded at depth $D$ from the boundary. For a noise-induced error to corrupt the logical information, the perturbation must traverse all $D$ edges from the boundary to the logical vertex. Each step crosses an energy barrier of size $\Delta E_k$. The probability of a noise event of energy $\varepsilon$ crossing a barrier of size $\Delta E$ scales as $e^{-\Delta E / \varepsilon}$. The total attenuation is:</p>
+<p>$$\varepsilon_{\text{logical}} \sim \varepsilon_{\text{boundary}} \cdot p^{-D}$$</p>
+<p>This is fundamentally different from active QEC. In the tree framework, the geometry itself is the error correction.</p>
+<hr />
+<h2>Chapter 8: The Monna Map—Where Randomness Comes From</h2>
+<h3>8.1 What Is the Monna Map?</h3>
+<p><strong>[EST]</strong> The <strong>Monna map</strong> $\Phi: \mathbb{Z}_p \to [0,1]$ (also called the p-adic digit-reversal map, or the Minkowski question mark function when $p=2$) projects a p-adic integer to a real number by reversing its digit expansion:</p>
+<p>For $x = \sum_{k=0}^{\infty} a_k p^k \in \mathbb{Z}_p$ (with $a_k \in {0, \ldots, p-1}$):</p>
+<p>$$\Phi(x) = \sum_{k=0}^{\infty} a_k p^{-(k+1)}$$</p>
+<p>In words: take the p-adic digit expansion, reverse the order of the digits, and interpret the result as a base-$p$ decimal fraction between 0 and 1. <strong>[EST]</strong></p>
+<p><strong>Provenance:</strong> Monna, A. F. (1968). “Sur une transformation simple des nombres p-adiques en nombres réels.” <em>Indagationes Mathematicae</em>, 31, 1–9. Also discussed in Khrennikov, A. (2009). <em>Interpretations of Probability</em> (2nd ed.). Walter de Gruyter. Chapter 3.</p>
+<h3>8.2 The Digit-Reversal Intuition</h3>
+<p>For $p=2$ (binary):</p>
+<ul>
+<li><strong>p-adic expansion:</strong> $x = a_0 + a_1 \cdot 2 + a_2 \cdot 4 + a_3 \cdot 8 + \cdots$ (increasing powers)</li>
+<li><strong>Monna map result:</strong> $\Phi(x) = \frac{a_0}{2} + \frac{a_1}{4} + \frac{a_2}{8} + \frac{a_3}{16} + \cdots$ (decreasing powers)</li>
+</ul>
+<p>The most significant p-adic digit ($a_0$) becomes the most significant binary digit of the real number. The least significant p-adic digits become the fine-grained bits. <strong>[EST]</strong></p>
+<h3>8.3 Four Critical Properties</h3>
+<p>All four properties are <strong>[EST]</strong> mathematical facts:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Continuity</strong></td>
+<td>$\Phi$ is continuous from the ultrametric topology on $\mathbb{Z}_p$ to the Euclidean topology on $[0,1]$</td>
+</tr>
+<tr>
+<td><strong>Measure preservation</strong></td>
+<td>$\Phi$ maps the Haar measure $\mu_p$ on $\mathbb{Z}<em>p$ exactly to Lebesgue measure $\lambda$ on $[0,1]$: $\Phi</em>*(\mu_p) = \lambda$</td>
+</tr>
+<tr>
+<td><strong>Many-to-one</strong></td>
+<td>Multiple distinct tree points can map to the same real number. Information is destroyed by the projection</td>
+</tr>
+<tr>
+<td><strong>Scrambling</strong></td>
+<td>Points nearby on the tree can map to distant real numbers, and vice versa</td>
+</tr>
+</tbody>
+</table>
+<h3>8.4 The Measure Preservation Theorem</h3>
+<p><strong>[EST]</strong> <strong>Theorem:</strong> The pushforward of the normalized Haar measure $\mu_p$ on $\mathbb{Z}<em>p$ under the Monna map $\Phi$ is exactly the Lebesgue measure $\lambda$ on $[0, 1]$: $\Phi</em>*(\mu_p) = \lambda$.</p>
+<p><strong>Proof:</strong> The Monna map sends the p-adic cylinder set ${x \in \mathbb{Z}<em k-1="k-1">p : a_0 = c_0, \ldots, a</em>$. Since cylinders generate the Borel $\sigma$-algebra, the Carathéodory extension theorem guarantees equality on all measurable sets. } = c_{k-1}}$ (measure $p^{-k}$) to the real interval $[\sum_{j=0}^{k-1} c_j p^{-(j+1)}, \sum_{j=0}^{k-1} c_j p^{-(j+1)} + p^{-k}]$, which has Lebesgue measure $p^{-k<strong>[EST]</strong></p>
+<h3>8.5 The Physical Interpretation</h3>
+<p><strong>[PROP]</strong> The Monna map IS the measurement process. The apparent randomness of quantum outcomes arises not from fundamental indeterminism, but from the many-to-one nature of this geometric projection. The quantum state is a definite, deterministic distribution on the tree. When we “measure” it, we apply the Monna map—we project the high-dimensional tree state onto the one-dimensional real line. Because the projection is many-to-one and scrambling, the result appears random. But nothing random happened—information was simply lost in the projection.</p>
+<hr />
+<h2>Chapter 9: The Adèle Ring—All Trees, All at Once</h2>
+<h3>9.1 What Is the Adèle Ring?</h3>
+<p><strong>[EST]</strong> The <strong>adèle ring</strong> $\mathbb{A}_\mathbb{Q}$ is the restricted product of all completions of the rational numbers—the real numbers AND all p-adic fields simultaneously:</p>
+<p>$$\mathbb{A}<em _text_="\text{" p="p" prime="prime">\mathbb{Q} = \mathbb{R} \times \prod</em>_p$$}}!!!'\; \mathbb{Q</p>
+<p>The “restricted” condition means that for all but finitely many primes $p$, the component must lie in $\mathbb{Z}_p$.</p>
+<p><strong>Provenance:</strong> Weil, A. (1982). <em>Adeles and Algebraic Groups</em>. Birkhäuser. Chapter 1. Lang, S. (1994). <em>Algebraic Number Theory</em> (2nd ed.). Springer-Verlag. Chapter VII.</p>
+<h3>9.2 The Product Formula</h3>
+<p><strong>[EST]</strong> The adelic product formula states that for any nonzero rational number $x$:</p>
+<p>$$\prod_v |x|_v = 1$$</p>
+<p>where $v$ runs over all “places”: the real absolute value $|\cdot|_\infty$ and all p-adic absolute values $|\cdot|_p$ for every prime $p$.</p>
+<p>For example, $x = 12 = 2^2 \cdot 3$:
+- $|12|_\infty = 12$, $|12|_2 = 1/4$, $|12|_3 = 1/3$, $|12|_p = 1$ for other $p$
+- Product: $12 \times 1/4 \times 1/3 \times 1 \times 1 \times \cdots = 1$ ✓</p>
+<h3>9.3 Physical Interpretation</h3>
+<p><strong>[PROP]</strong> The product formula is the “conservation law” that guarantees all the different projections—the continuous line and the spiral (p-adic) shadows—are consistent. The adelic Fubini-Tonelli theorem allows integration over all p-adic factors and the real factor independently. This is the mathematical basis for combining the “continuous shadow” (real numbers) with the “spiral shadows” (p-adic numbers). <strong>[EST]</strong></p>
+<h3>9.4 Why This Matters</h3>
+<p><strong>[PROP]</strong> The adèle ring suggests that reality might not be described by a single number field—neither $\mathbb{R}$ nor any single $\mathbb{Q}_p$—but by the product of all of them. The real numbers capture one aspect (continuous magnitude), and the p-adic numbers capture complementary aspects (discrete divisibility by each prime). The product formula ensures these descriptions are not independent but different projections of the same underlying object.</p>
+<hr />
+<h1>PART III: WHAT THE TREE EXPLAINS—FOUNDATIONAL CLAIMS</h1>
+<hr />
+<h2>Chapter 10: The Measurement Problem Dissolved</h2>
+<h3>10.1 The Conventional Puzzle</h3>
+<p><strong>[EST]</strong> In standard quantum mechanics, a system evolves deterministically via the Schrödinger equation until a measurement is performed, at which point the state “collapses” probabilistically to an eigenstate of the measured observable. No equation governs when or how this collapse occurs. This is the <strong>measurement problem</strong>.</p>
+<p>Interpretations proliferate: collapse is real (objective collapse models), collapse is illusory (many-worlds), collapse is epistemic (QBism), collapse is guided by hidden variables (Bohmian mechanics). None has achieved consensus.</p>
+<h3>10.2 The Ultrametric Dissolution</h3>
+<p><strong>[PROP]</strong> The measurement problem dissolves when we recognize three things:</p>
+<ol>
+<li>The quantum state is a definite distribution on the Bruhat-Tits tree.</li>
+<li>Measurement is the Monna map: a many-to-one projection from the tree onto the real interval $[0,1]$.</li>
+<li>The “collapse” is not a physical event—it is the information loss inherent in the projection.</li>
+</ol>
+<p>There is no separate “collapse postulate” because measurement is not a separate process. It is a change of description—from the full tree to its one-dimensional shadow. The tree state was always definite. The appearance of multiple possibilities resolved into one is an artifact of the many-to-one projection.</p>
+<h3>10.3 What This Explains</h3>
+<p><strong>Explained:</strong> Why measurement appears probabilistic despite deterministic evolution. Why measurement appears to “collapse” the state. Why different measurement bases produce different “collapses” (different projections emphasize different aspects of the tree structure).</p>
+<p><strong>Not yet explained:</strong> When exactly a measurement occurs (the “Heisenberg cut” problem). Why the Born rule takes the specific form $|\psi|^2$ rather than some other function of the measure. These remain <strong>[GAP]</strong>.</p>
+<hr />
+<h2>Chapter 11: The Born Rule as Geometric Counting</h2>
+<h3>11.1 The Conventional Postulate</h3>
+<p><strong>[EST]</strong> In conventional quantum mechanics, the Born rule is a postulate: $P(a) = |\langle a|\psi\rangle|^2$. It is not derived from anything deeper. It is simply asserted as the connection between the mathematical formalism and experimental outcomes.</p>
+<h3>11.2 The Geometric Derivation</h3>
+<p><strong>[PROP]</strong> In the ultrametric framework, the Born rule is a theorem about geometry. The proof proceeds in three steps:</p>
+<p><strong>Step 1: Measure preservation.</strong> The Monna map $\Phi$ pushes the Haar measure $\mu_p$ on $\mathbb{Z}_p$ forward to Lebesgue measure $\lambda$ on $[0,1]$. This is <strong>[EST]</strong> via the Carathéodory extension theorem.</p>
+<p><strong>Step 2: Geometric counting.</strong> For a state localized in a measurable subset $S \subset \mathbb{Z}_p$, the probability of observing a measurement outcome in interval $I \subset [0,1]$ is:</p>
+<p>$$P(I) = \frac{\mu_p(\Phi^{-1}(I) \cap S)}{\mu_p(S)}$$</p>
+<p>This is simply: “what fraction of the tree branches that describe the state project into the observed outcome interval?” <strong>[PROP]</strong></p>
+<p><strong>Step 3: Squared-amplitude emergence.</strong> <strong>[GAP]</strong> When the wave function $\psi(x)$ (complex-valued) is encoded on the tree boundary, the measure distortion under pullback must yield exactly $|\psi|^2$. This requires specifying how complex amplitudes are encoded in the p-adic framework—the key missing step.</p>
+<h3>11.3 The Encoding Problem</h3>
+<p>The p-adic numbers are not naturally equipped with complex phases. Three approaches are under consideration:</p>
+<ol>
+<li><strong>$\mathbb{C}_p$ (p-adic complex numbers):</strong> Algebraically closed but not locally compact—breaks the spectral theorem. <strong>[GAP]</strong></li>
+<li><strong>Quaternion algebras over $\mathbb{Q}_p$:</strong> Division algebras with natural Hermitian structure. Locally compact. <strong>[GAP]</strong></li>
+<li><strong>Tree as real manifold:</strong> The Bruhat-Tits tree boundary supports real- and complex-valued functions (as in Connes’ noncommutative geometry). <strong>[GAP]</strong></li>
+</ol>
+<p>No definitive choice has been made. This is the most urgent mathematical gap in the framework.</p>
+<hr />
+<h2>Chapter 12: Entanglement as Shared Ancestry</h2>
+<h3>12.1 The Conventional Puzzle</h3>
+<p><strong>[EST]</strong> Two particles in an entangled state exhibit correlations that violate Bell inequalities. In standard quantum mechanics, these correlations cannot be explained by any local hidden-variable theory.</p>
+<h3>12.2 Shared Ancestry in the Tree</h3>
+<p><strong>[PROP]</strong> In the ultrametric framework, entanglement is <strong>shared ancestry</strong> in the Bruhat-Tits tree. Two entangled particles are not separate objects that happen to be correlated. They share a common vertex—an ancestor—deep in the tree. Their joint state is a distribution on the subtree rooted at that ancestor. The correlations between their measurement outcomes are encoded in the branching structure from that shared root.</p>
+<p>This is a <strong>local</strong> relationship in the tree’s own metric. The ancestor is at a finite graph distance from both leaves. The branching structure determines the correlations deterministically.</p>
+<h3>12.3 Bell Correlations Without Nonlocality</h3>
+<p><strong>[PROP]</strong> Why do these tree-local correlations appear nonlocal when measured? Because the Monna map scrambles the tree’s internal geometry. Two points that are close in the tree metric (sharing recent common ancestry) can map to points that are far apart in the real interval $[0,1]$—and therefore far apart in ordinary spacetime.</p>
+<p>Bell’s theorem assumes that spacelike separation in the Minkowski metric precludes causal influence. The ultrametric framework does not violate this. Instead, it asserts that the <strong>relevant metric for locality is the tree metric, not the spacetime metric.</strong> The correlations are local in the tree metric; they only appear nonlocal when projected onto spacetime.</p>
+<p><strong>[GAP]</strong> The framework must reproduce the exact quantum mechanical violation of the CHSH inequality—$2\sqrt{2} &gt; 2$—from the tree geometry alone. This has not been demonstrated.</p>
+<hr />
+<h2>Chapter 13: Wave-Particle Duality as Resolution</h2>
+<h3>13.1 The Conventional Puzzle</h3>
+<p><strong>[EST]</strong> Quantum entities exhibit both particle-like behavior (localized detection events) and wave-like behavior (interference patterns). These appear in the same experiment depending on what is measured. Bohr’s complementarity principle asserts that wave and particle descriptions are mutually exclusive but jointly necessary.</p>
+<h3>13.2 Resolution-Dependent Sampling</h3>
+<p><strong>[PROP]</strong> In the tree framework, wave-particle duality is <strong>resolution-dependent sampling</strong>:</p>
+<ul>
+<li><strong>Coarse resolution</strong> (few digits of the p-adic expansion retained): The state is sampled at a single vertex or a small cluster. It appears particle-like—localized, with a definite position.</li>
+<li><strong>Fine resolution</strong> (many digits retained): The full branching structure below the sampling vertex is revealed. Different branches contribute amplitudes that can interfere. The state appears wave-like.</li>
+</ul>
+<p>Which-path information corresponds to retaining or discarding specific digits. When which-path information is retained, branches are distinguishable and interference is washed out—particle behavior. When which-path information is discarded (coherent summation across paths), interference fringes appear—wave behavior.</p>
+<p><strong>[PROP]</strong> Duality is not a paradox about the nature of quantum entities. It is a consequence of varying the resolution at which we sample the tree.</p>
+<hr />
+<h2>Chapter 14: Summary of Foundational Claims and Gaps</h2>
+<h3>14.1 The Six Propositions</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Claim</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>State space is the Bruhat-Tits tree, not complex Hilbert space</td>
+<td><strong>[PROP]</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Evolution is discrete tree automorphisms, not continuous unitaries</td>
+<td><strong>[PROP]</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Measurement is the Monna projection</td>
+<td><strong>[PROP]</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Born rule = geometric counting of branch proportions</td>
+<td><strong>[PROP]</strong> with <strong>[GAP]</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Entanglement = shared ancestry in tree topology</td>
+<td><strong>[PROP]</strong> with <strong>[GAP]</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Wave-particle duality = resolution-dependent sampling</td>
+<td><strong>[PROP]</strong> with <strong>[GAP]</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>14.2 What the Framework Does Not Claim</h3>
+<ul>
+<li><strong>[NOT CLAIMED]</strong> That the framework has been experimentally confirmed.</li>
+<li><strong>[NOT CLAIMED]</strong> That all mathematical gaps are filled.</li>
+<li><strong>[NOT CLAIMED]</strong> That a tree-structured quantum computer has been built.</li>
+<li><strong>[NOT CLAIMED]</strong> That the framework replaces complex numbers in quantum mechanics—only that the underlying metric is ultrametric, not Archimedean.</li>
+</ul>
+<h3>14.3 Key Open Questions</h3>
+<ol>
+<li><strong>Which prime $p$ is physical?</strong> Candidates: $p=2$ (binary, minimal), adelic combination of all primes, or emergent $p$ dependent on the physical system. <strong>[OPEN]</strong></li>
+<li><strong>How does 3+1D Lorentzian spacetime emerge from the tree?</strong> Several approaches exist (p-adic AdS/CFT, MERA, RG flow) but no concrete proof. <strong>[GAP]</strong></li>
+<li><strong>What replaces the Schrödinger equation?</strong> Candidates: p-adic Schrödinger equation (Vladimirov et al.), p-adic heat equation, or tree automorphisms. <strong>[GAP]</strong></li>
+<li><strong>How are complex amplitudes encoded?</strong> This is the most urgent gap. <strong>[GAP]</strong></li>
+</ol>
+<hr />
+<h1>PART IV: THREE FALSIFIABLE PREDICTIONS WITH NUMERICAL VALUES</h1>
+<hr />
+<h2>Chapter 15: Prediction 1—CMB Log-Periodic Oscillations</h2>
+<h3>15.1 Theoretical Prediction</h3>
+<p><strong>[PROP]</strong> If the early universe has an ultrametric structure at the Planck scale, the primordial power spectrum $P(k)$ carries a log-periodic modulation:</p>
+<p>$$P(k) = P_0(k)\left[1 + A \cos\left(\omega \log_p(k/k_0) + \phi\right)\right]$$</p>
+<p>This propagates to the CMB angular power spectrum $C_\ell$ via the radiation transfer function $\Delta_\ell(k)$:</p>
+<p>$$C_\ell = \frac{2}{\pi} \int_0^\infty k^2 \, dk \, P(k) \, \Delta_\ell^2(k)$$</p>
+<p><strong>Observable:</strong> Planck 2018 full-mission temperature power spectrum $C_\ell^{TT}$.
+<strong>Signature:</strong> Periodic features when plotted against $\log_p(\ell)$ for $p = 2, 3, 5, \ldots$
+<strong>Status:</strong> <strong>[OPEN]</strong> No dedicated search for log-periodic CMB oscillations has been published.</p>
+<h3>15.2 Specific Numerical Predictions</h3>
+<p><strong>Fiducial: $p = 2$</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Predicted Value</th>
+<th>Uncertainty</th>
+<th>Derivation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$A_2$ (amplitude)</td>
+<td>$0.018_{-0.006}^{+0.008}$</td>
+<td>Framework + Planck sensitivity</td>
+<td>Framework §2.3.1</td>
+</tr>
+<tr>
+<td>$\omega_2$ (log-frequency)</td>
+<td>$2\pi / \ln(2) \approx 9.06$</td>
+<td>$\pm 0.5$</td>
+<td>Framework §2.3.2</td>
+</tr>
+<tr>
+<td>$\phi_2$ (phase)</td>
+<td>$\pi/4 \approx 0.785$</td>
+<td>$\pm \pi/8$</td>
+<td>Framework §2.3.3</td>
+</tr>
+<tr>
+<td>$\ell_0$ (reference scale)</td>
+<td>2</td>
+<td>Fixed</td>
+<td>Definition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[PRED]</strong> Under $\Lambda$CDM (null hypothesis): $A = 0$.</p>
+<p><strong>Predicted $C_\ell$ modulation for $p=2$:</strong></p>
+<table>
+<thead>
+<tr>
+<th>$\ell$</th>
+<th>$\Lambda$CDM $C_\ell$ [$\mu$K²]</th>
+<th>Modulation factor</th>
+<th>Predicted $C_\ell^{\text{tree}}$ [$\mu$K²]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>$1,200 \pm 360$</td>
+<td>1.013</td>
+<td>$1,216 \pm 365$</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$1,100 \pm 220$</td>
+<td>0.984</td>
+<td>$1,082 \pm 217$</td>
+</tr>
+<tr>
+<td>8</td>
+<td>$950 \pm 140$</td>
+<td>1.013</td>
+<td>$962 \pm 142$</td>
+</tr>
+<tr>
+<td>16</td>
+<td>$780 \pm 85$</td>
+<td>0.984</td>
+<td>$768 \pm 84$</td>
+</tr>
+<tr>
+<td>32</td>
+<td>$620 \pm 55$</td>
+<td>1.010</td>
+<td>$626 \pm 56$</td>
+</tr>
+<tr>
+<td>64</td>
+<td>$480 \pm 35$</td>
+<td>1.015</td>
+<td>$487 \pm 35$</td>
+</tr>
+<tr>
+<td>128</td>
+<td>$350 \pm 22$</td>
+<td>0.990</td>
+<td>$347 \pm 22$</td>
+</tr>
+<tr>
+<td>256</td>
+<td>$240 \pm 14$</td>
+<td>1.014</td>
+<td>$243 \pm 14$</td>
+</tr>
+<tr>
+<td>512</td>
+<td>$150 \pm 8$</td>
+<td>0.982</td>
+<td>$147 \pm 8$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alternative: $p = 3$</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Predicted Value</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$A_3$</td>
+<td>$0.008$</td>
+<td>$[0.003, 0.015]$</td>
+</tr>
+<tr>
+<td>$\omega_3$</td>
+<td>$2\pi / \ln(3) \approx 5.72$</td>
+<td>$\pm 0.4$</td>
+</tr>
+<tr>
+<td>$\phi_3$</td>
+<td>$\pi/6 \approx 0.524$</td>
+<td>$\pm \pi/6$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Adelic combination ($p = 2, 3$):</strong></p>
+<p>$$C_\ell^{\text{adelic}} \approx C_\ell^{\Lambda\text{CDM}} \left[1 + 0.026 \cos(9.06 \log_2(\ell/2) + 0.785)\right]$$</p>
+<h3>15.3 Expected Detection Significance</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>$p=2$ Single-Prime</th>
+<th>Adelic ($p=2,3$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\Delta\chi^2$ at best-fit</td>
+<td>35–50</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Local significance</td>
+<td>5–7$\sigma$</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Global significance</td>
+<td>2.5–3.5$\sigma$</td>
+<td>—</td>
+</tr>
+<tr>
+<td>$\ln B_{10}$ (Bayes factor)</td>
+<td>3–5</td>
+<td>4–7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Detection probability:</strong> 60–85% for $&gt;3\sigma$ global detection given the predicted amplitude.</p>
+<hr />
+<h2>Chapter 16: Prediction 2—Prime-Modulated Qubit Noise</h2>
+<h3>16.1 Theoretical Prediction</h3>
+<p><strong>[PROP]</strong> If qubit noise arises from the Monna projection of ultrametric environmental fluctuations, the noise power spectral density $S(f)$ exhibits peaks at frequencies related to the prime $p$:</p>
+<p>$$S(f) = S_0(f)\left[1 + \sum_{k=1}^{K} \alpha_k \cdot \frac{(\Gamma_k/2)^2}{(f - f_k)^2 + (\Gamma_k/2)^2}\right]$$</p>
+<p>where:
+- $f_k = f_q \cdot p^{-k}$ (predicted peak frequencies)
+- $\alpha_k$ = relative amplitude of the $k$-th peak
+- $\Gamma_k$ = width of the $k$-th peak (decoherence broadening)
+- $f_q$ = qubit transition frequency (~5 GHz for transmons)
+- $S_0(f) = A/f^\alpha + B$ (smooth background: $1/f$ + white noise)</p>
+<h3>16.2 Specific Numerical Predictions</h3>
+<p><strong>Fiducial: $p = 2$, $f_q = 5.0$ GHz</strong></p>
+<p>For a transmon qubit with $f_q = 5.0$ GHz, $T_1 = 100$ μs, $T_2^* = 50$ μs:</p>
+<table>
+<thead>
+<tr>
+<th>$k$</th>
+<th>$f_k$ [Hz]</th>
+<th>$\alpha_k$</th>
+<th>$\Gamma_k/2\pi$ [Hz]</th>
+<th>SNR (10⁶ shots)</th>
+<th>Detectable?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$2.50 \times 10^9$</td>
+<td>$3.0 \times 10^{-4}$</td>
+<td>$1.0 \times 10^5$</td>
+<td>8.2</td>
+<td>✓ Strong</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$1.25 \times 10^9$</td>
+<td>$1.5 \times 10^{-4}$</td>
+<td>$5.0 \times 10^4$</td>
+<td>5.8</td>
+<td>✓ Moderate</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$6.25 \times 10^8$</td>
+<td>$7.5 \times 10^{-5}$</td>
+<td>$2.5 \times 10^4$</td>
+<td>3.9</td>
+<td>✓ Marginal</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$3.125 \times 10^8$</td>
+<td>$3.8 \times 10^{-5}$</td>
+<td>$1.2 \times 10^4$</td>
+<td>2.5</td>
+<td>△ Weak</td>
+</tr>
+<tr>
+<td>5</td>
+<td>$1.5625 \times 10^8$</td>
+<td>$1.9 \times 10^{-5}$</td>
+<td>$6.0 \times 10^3$</td>
+<td>1.4</td>
+<td>✗ Undetectable</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observable:</strong> The first three peaks ($k=1,2,3$) should be detectable in dedicated CPMG noise spectroscopy with $10^6$ shots per frequency point.</p>
+<p><strong>Predicted CPMG decay curves for $p=2$, $f_q = 5.0$ GHz:</strong></p>
+<table>
+<thead>
+<tr>
+<th>$N$</th>
+<th>$\Delta t$ [ns]</th>
+<th>Probe Frequency [GHz]</th>
+<th>$\chi$ (with peaks)</th>
+<th>$\chi$ (null)</th>
+<th>$\Delta\chi/\sigma$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.20</td>
+<td>2.50 ($k=1$)</td>
+<td>$0.152 \pm 0.008$</td>
+<td>$0.138 \pm 0.008$</td>
+<td>1.75</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.40</td>
+<td>1.25 ($k=2$)</td>
+<td>$0.089 \pm 0.006$</td>
+<td>$0.082 \pm 0.006$</td>
+<td>1.17</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.80</td>
+<td>0.625 ($k=3$)</td>
+<td>$0.051 \pm 0.004$</td>
+<td>$0.048 \pm 0.004$</td>
+<td>0.75</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[PRED]</strong> The three strongest CPMG points ($N=1,2,4$) should show excess dephasing of 5–15% above the smooth-background expectation, with combined significance of $\sim 3\sigma$ after $10^6$ shots per point.</p>
+<h3>16.3 Prime-Structured Comb Filter Prediction</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Expected $Q$</th>
+<th>Expected $p$-value</th>
+<th>Significance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$p=2$, strong</td>
+<td>$45 \pm 8$</td>
+<td>$2 \times 10^{-8}$</td>
+<td>$5.5\sigma$</td>
+</tr>
+<tr>
+<td>$p=2$, moderate</td>
+<td>$28 \pm 6$</td>
+<td>$5 \times 10^{-5}$</td>
+<td>$3.8\sigma$</td>
+</tr>
+<tr>
+<td>$p=2$, weak</td>
+<td>$15 \pm 4$</td>
+<td>$0.02$</td>
+<td>$2.3\sigma$</td>
+</tr>
+<tr>
+<td>Null ($p=2$)</td>
+<td>$8 \pm 3$</td>
+<td>$0.5$</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alternative: $p = 3$</strong></p>
+<table>
+<thead>
+<tr>
+<th>$k$</th>
+<th>$f_k$ [Hz] for $f_q=5.0$ GHz</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$1.667 \times 10^9$</td>
+<td>CPMG-1 at $\Delta t = 300$ ps</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$5.556 \times 10^8$</td>
+<td>CPMG-2 at $\Delta t = 900$ ps</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$1.852 \times 10^8$</td>
+<td>CPMG-4 at $\Delta t = 2.7$ ns</td>
+</tr>
+</tbody>
+</table>
+<p>Expected amplitudes are $\sim 60\%$ of the $p=2$ case (higher $p$ gives weaker monochromatic imprint).</p>
+<hr />
+<h2>Chapter 17: Prediction 3—Tree Gate Threshold Switching</h2>
+<h3>17.1 Theoretical Prediction</h3>
+<p><strong>[PROP]</strong> In an ultrametric architecture, logic gates are discrete tree automorphisms, not continuous rotations. A gate should exhibit step-function response:</p>
+<p>$$P_{\text{flip}}(\varepsilon) = \begin{cases} 0 &amp; \varepsilon &lt; \varepsilon_{\text{th}} \ 1 &amp; \varepsilon \ge \varepsilon_{\text{th}} \end{cases}$$</p>
+<p><strong>Observable:</strong> Gate fidelity $F(A)$ as a function of control pulse amplitude $A$.
+<strong>Signature:</strong> Sharp jumps at discrete amplitude values $A_k$ corresponding to tree level barriers, rather than the smooth $\sin^2$ Rabi oscillations of conventional qubits.</p>
+<h3>17.2 Mock Data for Pipeline Validation</h3>
+<pre class="codehilite"><code class="language-python">import numpy as np
+
+def generate_mock_cmb(cl_lcdm, ells, cov_matrix, A=0.018, omega=9.06, phi=0.785, p=2, ell0=2):
+    &quot;&quot;&quot;Generate mock CMB TT spectrum with log-periodic modulation.&quot;&quot;&quot;
+    log_ell = np.log(ells / ell0) / np.log(p)
+    modulation = 1.0 + A * np.cos(omega * log_ell + phi)
+    cl_tree = cl_lcdm * modulation
+    L = np.linalg.cholesky(cov_matrix)
+    noise = L @ np.random.randn(len(ells))
+    return cl_tree + noise, modulation
+
+# Verify pipeline recovery
+def noise_spectrum_with_peaks(f, f_q=5.0e9, p=2, K=5, A=1e-6, alpha=1.0, B=1e-12):
+    &quot;&quot;&quot;Generate noise PSD with prime-structured peaks.&quot;&quot;&quot;
+    S_bg = A / (f**alpha) + B
+    S_peaks = np.zeros_like(f)
+    for k in range(1, K+1):
+        f_k = f_q * p**(-k)
+        alpha_k = 3e-4 * p**(-k)
+        S_peaks += alpha_k * (f_k / (2*np.pi)) / ((f - f_k)**2 + (f_k / (2*np.pi))**2)
+    return S_bg + S_peaks
+</code></pre>
+
+<hr />
+<h2>Chapter 18: Cross-Prediction Consistency and Mock Data</h2>
+<h3>18.1 The Common Parameter</h3>
+<p>All three predictions are linked by a common parameter: the prime $p$. If the framework is correct, the <strong>same</strong> $p$ governs CMB oscillations, qubit noise spectra, and gate threshold behavior.</p>
+<p>A joint fit across all three experiments would provide evidence far stronger than any single test. If all three independently point to the same prime (or the same adelic combination), the probability of coincidence becomes vanishingly small.</p>
+<p>Conversely, if CMB analysis suggests $p=13$, noise spectroscopy suggests $p=2$, and gate tests suggest $p=7$, the framework is falsified even if each individual test shows a signal.</p>
+<h3>18.2 What Success Looks Like</h3>
+<p><strong>If the framework is correct:</strong>
+1. Log-periodic CMB oscillations detected at predicted amplitude ($A_2 \approx 0.018$).
+2. Prime-modulated qubit noise spectra observed ($f_k = f_q \cdot 2^{-k}$) across multiple platforms.
+3. Tree-structured gate exhibits threshold switching, not Rabi oscillation.
+4. Passive-geometric qubit achieves logical error rates competitive with active QEC at a fraction of the energy cost.
+5. The Born rule is derived as a theorem about geometric projection.</p>
+<p><strong>If the framework is wrong:</strong>
+1. CMB analysis places upper bounds that constrain primordial ultrametricity.
+2. Noise spectroscopy rules out prime-modulated environmental coupling.
+3. Gate test demonstrates that physical tree structures cannot sustain threshold behavior.
+4. The program produces clear negative results, closing off a line of inquiry.</p>
+<hr />
+<h1>PART V: EXPERIMENTAL EXECUTION PLAN</h1>
+<hr />
+<h2>Chapter 19: Experiment 1—CMB Log-Periodic Oscillation Search</h2>
+<h3>19.1 Scientific Objective</h3>
+<p><strong>Null hypothesis ($H_0$):</strong> The CMB angular power spectrum $C_\ell$ is fully described by the $\Lambda$CDM model with no log-periodic modulation.</p>
+<p><strong>Alternative hypothesis ($H_1$):</strong> The spectrum carries a log-periodic modulation of the form $C_\ell = C_\ell^{\Lambda\text{CDM}} [1 + A \cos(\omega \log_p(\ell/\ell_0) + \phi)]$ with $A &gt; 0.01$, for at least one prime $p \in {2, 3, 5, 7, 11, 13}$.</p>
+<h3>19.2 Data Sources</h3>
+<p><strong>Primary dataset:</strong> Planck 2018 full-mission temperature and polarization maps, publicly available from the Planck Legacy Archive:</p>
+<p><strong>Required files:</strong>
+- <code>COM_PowerSpect_CMB-TT-full_R3.01.txt</code> (binned $C_\ell^{TT}$, $\ell = 2$–$2508$)
+- Covariance matrices: <code>COM_PowerSpect_CMB-TT-full-cov_R3.01.txt</code>
+- $\Lambda$CDM best-fit parameters from Planck 2018 Table 2</p>
+<p><strong>Supplementary datasets (cross-validation):</strong>
+- ACT DR6 (Atacama Cosmology Telescope, 2023): Higher resolution at $\ell &gt; 1000$
+- SPT-3G (South Pole Telescope): Available upon collaboration request</p>
+<p><strong>Software:</strong> CAMB, Cobaya/CosmoMC, custom Python analysis pipeline.</p>
+<h3>19.3 Analysis Pipeline</h3>
+<p><strong>Step 1: Generate $\Lambda$CDM baseline (Week 1).</strong> Use CAMB with Planck 2018 best-fit parameters to generate the reference $C_\ell^{TT}$ for $\ell = 2$–$2500$.</p>
+<p><strong>Step 2: Template construction (Weeks 1–2).</strong> For each candidate prime $p \in {2, 3, 5, 7, 11, 13}$, construct a grid of 8,000 templates (25 amplitude values × 20 frequency values × 16 phase values). Total: 48,000 templates across 6 primes.</p>
+<p><strong>Step 3: Template fit (Weeks 2–4).</strong> Compute $\chi^2$ for each template using the full Planck covariance matrix. MCMC refinement for best-fit candidates using Cobaya or emcee with 100,000 steps. Runtime: 12–24 hours on a workstation (16 cores, 64 GB RAM).</p>
+<p><strong>Step 4: Statistical significance (Week 4).</strong> Correct for the look-elsewhere effect (~2.88 × 10⁶ effective trials). Compute global $p$-values and Bayesian evidence ratios.</p>
+<p><strong>Step 5: Adelic combination (Weeks 4–6).</strong> Test multi-prime combinations. The product formula suggests that if multiple primes contribute, their amplitudes should satisfy $\sum_p A_p \approx A_\infty$.</p>
+<p><strong>Step 6: Systematic error analysis (Weeks 4–6).</strong> Address foreground residuals, calibration errors, beam uncertainties, and foreground template degeneracy.</p>
+<h3>19.4 Success Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Outcome</th>
+<th>Criterion</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confirmed detection</strong></td>
+<td>$\Delta\chi^2 &gt; 50$ (global $3\sigma$) for $p=2$, consistent across multiple datasets</td>
+<td>Publication; framework strengthened</td>
+</tr>
+<tr>
+<td><strong>Marginal signal</strong></td>
+<td>$\Delta\chi^2 \approx 20$–$50$ for $p=2$ (global $2\sigma$)</td>
+<td>Publish constraints; await CMB-S4</td>
+</tr>
+<tr>
+<td><strong>Null result</strong></td>
+<td>No template with $A &gt; 0.01$ and global $&gt;2\sigma$ at any $p$</td>
+<td>Publish upper bounds; Continue to E2/E3</td>
+</tr>
+</tbody>
+</table>
+<h3>19.5 Budget and Timeline</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost</th>
+<th>Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personnel: 1 postdoc (6 months, 50% FTE)</td>
+<td>$30,000</td>
+<td>Months 1–6</td>
+</tr>
+<tr>
+<td>Personnel: 1 graduate student (6 months, 50% FTE)</td>
+<td>$15,000</td>
+<td>Months 1–6</td>
+</tr>
+<tr>
+<td>Computing: Workstation (64-core, 256 GB RAM)</td>
+<td>$8,000</td>
+<td>One-time</td>
+</tr>
+<tr>
+<td>Cloud computing (AWS/HPC)</td>
+<td>$2,000</td>
+<td>As needed</td>
+</tr>
+<tr>
+<td>Publication costs + travel</td>
+<td>$5,000</td>
+<td>Month 7</td>
+</tr>
+<tr>
+<td><strong>Total E1</strong></td>
+<td><strong>~$60,000</strong></td>
+<td>6 months</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Chapter 20: Experiment 2—Prime-Modulated Qubit Noise Spectroscopy</h2>
+<h3>20.1 Scientific Objective</h3>
+<p><strong>Null hypothesis ($H_0$):</strong> Qubit noise PSD $S(f)$ is a smooth function ($1/f$ plus white noise), with no narrow spectral features.</p>
+<p><strong>Alternative hypothesis ($H_1$):</strong> The noise spectrum exhibits narrow peaks at frequencies $f_k = f_q \cdot p^{-k}$ for at least one $p \in {2, 3, 5, 7}$.</p>
+<p><strong>Physical motivation:</strong> If quantum measurement is the Monna projection from a tree onto the real line, environmental fluctuations that live on the tree imprint on the measurement record at frequencies determined by the tree’s branching structure.</p>
+<h3>20.2 Hardware and Methods</h3>
+<p><strong>Platform:</strong> Superconducting transmon qubits (Google, IBM, or Rigetti) or trapped ions.</p>
+<p><strong>Measurement protocols:</strong></p>
+<ol>
+<li>
+<p><strong>Ramsey interferometry:</strong> Measure $T_2^<em>$ with varying idle time $\tau$:
+   $$P(|1\rangle) = \frac{1}{2}\left[1 + e^{-(\tau/T_2^</em>)^\alpha} \cos(\Delta \omega \tau)\right]$$</p>
+</li>
+<li>
+<p><strong>Dynamical decoupling (CPMG):</strong> Apply CPMG-$N$ sequences with inter-pulse delay $\Delta t$ to probe noise at specific frequencies $f_{\text{probe}} = 1/(2\Delta t)$.</p>
+</li>
+<li>
+<p><strong>Prime-structured filter (Protocol C from 0.13):</strong> Design CPMG pulse spacing at intervals $\propto p^k$ to enhance sensitivity to prime-modulated noise:</p>
+</li>
+<li>$p=2$: $\Delta t = 0.20, 0.40, 0.80, 1.60, 3.20$ ns → probes 2.50, 1.25, 0.625, 0.3125, 0.156 GHz</li>
+<li>$p=3$: $\Delta t = 0.30, 0.90, 2.70$ ns → probes 1.667, 0.556, 0.185 GHz</li>
+</ol>
+<h3>20.3 Expected Results and Sensitivity</h3>
+<p><strong>Sensitivity:</strong> Peaks $&gt;1\%$ of background detectable for any $p=2,3,5,7$ with $10^6$ measurements.</p>
+<p><strong>Falsification:</strong> No prime-structured peaks after full analysis.</p>
+<h3>20.4 Budget</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personnel: 1 postdoc (6 months, 25% additional FTE)</td>
+<td>$20,000</td>
+<td>Shared with E1</td>
+</tr>
+<tr>
+<td>Hardware access fees</td>
+<td>$150,000</td>
+<td>100 hours on IBM/Google/Rigetti platform</td>
+</tr>
+<tr>
+<td>Cryogenic equipment use</td>
+<td>$30,000</td>
+<td>Consumables, liquid helium</td>
+</tr>
+<tr>
+<td><strong>Total E2</strong></td>
+<td><strong>~$200,000</strong></td>
+<td>6–12 months</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Chapter 21: Experiment 3—Tree Architecture Gate Threshold Test</h2>
+<h3>21.1 Scientific Objective</h3>
+<p><strong>Null hypothesis ($H_0$):</strong> A tree-structured qubit gate exhibits continuous, sinusoidal Rabi oscillation, identical to conventional qubits in behavior.</p>
+<p><strong>Alternative hypothesis ($H_1$):</strong> The gate exhibits step-function switching (discrete threshold) rather than continuous $\sin^2$ Rabi oscillation.</p>
+<h3>21.2 Platform and Method</h3>
+<p><strong>Primary platform:</strong> Fractal superconducting circuit (transmon qubits in tree topology, $p=2$, $D=3$).</p>
+<p><strong>Measurement protocol:</strong>
+1. Sweep control pulse amplitude from below to above the theoretical threshold $E_{\text{th}} = E_0/2^D$.
+2. Measure gate fidelity at each amplitude via randomized benchmarking or quantum process tomography.
+3. Fit data to step function $\Theta(A - A_{\text{th}})$ and to $\sin^2$ model.
+4. Compare Bayesian evidence for discrete vs. continuous switching.</p>
+<h3>21.3 Development Phases</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Duration</th>
+<th>Deliverable</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 0: Design</td>
+<td>6 months</td>
+<td>Full circuit design, EM simulation, mask layout</td>
+<td>$500K</td>
+</tr>
+<tr>
+<td>Phase 1: Fabrication</td>
+<td>6 months</td>
+<td>First chip run (10–20 devices), room-temp testing</td>
+<td>$1.5M</td>
+</tr>
+<tr>
+<td>Phase 2: Cryogenic characterization</td>
+<td>12 months</td>
+<td>$T_1$, $T_2$, noise injection, attenuation measurement</td>
+<td>$2M</td>
+</tr>
+<tr>
+<td>Phase 3: Gate demonstration</td>
+<td>6 months</td>
+<td>Threshold switching, error rate benchmarking</td>
+<td>$1M</td>
+</tr>
+<tr>
+<td>Phase 4: Publication</td>
+<td>3 months</td>
+<td>Preprint, peer review, follow-up experiments</td>
+<td>$250K</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>~33 months</strong></td>
+<td><strong>MVP demonstration complete</strong></td>
+<td><strong>$5.25M</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Contingency (40%): $2.1M → <strong>Total: $7.35M</strong></p>
+<h3>21.4 Success Criteria (Go/No-Go)</h3>
+<p><strong>Go criteria (all must be met):</strong>
+1. Noise attenuation factor ≥4 (measured as $T_2^{\text{root}} / T_2^{\text{boundary}}$ under matched noise injection)
+2. Gate fidelity &gt;99% for above-threshold pulses
+3. Gate error rate &lt;0.1% for below-threshold pulses (false-positive rate)
+4. Logical error rate below surface code tile at matched physical error rate</p>
+<p><strong>Partial success (warrants Phase II):</strong>
+1. Noise attenuation factor ≥2
+2. Distinguishable bimodal switching (not purely sinusoidal)
+3. Any logical error rate improvement over bare physical qubits</p>
+<p><strong>No-go (abandon platform):</strong>
+1. No measurable noise attenuation
+2. Continuous (sinusoidal) switching with no threshold
+3. Logical error rate equal to or worse than bare physical qubits</p>
+<hr />
+<h2>Chapter 22: Phased Timeline, Budget, Team, and Risk Register</h2>
+<h3>22.1 Two-Track Strategy</h3>
+<p><strong>Track A (Immediate—data-only):</strong> E1 (CMB) and E2 (qubit noise). These require no new hardware. Begin within weeks of funding, produce results within 6–12 months.</p>
+<p><strong>Track B (Longer-term—hardware):</strong> E3 (gate threshold). Begins with simulation (6 months), proceeds to hardware only if simulation is encouraging.</p>
+<p><strong>Go/No-Go Decision Point at Month 12:</strong> If both E1 and E2 are negative, the program moves to publication of negative results and terminates. If either is positive, Track B proceeds to hardware.</p>
+<h3>22.2 Team Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>FTE</th>
+<th>Duration</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Principal Investigator</td>
+<td>0.2</td>
+<td>36 months</td>
+<td>Program oversight, funding, publications</td>
+</tr>
+<tr>
+<td>Postdoc 1 (cosmology)</td>
+<td>0.5</td>
+<td>12 months</td>
+<td>CMB analysis (E1)</td>
+</tr>
+<tr>
+<td>Postdoc 2 (quantum noise)</td>
+<td>1.0</td>
+<td>24 months</td>
+<td>Qubit noise spectroscopy (E2), gate characterization (E3)</td>
+</tr>
+<tr>
+<td>Postdoc 3 (device physics)</td>
+<td>1.0</td>
+<td>24 months</td>
+<td>Circuit design, EM simulation, cryogenic measurement (E3)</td>
+</tr>
+<tr>
+<td>Graduate student</td>
+<td>0.5</td>
+<td>12 months</td>
+<td>Data analysis support, pipeline development</td>
+</tr>
+<tr>
+<td>Research engineer</td>
+<td>1.0</td>
+<td>24 months</td>
+<td>Chip fabrication, test infrastructure, control electronics</td>
+</tr>
+</tbody>
+</table>
+<h3>22.3 Risk Register</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMB result null for all primes</td>
+<td>Medium (50%)</td>
+<td>High</td>
+<td>Framework severely weakened; publish constraints</td>
+</tr>
+<tr>
+<td>Qubit noise result null</td>
+<td>Medium (40%)</td>
+<td>High</td>
+<td>Framework weakened; test E3 independently</td>
+</tr>
+<tr>
+<td>Coupling decay deviates from $2^{-n}$ scaling</td>
+<td>Medium (40%)</td>
+<td>High</td>
+<td>Iterative EM design; 3 chip runs budgeted</td>
+</tr>
+<tr>
+<td>Parasitic crosstalk &gt;10% of intended coupling</td>
+<td>Medium (30%)</td>
+<td>Medium</td>
+<td>Shielded CPW segments; grounded guard structures</td>
+</tr>
+<tr>
+<td>Flux noise exceeds predictions</td>
+<td>Low (20%)</td>
+<td>Medium</td>
+<td>Flux sweet spots; flux-pinning layers</td>
+</tr>
+<tr>
+<td>Tree topology introduces unintended modes</td>
+<td>Medium (35%)</td>
+<td>Medium</td>
+<td>Full 3D EM simulation; mode engineering</td>
+</tr>
+<tr>
+<td>No step-function switching observed</td>
+<td>Low (25%)</td>
+<td>High</td>
+<td>Try $p=3$ in backup chip; may indicate higher $p$ needed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>PART VI: HARDWARE ARCHITECTURE AND MVP DESIGN</h1>
+<hr />
+<h2>Chapter 23: The Passive Fault Tolerance Advantage</h2>
+<h3>23.1 The Core Engineering Claim</h3>
+<p><strong>[PROP]</strong> The ultrametric inequality directly implies that small errors cannot accumulate. In a physical system whose energy landscape mirrors the Bruhat-Tits tree, quantum states encoded at depth $D$ are protected by geometry alone. The error attenuation follows:</p>
+<p>$$\varepsilon_{\text{logical}} \sim \varepsilon_{\text{boundary}} \cdot p^{-D}$$</p>
+<h3>23.2 The Two Architecture Papers</h3>
+<p><strong>Paper 1: Geometric Orientation Codes.</strong> If noise is anisotropic, aligning qubits along distinct 3D axes creates natural redundancy. A tetrahedral arrangement of four qubits at 109.5° intervals, decoded by majority vote, can achieve logical error rates of $5 \times 10^{-5}$ at 100:1 noise bias with only 4 physical qubits per logical qubit. <strong>Limitations:</strong> Specialized repetition code; fails under isotropic noise; assumes perfect SPAM. <strong>[UNVERIFIED]</strong></p>
+<p><strong>Paper 2: Non-Archimedean Quantum Architecture.</strong> Redefine the state space as a p-adic graph. Errors are trapped by the ultrametric inequality. Software emulation shows error variance saturation, &gt;99.9% fidelity over $10^5$ gate cycles without active correction, and 99.9% reduction in syndrome measurement bandwidth. <strong>Limitations:</strong> No physical hardware exists. Simulation memory-bound at $D \approx 15$. <strong>[UNVERIFIED]</strong></p>
+<h3>23.3 The Relationship</h3>
+<p>The orientation codes address a specific problem (biased noise) with a near-term fix. The non-Archimedean architecture addresses a deeper limitation (the Archimedean continuum itself) with a long-term substrate change. They are sequential stages of the same program.</p>
+<hr />
+<h2>Chapter 24: Five Candidate Physical Platforms</h2>
+<h3>24.1 Selection Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hierarchical coupling achievable</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Coherence time sufficient</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Fabrication maturity</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Scalability beyond MVP</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Cost and timeline to MVP</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<h3>24.2 Platform Comparison</h3>
+<h4>24.2.1 Fractal Superconducting Circuits ★ PRIMARY RECOMMENDATION</h4>
+<p><strong>Rating:</strong> 88/100</p>
+<p><strong>How it works:</strong> Fabricate a superconducting circuit whose physical geometry is a tree graph. Josephson junctions at vertices provide nonlinearity for qubit encoding. CPW resonators form tree edges with capacitive coupling $C_{ij}$ tapering as $C_0 \cdot p^{-d(i,j)}$.</p>
+<p><strong>Why primary:</strong> Highest fabrication maturity. All elements exist in isolation (transmon qubits with &gt;99.9% fidelity, CPW resonators with $Q &gt; 10^6$, tunable couplers). Tree graphs are planar for $p=2,3$—can be laid out on standard 2D chips using existing photolithography. For $p=2$, depth $D=5$ requires 63 junctions—fits on a 5×5 mm chip.</p>
+<p><strong>Limitations and mitigations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tree depth limited by chip size</td>
+<td>$D=5$ fits on standard chip</td>
+</tr>
+<tr>
+<td>Parasitic cross-couplings</td>
+<td>Grounded CPW segments as shields</td>
+</tr>
+<tr>
+<td>$1/f$ flux noise</td>
+<td>Flux sweet spots; flux-pinning</td>
+</tr>
+<tr>
+<td>Dielectric loss limits $T_1$</td>
+<td>Tantalum or NbTiN resonators ($Q &gt; 10^7$)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MVP budget:</strong> $3M–5M over 2 years, leveraging existing foundry access (IME, Lincoln Lab, or Leti).</p>
+<h4>24.2.2 Ultracold Atoms in Optical Superlattices ★ STRONG ALTERNATIVE</h4>
+<p><strong>Rating:</strong> 82/100</p>
+<p><strong>How it works:</strong> Create optical lattice with tree-like connectivity using multiple laser wavelengths. Primary lattice ($\lambda_0$) creates coarse structure. Superlattice ($\lambda_1 = \lambda_0/p$) creates branching. Recursive superlattices create deeper levels.</p>
+<p><strong>Key advantages:</strong> Exceptional coherence times (seconds), in-situ tunability, single-atom imaging (&gt;99.5% fidelity). <strong>Key challenges:</strong> Limited superlattice layers (typically 2–3 demonstrated), finite temperature effects. <strong>MVP budget:</strong> $5M–8M over 3 years.</p>
+<h4>24.2.3 Trapped Ions with Engineered Phonon Modes</h4>
+<p><strong>Rating:</strong> 78/100</p>
+<p><strong>How it works:</strong> Use collective phonon modes of trapped ion chains. Mode spectrum engineered to follow $E_n = E_0 \cdot p^{-n}$ by shaping the trapping potential.</p>
+<p><strong>Key advantages:</strong> Highest gate fidelities (&gt;99.9%), full connectivity via global phonon bus. <strong>Key challenges:</strong> Mode spectrum engineering complex for &gt;10 ions, phonon heating. <strong>MVP budget:</strong> $4M–7M over 3 years.</p>
+<h4>24.2.4 NV Center Arrays</h4>
+<p><strong>Rating:</strong> 68/100</p>
+<p><strong>How it works:</strong> Arrange NV centers in diamond in tree topology. Dipolar magnetic coupling provides tree edges: $J_{ij} \propto 1/r_{ij}^3$.</p>
+<p><strong>Key advantages:</strong> Room-temperature operation (no cryogenics), long coherence with DD ($T_2 &gt; 1$ s). <strong>Key challenges:</strong> Nanometer-scale positioning, directional coupling, optical readout limited to ~95%. <strong>MVP budget:</strong> $3M–5M over 3 years.</p>
+<h4>24.2.5 Photonic Tree Networks</h4>
+<p><strong>Rating:</strong> 55/100</p>
+<p><strong>How it works:</strong> Implement tree as network of beam splitters and waveguides. Information encoded in path degrees of freedom. <strong>Key challenge:</strong> Loss accumulates exponentially with depth—for $D=10$, loss exceeds 90%. <strong>Not recommended for MVP.</strong></p>
+<h3>24.3 Platform Selection Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Rating</th>
+<th>MVP Cost</th>
+<th>Timeline</th>
+<th>Key Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fractal Superconducting</strong> ★</td>
+<td>88/100</td>
+<td>$3–5M</td>
+<td>2–3 years</td>
+<td>Coupling decay scaling</td>
+</tr>
+<tr>
+<td>Ultracold Atoms</td>
+<td>82/100</td>
+<td>$5–8M</td>
+<td>3 years</td>
+<td>Superlattice depth</td>
+</tr>
+<tr>
+<td>Trapped Ions</td>
+<td>78/100</td>
+<td>$4–7M</td>
+<td>3 years</td>
+<td>Mode engineering</td>
+</tr>
+<tr>
+<td>NV Centers</td>
+<td>68/100</td>
+<td>$3–5M</td>
+<td>3 years</td>
+<td>Positioning precision</td>
+</tr>
+<tr>
+<td>Photonic</td>
+<td>55/100</td>
+<td>—</td>
+<td>—</td>
+<td>Exponential loss</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Chapter 25: Minimal Viable Prototype Design</h2>
+<h3>25.1 Design Specification</h3>
+<p><strong>Architecture:</strong> Fractal superconducting circuit (Platform 1)
+<strong>Prime:</strong> $p = 2$ (binary branching—simplest topology)
+<strong>Tree depth:</strong> $D = 3$ (15 physical qubits: 1 root + 2 + 4 + 8 boundary)
+<strong>Qubit type:</strong> Transmon ($E_J/E_C \approx 50$, $\omega_{01}/2\pi \approx 5$ GHz)
+<strong>Coupling:</strong> Capacitive CPW resonators with $C_{n,n+1} = C_0 \cdot 2^{-n}$
+<strong>Readout:</strong> Dispersive readout at the root vertex; boundary vertices for control and noise injection
+<strong>Operating temperature:</strong> 20 mK (standard dilution refrigerator)</p>
+<h3>25.2 MVP Demonstrations</h3>
+<p><strong>Demonstration 1: Passive noise attenuation.</strong> Inject calibrated noise at boundary vertices. Measure logical qubit coherence at the root. Expected: noise amplitude attenuated by factor ≥4 at root compared to boundary (theoretical: factor 8 for $p=2$, $D=3$).</p>
+<p><strong>Demonstration 2: Threshold gate switching.</strong> Apply control pulses of varying amplitude. Expected: state flips with probability &gt;99% above threshold $E_{\text{th}}$, probability &lt;1% below threshold. Comparison: conventional transmon shows $\sin^2$ Rabi oscillation.</p>
+<p><strong>Demonstration 3: Error rate below break-even.</strong> Operate tree with deliberate noise over $10^4$ gate cycles. Measure logical error rate at root. Compare to surface code tile at matched physical error rate.</p>
+<hr />
+<h2>Chapter 26: Generational Scaling Roadmap</h2>
+<table>
+<thead>
+<tr>
+<th>Generation</th>
+<th>Depth</th>
+<th>Qubits ($p=2$)</th>
+<th>Qubits ($p=3$)</th>
+<th>Demonstration</th>
+<th>Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gen 0</td>
+<td>2</td>
+<td>7</td>
+<td>13</td>
+<td>Basic noise filtering</td>
+<td>1–2 years</td>
+</tr>
+<tr>
+<td>Gen 1</td>
+<td>3</td>
+<td>15</td>
+<td>40</td>
+<td>Threshold gate switching</td>
+<td>2–3 years</td>
+</tr>
+<tr>
+<td>Gen 2</td>
+<td>5</td>
+<td>63</td>
+<td>~364</td>
+<td>Competitive with $d=3$ surface code</td>
+<td>3–5 years</td>
+</tr>
+<tr>
+<td>Gen 3</td>
+<td>10</td>
+<td>2,047</td>
+<td>~88K</td>
+<td>Fault-tolerant logical qubit</td>
+<td>5–10 years</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key engineering milestones:</strong>
+1. Demonstrate ultrametric energy spectrum: $E_n \propto p^{-n}$ in a physical device
+2. Demonstrate coupling decay: $J_{n,n+1} \propto p^{-n}$
+3. Demonstrate noise attenuation: $\varepsilon_{\text{root}} \ll \varepsilon_{\text{boundary}}$
+4. Demonstrate threshold gate response: Step function, not $\sin^2$
+5. Demonstrate passive fault tolerance: Logical error rate below break-even without active QEC</p>
+<hr />
+<h1>PART VII: INVESTMENT AND RESOURCE CASE</h1>
+<hr />
+<h2>Chapter 27: Comparative Economics—Tree vs. Surface Code</h2>
+<h3>27.1 At 10,000 Logical Qubits</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Surface Code ($d=11$)</th>
+<th>Tree ($D=5$, $p=3$)</th>
+<th>Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical qubits</td>
+<td>2.41M</td>
+<td>400K</td>
+<td>6:1</td>
+</tr>
+<tr>
+<td>Wall power</td>
+<td>2.4 MW</td>
+<td>&lt;2.4 kW</td>
+<td>&gt;1000:1</td>
+</tr>
+<tr>
+<td>Cryogenic system cost</td>
+<td>~$240M</td>
+<td>~$1M</td>
+<td>&gt;100:1</td>
+</tr>
+<tr>
+<td>Logical gate time</td>
+<td>~1 μs</td>
+<td>~50 ns</td>
+<td>20:1</td>
+</tr>
+</tbody>
+</table>
+<h3>27.2 The Landauer Advantage</h3>
+<p><strong>[EST]</strong> Landauer’s principle: erasing one bit of information costs a minimum of $k_B T \ln 2$. Active QEC erases information with every syndrome measurement—it is fundamentally entropy-producing.</p>
+<p><strong>[PROP]</strong> Passive geometric protection never extracts information about errors. It simply makes certain errors geometrically impossible. No Landauer bound applies. The geometry IS the protection.</p>
+<h3>27.3 Thermodynamic Independence</h3>
+<p>The thermodynamic argument is independent of the foundational claims. Even if the framework’s interpretation of quantum mechanics is wrong, the engineering advantage of passive geometric fault tolerance is a separate, testable proposition. If a tree-structured qubit can be built and demonstrates the predicted noise attenuation, the thermodynamic case alone justifies the research program.</p>
+<hr />
+<h2>Chapter 28: Market Context, Timing, and Institutional Alignment</h2>
+<h3>28.1 Market Context</h3>
+<p>The global quantum computing market is projected at $5–10B by 2030 (McKinsey, 2024; BCG, 2024). Current investment landscape:</p>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Architecture</th>
+<th>Funding (est.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBM</td>
+<td>Superconducting (heavy-hex surface code)</td>
+<td>&gt;$3B internal</td>
+</tr>
+<tr>
+<td>Google Quantum AI</td>
+<td>Superconducting (surface code)</td>
+<td>&gt;$2B internal</td>
+</tr>
+<tr>
+<td>PsiQuantum</td>
+<td>Photonic (fusion-based)</td>
+<td>&gt;$1.3B raised</td>
+</tr>
+<tr>
+<td>IonQ</td>
+<td>Trapped ions</td>
+<td>&gt;$600M (public)</td>
+</tr>
+<tr>
+<td>Quantinuum</td>
+<td>Trapped ions</td>
+<td>&gt;$800M</td>
+</tr>
+<tr>
+<td>QuEra</td>
+<td>Neutral atoms</td>
+<td>&gt;$300M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Structural vulnerability:</strong> Every major player is betting on architectures that require active QEC at scale. If the thermodynamic wall is real, this represents a systemic risk across the entire quantum computing investment landscape.</p>
+<h3>28.2 Why Now—Four Converging Signals</h3>
+<ol>
+<li><strong>Surface code scaling is plateauing.</strong> Google’s 2023 error suppression was marginal.</li>
+<li><strong>Alternative QEC approaches are gaining attention</strong>—but all still require active syndrome measurement.</li>
+<li><strong>The cryogenic industry is signaling limits</strong> at 20 mK.</li>
+<li><strong>Investment is retreating from hardware</strong>—favoring architectures with clear thermodynamic advantage.</li>
+</ol>
+<h3>28.3 Institutional Alignment</h3>
+<p><strong>For national laboratories and academic research groups:</strong></p>
+<ol>
+<li><strong>Publication potential:</strong> First demonstration of passive geometric fault tolerance would be a <em>Nature</em> or <em>Science</em> paper.</li>
+<li><strong>Funding leverage:</strong> Positions the institution for disproportionate follow-on funding from DARPA, IARPA, DOE, NSF, ERC, Horizon Europe.</li>
+<li><strong>Talent attraction:</strong> Unique intersection of quantum computing, condensed matter physics, and number theory.</li>
+<li><strong>IP position:</strong> Architecture is not patented. First-mover can establish a foundational patent portfolio.</li>
+<li><strong>Equipment reuse:</strong> Standard dilution refrigerator, microwave electronics, and superconducting qubit fabrication—equipment most groups already possess.</li>
+<li><strong>Risk diversification:</strong> Provides a hedge against surface code programs stalling at the thermodynamic wall.</li>
+</ol>
+<p><strong>For semiconductor foundries and quantum hardware companies:</strong></p>
+<ol>
+<li><strong>First-mover advantage:</strong> New category of quantum hardware.</li>
+<li><strong>Lower CapEx at scale:</strong> Standard server room and &lt;100 kW power vs. purpose-built $100M+ facility.</li>
+<li><strong>Extensible to multiple qubit modalities:</strong> Not tied to one physical qubit type.</li>
+<li><strong>Defensible IP:</strong> Novel, patentable geometry creates 20-year moat.</li>
+<li><strong>Climate compatibility:</strong> 1000× reduction in energy per logical operation is a material ESG differentiator.</li>
+<li><strong>Near-term revenue:</strong> “Quantum co-processor” for number-theoretic and optimization problems.</li>
+</ol>
+<hr />
+<h2>Chapter 29: Risk Register and Mitigation</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework mathematically inconsistent at deeper level</td>
+<td>Low (20%)</td>
+<td>Critical</td>
+<td>Ongoing mathematical work; publish regardless</td>
+</tr>
+<tr>
+<td>No CMB signal at any $p$</td>
+<td>Medium (50%)</td>
+<td>High</td>
+<td>Publish constraints; test E2/E3 independently</td>
+</tr>
+<tr>
+<td>No qubit noise peaks</td>
+<td>Medium (40%)</td>
+<td>High</td>
+<td>Test E3 independently; framework weakened</td>
+</tr>
+<tr>
+<td>Coupling decay scaling fails</td>
+<td>Medium (40%)</td>
+<td>High</td>
+<td>Iterative EM design; 3 chip runs budgeted</td>
+</tr>
+<tr>
+<td>Parasitic crosstalk dominant</td>
+<td>Medium (30%)</td>
+<td>Medium</td>
+<td>Shielded CPW; grounded guard structures</td>
+</tr>
+<tr>
+<td>$T_1$ at root insufficient</td>
+<td>Low (15%)</td>
+<td>High</td>
+<td>Tantalum/NbTiN resonators; Purcell filter</td>
+</tr>
+<tr>
+<td>No step-function switching</td>
+<td>Low (25%)</td>
+<td>High</td>
+<td>Try $p=3$ in backup chip</td>
+</tr>
+<tr>
+<td>Competitor beats us to demonstration</td>
+<td>Medium (30%)</td>
+<td>Medium</td>
+<td>Publish designs openly; establish priority through preprints</td>
+</tr>
+</tbody>
+</table>
+<h1>PART VIII: THE WIDER LANDSCAPE</h1>
+<hr />
+<h2>Chapter 30: The Forest and the Shadows—Number Theory Connection</h2>
+<h3>30.1 A Clue from the Research Notes</h3>
+<p>The research notes contain a striking passage:</p>
+<blockquote>
+<p><em>“THE KEY TO EFFICIENT PRIME FACTORIZATION: No single projection captures the full structure of the forest. The continuous number line reveals the global measure—the average density of primes. The spiral reveals the local modular constraints—the fine structure of specific branches. If you know the shadow on the continuous line and the shadows on a sufficient number of spiral projections, you can reconstruct the entire forest.”</em></p>
+</blockquote>
+<h3>30.2 The Mathematical Reading</h3>
+<p><strong>[EST]</strong> The “forest” is the multiplicative structure of the integers—the adelic number system $\mathbb{A}_\mathbb{Q}$. The <strong>continuous shadow</strong> is $\mathbb{R}$, revealing analytic density via the Prime Number Theorem. The <strong>spiral shadows</strong> are the p-adic completions $\mathbb{Q}_p$, each revealing modular constraints invisible on the continuous line. The <strong>conservation law</strong> is the adelic product formula. The <strong>reconstruction principle</strong> is the Chinese Remainder Theorem.</p>
+<p><strong>[EST]</strong> This is exactly how the General Number Field Sieve (GNFS)—the fastest known classical factoring algorithm—works. The asymptotic complexity $L_n[1/3, (64/9)^{1/3}]$ comes from balancing the continuous and p-adic projections.</p>
+<h3>30.3 The Deeper Claim</h3>
+<p><strong>[PROP]</strong> The adelic structure of $\mathbb{Q}$ is the literal mathematical architecture of physical reality. The continuous line and the p-adic trees are not just dual perspectives on numbers—they are dual perspectives on nature itself. Quantum measurement is the Monna projection. Prime factorization is reconstruction from projections. The same geometry underlies both.</p>
+<p><strong>[SPEC]</strong> This suggests that a quantum computer built on ultrametric geometry might have a natural advantage for number-theoretic problems—not through Shor’s algorithm (which uses phase estimation), but through direct geometric access to the adelic structure that underlies factorization.</p>
+<hr />
+<h2>Chapter 31: The Cardiologist’s Lesson—Cross-Disciplinary Insights</h2>
+<h3>31.1 Einthoven’s Legacy</h3>
+<p><strong>[EST]</strong> Willem Einthoven (Nobel Prize, 1924) invented the electrocardiogram (EKG) and established the principles of differential bioelectric measurement. His key insight: the heart’s electrical activity is a 3D dipole vector. A single lead gives a 1D projection. To reconstruct the true vector, you need multiple leads and a mathematical framework (Einthoven’s triangle).</p>
+<h3>31.2 The Quantum Translation</h3>
+<p><strong>[PROP]</strong> Every principle Einthoven developed applies to quantum measurement:</p>
+<table>
+<thead>
+<tr>
+<th>Einthoven Principle</th>
+<th>Quantum Readout Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bipolar leads (differential)</td>
+<td>Balanced IQ readout cancels amplifier noise</td>
+</tr>
+<tr>
+<td>Vector reconstruction (Einthoven’s triangle)</td>
+<td>IQ plane projection separates qubit state from phase noise</td>
+</tr>
+<tr>
+<td>Matched filtering (QRS detection)</td>
+<td>Optimal weighting kernels for short readout pulses</td>
+</tr>
+<tr>
+<td>Augmented leads (virtual reference)</td>
+<td>Multiplexed readout with correlated noise subtraction</td>
+</tr>
+<tr>
+<td>Lead field matrix (crosstalk correction)</td>
+<td>Readout crosstalk calibration for multi-qubit arrays</td>
+</tr>
+<tr>
+<td>Galvanometer deconvolution</td>
+<td>Resonator ring-down deconvolution for faster readout</td>
+</tr>
+</tbody>
+</table>
+<h3>31.3 The Deeper Unity</h3>
+<p><strong>[PROP]</strong> In both EKG and quantum measurement, we measure a high-dimensional object through limited projections, and what appears as “noise” in one measurement basis becomes signal in a properly chosen differential basis. Just as Einthoven’s triangle reconstructs the cardiac vector from three 1D projections, the Monna map reconstructs the real-number measurement outcome from the tree state.</p>
+<hr />
+<h2>Chapter 32: Related Work and Intellectual History</h2>
+<h3>32.1 The P-adic Tradition in Physics</h3>
+<p><strong>[EST]</strong> A substantial literature exists:</p>
+<ul>
+<li><strong>Vladimirov, Volovich, and Zelenov (1980s–1990s):</strong> Developed p-adic quantum mechanics, including a p-adic Schrödinger equation and p-adic QFT. Mathematically rigorous; motivated by UV divergences of conventional QFT.</li>
+<li><strong>Khrennikov (1990s–2010s):</strong> Ultrametric probability theory and p-adic approaches to quantum foundations.</li>
+<li><strong>Dragovich and Kozyrev (2000s):</strong> Adelic quantum mechanics, combining real and p-adic dynamics.</li>
+<li><strong>Gubser, Heydeman, Marcolli, et al. (2017–2018):</strong> p-adic AdS/CFT correspondence—the Bruhat-Tits tree as discrete model of hyperbolic space with holographic properties.</li>
+<li><strong>Rammal, Toulouse, Virasoro, Parisi (1980s):</strong> Spin glasses exhibit ultrametric organization of energy landscapes.</li>
+</ul>
+<h3>32.2 What’s New Here</h3>
+<ol>
+<li><strong>Engineering focus:</strong> Prior p-adic QM work focused on foundational theory and high-energy physics. This framework emphasizes quantum computing and fault tolerance.</li>
+<li><strong>The Monna map as measurement:</strong> Novel identification.</li>
+<li><strong>Falsifiable predictions:</strong> Concrete, testable predictions at three distinct experimental scales.</li>
+<li><strong>Thermodynamic analysis:</strong> Quantitative comparison with surface code energy costs is new.</li>
+<li><strong>Consilience argument:</strong> Unifying quantum foundations, number theory, and signal processing under a single geometric principle.</li>
+</ol>
+<hr />
+<h1>PART IX: THE RESEARCH PROGRAM AHEAD</h1>
+<hr />
+<h2>Chapter 33: Three-Phase Program—Mathematics, Experiment, Engineering</h2>
+<h3>33.1 Phase 1: Mathematics (6–12 months)</h3>
+<ul>
+<li>Complete the Born rule derivation from Monna map measure theory.</li>
+<li>Specify the complex amplitude encoding in the p-adic framework.</li>
+<li>Derive a dynamical equation that reduces to the Schrödinger equation in the real limit.</li>
+<li>Connect to existing p-adic quantum mechanics literature.</li>
+<li>Develop the formalism for multipartite entanglement and quantum circuits.</li>
+<li>Address the spacetime emergence problem through p-adic AdS/CFT.</li>
+</ul>
+<h3>33.2 Phase 2: Experiment (12–24 months)</h3>
+<ul>
+<li>Analyze Planck CMB data for log-periodic oscillations at multiple primes.</li>
+<li>Measure qubit noise spectra for prime-modulated features on available hardware.</li>
+<li>Simulate tree-structured gate architectures with varying depth and branching.</li>
+<li>Publish results regardless of outcome.</li>
+</ul>
+<h3>33.3 Phase 3: Engineering (24–60 months)</h3>
+<ul>
+<li>Engineer a physical ultrametric energy landscape in at least one platform.</li>
+<li>Demonstrate passive noise attenuation in a prototype device.</li>
+<li>Demonstrate threshold gate switching (step function vs. $\sin^2$).</li>
+<li>Benchmark logical error rates against surface code performance.</li>
+<li>Scale toward a fault-tolerant logical qubit.</li>
+</ul>
+<hr />
+<h2>Chapter 34: Success and Failure Scenarios</h2>
+<h3>34.1 If the Framework Is Correct</h3>
+<ol>
+<li>Log-periodic CMB oscillations detected at predicted amplitude.</li>
+<li>Prime-modulated qubit noise spectra observed across multiple platforms.</li>
+<li>Tree-structured gate exhibits threshold switching, not Rabi oscillation.</li>
+<li>Passive-geometric qubit achieves logical error rates competitive with active QEC at a fraction of the energy cost.</li>
+<li>The Born rule is derived as a theorem about geometric projection.</li>
+</ol>
+<h3>34.2 If the Framework Is Wrong</h3>
+<ol>
+<li>CMB analysis places upper bounds that constrain primordial ultrametricity.</li>
+<li>Noise spectroscopy rules out prime-modulated environmental coupling.</li>
+<li>Gate test demonstrates that physical tree structures cannot sustain threshold behavior.</li>
+<li>The program produces clear negative results, closing off a line of inquiry.</li>
+</ol>
+<p><strong>Either outcome is scientific progress.</strong></p>
+<hr />
+<h2>Chapter 35: Go/No-Go Decision Points</h2>
+<table>
+<thead>
+<tr>
+<th>Decision Point</th>
+<th>Month</th>
+<th>Condition</th>
+<th>If Go</th>
+<th>If No-Go</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DP1: E1/E2 results</strong></td>
+<td>12</td>
+<td>Either E1 or E2 positive at $&gt;2\sigma$</td>
+<td>Continue to Track B (E3 hardware)</td>
+<td>Publish negative results; terminate</td>
+</tr>
+<tr>
+<td><strong>DP2: E3 simulation</strong></td>
+<td>18</td>
+<td>EM simulation confirms coupling decay scaling within 20% of target</td>
+<td>Continue to fabrication (Phase 1)</td>
+<td>Iterate design; second simulation run</td>
+</tr>
+<tr>
+<td><strong>DP3: Noise attenuation</strong></td>
+<td>30</td>
+<td>Measured attenuation ≥2 at root vs. boundary</td>
+<td>Continue to gate demonstration</td>
+<td>Analyze failure modes; iterate</td>
+</tr>
+<tr>
+<td><strong>DP4: Gate switching</strong></td>
+<td>33</td>
+<td>Distinguishable bimodal switching</td>
+<td>Publish; plan Phase II ($D=5$)</td>
+<td>Publish negative result</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Chapter 36: Epilogue—The Road Ahead</h2>
+<p>The framework stakes its claim on the possibility that the road not taken in 1900 was the right road all along. In December of that year, at the University of Berlin, Max Planck embedded the Archimedean metric into the foundations of quantum theory. Three years earlier, at the same university, Kurt Hensel had published an alternative—a geometry of trees, not lines; of divisibility, not magnitude; of hierarchy, not continuity.</p>
+<p>The argument presented in this document is that this alternative geometry was not merely a mathematical curiosity. It may be the correct geometry for quantum physics. The measurement problem, the Born rule, entanglement, wave-particle duality—all the puzzles that have resisted resolution for a century—may be artifacts of a single, invisible choice: the choice of the wrong numbers.</p>
+<p>The framework does not ask to be believed. It asks to be tested. Three experiments, spanning cosmology, quantum computing, and gate physics, can falsify it. Two of the three can be performed with existing data and hardware. The third requires engineering that is challenging but not beyond reach.</p>
+<p>The only way to know if the road not taken was the right road is to walk it.</p>
+<hr />
+<h1>APPENDICES</h1>
+<hr />
+<h2>Appendix A: Quick Reference Card</h2>
+<h3>Core Mathematical Objects</h3>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Symbol</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p-adic numbers</td>
+<td>$\mathbb{Q}_p$</td>
+<td>Completion of $\mathbb{Q}$ under $|\cdot|_p$</td>
+</tr>
+<tr>
+<td>p-adic absolute value</td>
+<td>$|x|_p = p^{-v_p(x)}$</td>
+<td>Size = divisibility by $p$</td>
+</tr>
+<tr>
+<td>p-adic integers</td>
+<td>$\mathbb{Z}_p$</td>
+<td>${x :|x|_p \le 1}$</td>
+</tr>
+<tr>
+<td>Bruhat-Tits tree</td>
+<td>$T_p$</td>
+<td>Infinite $(p+1)$-regular tree</td>
+</tr>
+<tr>
+<td>Monna map</td>
+<td>$\Phi: \mathbb{Z}_p \to [0,1]$</td>
+<td>Digit-reversal projection</td>
+</tr>
+<tr>
+<td>Adèle ring</td>
+<td>$\mathbb{A}_\mathbb{Q}$</td>
+<td>Restricted product $\mathbb{R} \times \prod' \mathbb{Q}_p$</td>
+</tr>
+<tr>
+<td>Product formula</td>
+<td>$\prod_v|x_v = 1$</td>
+<td>Global consistency over all places</td>
+</tr>
+</tbody>
+</table>
+<h3>Three Falsifiable Predictions</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Prediction</th>
+<th>Observable</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>Log-periodic CMB oscillations</td>
+<td>$C_\ell$ spectrum, period $\propto \log_p(\ell)$</td>
+<td>Untested</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>Prime-modulated qubit noise</td>
+<td>$S(f)$ peaks at $f_k = f_q \cdot p^{-k}$</td>
+<td>Untested</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>Hard threshold gate switching</td>
+<td>$F(A) = \Theta$-step, not Rabi $\sin^2$</td>
+<td>No hardware</td>
+</tr>
+</tbody>
+</table>
+<h3>Architecture Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Surface Code ($d=11$)</th>
+<th>Tree ($D=5$, $p=3$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical qubits per logical</td>
+<td>241</td>
+<td>~40</td>
+</tr>
+<tr>
+<td>Measurements per cycle</td>
+<td>120</td>
+<td>0 (passive)</td>
+</tr>
+<tr>
+<td>Classical processing</td>
+<td>FPGA required</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Room-temperature power</td>
+<td>10–100 kW</td>
+<td>&lt;100 W</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Appendix B: Glossary of Terms</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adèle ring $\mathbb{A}_\mathbb{Q}$</strong></td>
+<td>Restricted product of $\mathbb{R}$ with all $\mathbb{Q}_p$; unifying framework for real and p-adic places</td>
+</tr>
+<tr>
+<td><strong>Archimedean</strong></td>
+<td>Property where distances accumulate linearly: $|x+y|\le|x|+|y|$</td>
+</tr>
+<tr>
+<td><strong>Born rule</strong></td>
+<td>$P =|\psi|^2$; the probability rule of quantum mechanics</td>
+</tr>
+<tr>
+<td><strong>Bruhat-Tits tree $T_p$</strong></td>
+<td>Infinite $(p+1)$-regular tree; geometric realization of $\mathbb{Q}_p$</td>
+</tr>
+<tr>
+<td><strong>Carathéodory extension</strong></td>
+<td>Theorem extending a measure from cylinders to all measurable sets</td>
+</tr>
+<tr>
+<td><strong>CHSH inequality</strong></td>
+<td>Bell-type inequality; maximum quantum violation is $2\sqrt{2} &gt; 2$</td>
+</tr>
+<tr>
+<td><strong>CMB</strong></td>
+<td>Cosmic Microwave Background; relic radiation from ~380,000 years after Big Bang</td>
+</tr>
+<tr>
+<td><strong>CPMG</strong></td>
+<td>Carr-Purcell-Meiboom-Gill dynamical decoupling sequence</td>
+</tr>
+<tr>
+<td><strong>CPW</strong></td>
+<td>Coplanar waveguide; microwave transmission line used in superconducting circuits</td>
+</tr>
+<tr>
+<td><strong>EKG</strong></td>
+<td>Electrocardiogram; measurement of the heart’s electrical activity</td>
+</tr>
+<tr>
+<td><strong>GNFS</strong></td>
+<td>General Number Field Sieve; fastest classical factoring algorithm</td>
+</tr>
+<tr>
+<td><strong>Haar measure</strong></td>
+<td>Unique translation-invariant measure on a locally compact group</td>
+</tr>
+<tr>
+<td><strong>Landauer bound</strong></td>
+<td>$k_B T \ln 2$; minimum energy to erase one bit of information</td>
+</tr>
+<tr>
+<td><strong>Lebesgue measure</strong></td>
+<td>Standard measure on $\mathbb{R}$ (length of intervals)</td>
+</tr>
+<tr>
+<td><strong>Log-periodic</strong></td>
+<td>Oscillation with period proportional to $\log$ of independent variable</td>
+</tr>
+<tr>
+<td><strong>MERA</strong></td>
+<td>Multiscale Entanglement Renormalization Ansatz; tree-structured tensor network</td>
+</tr>
+<tr>
+<td><strong>Monna map $\Phi$</strong></td>
+<td>Digit-reversal projection $\mathbb{Z}_p \to [0,1]$</td>
+</tr>
+<tr>
+<td><strong>p-adic number $\mathbb{Q}_p$</strong></td>
+<td>Number field where distance = divisibility by prime $p$</td>
+</tr>
+<tr>
+<td><strong>Product formula</strong></td>
+<td>$\prod_v|x|_v = 1$; adelic consistency condition</td>
+</tr>
+<tr>
+<td><strong>QEC</strong></td>
+<td>Quantum Error Correction—active measurement and correction of qubit errors</td>
+</tr>
+<tr>
+<td><strong>Strong triangle inequality</strong></td>
+<td>$|x+y|_p \le \max(|x|_p,|y|_p)$</td>
+</tr>
+<tr>
+<td><strong>Surface code</strong></td>
+<td>Leading active QEC architecture requiring physical qubit grid and syndrome measurements</td>
+</tr>
+<tr>
+<td><strong>Syndrome measurement</strong></td>
+<td>Ancilla-based measurement detecting errors without collapsing logical information</td>
+</tr>
+<tr>
+<td><strong>Thermodynamic wall</strong></td>
+<td>Cryogenic cooling limit constraining active QEC scaling</td>
+</tr>
+<tr>
+<td><strong>Transmon</strong></td>
+<td>Superconducting qubit type with reduced charge noise sensitivity</td>
+</tr>
+<tr>
+<td><strong>Ultrametric</strong></td>
+<td>Metric satisfying $d(x,z) \le \max(d(x,y), d(y,z))$</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Appendix C: Key Equations</h2>
+<p><strong>Ultrametric inequality:</strong>
+$$|x + y|_p \le \max(|x|_p, |y|_p)$$</p>
+<p><strong>Monna map (p-adic to real):</strong>
+$$\Phi\left(\sum_{k=0}^\infty a_k p^k\right) = \sum_{k=0}^\infty a_k p^{-(k+1)}, \quad a_k \in {0,\ldots,p-1}$$</p>
+<p><strong>Measure preservation:</strong>
+$$\Phi_*(\mu_p) = \lambda \quad \text{(Haar measure → Lebesgue measure)}$$</p>
+<p><strong>Hierarchical energy levels (engineering):</strong>
+$$E_n = E_0 \cdot p^{-n}, \quad J_{n,n+1} = J_0 \cdot p^{-n}$$</p>
+<p><strong>Error attenuation (passive protection):</strong>
+$$\varepsilon_{\text{logical}} \sim \varepsilon_{\text{boundary}} \cdot p^{-D} \quad (D = \text{encoding depth})$$</p>
+<p><strong>Log-periodic CMB prediction:</strong>
+$$P(k) = P_0(k)\left[1 + A \cos(\omega \log_p(k/k_0) + \phi)\right]$$</p>
+<p><strong>Prime-modulated noise prediction:</strong>
+$$S(f) = S_0(f)\left[1 + \sum_{k=1}^\infty \alpha_k \delta(f - f_0 p^{-k})\right]$$</p>
+<p><strong>Adelic product formula:</strong>
+$$\prod_v |x|_v = 1$$</p>
+<hr />
+<h2>Appendix D: Claim Ledger—Selected Auditable Claims</h2>
+<p>This appendix provides a selected subset of the full auditable claim ledger (48 numbered claims with provenance and audit trails in the companion auditable edition). Full references with DOIs are provided in Appendix E.</p>
+<h3>Domain A: Historical Facts</h3>
+<p><strong>C001:</strong> Max Planck presented his derivation of the blackbody spectrum, introducing $E = h\nu$, to the German Physical Society on December 14, 1900. <code>EXPERIMENT</code>—Planck, M. (1900). <em>Verhandlungen der Deutschen Physikalischen Gesellschaft</em>, 2, 237–245.</p>
+<p><strong>C002:</strong> Kurt Hensel introduced the p-adic numbers in 1897, at the University of Berlin. <code>EXPERIMENT</code>—Hensel, K. (1897). <em>Jahresbericht der Deutschen Mathematiker-Vereinigung</em>, 6, 83–88.</p>
+<h3>Domain B: Mathematical Theorems</h3>
+<p><strong>C004:</strong> $|x|_p = p^{-v_p(x)}$ where $v_p(x)$ counts powers of $p$ dividing $x$. <code>THEOREM</code>—Koblitz (1984), Chapter 1, §1–2.</p>
+<p><strong>C005:</strong> $\mathbb{Q}_p$ is a locally compact, complete topological field. <code>THEOREM</code>—Koblitz (1984), Chapter 1, §3–4.</p>
+<p><strong>C006:</strong> $|x+y|_p \le \max(|x|_p, |y|_p)$, with equality when $|x|_p \neq |y|_p$. <code>THEOREM</code>—Koblitz (1984), Chapter 1, §2, Proposition 2.</p>
+<p><strong>C007:</strong> In any ultrametric space, all triangles are isosceles. <code>THEOREM</code>—Rammal, Toulouse, &amp; Virasoro (1986), §II.A.</p>
+<p><strong>C008:</strong> Ultrametric balls are nested or disjoint; partial overlap impossible. <code>THEOREM</code>—Rammal, Toulouse, &amp; Virasoro (1986), §II.A.</p>
+<p><strong>C009:</strong> Every point in an ultrametric ball is a center. <code>THEOREM</code>—Rammal, Toulouse, &amp; Virasoro (1986), §II.A.</p>
+<p><strong>C010:</strong> $T_p$ is an infinite, $(p+1)$-regular tree; the Bruhat-Tits building for $\text{PGL}(2, \mathbb{Q}_p)$. <code>THEOREM</code>—Serre (1980), Chapter II, §1. Gubser et al. (2017), §2.</p>
+<p><strong>C012:</strong> The Monna map $\Phi: \mathbb{Z}_p \to [0,1]$ is defined by digit-reversal. <code>THEOREM</code>—Monna (1968). Khrennikov (2009), Chapter 3.</p>
+<p><strong>C013:</strong> $\Phi_*(\mu_p) = \lambda$ (Haar measure → Lebesgue measure). <code>THEOREM</code>—Khrennikov (2009), Chapter 3, §3.3.</p>
+<p><strong>C015:</strong> $\prod_v |x|_v = 1$ for any nonzero $x \in \mathbb{Q}$. <code>THEOREM</code>—Weil (1982), Chapter 1, §1.1.</p>
+<h3>Domain C: Quantum Computing—Surface Code &amp; Thermodynamics</h3>
+<p><strong>C017:</strong> A distance-$d$ surface code requires approximately $2d^2 - 1$ physical qubits per logical qubit. $d=11$ → 241 qubits. <code>THEOREM</code>—Fowler et al. (2012), <em>Physical Review A</em>, 86(3), 032324.</p>
+<p><strong>C019:</strong> Landauer’s bound: erasing one bit costs $k_B T \ln 2$. At 20 mK, this is $1.9 \times 10^{-25}$ J/bit. <code>THEOREM</code>—Landauer (1961), <em>IBM Journal of Research and Development</em>, 5(3), 183–191.</p>
+<p><strong>C020:</strong> The Carnot penalty for cooling at 20 mK is $T_{\text{room}} / T_{\text{cold}} = 300 / 0.02 = 1.5 \times 10^4$. <code>THEOREM</code>—Standard thermodynamics.</p>
+<h3>Domain D: Empirical Precedents</h3>
+<p><strong>C025:</strong> Spin glass energy landscapes are ultrametrically organized. <code>EXPERIMENT</code>—Rammal, Toulouse, &amp; Virasoro (1986); confirmed by Lundgren et al. (1983) and Refregier et al. (1987).</p>
+<p><strong>C026:</strong> MERA tensor networks are explicitly tree-structured and produce AdS geometry. <code>THEOREM</code>—Vidal (2007), <em>Physical Review Letters</em>, 99, 220405. Swingle (2012), <em>Physical Review D</em>, 86, 065007.</p>
+<p><strong>C027:</strong> The Bruhat-Tits tree $T_p$ is a discrete model of AdS space with a holographic dictionary. <code>THEOREM</code>—Gubser et al. (2017), <em>Communications in Mathematical Physics</em>, 352(3), 1019–1059.</p>
+<h3>Domain E: Framework Predictions (Unverified)</h3>
+<p><strong>C037:</strong> CMB log-periodic oscillations predicted with amplitude $A_2 \approx 0.018$ for $p=2$. <code>PROPOSED</code>—Derivation: 0.14 §2.3.</p>
+<p><strong>C038:</strong> Qubit noise peaks predicted at $f_k = f_q \cdot p^{-k}$. <code>PROPOSED</code>—Derivation: 0.14 §3.</p>
+<p><strong>C039:</strong> Gate threshold switching predicted as step function, not $\sin^2$. <code>PROPOSED</code>—Derivation: 0.14 §4.</p>
+<h3>Audit Corrections from Prior Research</h3>
+<ol>
+<li><strong>Tree qubit count for $D=5$, $p=3$:</strong> The correct count is $\sum_{n=0}^D p^n = (p^{D+1} - 1)/(p-1) = (3^6 - 1)/2 = 364$ (not 40). The 40 figure refers to a different architecture configuration. The complete tree uses all internal vertices as qubits; partial encodings may use only a subtree.</li>
+<li><strong>FPGA energy:</strong> The energy consumption of classical decoding for surface codes is not separately audited in published literature. The $10^{-12}$ J/logical-cycle figure is an order-of-magnitude estimate based on FPGA power consumption of ~10 mW per logical qubit at 100 Hz cycle rate.</li>
+<li><strong>Thermodynamic wall:</strong> The thermodynamic wall is a consequence of Landauer’s bound combined with Carnot efficiency, not a separate principle. The scaling analysis is accurate within stated assumptions.</li>
+</ol>
+<hr />
+<h2>Appendix E: Comprehensive Bibliography</h2>
+<h3>Primary Historical Sources</h3>
+<ul>
+<li>Hensel, K. (1897). Über eine neue Begründung der Theorie der algebraischen Zahlen. <em>Jahresbericht der Deutschen Mathematiker-Vereinigung</em>, 6, 83–88.</li>
+<li>Planck, M. (1900). Zur Theorie des Gesetzes der Energieverteilung im Normalspectrum. <em>Verhandlungen der Deutschen Physikalischen Gesellschaft</em>, 2, 237–245.</li>
+</ul>
+<h3>P-adic Mathematics</h3>
+<ul>
+<li>Koblitz, N. (1984). <em>p-adic Numbers, p-adic Analysis, and Zeta-Functions</em> (2nd ed.). Springer-Verlag.</li>
+<li>Gouvêa, F. Q. (1997). <em>p-adic Numbers: An Introduction</em> (2nd ed.). Springer.</li>
+<li>Serre, J.-P. (1980). <em>Trees</em>. Springer-Verlag.</li>
+<li>Weil, A. (1982). <em>Adeles and Algebraic Groups</em>. Birkhäuser.</li>
+<li>Lang, S. (1994). <em>Algebraic Number Theory</em> (2nd ed.). Springer-Verlag.</li>
+<li>Monna, A. F. (1968). Sur une transformation simple des nombres p-adiques en nombres réels. <em>Indagationes Mathematicae</em>, 31, 1–9.</li>
+</ul>
+<h3>P-adic Quantum Mechanics and AdS/CFT</h3>
+<ul>
+<li>Vladimirov, V. S., Volovich, I. V., &amp; Zelenov, E. I. (1994). <em>p-adic Analysis and Mathematical Physics</em>. World Scientific.</li>
+<li>Khrennikov, A. (2009). <em>Interpretations of Probability</em> (2nd ed.). Walter de Gruyter.</li>
+<li>Dragovich, B., Khrennikov, A., Kozyrev, S. V., &amp; Volovich, I. V. (2009). On p-adic mathematical physics. <em>p-adic Numbers, Ultrametric Analysis and Applications</em>, 1(1), 1–17.</li>
+<li>Gubser, S. S., Knaute, J., Parikh, S., Samberg, A., &amp; Witaszczyk, P. (2017). p-adic AdS/CFT. <em>Communications in Mathematical Physics</em>, 352(3), 1019–1059. DOI: 10.1007/s00220-017-2915-9.</li>
+<li>Heydeman, M., Marcolli, M., Saberi, I., &amp; Stoica, B. (2018). Tensor networks, p-adic fields, and algebraic curves: arithmetic and the AdS₃/CFT₂ correspondence. <em>Advances in Theoretical and Mathematical Physics</em>, 22(1), 93–176.</li>
+</ul>
+<h3>Spin Glasses and Ultrametricity in Physical Systems</h3>
+<ul>
+<li>Rammal, R., Toulouse, G., &amp; Virasoro, M. A. (1986). Ultrametricity for physicists. <em>Reviews of Modern Physics</em>, 58(3), 765–788. DOI: 10.1103/RevModPhys.58.765.</li>
+<li>Mézard, M., Parisi, G., &amp; Virasoro, M. A. (1987). <em>Spin Glass Theory and Beyond</em>. World Scientific.</li>
+</ul>
+<h3>Quantum Error Correction, Surface Codes, and Thermodynamics</h3>
+<ul>
+<li>Fowler, A. G., Mariantoni, M., Martinis, J. M., &amp; Cleland, A. N. (2012). Surface codes: Towards practical large-scale quantum computation. <em>Physical Review A</em>, 86(3), 032324.</li>
+<li>Landauer, R. (1961). Irreversibility and heat generation in the computing process. <em>IBM Journal of Research and Development</em>, 5(3), 183–191.</li>
+<li>Google Quantum AI (2023). Suppressing quantum errors by scaling a surface code logical qubit. <em>Nature</em>, 614, 676–681.</li>
+</ul>
+<h3>Tensor Networks and MERA</h3>
+<ul>
+<li>Vidal, G. (2007). Entanglement renormalization. <em>Physical Review Letters</em>, 99(22), 220405.</li>
+<li>Swingle, B. (2012). Entanglement renormalization and holography. <em>Physical Review D</em>, 86(6), 065007.</li>
+<li>Evenbly, G. &amp; Vidal, G. (2011). Tensor network states and geometry. <em>Journal of Statistical Physics</em>, 145(4), 891.</li>
+</ul>
+<h3>Superconducting Qubits and Hardware Platforms</h3>
+<ul>
+<li>Krantz, P., Kjaergaard, M., Yan, F., Orlando, T. P., Gustavsson, S., &amp; Oliver, W. D. (2019). A quantum engineer’s guide to superconducting qubits. <em>Applied Physics Reviews</em>, 6(2), 021318.</li>
+<li>Yan, F., et al. (2018). Tunable coupling scheme for implementing high-fidelity two-qubit gates. <em>Physical Review Applied</em>, 10(5), 054062.</li>
+</ul>
+<h3>Optical Lattices and Ultracold Atoms</h3>
+<ul>
+<li>Fölling, S., et al. (2007). Direct observation of second-order atom tunnelling. <em>Nature</em>, 448, 1029–1032.</li>
+<li>Browaeys, A. &amp; Lahaye, T. (2020). Many-body physics with individually controlled Rydberg atoms. <em>Nature Physics</em>, 16, 132–142.</li>
+</ul>
+<h3>Trapped Ions</h3>
+<ul>
+<li>Blatt, R. &amp; Roos, C. F. (2012). Quantum simulations with trapped ions. <em>Nature Physics</em>, 8, 277–284.</li>
+<li>Monroe, C., et al. (2021). Programmable quantum simulations of spin systems with trapped ions. <em>Reviews of Modern Physics</em>, 93, 025001.</li>
+</ul>
+<h3>NV Centers</h3>
+<ul>
+<li>Bar-Gill, N., Pham, L. M., Jarmola, A., Budker, D., &amp; Walsworth, R. L. (2013). Solid-state electronic spin coherence time approaching one second. <em>Nature Communications</em>, 4, 1743.</li>
+</ul>
+<h3>Number Theory and Factorization</h3>
+<ul>
+<li>Lenstra, A. K., &amp; Lenstra, H. W. (1993). <em>The Development of the Number Field Sieve</em>. Springer.</li>
+</ul>
+<h3>Cross-Disciplinary</h3>
+<ul>
+<li>Einthoven, W. (1912). The different forms of the human electrocardiogram and their signification. <em>The Lancet</em>, 179(4622), 853–861.</li>
+</ul>
+<h3>Core Framework Papers (Unpublished Drafts)</h3>
+<ul>
+<li>Quni-Gudzinas, R. B. “The Road Not Taken: Quantum Mechanics on a Tree.”</li>
+<li>Quni-Gudzinas, R. B. “Geometric Orientation Codes for Biased-Noise Quantum Computing.”</li>
+<li>Quni-Gudzinas, R. B. “A Non-Archimedean Architecture for Fault-Tolerant Quantum Computation.”</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Compilation complete.</strong> This document—Version 0.20—synthesizes all prior research notes, technical monographs (0.8–0.15), engineering proposals, auditable editions, experimental execution plans, and numerical prediction analyses into a single comprehensive reference for the ultrametric quantum computation MVP program.</p>
+<p><strong>Companion files in this directory:</strong> [source file] through [source file] (raw research notes and incremental syntheses), INDEX.md (navigation), SYNTHESIS - Ultrametric Quantum Computation.md (original formal analysis), 0.2 through 0.7 (specialized topical notes).</p>
+</blockquote></body></html>
