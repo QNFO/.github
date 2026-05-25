@@ -923,7 +923,7 @@ Conversely, if CMB analysis suggests $p=13$, noise spectroscopy suggests $p=2$, 
 |---------|-----------|--------|
 | **Confirmed detection** | $\Delta\chi^2 > 50$ (global $3\sigma$) for $p=2$, consistent across multiple datasets | Publication; framework strengthened |
 | **Marginal signal** | $\Delta\chi^2 \approx 20$–$50$ for $p=2$ (global $2\sigma$) | Publish constraints; await CMB-S4 |
-| **Null result** | No template with $A > 0.01$ and global $>2\sigma$ at any $p$ | Publish upper bounds; Proceed to E2/E3 |
+| **Null result** | No template with $A > 0.01$ and global $>2\sigma$ at any $p$ | Publish upper bounds; Continue to E2/E3 |
 
 ### 19.5 Budget and Timeline
 
@@ -1421,9 +1421,9 @@ The research notes contain a striking passage:
 
 | Decision Point | Month | Condition | If Go | If No-Go |
 |---------------|-------|-----------|--------|----------|
-| **DP1: E1/E2 results** | 12 | Either E1 or E2 positive at $>2\sigma$ | Proceed to Track B (E3 hardware) | Publish negative results; terminate |
-| **DP2: E3 simulation** | 18 | EM simulation confirms coupling decay scaling within 20% of target | Proceed to fabrication (Phase 1) | Iterate design; second simulation run |
-| **DP3: Noise attenuation** | 30 | Measured attenuation ≥2 at root vs. boundary | Proceed to gate demonstration | Analyze failure modes; iterate |
+| **DP1: E1/E2 results** | 12 | Either E1 or E2 positive at $>2\sigma$ | Continue to Track B (E3 hardware) | Publish negative results; terminate |
+| **DP2: E3 simulation** | 18 | EM simulation confirms coupling decay scaling within 20% of target | Continue to fabrication (Phase 1) | Iterate design; second simulation run |
+| **DP3: Noise attenuation** | 30 | Measured attenuation ≥2 at root vs. boundary | Continue to gate demonstration | Analyze failure modes; iterate |
 | **DP4: Gate switching** | 33 | Distinguishable bimodal switching | Publish; plan Phase II ($D=5$) | Publish negative result |
 
 ---
@@ -1680,4 +1680,4 @@ This appendix provides a selected subset of the full auditable claim ledger (48 
 
 > **Compilation complete.** This document—Version 0.20—synthesizes all prior research notes, technical monographs (0.8–0.15), engineering proposals, auditable editions, experimental execution plans, and numerical prediction analyses into a single comprehensive reference for the ultrametric quantum computation MVP program.
 >
-> **Companion files in this directory:** 0.1.md through 0.15.md (raw research notes and incremental syntheses), INDEX.md (navigation), SYNTHESIS - Ultrametric Quantum Computation.md (original formal analysis), 0.2 through 0.7 (specialized topical notes).
+> **Companion files in this directory:** [source file] through [source file] (raw research notes and incremental syntheses), INDEX.md (navigation), SYNTHESIS - Ultrametric Quantum Computation.md (original formal analysis), 0.2 through 0.7 (specialized topical notes).
