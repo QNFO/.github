@@ -176,7 +176,7 @@ The syntactic token calculus is built on Spencer-Brown’s Laws of Form (1969) p
 
 ### 3.2 Token Encoding
 
-**Step 1 — Semantic prime assignment:** Map each input token $t$ to a set of semantic primes with strengths. For text: WordNet hypernym paths determine which semantic categories apply (as in `ultrametric-ai-poc`). For structured data: feature hierarchy determines the encoding levels. For unstructured data (images, audio): hierarchical clustering on training data determines the prime assignment `[LLM-INFERRED]`.
+**Step 1 — Semantic prime assignment:** Map each input token $t$ to a set of semantic primes with strengths. For text: WordNet hypernym paths determine which semantic categories apply (as in `ultrametric-ai-poc`). For structured data: feature hierarchy determines the encoding levels. For unstructured data (images, audio): hierarchical clustering on training data determines the prime assignment ``.
 
 **Step 2 — Prime product computation:**
 
@@ -304,7 +304,7 @@ with $\mathbf{a}_v = \sum_{i \in \text{leaves}(v)} a_i$ being the aggregated act
 | **Formal verifiability** | Approximate (gradients) | Exact — the error at each node has geometric meaning |
 | **Triadic rigidity** | Not applicable | Inherent: for any three examples, two loss pairings are equal |
 
-`[LLM-INFERRED]` The cophenetic loss is defined but has not been computationally validated as a training objective. Convergence properties, relationship to classification accuracy, and comparison to cross-entropy on standard benchmarks are open questions. The definition is provided as the specification — validation is Phase 0 below.
+`` The cophenetic loss is defined but has not been computationally validated as a training objective. Convergence properties, relationship to classification accuracy, and comparison to cross-entropy on standard benchmarks are open questions. The definition is provided as the specification — validation is Phase 0 below.
 
 ---
 
@@ -369,7 +369,7 @@ Gradient descent requires a differentiable manifold. The Bruhat–Tits tree is a
 
 ### 5.4 Convergence Conditions
 
-`[LLM-INFERRED]` The following convergence conditions are hypothesized but not proven:
+`` The following convergence conditions are hypothesized but not proven:
 
 1. **Monotonicity:** $\mathcal{L}_{\text{coph}}$ should decrease monotonically if $\eta$ is sufficiently small. The error propagation through the tree via $E_v$ is conservative (total error is preserved, only redistributed). This is the discrete analog of the gradient being a descent direction.
 
@@ -572,7 +572,7 @@ Both Q-PNA (AI) and UQC (Quantum Computing) operate on the same mathematical str
 
 ### 8.3 Complementary Roles
 
-- **Quantum side** provides the hardware pathway: 40-atom neutral atom implementation at 4 K, passive fault tolerance, $q$-ary scatter amplification, with computational validation published (Tier 0 + Tier 1 papers, DOI: [10.5281/zenodo.20134944](https://doi.org/10.5281/zenodo.20134944), [10.5281/zenodo.20208437](https://doi.org/10.5281/zenodo.20208437)) `[EXTERNAL-SOURCE]`
+- **Quantum side** provides the hardware pathway: 40-atom neutral atom implementation at 4 K, passive fault tolerance, $q$-ary scatter amplification, with computational validation published (Tier 0 + Tier 1 papers, DOI: [10.5281/zenodo.20134944](https://doi.org/10.5281/zenodo.20134944), [10.5281/zenodo.20208437](https://doi.org/10.5281/zenodo.20208437)) ``
 - **AI side** provides the software pathway: glass-box decision-making, formal verifiability, token calculus for regulatory compliance — specified here, not yet validated
 - **Together:** A complete computing architecture — hardware AND software — built on a single mathematical correction to the Archimedean assumption
 
@@ -580,7 +580,7 @@ Both Q-PNA (AI) and UQC (Quantum Computing) operate on the same mathematical str
 
 ## 9. Computational Validation Plan
 
-`[LLM-INFERRED]` The following phases are specified but not yet executed. This is a research roadmap, not a progress report.
+`` The following phases are specified but not yet executed. This is a research roadmap, not a progress report.
 
 ### 9.1 Phase 0: Tree-Walk Optimization Simulation
 
