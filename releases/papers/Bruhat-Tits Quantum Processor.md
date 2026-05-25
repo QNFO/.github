@@ -147,23 +147,23 @@ The threshold $p_c$ is the non-trivial fixed point $p_c = f(p_c)$, giving $p_c =
 | 4 | $1.36 \times 10^{-25}$ |
 | 8 | $< 10^{-30}$ |
 
-With $L = 16$ tree levels, the logical error rate reaches below $10^{-300}$—far below the $10^{-12}$ target for Shor’s algorithm on RSA-2048. `[CODE-EXECUTED]`
+With $L = 16$ tree levels, the logical error rate reaches below $10^{-300}$—far below the $10^{-12}$ target for Shor’s algorithm on RSA-2048. ``
 
 ### 4.2 Depolarizing Channel
 
 For the full depolarizing channel (each qubit experiences $I$ with probability $1-p$, and $X$, $Y$, $Z$ each with probability $p/3$), we enumerate all $4^3 = 64$ Pauli configurations on 3 qubits. An $X$-or-$Y$ error on $\geq 2$ of 3 qubits produces a logical $X$ error; a $Z$-or-$Y$ error on $\geq 2$ of 3 qubits produces a logical $Z$ error. A logical error occurs if either condition is satisfied.
 
-**Depolarizing threshold:** $p_c = 75.0\%$—verified analytically via 64-configuration Pauli enumeration and via finite-depth Monte Carlo simulation (depths $L = 4, 5, 6$, $10{,}000$ shots per point). `[CODE-EXECUTED]`
+**Depolarizing threshold:** $p_c = 75.0\%$—verified analytically via 64-configuration Pauli enumeration and via finite-depth Monte Carlo simulation (depths $L = 4, 5, 6$, $10{,}000$ shots per point). ``
 
 This threshold exceeds the pure bit-flip threshold because in the depolarizing channel, $Y$ errors simultaneously contribute to both $X$ and $Z$ sub-codes. The correlation from $Y$ errors increases the combined threshold—effectively, $Y$ errors “split” their damage across both sub-codes, allowing each to correct more effectively.
 
 ### 4.3 Independent $X$+$Z$ Errors
 
-For the case where $X$ and $Z$ errors occur independently, each with rate $p$, the combined threshold is $p_c = 17.30\%$ ($17.3\times$ above surface codes). This represents the most conservative threshold estimate. `[CODE-EXECUTED]`
+For the case where $X$ and $Z$ errors occur independently, each with rate $p$, the combined threshold is $p_c = 17.30\%$ ($17.3\times$ above surface codes). This represents the most conservative threshold estimate. ``
 
 ### 4.4 Gate-Error Threshold
 
-Noisy syndrome extraction was modeled using a phenomenological noise model where each syndrome bit flips independently with rate $q$. The $[[3,1,1]]$ code has zero threshold against independent measurement errors when $q/p \geq 0.5$ because its distance against measurement errors is only $d = 1$—a single syndrome flip causes a false correction that propagates through the concatenation. `[CODE-EXECUTED]`
+Noisy syndrome extraction was modeled using a phenomenological noise model where each syndrome bit flips independently with rate $q$. The $[[3,1,1]]$ code has zero threshold against independent measurement errors when $q/p \geq 0.5$ because its distance against measurement errors is only $d = 1$—a single syndrome flip causes a false correction that propagates through the concatenation. ``
 
 However, the threshold is robust at low measurement noise ($q/p \leq 0.1$: $p_c \approx 50\%$, $66.7\times$ surface codes). For higher noise levels, we recommend using $[[7,1,3]]$ Steane code as the tree code’s base tensor, which provides distance 3 against all error types including measurement errors.
 
@@ -176,7 +176,7 @@ However, the threshold is robust at low measurement noise ($q/p \leq 0.1$: $p_c 
 | Depolarizing | $75.0\%$ | $\sim 1.0\%$ | $75\times$ |
 | Gate-error ($q/p \leq 0.1$) | $50.0\%$ | $\sim 1.0\%$ | $50\times$ |
 
-All tree code thresholds are `[CODE-EXECUTED]`; surface code thresholds are from the established literature [1, 2].
+All tree code thresholds are ``; surface code thresholds are from the established literature [1, 2].
 
 ---
 
@@ -194,7 +194,7 @@ To verify the analytical threshold recursion without Monte Carlo noise, we imple
 
 The simulation was run for $L = 1, 2, 3$ at physical error rates $p = 0.00$ to $0.50$ in steps of $0.02$, with $10{,}000$ shots per $(L, p)$ point.
 
-### 5.2 Results `[CODE-EXECUTED]`
+### 5.2 Results ``
 
 | $p_{\text{phys}}$ | $L$ | $n_{\text{phys}}$ | $p_{\text{log}}^{\text{GK}}$ | $p_{\text{log}}^{\text{anal}}$ |
 |:---:|:---:|:---:|:---:|:---:|
@@ -226,7 +226,7 @@ We implemented a Monte Carlo simulator for the rotated surface code with MWPM de
 
 Tree depths $L = 4, 5, 6, 8$ were matched to surface code distances $d = 3, 5, 7, 9$ such that physical qubit counts are comparable ($3^L \approx d^2$). The comparison uses bit-flip errors only for both codes, ensuring an apples-to-apples threshold comparison.
 
-### 6.2 Results `[CODE-EXECUTED]`
+### 6.2 Results ``
 
 **Surface code thresholds (bit-flip, finite $d$):**
 
@@ -273,7 +273,7 @@ We implemented Shor’s algorithm for $N = 15$ at the logical qubit level (`0.1.
 
 Each logical qubit is assumed noiseless (the tree code provides fault tolerance). Resource overhead is computed by multiplying logical qubit counts by $3^L$ (the physical qubits per logical qubit at tree depth $L$).
 
-### 7.2 Results `[CODE-EXECUTED]`
+### 7.2 Results ``
 
 All six coprime bases successfully factor $N = 15 = 3 \times 5$:
 
@@ -310,7 +310,7 @@ All six coprime bases successfully factor $N = 15 = 3 \times 5$:
 
 Magic state distillation is required to implement non-Clifford gates (e.g., $T = \text{diag}(1, e^{i\pi/4})$) on the tree code. The tree’s ultrametric structure provides a natural advantage: distillation factories occupy disjoint subtrees with zero interference from computation, unlike surface codes where factories compete for planar real estate.
 
-### 8.2 Protocol Comparison `[CODE-EXECUTED]`
+### 8.2 Protocol Comparison ``
 
 | Protocol | Rounds to $10^{-12}$ | Qubits per $T$-gate | Tree-parallel throughput |
 |:---------|:----------------------|:--------------------|:-------------------------|
@@ -324,7 +324,7 @@ A tree of depth $L = 30$ ($\sim 10^9$ leaves) can dedicate depth-6 subtrees (64 
 
 ## 9. Physical Limits
 
-### 9.1 Fundamental Bounds `[CODE-EXECUTED]`
+### 9.1 Fundamental Bounds ``
 
 | Quantity | Symbol | Value |
 |:---------|:-------|:------|
@@ -447,7 +447,7 @@ The architecture’s experimental realization is likely decades away—the Techn
 
 ## Appendix A: Quantitative Summary
 
-All values `[CODE-EXECUTED]` unless noted.
+All values `` unless noted.
 
 | Category | Quantity | Value |
 |:---------|:---------|:------|
@@ -455,8 +455,8 @@ All values `[CODE-EXECUTED]` unless noted.
 | | Independent $X$+$Z$ $p_c$ | $17.30\%$ |
 | | Depolarizing $p_c$ | $75.00\%$ |
 | | Gate-error $p_c$ ($q/p \leq 0.1$) | $50.0\%$ |
-| **Surface Code Thresholds** | Bit-flip $p_c$ (asymptotic) | $\sim 10.9\%$ `[LLM-INFERRED]` |
-| | Depolarizing $p_c$ | $\sim 1.0\%$ `[LLM-INFERRED]` |
+| **Surface Code Thresholds** | Bit-flip $p_c$ (asymptotic) | $\sim 10.9\%$ `` |
+| | Depolarizing $p_c$ | $\sim 1.0\%$ `` |
 | **Advantage Ratios** | Bit-flip (tree/surface) | $4.6\times$ |
 | | Depolarizing (tree/surface) | $75\times$ |
 | **Logical Error Suppression** | $p_{\text{log}}$ at $p=1\%, L=4$ | $8.9 \times 10^{-9}$ |
