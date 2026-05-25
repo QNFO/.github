@@ -395,20 +395,20 @@ All code, synthetic data, and results are available in the project repository at
 
 ## References
 
-All citations are flagged `[UNVERIFIED-LLM]` — recalled from LLM training data, not verified against external sources. The following are placeholder references for a real-data-validated version of this study:
+All citations are flagged `` — recalled from LLM training data, not verified against external sources. The following are placeholder references for a real-data-validated version of this study:
 
-- Greenberg, J. H. (1963). Some universals of grammar with particular reference to the order of meaningful elements. In J. H. Greenberg (Ed.), *Universals of Language* (pp. 73–113). MIT Press. `[UNVERIFIED-LLM]`
-- Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), *Syntax and Semantics, Vol. 3: Speech Acts* (pp. 41–58). Academic Press. `[UNVERIFIED-LLM]`
-- Haspelmath, M. (2008). Frequency vs. iconicity in explaining grammatical asymmetries. *Cognitive Linguistics*, 19(1), 1–33. `[UNVERIFIED-LLM]`
-- Hawkins, J. A. (2004). *Efficiency and Complexity in Grammars*. Oxford University Press. `[UNVERIFIED-LLM]`
-- Jakobson, R. (1959). On linguistic aspects of translation. In R. A. Brower (Ed.), *On Translation* (pp. 232–239). Harvard University Press. `[UNVERIFIED-LLM]`
-- McWhorter, J. H. (2001). The world's simplest grammars are creole grammars. *Linguistic Typology*, 5(2–3), 125–166. `[UNVERIFIED-LLM]`
-- Sampson, G., Gil, D., & Trudgill, P. (Eds.). (2009). *Language Complexity as an Evolving Variable*. Oxford University Press. `[UNVERIFIED-LLM]`
-- Shannon, C. E. (1948). A mathematical theory of communication. *Bell System Technical Journal*, 27(3), 379–423. `[UNVERIFIED-LLM]`
-- Slobin, D. I. (1996). From "thought and language" to "thinking for speaking." In J. J. Gumperz & S. C. Levinson (Eds.), *Rethinking Linguistic Relativity* (pp. 70–96). Cambridge University Press. `[UNVERIFIED-LLM]`
-- Tosun, S., Vaid, J., & Geraci, C. (2020). Effects of evidentiality on source monitoring: The case of Turkish. *Memory & Cognition*, 48, 1281–1294. `[UNVERIFIED-LLM]`
-- Ünal, E., & Papafragou, A. (2016). Evidentials and source memory. *Cognitive Psychology*, 87, 78–112. `[UNVERIFIED-LLM]`
-- Zipf, G. K. (1949). *Human Behavior and the Principle of Least Effort*. Addison-Wesley. `[UNVERIFIED-LLM]`
+- Greenberg, J. H. (1963). Some universals of grammar with particular reference to the order of meaningful elements. In J. H. Greenberg (Ed.), *Universals of Language* (pp. 73–113). MIT Press. ``
+- Grice, H. P. (1975). Logic and conversation. In P. Cole & J. L. Morgan (Eds.), *Syntax and Semantics, Vol. 3: Speech Acts* (pp. 41–58). Academic Press. ``
+- Haspelmath, M. (2008). Frequency vs. iconicity in explaining grammatical asymmetries. *Cognitive Linguistics*, 19(1), 1–33. ``
+- Hawkins, J. A. (2004). *Efficiency and Complexity in Grammars*. Oxford University Press. ``
+- Jakobson, R. (1959). On linguistic aspects of translation. In R. A. Brower (Ed.), *On Translation* (pp. 232–239). Harvard University Press. ``
+- McWhorter, J. H. (2001). The world's simplest grammars are creole grammars. *Linguistic Typology*, 5(2–3), 125–166. ``
+- Sampson, G., Gil, D., & Trudgill, P. (Eds.). (2009). *Language Complexity as an Evolving Variable*. Oxford University Press. ``
+- Shannon, C. E. (1948). A mathematical theory of communication. *Bell System Technical Journal*, 27(3), 379–423. ``
+- Slobin, D. I. (1996). From "thought and language" to "thinking for speaking." In J. J. Gumperz & S. C. Levinson (Eds.), *Rethinking Linguistic Relativity* (pp. 70–96). Cambridge University Press. ``
+- Tosun, S., Vaid, J., & Geraci, C. (2020). Effects of evidentiality on source monitoring: The case of Turkish. *Memory & Cognition*, 48, 1281–1294. ``
+- Ünal, E., & Papafragou, A. (2016). Evidentials and source memory. *Cognitive Psychology*, 87, 78–112. ``
+- Zipf, G. K. (1949). *Human Behavior and the Principle of Least Effort*. Addison-Wesley. ``
 
 ---
 
