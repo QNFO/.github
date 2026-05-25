@@ -1401,7 +1401,7 @@ Using a quantum circuit simulator, simulate the hierarchical Hamiltonian for a t
 
 ### 25. The Path to Construction
 
-The construction of a full hierarchical quantum computer will likely proceed through the following phases.
+The construction of a full hierarchical quantum computer will likely Proceed through the following phases.
 
 **Phase 1: Single-Tree Verification (1–3 years)**
 
