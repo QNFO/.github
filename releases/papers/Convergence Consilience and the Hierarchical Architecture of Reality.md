@@ -229,7 +229,7 @@ The crucial point: **RG gives us a model of convergence that does not rely on co
 
 ### 6.3 The Pragmatist Resolution
 
-Even in a superdeterministic world, we have no choice but to proceed as if consilience is epistemically valid. Our cognitive architecture, itself predetermined, demands we seek unified explanations. The script, if it exists, contains the experience of discovery, the feeling of epistemic progress, and the pragmatic success of technology. Pragmatically, then, consilience remains our operative methodology — even if its ultimate justification is undercut.
+Even in a superdeterministic world, we have no choice but to Proceed as if consilience is epistemically valid. Our cognitive architecture, itself predetermined, demands we seek unified explanations. The script, if it exists, contains the experience of discovery, the feeling of epistemic progress, and the pragmatic success of technology. Pragmatically, then, consilience remains our operative methodology — even if its ultimate justification is undercut.
 
 This is the pragmatist’s move: the universe might be a conspiracy, but it’s a consistently livable one, and we bet our lives on its apparent regularities. The Deterministic Lattice [Deterministic Lattice, 2026] makes this point from the physics side: the lattice structure is real regardless of whether its discovery was inevitable. The present work makes the same point from the epistemology side: consilience works regardless of whether its success was pre-written.
 
@@ -283,7 +283,7 @@ This document has argued for three claims:
 
 2. **The hierarchy is vindicated by a gallery of interdisciplinary physics convergences.** Gauge theory, effective field theory, universality, holography, and non-equilibrium dynamics all exhibit the same pattern: independent invention of the same mathematical structure in disconnected fields, followed by consilient recognition that the structure expresses a deeper unity. The renormalization group is the meta-example — simultaneously an instance of convergence and the mathematical mechanism that explains why convergence occurs.
 
-3. **Superdeterminism challenges the epistemic warrant of consilience without destroying its pragmatic value.** If all variables are pre-correlated, the “independent” lines of evidence that Whewell celebrated were never truly independent, and consilience could be a closed loop of mutual reinforcement. Yet the attractor landscape remains mathematically real — because the mathematics of fixed points and basins of attraction is true regardless of whether our discovery of it was pre-scripted — and we have no choice but to proceed as if consilience tracks genuine causal structure.
+3. **Superdeterminism challenges the epistemic warrant of consilience without destroying its pragmatic value.** If all variables are pre-correlated, the “independent” lines of evidence that Whewell celebrated were never truly independent, and consilience could be a closed loop of mutual reinforcement. Yet the attractor landscape remains mathematically real — because the mathematics of fixed points and basins of attraction is true regardless of whether our discovery of it was pre-scripted — and we have no choice but to Proceed as if consilience tracks genuine causal structure.
 
 The tree is real, the leaves are real, and the equations are real — regardless of whether our discovery of them was inevitable or contingent. The pragmatic architecture stands.
 
