@@ -87,7 +87,7 @@ Consider two examples from Mohawk, an Iroquoian language spoken by roughly 4,000
 
 These are not extreme, artificial examples. They are routine, everyday Mohawk utterances. In such a language, the fundamental question “where does one word end and the next begin?” is not trivial — it is contested even among linguists who study the language. And the answer has profound consequences: for literacy education, for dictionary-making, for machine translation, and — as we will see — for search engine architecture.
 
-[^2]: All language examples in this section are drawn from the author’s training-data knowledge of linguistic typology and are labeled `[LLM-INFERRED]`. They require verification against primary linguistic sources (fieldwork data, grammars, dictionaries) before publication. The specific Mohawk forms follow standard Iroquoianist transcription conventions but should be checked against a native speaker or authoritative reference grammar.
+[^2]: All language examples in this section are drawn from the author’s training-data knowledge of linguistic typology and are labeled ``. They require verification against primary linguistic sources (fieldwork data, grammars, dictionaries) before publication. The specific Mohawk forms follow standard Iroquoianist transcription conventions but should be checked against a native speaker or authoritative reference grammar.
 
 ### II.B — The Spectrum of Linguistic Architectures
 
@@ -128,11 +128,11 @@ If the cognitive operation of chunking is universal — and the ultrametric tree
 
 To make this concrete, consider how the same underlying proposition might be rendered across different morphological strategies. The idea is something like: “The fact of repeatedly making the small into the one embeds the equal-branching pattern that makes mind and world the same.” This is the core insight from the distinction calculus — the recursive nesting of distinctions yields an ultrametric structure — expressed as a proposition.
 
-- **Isolating strategy** (Classical Chinese-inspired): “Part part combine. Combine combine again. Tree form. Two sides equal. Mind world one.” Each conceptual atom gets its own syllable; grammar is encoded through juxtaposition and sequence. `[LLM-INFERRED]`
+- **Isolating strategy** (Classical Chinese-inspired): “Part part combine. Combine combine again. Tree form. Two sides equal. Mind world one.” Each conceptual atom gets its own syllable; grammar is encoded through juxtaposition and sequence. ``
 
-- **Agglutinative strategy** (Turkish-inspired): A chain of distinct, segmentable morphemes — each carrying one grammatical function — attached to a root. The word can be long, but each morpheme remains transparent. `[LLM-INFERRED]`
+- **Agglutinative strategy** (Turkish-inspired): A chain of distinct, segmentable morphemes — each carrying one grammatical function — attached to a root. The word can be long, but each morpheme remains transparent. ``
 
-- **Polysynthetic strategy** (Mohawk-inspired): A single, phonologically unified word-sentence in which noun incorporation, pronominal prefixes, and aspectual suffixes fuse the entire event into one morphological complex. `[LLM-INFERRED]`
+- **Polysynthetic strategy** (Mohawk-inspired): A single, phonologically unified word-sentence in which noun incorporation, pronominal prefixes, and aspectual suffixes fuse the entire event into one morphological complex. ``
 
 All three strategies communicate the same underlying conceptual structure. The difference is in *packaging*: where the boundaries fall, how many surface units carry the information, and what must be explicitly marked versus left to context.
 
@@ -212,7 +212,7 @@ Consider the difference:
 
 **Polysynthetic morphemic search:** The equivalent query in a polysynthetic language might be a single word, or a short sequence. If a searcher wants to find content about “a dog biting a man in the past,” they might need to search for the root meaning “bite” combined with morphemes indicating “dog” (as agent), “man” (as patient), and past tense. But in a polysynthetic language, these are not separate words — they are bound morphemes that only appear as part of a larger morphological complex. A search for the root alone returns every word that contains it, regardless of argument structure. A search for a specific combination of morphemes fails if any one of them varies (e.g., a different tense marker, a different person marker, a different evidential). And the scope relationships — the fact that “dog” is the agent and “man” the patient, not vice versa — are encoded by morpheme *order* and *hierarchy*, which keyword search has no mechanism to represent.
 
-To make this concrete, imagine the following scenario `[LLM-INFERRED]`:
+To make this concrete, imagine the following scenario ``:
 
 - A researcher wants to find all instances in a Mohawk text corpus where a human agent performs an action on an animal patient. In English, you might search for combinations like “man bites dog” or “hunter kills bear” — the keywords carry the semantic roles implicitly through world knowledge. In Mohawk, the agent and patient are encoded through pronominal prefixes on the verb, and the nouns for “man” and “dog” may be incorporated into the verb itself. A keyword search for “man” would miss every instance where “man” is expressed through a pronominal prefix. A keyword search for the verb root would return every instance of the action, regardless of whether the agent is human, animal, or inanimate. To find what the researcher wants, you need to search not for *words* but for *morphological configurations* — specific patterns of prefix-root-suffix combinations that encode the relevant semantic roles.
 
@@ -230,10 +230,10 @@ The consequences of this architectural failure are not hypothetical. They are st
 
 **Quantifying the exclusion.** How many people are affected? Polysynthetic languages are spoken by millions of people across North America (Mohawk, Cree, Inuktitut, Nahuatl), South America (Quechua, Aymara, Mapudungun), Australia (Tiwi, Warlpiri, Nunggubuyu), and Papua New Guinea (many Trans-New Guinea languages). Many of these languages have speaker populations in the tens or hundreds of thousands, and some — Quechua, Nahuatl — have millions. The total number of polysynthetic language speakers worldwide is difficult to estimate precisely, but it is on the order of 10 to 20 million people [^5]. For comparison, that is roughly the population of the Netherlands, or of Guatemala — a nation-sized community for whom the fundamental architecture of information retrieval is broken.
 
-[^5]: Population estimate is `[LLM-INFERRED]` — based on the author’s training-data knowledge of global language demographics. A systematic survey using Ethnologue or Glottolog data is needed for a publication-quality figure. The estimate is conservative; including agglutinative languages with polysynthetic tendencies would substantially increase the count.
-[^6]: This figure is `[LLM-INFERRED]` — based on the author’s training-data knowledge of search engine statistics. A verified source (e.g., Google’s annual search statistics report) should be cited for publication.
+[^5]: Population estimate is `` — based on the author’s training-data knowledge of global language demographics. A systematic survey using Ethnologue or Glottolog data is needed for a publication-quality figure. The estimate is conservative; including agglutinative languages with polysynthetic tendencies would substantially increase the count.
+[^6]: This figure is `` — based on the author’s training-data knowledge of search engine statistics. A verified source (e.g., Google’s annual search statistics report) should be cited for publication.
 
-[^7]: This figure is `[LLM-INFERRED]` — based on the author’s training-data knowledge of Common Crawl corpus composition. The actual percentage varies by crawl and methodology; a verified source should be cited for publication.
+[^7]: This figure is `` — based on the author’s training-data knowledge of Common Crawl corpus composition. The actual percentage varies by crawl and methodology; a verified source should be cited for publication.
 
 ### IV.D — The Data Bias in LLM Training
 
