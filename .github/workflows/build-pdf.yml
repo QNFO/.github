@@ -4,32 +4,78 @@ on:
   workflow_dispatch:
     inputs:
       paper_path:
-        description: "Path to markdown file (e.g., publications/2026/05/Paper.md)"
+        description: "Path to markdown file"
         required: true
         type: string
       title:
-        description: "Publication title for PDF metadata"
+        description: "PDF title"
         required: false
         type: string
+
+env:
+  PANDOC_IMAGE: pandoc/latex:latest
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+
+      - name: Validate input
+        run: |
+          FILE="${{ github.event.inputs.paper_path }}"
+          if [ ! -f "$FILE" ]; then
+            echo "ERROR: File not found: $FILE"
+            exit 1
+          fi
+          if [ ! -s "$FILE" ]; then
+            echo "ERROR: File is empty: $FILE"
+            exit 1
+          fi
+          echo "File validated: $FILE ($(wc -c < "$FILE") bytes)"
 
       - name: Build PDF
         run: |
           PAPER="${{ github.event.inputs.paper_path }}"
-          docker run --rm -v "${PWD}:/data" -w /data pandoc/latex:latest \
-            "${PAPER}" \
-            --from=markdown+yaml_metadata_block+tex_math_dollars \
-            --to=pdf \
-            --pdf-engine=xelatex \
-            --metadata=colorlinks:true \
-            --metadata=linkcolor:blue \
-            --metadata=title="${{ github.event.inputs.title || github.event.inputs.paper_path }}" \
-            --output=publication.pdf
+          TITLE="${{ github.event.inputs.title || github.event.inputs.paper_path }}"
+          
+          # Run pandoc with retry on docker pull failures
+          for i in 1 2 3; do
+            echo "Attempt $i/3..."
+            if docker run --rm -v "${PWD}:/data" -w /data $PANDOC_IMAGE \
+              "$PAPER" \
+              --from=markdown+yaml_metadata_block+tex_math_dollars \
+              --to=pdf \
+              --pdf-engine=xelatex \
+              --metadata=colorlinks:true \
+              --metadata=linkcolor:blue \
+              --metadata=title:"$TITLE" \
+              --output=publication.pdf 2>&1; then
+              echo "PDF built successfully"
+              break
+            else
+              if [ $i -eq 3 ]; then
+                echo "FATAL: PDF build failed after 3 attempts"
+                exit 1
+              fi
+              echo "Attempt $i failed, retrying in 10s..."
+              sleep 10
+            fi
+          done
+
+      - name: Verify PDF
+        run: |
+          if [ ! -f publication.pdf ]; then
+            echo "ERROR: PDF not generated"
+            exit 1
+          fi
+          SIZE=$(stat -c%s publication.pdf 2>/dev/null || stat -f%z publication.pdf 2>/dev/null || echo 0)
+          if [ "$SIZE" -lt 1000 ]; then
+            echo "ERROR: PDF too small ($SIZE bytes) — likely corrupted"
+            exit 1
+          fi
+          echo "PDF verified: $SIZE bytes"
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
