@@ -93,7 +93,7 @@ When we apply the same logic to every known particle:
 3. Both $r_e$ and $\bar{\lambda}_C$ are proportional to $1/\omega_e$ ``
 4. Every massive particle has a Compton frequency $\omega = m c^2 / \hbar$ (definitional, from $E = \hbar\omega$)
 5. A scan of 600 combinations of known length scales finds no non-tautological expression for $m_p/m_e$ ``
-6. Precision measurements of $\alpha$ Proceed through rational numbers (ratios of integer counts)
+6. Precision measurements of $\alpha$ Continue through rational numbers (ratios of integer counts)
 
 **Interpretation:**
 - Treating frequencies as more fundamental than masses is a conceptual choice, not a physical claim—both pictures produce identical numerical predictions
@@ -327,7 +327,7 @@ All 300 unordered pairs were tested for both ratio directions (A/B and B/A), yie
 
 The 5% threshold is chosen as a conservative first-pass filter: it is wide enough to capture physically suggestive relationships without being so narrow as to miss structure that might be blurred by QCD systematic uncertainties (lattice QCD observables carry 1–5% errors), yet tight enough that a null result (no match for mass ratios among 600 combinations at this tolerance) is informative.
 
-``—Full scan in 0.7.py.
+``—Full scan in [source file].
 
 **Operational definition of “non-tautological”:** A ratio is non-tautological if the two length scales involved are independently characterizable—measured by distinct experimental techniques that do not presuppose knowledge of the quantity being tested. A ratio is tautological if it restates a known relationship in different units without adding independent physical information (e.g., $\bar{\lambda}_C^{(e)} / \bar{\lambda}_C^{(p)} = m_p/m_e$ follows from $\bar{\lambda}_C \propto 1/m$ and is therefore a restatement of the mass ratio in wavelength units). The computational scan conservatively classifies Compton wavelength ratios and classical-radius ratios between leptons as tautological or structurally equivalent.
 
@@ -753,10 +753,10 @@ print("=" * 65)
 | Fine-Structure Constant as a Cross-Ratio | 2026/05/09 | $\alpha$ as cross-ratio; five formalisms |
 | Tree of Frequencies (DOI: 10.5281/zenodo.20071716) | 2026/05/07 | Bruhat–Tits tree; frequency space geometry; 3 predictions |
 | Adelic Cross-Ratio | 2026/04/09 | Cross-ratio as only projective invariant |
-| One Pattern / 0.23.md | 2026/05/08 | Grammatical function; Ostrowski; adelic frontier |
+| One Pattern / [source file] | 2026/05/08 | Grammatical function; Ostrowski; adelic frontier |
 | Number Theory as Physics | 2026/04 | Spin-statistics from tree geometry |
 | MASS-FREQUENCY project | Nov 2025 | $m = h f_C / c^2$; mass-frequency identity |
-| This project: 0.7.py | 2026/05/10 | Extended 600-combination computational scan |
+| This project: [source file] | 2026/05/10 | Extended 600-combination computational scan |
 | This project: 0.7.1.md | 2026/05/10 | Path B prototype—Shimura variety minimal example |
 
 ---
