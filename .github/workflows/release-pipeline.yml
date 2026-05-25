@@ -6,40 +6,46 @@ on:
   workflow_dispatch:
     inputs:
       paper_path:
-        description: "Path to markdown file (e.g., publications/2026/05/Paper.md)"
+        description: "Path to markdown file"
         required: false
         type: string
 
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
       - name: Determine paper path
         id: path
         run: |
-          if [ -n "${{ github.event.inputs.paper_path }}" ]; then
-            echo "paper=${{ github.event.inputs.paper_path }}" >> $GITHUB_OUTPUT
-          else
-            echo "paper=README.md" >> $GITHUB_OUTPUT
+          PAPER="${{ github.event.inputs.paper_path || 'README.md' }}"
+          if [ ! -f "$PAPER" ]; then
+            echo "::warning::File not found: $PAPER — using README.md"
+            PAPER="README.md"
           fi
+          echo "paper=$PAPER" >> $GITHUB_OUTPUT
 
-      - name: Build PDF with Pandoc
-        uses: docker://pandoc/latex:latest
-        with:
-          args: >
-            ${{ steps.path.outputs.paper }}
-            --from=markdown+yaml_metadata_block+tex_math_dollars
-            --to=pdf
-            --pdf-engine=xelatex
-            --template=eisvogel
-            --metadata=colorlinks:true
-            --metadata=linkcolor:blue
-            --output=publication.pdf
+      - name: Build PDF (with retry)
+        run: |
+          PAPER="${{ steps.path.outputs.paper }}"
+          for i in 1 2 3; do
+            echo "Attempt $i/3..."
+            if docker run --rm -v "${PWD}:/data" -w /data pandoc/latex:latest \
+              "$PAPER" \
+              --from=markdown+yaml_metadata_block+tex_math_dollars \
+              --to=pdf --pdf-engine=xelatex \
+              --metadata=colorlinks:true --metadata=linkcolor:blue \
+              --output=publication.pdf 2>&1; then
+              [ -f publication.pdf ] && [ "$(stat -c%s publication.pdf 2>/dev/null || echo 0)" -gt 1000 ] && break
+            fi
+            [ $i -eq 3 ] && { echo "FATAL: PDF build failed"; exit 1; }
+            sleep 10
+          done
 
       - name: Upload PDF to Release
-        if: github.event_name == "release"
+        if: github.event_name == 'release'
         uses: softprops/action-gh-release@v2
         with:
           files: publication.pdf
@@ -59,13 +65,14 @@ jobs:
       file_path: "publication.pdf"
       abstract: "${{ github.event.release.body || 'Open-access research publication from QNFO.' }}"
       keywords: "ultrametric,quantum-computing,QWAV"
+      sandbox: ${{ github.event_name == 'workflow_dispatch' }}
     secrets:
       ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 
   update-readme:
     needs: zenodo-publish
     runs-on: ubuntu-latest
-    if: needs.zenodo-publish.outputs.doi != ""
+    if: needs.zenodo-publish.outputs.doi != ''
     steps:
       - uses: actions/checkout@v4
 
@@ -73,7 +80,6 @@ jobs:
         run: |
           DOI="${{ needs.zenodo-publish.outputs.doi }}"
           BADGE="[![DOI](https://zenodo.org/badge/DOI/${DOI}.svg)](https://doi.org/${DOI})"
-
           if ! grep -qF "$DOI" README.md; then
             echo "" >> README.md
             echo "$BADGE" >> README.md
@@ -81,18 +87,47 @@ jobs:
             git config user.email "bot@qnfo.org"
             git add README.md
             git commit -m "docs: add DOI badge ${DOI}"
-            git push origin master
-          else
-            echo "DOI badge already present"
+            for i in 1 2 3; do
+              if git push origin master 2>&1; then break; fi
+              [ $i -eq 3 ] && echo "::warning::Failed to push DOI badge after 3 attempts"
+              sleep 10
+            done
           fi
+
+  report-failure:
+    needs: [build-pdf, zenodo-publish, update-readme]
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create failure issue
+        run: |
+          gh issue create \
+            --repo QNFO/.github \
+            --title "Release pipeline failure — $(date -u +'%Y-%m-%d')" \
+            --label "bug,P1" \
+            --body "## Release pipeline failed
+
+          **Release:** ${{ github.event.release.tag_name || 'Manual' }}
+          **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          **Failed jobs:** Check run log above
+
+          Automated failure notification from release-pipeline.yml."
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
 
   trigger-gitbook:
     needs: zenodo-publish
     runs-on: ubuntu-latest
-    if: needs.zenodo-publish.outputs.doi != ""
+    if: needs.zenodo-publish.outputs.doi != ''
     steps:
       - name: Dispatch GitBook sync
         run: |
-          gh workflow run sync-publications.yml --repo QNFO/gitbook --ref main
+          for i in 1 2 3; do
+            if gh workflow run sync-publications.yml --repo QNFO/gitbook --ref main 2>&1; then
+              break
+            fi
+            [ $i -eq 3 ] && echo "::warning::Failed to trigger GitBook sync after 3 attempts"
+            sleep 10
+          done
         env:
           GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
