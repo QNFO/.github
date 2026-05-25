@@ -1,0 +1,114 @@
+---
+author: Rowan Brad Quni-Gudzinas
+ORCID: 0009-0002-4317-5604
+ISNI: 0000000526456062
+title: "1.0"
+aliases:
+  - "1.0"
+modified: 2025-11-07T10:07:39Z
+---
+## Commercial Pathways to Room-Temperature Topological Quantum Computation via Intrinsic Quantum Media
+
+**Author:** Rowan Brad Quni-Gudzinas
+**Contact:** rowan.quni@outlook.com
+**ORCID:** 0009-0002-4317-5604
+**ISNI:** 0000 0005 2645 6062
+**DOI:** 10.5281/zenodo.17550366
+**Publication Date:** 2025-11-07
+**Version:** 1.0
+
+**Abstract**: The realization of a room-temperature topological quantum computer using intrinsic quantum media is predicated on the successful engineering and validation of Fractional Chern Insulators (FCIs). This document presents a comprehensive, falsifiable research program to overcome the two primary barriers to this goal. The Temperature Gap—currently a two-orders-of-magnitude shortfall between the sub-meV energy scales of existing FCIs and the ~26 meV required for room-temperature operation—is addressed through a dual-engineering strategy. Concurrently, the Non-Abelian Statistics Gap—the lack of direct experimental proof that FCI quasiparticles possess non-commutative braiding statistics—is targeted with a definitive experimental protocol. By framing the challenge around testable hypotheses with explicit validation pathways, this work provides a structured, actionable blueprint for transitioning FCI research from fundamental discovery to applied technology.
+
+**Keywords**: Topological Quantum Computation; Fractional Chern Insulator; Non-Abelian Anyons; Room-Temperature Quantum Computing; Quantum Materials Engineering; Dielectric Engineering; Strain Engineering; Fabry-Pérot Interferometry; Fibonacci Anyons; Topological Energy Gap
+
+---
+
+## 1.0 Foundational Principles of Fractional Chern Insulators (FCIs)
+
+The leading experimental platform for realizing topological quantum computation in intrinsic quantum media is the Fractional Quantum Anomalous Hall Effect (FQAHE), a phenomenon also known as the Fractional Chern Insulator (FCI) state (Park et al., 2023)<!-- key: Park2023 -->; (Lu et al., 2024)<!-- key: Lu2024 -->. This state of matter provides a zero-magnetic-field analogue to the Fractional Quantum Hall Effect (FQHE), offering a pathway to topological order without requiring large, power-intensive external magnets. The emergence of the FCI state is a direct consequence of strong electronic correlations, which become the dominant physical mechanism when the kinetic energy of electrons is effectively quenched within engineered, nearly flat electronic bands (Xie et al., 2025)<!-- key: Xie2025 -->; (Zhou et al., 2023)<!-- key: Zhou2023 -->. The definitive empirical signature of this topological phase is the precise quantization of the Hall resistance to a fractional value of the von Klitzing constant, $R_{xy} = \frac{1}{\nu} \frac{h}{e^2}$, which occurs concurrently with a vanishing of the longitudinal resistance, $R_{xx} \to 0$ (Lu et al., 2024)<!-- key: Lu2024 -->; (Park et al., 2023)<!-- key: Park2023 -->. Within this framework, specific fractional states that are theoretically predicted to host non-Abelian anyons, such as those at filling fractions of $\nu=2/3$ or $\nu=3/5$, are the primary candidates for building an intrinsically fault-tolerant quantum computer (Xie et al., 2025)<!-- key: Xie2025 -->.
+
+## 2.0 Methodological Pathways to Experimental FCI Realization
+
+The central methodological challenge for realizing FCI states is the successful engineering of flat electronic bands. The experimental literature demonstrates two primary pathways to achieve this. The most prevalent method involves the creation of a moiré superlattice by stacking two-dimensional materials with a precisely controlled relative twist angle or lattice mismatch (Park et al., 2023)<!-- key: Park2023 -->; (Lu et al., 2024)<!-- key: Lu2024 -->. A second, distinct pathway leverages the intrinsic electronic properties of rhombohedral multilayer graphene (RMG), which naturally hosts flat, topologically non-trivial bands that can support FCI states (Xie et al., 2025)<!-- key: Xie2025 -->; (Zhou et al., 2023)<!-- key: Zhou2023 -->. Across all verified methodologies, the definitive validation protocol remains consistent: low-temperature magneto-transport measurements are performed to confirm the presence of quantized Hall plateaus at zero magnetic field, which is the hallmark of the FQAHE (Park et al., 2023)<!-- key: Park2023 -->; (Xie et al., 2025)<!-- key: Xie2025 -->.
+
+### 2.1 Pathway 1: Moiré Superlattices in Transition Metal Dichalcogenides (TMDs)
+
+The moiré superlattice approach has been successfully demonstrated using transition metal dichalcogenides (TMDs) as the material platform. Specifically, twisted homobilayers of molybdenum ditelluride (MoTe₂) have been experimentally shown to host an FCI state at a twist angle near 3.7 degrees (Park et al., 2023)<!-- key: Park2023 -->. In this system, the long-wavelength moiré potential generated by the twist angle creates flat Chern bands, which are then partially filled with charge carriers to induce the strongly correlated FCI state. However, the FCI state in twisted MoTe₂ is not always the ground state; it exists in competition with other correlated phases, such as antiferromagnetism, requiring careful tuning of an external electric displacement field to selectively stabilize the desired topological order (Cai et al., 2025)<!-- key: Cai2025 -->.
+
+### 2.2 Pathway 2: Intrinsic and Engineered Flat Bands in Graphene Systems
+
+Graphene-based systems offer a versatile alternative for FCI realization. Rhombohedral multilayer graphene (RMG) is a particularly promising platform as it intrinsically hosts topologically non-trivial flat bands near the charge neutrality point, obviating the need for precise twist angle engineering in some cases (Xie et al., 2025)<!-- key: Xie2025 -->. In one approach, an FCI state is induced in RMG by superimposing a moiré potential from a slightly misaligned substrate of hexagonal boron nitride (hBN) (Xie et al., 2025)<!-- key: Xie2025 -->; (Lu et al., 2024)<!-- key: Lu2024 -->. Remarkably, an FCI state has also been demonstrated in a “moiréless” RMG system, where a periodic potential was instead imprinted via the Coulomb field of a patterned dielectric substrate (Zhou et al., 2023)<!-- key: Zhou2023 -->. This moiréless approach is significant as it suggests a pathway to creating FCI states that is potentially more scalable and less sensitive to the extreme mechanical precision of atomic-scale rotational alignment.
+
+### 2.3 Competing Ground States in FCI Systems
+
+The stabilization of an FCI ground state is not guaranteed and often exists in a delicate balance with other competing correlated phases that can be energetically similar (Cai et al., 2025)<!-- key: Cai2025 -->. For example, in the promising platform of moiré MoTe₂, the desired FCI state is in direct competition with an antiferromagnetic (AFM) insulating state. Accessing the desired topological phase is therefore not just a matter of material fabrication but also requires careful tuning of external parameters, such as an electric displacement field, to navigate the material’s phase diagram and selectively stabilize the FCI state over its competitors (Cai et al., 2025)<!-- key: Cai2025 -->. This highlights the complexity of engineering these quantum states and the need for precise control over both material and environmental parameters.
+
+## 3.0 Critical Gap Analysis for Room-Temperature TQC
+
+### 3.1 The Temperature Gap: A Two-Orders-of-Magnitude Discrepancy
+
+A significant barrier to the practical application of topological quantum computation is the vast discrepancy between current experimental conditions and the goal of room-temperature operation. All verified experimental demonstrations of the FCI state occur at cryogenic temperatures, typically below 4 Kelvin (Park et al., 2023)<!-- key: Park2023 -->; (Lu et al., 2024)<!-- key: Lu2024 -->; (Xie et al., 2025)<!-- key: Xie2025 -->. The thermal stability of any quantum state is determined by its characteristic energy gap, which must significantly exceed the ambient thermal energy ($k_B T$) to prevent thermal fluctuations from destroying the quantum phase. Since room-temperature operation (T ≈ 300 K) corresponds to a thermal energy of $k_B T \approx 26$ meV, a viable system must possess a topological energy gap much larger than this value. Current FCI systems, however, exhibit topological gaps on the scale of a few Kelvin, corresponding to sub-meV energy scales, representing a gap of approximately two orders of magnitude that must be bridged (Park et al., 2023)<!-- key: Park2023 -->; (Lu et al., 2024)<!-- key: Lu2024 -->.
+
+#### 3.1.1 Falsifiable Hypothesis for Overcoming the Temperature Gap
+
+To address this critical challenge, a clear, testable hypothesis must be validated. The central hypothesis is that it is physically possible to engineer an intrinsic quantum medium that hosts a Fractional Chern Insulator state with a topological energy gap exceeding 26 meV. A direct validation protocol involves fabricating a candidate material system (e.g., twisted MoTe₂ on a high-$\kappa$ substrate) and measuring its longitudinal resistance ($R_{xx}$) as a function of temperature ($T$) at the center of the FCI plateau. By creating an Arrhenius plot of $\ln(R_{xx})$ versus $1/T$, the slope in the thermally activated regime is proportional to $-\Delta_{\text{topo}}/2k_B$, allowing the topological gap, $\Delta_{\text{topo}}$, to be extracted. The hypothesis would be falsified if, after exploring a wide parameter space of materials, dielectric environments, and strain conditions, the maximum achievable gap consistently saturates at a value significantly below 26 meV.
+
+### 3.2 The Non-Abelian Statistics Gap: Verifying the Computational Substrate
+
+The second critical gap for realizing a universal topological quantum computer is the verification of its computational basis. The observation of a fractionally quantized Hall plateau is a necessary prerequisite but is not sufficient to prove the system’s utility for universal TQC (Xie et al., 2025)<!-- key: Xie2025 -->. Such computation requires the ability to process information by braiding non-Abelian anyons, whose exchange statistics are described by non-commutative matrices. While the surveyed literature confirms the existence of fractional states (e.g., at $\nu=2/3$), it provides no direct experimental evidence that the quasiparticle excitations in these systems possess the required non-Abelian braiding statistics (Park et al., 2023)<!-- key: Park2023 -->; (Lu et al., 2024)<!-- key: Lu2024 -->; (Xie et al., 2025)<!-- key: Xie2025 -->.
+
+#### 3.2.1 Falsifiable Hypothesis for Verifying Non-Abelian Statistics
+
+A definitive experiment is required to confirm the computational nature of the observed FCI states. The guiding hypothesis is that the quasiparticle excitations of the $\nu=2/3$ FCI state in a candidate material (e.g., twisted MoTe₂) exhibit non-Abelian braiding statistics consistent with Fibonacci anyons. The validation protocol for this hypothesis involves constructing a Fabry-Pérot interferometer from the FCI material, which typically consists of two quantum point contacts (QPCs) that define a cavity. By measuring the interferometer’s conductance as a function of both the cavity area and an enclosed test charge, one can analyze the resulting interference patterns for phase slips. The hypothesis would be falsified if the measured patterns are fully consistent with the predictions for Abelian statistics and inconsistent with the unique signatures predicted for non-Abelian anyons.
+
+## 4.0 Proposed R&D Thrusts to Bridge the Gaps
+
+### 4.1 Thrust 1: Aggressive Gap Engineering
+
+#### 4.1.1 Sub-Thrust 1.1: Dielectric Engineering to Enhance Coulomb Interactions
+
+The magnitude of the topological gap in FCI systems is theoretically proportional to the strength of the Coulomb interactions ($U$) relative to the kinetic energy ($K$). A direct method to enhance $U$ is to reduce the dielectric screening from the environment. This research thrust proposes the systematic fabrication and measurement of leading FCI platforms (twisted MoTe₂ and RMG) on a variety of high-$\kappa$ dielectric substrates, most notably SrTiO₃ (Park et al., 2023)<!-- key: Park2023 -->; (Xie et al., 2025)<!-- key: Xie2025 -->. The primary goal is to quantify the increase in the topological gap as a function of the substrate’s dielectric constant, thereby validating this approach as a viable path toward room-temperature operation.
+
+#### 4.1.2 Sub-Thrust 1.2: Strain Engineering for Band Flattening
+
+The ratio $U/K$ can also be increased by quenching the kinetic energy $K$, which is achieved by making the electronic bands as flat as possible. Applying tunable uniaxial or biaxial strain to moiré heterostructures is a known method for controllably modifying and flattening the band structure. This thrust proposes developing an apparatus to apply in-situ tunable strain to moiré systems like twisted MoTe₂ and measuring the resulting effect on the FCI energy gap (Park et al., 2023)<!-- key: Park2023 -->; (Cai et al., 2025)<!-- key: Cai2025 -->. This provides a complementary and potentially synergistic method to dielectric engineering for maximizing the topological gap.
+
+### 4.2 Thrust 2: Direct Experimental Verification of Non-Abelian Statistics
+
+To prove that FCI platforms are viable for universal computation, the non-Abelian nature of their excitations must be experimentally confirmed. This research thrust proposes the development and fabrication of interferometry devices, such as quantum point contact-based Fabry-Pérot interferometers, specifically designed for the most promising large-gap FCI material identified in Thrust 1. The primary experimental goal is to measure the interference patterns resulting from braiding operations on the $\nu=2/3$ FCI state and compare them to the distinct theoretical predictions for Abelian vs. non-Abelian anyons (Xie et al., 2025)<!-- key: Xie2025 -->. A conclusive result from this experiment would definitively close the Non-Abelian Statistics Gap.
+
+## 5.0 Limitations, Risks, and Counterarguments
+
+### 5.1 Material Science and Phase Competition Risks
+
+The proposed research thrusts are based on several core assumptions that may not hold true. A primary risk is that enhancing Coulomb interactions or flattening bands, while intended to increase the FCI gap, could instead preferentially stabilize a competing, non-topological phase like an antiferromagnet or a charge density wave (Cai et al., 2025)<!-- key: Cai2025 -->. The application of strain, while beneficial for band flattening, may introduce significant lattice disorder, which could destroy the delicate FCI state altogether (Cai et al., 2025)<!-- key: Cai2025 -->. Furthermore, high-$\kappa$ dielectrics like SrTiO₃ could introduce new scattering channels (e.g., from soft phonon modes) that suppress electron mobility and degrade the quality of the FCI state. Finally, the foundational theoretical prediction that the $\nu=2/3$ state hosts computationally universal Fibonacci anyons may be incorrect for these specific material systems; the state could host a different, less powerful non-Abelian group (like Ising anyons) or could be Abelian.
+
+### 5.2 Experimental and Interpretive Risks
+
+Significant experimental and interpretive challenges must also be acknowledged. The fabrication of high-quality interferometers in complex 2D heterostructures is an extreme technical challenge; device failure or poor performance may prevent a conclusive measurement of braiding statistics. A significant risk of circularity exists in the interpretation of complex interferometry data. The signatures of non-Abelian braiding can be subtle and may be difficult to distinguish from classical Coulomb effects or other experimental artifacts without pre-supposing the existence of the very statistics one is trying to prove. Finally, extracting the energy gap from thermal activation data can be unreliable if multiple transport mechanisms are active at different temperatures, leading to an incorrect estimation of the gap size.
+
+---
+## Glossary
+
+**Fractional Chern Insulator (FCI):** A zero-field topological state of matter in a Chern band, analogous to the Fractional Quantum Hall Effect, characterized by fractional Hall quantization and topological order.
+
+**Fibonacci Anyon:** A type of non-Abelian anyon whose braiding statistics are described by the golden ratio; its fusion rules enable universal topological quantum computation.
+
+**Moiré Superlattice:** A long-period interference pattern formed by stacking two 2D crystals with a small twist angle or lattice mismatch, used to engineer flat electronic bands.
+
+**Topological Energy Gap ($\Delta_{\text{topo}}$):** The energy separation between the ground state manifold and the first excited state in a topologically ordered phase; determines thermal stability.
+
+**Rhombohedral Multilayer Graphene (RMG):** A stacking configuration of graphene layers that intrinsically hosts topologically non-trivial flat bands near charge neutrality.
+
+---
+## References
+
+Cai, J., et al. (2025). Evidence of competing ground states between fractional Chern insulator and antiferromagnetism in moiré MoTe₂. http://arxiv.org/abs/2503.13213
+
+Lu, Z.-D., Han, T.-Y., Zhang, Y.-H., et al. (2024). Fractional Quantum Anomalous Hall Effect in a Graphene Moiré Superlattice. *Science*. https://doi.org/10.48550/arXiv.2309.17436
+
+Park, H., Cai, J., Anderson, E., et al. (2023). Observation of Fractionally Quantized Anomalous Hall Effect. http://arxiv.org/abs/2308.02657
+
+Xie, J., Huo, Z., Lu, X., et al. (2025). Tunable Fractional Chern Insulators in Rhombohedral Graphene Superlattices. *Nature Materials*. http://dx.doi.org/10.1038/s41563-025-02225-7
+
+Zhou, B., Yang, H., & Zhang, Y.-H. (2023). Fractional quantum anomalous Hall effects in rhombohedral multilayer graphene in the moiréless limit and in Coulomb imprinted superlattice. http://arxiv.org/abs/2311.04217
