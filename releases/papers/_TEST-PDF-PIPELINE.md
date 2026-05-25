@@ -1,12 +1,11 @@
-# PDF Pipeline Test v2
+# PDF Pipeline Test v3
 
 **Date:** 2026-05-25
-**Status:** Testing Linux browser fix in find_browser()
-
-## Purpose
-This file triggers the build-pdfs.yml workflow with the updated build_pdf.py that now supports Linux browsers (google-chrome, chromium-browser).
+**Status:** Testing find-based paper detection + Linux browser fix
 
 ## Math Test
 d(x, y) = p^{-v_p(x - y)}
 
-If this PDF builds successfully, the cross-platform find_browser() fix works.
+\int_{\mathbb{Q}_p} f(x) \, d\mu(x)
+
+Build should succeed now with both fixes applied.
