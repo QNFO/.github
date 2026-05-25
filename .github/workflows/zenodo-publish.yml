@@ -1,0 +1,103 @@
+name: Zenodo DOI Registration
+
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true
+        type: string
+        description: "Publication title"
+      author:
+        required: true
+        type: string
+        default: "Quni-Gudzinas, Rowan Brad"
+      file_path:
+        required: true
+        type: string
+        description: "Path to the file to upload"
+      abstract:
+        required: false
+        type: string
+        default: ""
+        description: "Publication abstract"
+      keywords:
+        required: false
+        type: string
+        default: "ultrametric,quantum-computing,QWAV"
+      sandbox:
+        required: false
+        type: boolean
+        default: false
+        description: "Use Zenodo sandbox (no real DOI)"
+      communities:
+        required: false
+        type: string
+        default: ""
+    secrets:
+      ZENODO_TOKEN:
+        required: true
+    outputs:
+      doi:
+        description: "The registered DOI"
+        value: ${{ jobs.publish.outputs.doi }}
+      zenodo_id:
+        description: "The Zenodo deposition ID"
+        value: ${{ jobs.publish.outputs.zenodo_id }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    outputs:
+      doi: ${{ steps.publish.outputs.doi }}
+      zenodo_id: ${{ steps.publish.outputs.zenodo_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: QNFO/zenodo-automation
+          path: zenodo-automation
+
+      - uses: actions/checkout@v4
+        with:
+          path: source-repo
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Publish to Zenodo
+        id: publish
+        run: |
+          ARGS="--token ${{ secrets.ZENODO_TOKEN }}"
+          ARGS="$ARGS --title \"${{ inputs.title }}\""
+          ARGS="$ARGS --author \"${{ inputs.author }}\""
+          ARGS="$ARGS --file \"source-repo/${{ inputs.file_path }}\""
+          if [ -n "${{ inputs.abstract }}" ]; then
+            ARGS="$ARGS --abstract \"${{ inputs.abstract }}\""
+          fi
+          if [ -n "${{ inputs.keywords }}" ]; then
+            ARGS="$ARGS --keywords \"${{ inputs.keywords }}\""
+          fi
+          if [ -n "${{ inputs.communities }}" ]; then
+            ARGS="$ARGS --communities \"${{ inputs.communities }}\""
+          fi
+          if [ "${{ inputs.sandbox }}" = "true" ]; then
+            ARGS="$ARGS --sandbox"
+          fi
+
+          OUTPUT=$(python zenodo-automation/zenodo_publish.py $ARGS)
+          echo "$OUTPUT" | tee zenodo_output.txt
+
+          DOI=$(echo "$OUTPUT" | grep -oP 'doi\.org/\K10\.\d{4,9}/zenodo\.\d+' || echo "")
+          if [ -z "$DOI" ]; then
+            DOI=$(echo "$OUTPUT" | grep -oP 'DOI:?\s*\K10\.\d{4,9}/zenodo\.\d+' || echo "")
+          fi
+          echo "doi=$DOI" >> $GITHUB_OUTPUT
+
+          ZENODO_ID=$(echo "$DOI" | grep -oP '\d+$' || echo "")
+          echo "zenodo_id=$ZENODO_ID" >> $GITHUB_OUTPUT
+
+      - name: Report failure
+        if: failure()
+        run: |
+          echo "Zenodo publication failed. Check logs above."
+          echo "Ensure ZENODO_TOKEN has deposit:actions and deposit:write scopes."
