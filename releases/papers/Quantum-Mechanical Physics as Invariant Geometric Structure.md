@@ -73,7 +73,7 @@ The fine-structure constant $\alpha$ equals the ratio of two lengths:
 
 $$\alpha = \frac{r_e}{\bar{\lambda}_C} \approx \frac{2.82 \times 10^{-15} \text{ m}}{3.86 \times 10^{-13} \text{ m}} \approx \frac{1}{137.036}$$
 
-where $r_e$ is the classical electron radius (a measure of how strongly the electron interacts with electromagnetic fields) and $\bar{\lambda}_C$ is the reduced Compton wavelength (the scale at which quantum effects become important for the electron). This is an algebraic identity—not a theory, not an interpretation. It is true by definition of the quantities involved. `[CODE-EXECUTED]`
+where $r_e$ is the classical electron radius (a measure of how strongly the electron interacts with electromagnetic fields) and $\bar{\lambda}_C$ is the reduced Compton wavelength (the scale at which quantum effects become important for the electron). This is an algebraic identity—not a theory, not an interpretation. It is true by definition of the quantities involved. ``
 
 ### 1.2 What Follows From This Observation
 
@@ -88,12 +88,12 @@ When we apply the same logic to every known particle:
 ### 1.3 What Is Established vs. What Is Interpretation
 
 **Established facts:**
-1. $\alpha = r_e / \bar{\lambda}_C$ is an algebraic identity `[CODE-EXECUTED]`
-2. This can be written as a cross-ratio $(0, \infty; r_e, \bar{\lambda}_C)$ `[CODE-EXECUTED]`
-3. Both $r_e$ and $\bar{\lambda}_C$ are proportional to $1/\omega_e$ `[CODE-EXECUTED]`
+1. $\alpha = r_e / \bar{\lambda}_C$ is an algebraic identity ``
+2. This can be written as a cross-ratio $(0, \infty; r_e, \bar{\lambda}_C)$ ``
+3. Both $r_e$ and $\bar{\lambda}_C$ are proportional to $1/\omega_e$ ``
 4. Every massive particle has a Compton frequency $\omega = m c^2 / \hbar$ (definitional, from $E = \hbar\omega$)
-5. A scan of 600 combinations of known length scales finds no non-tautological expression for $m_p/m_e$ `[CODE-EXECUTED]`
-6. Precision measurements of $\alpha$ proceed through rational numbers (ratios of integer counts)
+5. A scan of 600 combinations of known length scales finds no non-tautological expression for $m_p/m_e$ ``
+6. Precision measurements of $\alpha$ Proceed through rational numbers (ratios of integer counts)
 
 **Interpretation:**
 - Treating frequencies as more fundamental than masses is a conceptual choice, not a physical claim—both pictures produce identical numerical predictions
@@ -163,11 +163,11 @@ From the electron’s Compton frequency $\omega_e$, two characteristic lengths e
 
 **Reduced Compton wavelength** $\bar{\lambda}_C = c / \omega_e$:
 - The scale where quantum field theory becomes necessary
-- `[CODE-EXECUTED]`: $\bar{\lambda}_C^{(e)} = 3.861593 \times 10^{-13}$ m
+- ``: $\bar{\lambda}_C^{(e)} = 3.861593 \times 10^{-13}$ m
 
 **Classical electron radius** $r_e = \alpha \cdot c / \omega_e$:
 - The scale where electromagnetic self-energy equals rest energy
-- `[CODE-EXECUTED]`: $r_e = 2.817940 \times 10^{-15}$ m
+- ``: $r_e = 2.817940 \times 10^{-15}$ m
 
 Their ratio is $\alpha$:
 
@@ -192,7 +192,7 @@ For $\alpha$, the four points are:
 
 $$\alpha = (0, \infty; r_e, \bar{\lambda}_C) = \frac{r_e}{\bar{\lambda}_C}$$
 
-`[CODE-EXECUTED]`—Verified to 15 decimal places.
+``—Verified to 15 decimal places.
 
 Because a cross-ratio is invariant under coordinate changes, $\alpha$ does not depend on what units we use or where we place the origin of our coordinate system. This invariance is why $\alpha$ is a genuine physical constant: dimensionful quantities change when units change; only their dimensionless ratio is invariant.
 
@@ -202,7 +202,7 @@ For the electron, muon, and tau, the classical radius and Compton wavelength bot
 
 $$\frac{r_e}{\bar{\lambda}_C^{(e)}} = \frac{r_\mu}{\bar{\lambda}_C^{(\mu)}} = \frac{r_\tau}{\bar{\lambda}_C^{(\tau)}} = \alpha$$
 
-`[CODE-EXECUTED]`—$\alpha_e = \alpha_\mu = 0.007297352573749$ to machine precision.
+``—$\alpha_e = \alpha_\mu = 0.007297352573749$ to machine precision.
 
 > **A note on running:** The value discussed here is the low-energy, Thomson-limit $\alpha(0) \approx 1/137.036$. At higher probing frequencies—such as the Z boson mass scale—$\alpha$ runs to approximately $1/127.95$, a 7.1% increase. This energy-dependence is discussed in §8. The Type I universality described here holds for the Thomson-limit value: $r_\ell/\bar{\lambda}_C^{(\ell)} = e^2/(4\pi\varepsilon_0\hbar c)$ is identically equal for all charged leptons because the classical radius definition uses the same bare electromagnetic coupling, regardless of the lepton mass.
 
@@ -248,7 +248,7 @@ The mass cancels identically. $\alpha$ is a property of the electromagnetic inte
 
 **Key property:** These encode how different sectors of physics relate to each other.
 
-`[CODE-EXECUTED]`—All numerical values verified in Appendix A.
+``—All numerical values verified in Appendix A.
 
 ---
 
@@ -269,7 +269,7 @@ The mass cancels identically. $\alpha$ is a property of the electromagnetic inte
 | $h$ (Higgs boson) | $125.2$ GeV$/c^2$ | $1.90 \times 10^{26}$ |
 | (Planck scale) | $1.22 \times 10^{19}$ GeV$/c^2$ | $1.85 \times 10^{43}$ |
 
-`[CODE-EXECUTED]`—See Appendix A.
+``—See Appendix A.
 
 ### 5.2 The ~26 Numbers That Specify Our Universe
 
@@ -327,7 +327,7 @@ All 300 unordered pairs were tested for both ratio directions (A/B and B/A), yie
 
 The 5% threshold is chosen as a conservative first-pass filter: it is wide enough to capture physically suggestive relationships without being so narrow as to miss structure that might be blurred by QCD systematic uncertainties (lattice QCD observables carry 1–5% errors), yet tight enough that a null result (no match for mass ratios among 600 combinations at this tolerance) is informative.
 
-`[CODE-EXECUTED]`—Full scan in 0.7.py.
+``—Full scan in 0.7.py.
 
 **Operational definition of “non-tautological”:** A ratio is non-tautological if the two length scales involved are independently characterizable—measured by distinct experimental techniques that do not presuppose knowledge of the quantity being tested. A ratio is tautological if it restates a known relationship in different units without adding independent physical information (e.g., $\bar{\lambda}_C^{(e)} / \bar{\lambda}_C^{(p)} = m_p/m_e$ follows from $\bar{\lambda}_C \propto 1/m$ and is therefore a restatement of the mass ratio in wavelength units). The computational scan conservatively classifies Compton wavelength ratios and classical-radius ratios between leptons as tautological or structurally equivalent.
 
@@ -373,7 +373,7 @@ Converting to frequencies:
 
 $$\omega_f = y_f \cdot \frac{v c^2}{\hbar \sqrt{2}} = y_f \cdot \omega_H$$
 
-where the Higgs frequency is $\omega_H \approx 2.64 \times 10^{26}$ rad/s. `[CODE-EXECUTED]`
+where the Higgs frequency is $\omega_H \approx 2.64 \times 10^{26}$ rad/s. ``
 
 The Yukawa couplings become dimensionless ratios $y_f = \omega_f / \omega_H$—Type II cross-ratios of the Higgs frequency. This makes them natural targets for the cross-ratio program: if any Yukawa coupling can be expressed as a cross-ratio of independently characterizable scales, that would be progress toward explaining the mass hierarchy.
 
@@ -391,7 +391,7 @@ The energy scale at which a coupling is measured corresponds to a probing freque
 
 $$\alpha(\omega) = (0, \infty; r_e(\omega), \bar{\lambda}_C^{(e)})$$
 
-At the electron’s own frequency, $\alpha \approx 1/137.036$. At the Z boson’s frequency, $\alpha \approx 1/127.95$. The change is 7.1%. `[CODE-EXECUTED]`
+At the electron’s own frequency, $\alpha \approx 1/137.036$. At the Z boson’s frequency, $\alpha \approx 1/127.95$. The change is 7.1%. ``
 
 The renormalization group equation becomes, in this language, $\omega \cdot d\alpha/d\omega = \beta(\alpha)$—a “frequency flow” describing how the cross-ratio changes as we probe at different fundamental frequencies.
 
@@ -563,15 +563,15 @@ The research program this document belongs to makes specific, falsifiable claims
 
 | Claim                                                                       | Basis |
 |:------|:------|
-| $\alpha = r_e / \bar{\lambda}_C$                                            | Algebraic identity; `[CODE-EXECUTED]` |
-| This is a cross-ratio $(0, \infty; r_e, \bar{\lambda}_C)$                   | Projective geometry; `[CODE-EXECUTED]` |
-| $\alpha$ is identical for all charged leptons                               | $r_\ell / \bar{\lambda}_C^{(\ell)}$ independent of mass; `[CODE-EXECUTED]` |
+| $\alpha = r_e / \bar{\lambda}_C$                                            | Algebraic identity; `` |
+| This is a cross-ratio $(0, \infty; r_e, \bar{\lambda}_C)$                   | Projective geometry; `` |
+| $\alpha$ is identical for all charged leptons                               | $r_\ell / \bar{\lambda}_C^{(\ell)}$ independent of mass; `` |
 | Every massive particle has $\omega = m c^2 / \hbar$                         | From $E = \hbar\omega$ and $E = mc^2$ |
 | Precision measurements use rational observables                             | Documented experimental practice |
-| No non-tautological cross-ratio for $m_p/m_e$ among 600 tested combinations | `[CODE-EXECUTED]` |
-| Higgs mechanism → $\omega_f = y_f \cdot \omega_H$                           | Standard Model algebra; `[CODE-EXECUTED]` |
+| No non-tautological cross-ratio for $m_p/m_e$ among 600 tested combinations | `` |
+| Higgs mechanism → $\omega_f = y_f \cdot \omega_H$                           | Standard Model algebra; `` |
 | Adelic product formula holds for rational numbers                           | Number theory theorem |
-| $m = \omega$ established in prior work                                      | `[EXTERNAL-SOURCE: Archive MASS-FREQUENCY]` |
+| $m = \omega$ established in prior work                                      | `` |
 
 ### 14.2 Speculative
 
@@ -739,7 +739,7 @@ ratio3 = lambda_mu / L_fpi
 print(f"  lambda_mu / L_fpi     = {ratio3:.6f} vs m_W/m_Z = {m_W/m_Z:.6f} ({abs(ratio3-m_W/m_Z)/(m_W/m_Z)*100:.2f}% off)")
 
 print("\n" + "=" * 65)
-if ok: print("ALL ASSERTIONS PASSED [CODE-EXECUTED]")
+if ok: print("ALL ASSERTIONS PASSED ")
 else: print("SOME ASSERTIONS FAILED")
 print("=" * 65)
 ```
