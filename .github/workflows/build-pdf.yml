@@ -1,0 +1,39 @@
+name: Build PDF
+
+on:
+  workflow_dispatch:
+    inputs:
+      paper_path:
+        description: "Path to markdown file (e.g., publications/2026/05/Paper.md)"
+        required: true
+        type: string
+      title:
+        description: "Publication title for PDF metadata"
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build PDF
+        uses: docker://pandoc/latex:latest
+        with:
+          args: >
+            ${{ github.event.inputs.paper_path }}
+            --from=markdown+yaml_metadata_block+tex_math_dollars
+            --to=pdf
+            --pdf-engine=xelatex
+            --template=eisvogel
+            --metadata=colorlinks:true
+            --metadata=linkcolor:blue
+            --metadata=title:"${{ github.event.inputs.title || github.event.inputs.paper_path }}"
+            --output=publication.pdf
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-pdf
+          path: publication.pdf
