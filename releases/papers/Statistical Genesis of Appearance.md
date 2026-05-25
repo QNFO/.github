@@ -14,7 +14,7 @@ modified: 2026-05-14T14:12:05Z
 > **Version:** 0.16
 > **Date:** 2026-05-14
 > **DOI:** [10.5281/zenodo.20182909](https://doi.org/10.5281/zenodo.20182909)
-> **Supersedes:** All prior synthesis documents ($0.9.md$ and earlier). Incorporates all findings from companion explorations $0.10.md$ through $0.15.md$.
+> **Supersedes:** All prior synthesis documents ($[source file]$ and earlier). Incorporates all findings from companion explorations $[source file]$ through $[source file]$.
 > **Reading time:** ~45 minutes (full), ~15 minutes (essential sections only).
 
 ## 1. Preamble: What This Document Is
@@ -30,7 +30,7 @@ We do not prove this hypothesis. We clarify what it means, what would constitute
 ### 1.2 Scope and Boundaries
 
 **What this document does:**
-- Derives all key numbers from first principles using CODATA 2018 constants with code-level verification ($0.2.py$)
+- Derives all key numbers from first principles using CODATA 2018 constants with code-level verification ($[source file]$)
 - Presents the Central Limit Theorem (CLT) as the organizing principle behind dimensionless ratios in atomic physics
 - Systematically assesses four load-bearing gaps in the argument
 - Extends the framework to other dimensionless constants --- most notably the cosmological constant $\rho_\Lambda/\rho_{Pl} \approx 10^{-122}$
@@ -69,14 +69,14 @@ We do not prove this hypothesis. We clarify what it means, what would constitute
 This document supersedes:
 - $0.1.2.md$ --- Original synthesis (reader-tested, 8 issues found)
 - $0.1.3.md$ --- Revised synthesis
-- $0.9.md$ --- Definitive synthesis (11 sections, canonical through development phase)
+- $[source file]$ --- Definitive synthesis (11 sections, canonical through development phase)
 
-It incorporates findings from all companion explorations ($0.2.md$ through $0.15.md$).
+It incorporates findings from all companion explorations ($[source file]$ through $[source file]$).
 
 ### 1.5 Provenance of Claims
 
 Throughout this document:
-- $$ --- Verified by Python execution ($0.2.py$, 242 lines, 6/6 checks pass)
+- $$ --- Verified by Python execution ($[source file]$, 242 lines, 6/6 checks pass)
 - $$ --- Traced to cited references (CODATA 2018, published literature)
 - $$ --- Interpretive synthesis, not independently verified
 
@@ -180,7 +180,7 @@ The factor of $2\pi$ from the orbit circumference combines with the factor of $2
 
 ### 3.5 Verification
 
-All derivations are verified by $0.2.py$ (Python, 242 lines, standard library only, CODATA 2018). Six consistency checks pass:
+All derivations are verified by $[source file]$ (Python, 242 lines, standard library only, CODATA 2018). Six consistency checks pass:
 
 ```
 [PASS] a_0 formula 1 vs 2
@@ -225,7 +225,7 @@ Key differences from the classical CLT:
 | Precision scaling | $1/\sqrt{n}$ | $1/\sqrt{n}$ (same!) |
 | Physics applications | Classical statistics | Random matrices, quantum chaos |
 
-The free CLT is almost certainly the correct mathematical framework for any rigorous statistical emergence of quantum structure. We use the classical CLT throughout this document as a **structural analogy** --- the full free CLT treatment is deferred to external literature ($0.10.md$, queries Q3.1--Q3.2).
+The free CLT is almost certainly the correct mathematical framework for any rigorous statistical emergence of quantum structure. We use the classical CLT throughout this document as a **structural analogy** --- the full free CLT treatment is deferred to external literature ($[source file]$, queries Q3.1--Q3.2).
 
 ### 4.3 Layered CLT: The Organizing Metaphor
 
@@ -348,7 +348,7 @@ A naive CLT would predict a **Gaussian** ground state. The hydrogen ground state
 
 **Resolution:** The CLT applies to sums of random variables. The electron’s radial position is not a sum --- it is a magnitude. In the statistical genesis picture, the CLT convergence happens at the level of quantum field fluctuations that **produce** the effective potential in which the electron moves. The exponential ground state is the equilibrium distribution of the emergent dynamics --- which, by MaxEnt, is the right answer.
 
-The Poisson/MaxEnt connection ($0.5.md$) explores this in detail: the exponential ground state is consistent with statistical emergence, but through the MaxEnt route rather than the direct CLT route.
+The Poisson/MaxEnt connection ($[source file]$) explores this in detail: the exponential ground state is consistent with statistical emergence, but through the MaxEnt route rather than the direct CLT route.
 
 ### 8.3 Scale Separation: $\alpha \ll 1$
 
@@ -409,7 +409,7 @@ This $\beta$-function has **no known connection to the Central Limit Theorem.** 
 
 The permitted range from combined bounds: $3.18 \times 10^{-4} < \alpha < 1$, spanning a factor of $\sim 3{,}144\times$. The observed $\alpha = 1/137$ sits comfortably in the middle.
 
-**The chemistry bottleneck:** The real constraint is chemistry: what range of $\alpha$ permits a diverse periodic table, covalent bonding (C, O, N), and complex molecules? This constraint is **not yet quantified.** Computational studies (lattice QED, DFT with variable $\alpha$) are needed ($0.15.md$, Model 1).
+**The chemistry bottleneck:** The real constraint is chemistry: what range of $\alpha$ permits a diverse periodic table, covalent bonding (C, O, N), and complex molecules? This constraint is **not yet quantified.** Computational studies (lattice QED, DFT with variable $\alpha$) are needed ($[source file]$, Model 1).
 
 **Verdict:** Anthropic reasoning survives as a **bound** (“$\alpha$ must be small enough for stable atoms”) but not as a **prediction** (“$\alpha$ must be $1/137$”).
 
@@ -425,7 +425,7 @@ The permitted range from combined bounds: $3.18 \times 10^{-4} < \alpha < 1$, sp
 
 **What we don’t know:**
 - Can we distinguish Poisson (Fano = 1) from Gaussian fluctuations at the atomic scale?
-- $0.5.py$ shows: with $N \sim 10^2$--$10^3$ counts, Poisson and Gaussian are distinguishable. But we cannot count individual Compton events.
+- $[source file]$ shows: with $N \sim 10^2$--$10^3$ counts, Poisson and Gaussian are distinguishable. But we cannot count individual Compton events.
 
 **Verdict:** The MaxEnt connection is physically well-motivated. The Compton timescale barrier prevents current experimental falsification.
 
@@ -445,10 +445,10 @@ The permitted range from combined bounds: $3.18 \times 10^{-4} < \alpha < 1$, sp
 
 | Gap | Strength | Core Finding | Companion |
 |:----|:---------|:-------------|:----------|
-| RG Connection | $\star$ | QED $\beta$-function has no CLT connection; UV-flow gives partial salvage | $0.6.md$, $0.6.py$ |
-| Dyson Stability | $\star\star\star$ | $\alpha$ range spans 3,144$\times$; anthropic claim is bound, not prediction | $0.3.md$, $0.3.py$ |
-| Poisson/MaxEnt | $\star\star\star$ | Exponential = MaxEnt; Compton barrier blocks tests | $0.5.md$, $0.5.py$ |
-| QHE Universality | $\star\star$ | Double-edged; topological bridge; experiments cannot distinguish | $0.4.md$, $0.4.py$ |
+| RG Connection | $\star$ | QED $\beta$-function has no CLT connection; UV-flow gives partial salvage | $[source file]$, $[source file]$ |
+| Dyson Stability | $\star\star\star$ | $\alpha$ range spans 3,144$\times$; anthropic claim is bound, not prediction | $[source file]$, $[source file]$ |
+| Poisson/MaxEnt | $\star\star\star$ | Exponential = MaxEnt; Compton barrier blocks tests | $[source file]$, $[source file]$ |
+| QHE Universality | $\star\star$ | Double-edged; topological bridge; experiments cannot distinguish | $[source file]$, $[source file]$ |
 
 ---
 
@@ -475,7 +475,7 @@ The key parameter is **redundancy** $R_\delta$ --- the number of distinct enviro
 
 $$R_\delta = \frac{\text{accessible environment fragments}}{\text{minimum fragments needed}}$$
 
-Known values ($0.13.md$): $R_\delta \sim 10^3$--$10^8$ for photon scattering, $10^2$--$10^4$ for spin baths.
+Known values ($[source file]$): $R_\delta \sim 10^3$--$10^8$ for photon scattering, $10^2$--$10^4$ for spin baths.
 
 ### 10.4 Multiplication of Sample Size
 
@@ -525,7 +525,7 @@ This is the same pattern as the atom: the observable quantity equals the fundame
 
 ### 11.4 Other Constants Assessed
 
-$0.7.md$ systematically assessed six constants. Summary:
+$[source file]$ systematically assessed six constants. Summary:
 
 | Constant | Value | Rating | Key Limitation |
 |:---------|:------|:------:|:---------------|
@@ -573,7 +573,7 @@ The dimensionless constants are the reciprocals of the CLT sample sizes at each 
 
 ### 13.1 The Problem
 
-Layer 2 --- emergence of $SU(3)_C \times SU(2)_L \times U(1)_Y$ from the quantum-informational substrate --- has **no concrete statistical mechanism.** This is the “missing rung” ($0.11.md$).
+Layer 2 --- emergence of $SU(3)_C \times SU(2)_L \times U(1)_Y$ from the quantum-informational substrate --- has **no concrete statistical mechanism.** This is the “missing rung” ($[source file]$).
 
 ### 13.2 Why It’s Hard
 
@@ -616,13 +616,13 @@ The quantity being anthropically selected is not a fundamental coupling constant
 
 ### 14.3 Bound vs. Prediction
 
-The anthropic argument works as a **bound** but not a **prediction.** The chemistry constraint (what $\alpha$ permits complex molecules) remains the unquantified bottleneck ($0.14.md$).
+The anthropic argument works as a **bound** but not a **prediction.** The chemistry constraint (what $\alpha$ permits complex molecules) remains the unquantified bottleneck ($[source file]$).
 
 ---
 
 ## 15. Computational and Experimental Pathways
 
-### 15.1 Computational Models (from $0.15.md$)
+### 15.1 Computational Models (from $[source file]$)
 
 | Model | Priority | Feasibility | What It Would Test |
 |:------|:---------|:------------|:-------------------|
@@ -698,7 +698,7 @@ A theory substantiating the statistical genesis hypothesis would need to:
 ### 16.6 Open Questions
 
 1. **Why $\alpha \approx 1/137$ specifically?** Why not 1/100 or 1/200? No known mathematical significance.
-2. **Can the free CLT bridge the gap?** The free CLT ($0.12.md$) is the correct framework for non-commutative quantum variables. Can it constrain $\alpha$?
+2. **Can the free CLT bridge the gap?** The free CLT ($[source file]$) is the correct framework for non-commutative quantum variables. Can it constrain $\alpha$?
 3. **Does $1/\alpha$ vary across cosmological time?** Quasar spectra constrain $|\Delta\alpha/\alpha| < 10^{-6}$ over $\sim 10$ Gyr.
 4. **Is the cosmological constant’s counting causally connected to atomic-scale counting?** Both obey $\text{Observable} = \text{Grain} / N_{\text{eff}}$.
 5. **Can the chemistry constraint be quantified?** The most actionable near-term research program.
@@ -712,21 +712,21 @@ A theory substantiating the statistical genesis hypothesis would need to:
 
 | Document | Description |
 |:---------|:------------|
-| $0.2.md$ | Mathematical formalization --- full derivations, 11 sections |
-| $0.2.py$ | Python verification --- 242 lines, 6/6 checks pass |
-| $0.3.md$ + $0.3.py$ | Dyson stability exploration |
-| $0.4.md$ + $0.4.py$ | Quantum Hall Effect universality |
-| $0.5.md$ + $0.5.py$ | Poisson/MaxEnt statistics |
-| $0.6.md$ + $0.6.py$ | Renormalization Group connection |
-| $0.7.md$ | Beyond $\alpha$ --- other dimensionless constants |
-| $0.8.md$ | Spacetime emergence from quantum information |
-| $0.9.md$ | Definitive synthesis (superseded by this document) |
-| $0.10.md$ | Search Request Manifest --- 20 queries across 7 categories |
-| $0.11.md$ | The Missing Rung --- gauge symmetry emergence |
-| $0.12.md$ | Free CLT and non-commutative statistical genesis |
-| $0.13.md$ | Quantum Darwinism and redundancy proliferation |
-| $0.14.md$ | Anthropic bounds on the fine-structure constant |
-| $0.15.md$ | Computational model specification |
+| $[source file]$ | Mathematical formalization --- full derivations, 11 sections |
+| $[source file]$ | Python verification --- 242 lines, 6/6 checks pass |
+| $[source file]$ + $[source file]$ | Dyson stability exploration |
+| $[source file]$ + $[source file]$ | Quantum Hall Effect universality |
+| $[source file]$ + $[source file]$ | Poisson/MaxEnt statistics |
+| $[source file]$ + $[source file]$ | Renormalization Group connection |
+| $[source file]$ | Beyond $\alpha$ --- other dimensionless constants |
+| $[source file]$ | Spacetime emergence from quantum information |
+| $[source file]$ | Definitive synthesis (superseded by this document) |
+| $[source file]$ | Search Request Manifest --- 20 queries across 7 categories |
+| $[source file]$ | The Missing Rung --- gauge symmetry emergence |
+| $[source file]$ | Free CLT and non-commutative statistical genesis |
+| $[source file]$ | Quantum Darwinism and redundancy proliferation |
+| $[source file]$ | Anthropic bounds on the fine-structure constant |
+| $[source file]$ | Computational model specification |
 | $GENERAL-AUDIENCE.md$ | Layperson’s guide |
 
 ### External (Seminal Works)
@@ -751,6 +751,6 @@ A theory substantiating the statistical genesis hypothesis would need to:
 
 ---
 
-*All numerical values are $$ via $0.2.py$ (CODATA 2018). All interpretative claims are $$ --- proposed, not proven. This document is the capstone synthesis of the Statistical Genesis of Appearance project. It supersedes $0.9.md$ and all prior synthesis documents.*
+*All numerical values are $$ via $[source file]$ (CODATA 2018). All interpretative claims are $$ --- proposed, not proven. This document is the capstone synthesis of the Statistical Genesis of Appearance project. It supersedes $[source file]$ and all prior synthesis documents.*
 
 *The core thesis --- that dimensionless physical constants encode effective sample sizes of a cosmic statistical process --- remains unproven. This document has clarified what it means, what would support it, what would refute it, and what gaps must be filled for it to advance from structural analogy to physical theory.*
