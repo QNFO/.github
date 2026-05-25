@@ -1,0 +1,64 @@
+name: Regenerate Publication Catalog
+
+on:
+  push:
+    paths:
+      - 'releases/papers/**.md'
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate catalog index.md
+        run: |
+          import os, re
+
+          papers_dir = 'releases/papers'
+          papers = sorted([f for f in os.listdir(papers_dir) if f.endswith('.md') and f != 'index.md'])
+
+          lines = []
+          lines.append('# QNFO Legacy Publications Catalog')
+          lines.append('')
+          lines.append(f'**{len(papers)} papers** — migrated from Obsidian releases | [QNFO Org](https://github.com/QNFO) | [QWAV Hub](https://qnfo.github.io/QWAV/)')
+          lines.append('')
+          lines.append('These papers were originally published via Obsidian Publish and migrated to GitHub as a permanent archive.')
+          lines.append('**New publications** are stored in their native project repositories.')
+          lines.append('')
+          lines.append('| Title | Words | GitHub |')
+          lines.append('|:------|:-----|:-------|')
+
+          for fname in papers:
+              fpath = os.path.join(papers_dir, fname)
+              with open(fpath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+              words = len(re.findall(r'\b\w+\b', content))
+              title = fname.replace('.md', '')
+              encoded = fname.replace(' ', '%20')
+              lines.append(f'| [{title}]({encoded}) | ~{words:,} | [Read]({encoded}) |')
+
+          with open(os.path.join(papers_dir, 'index.md'), 'w', encoding='utf-8') as f:
+              f.write('\n'.join(lines))
+          
+          print(f'Catalog regenerated: {len(papers)} papers indexed')
+        shell: python
+      
+      - name: Commit updated catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add releases/papers/index.md
+          if git diff --cached --quiet; then
+            echo 'No catalog changes'
+          else
+            git commit -m 'auto: Regenerate publication catalog [skip ci]'
+            git push
+          fi
