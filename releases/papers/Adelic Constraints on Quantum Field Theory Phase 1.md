@@ -622,10 +622,10 @@ $$\frac{2}{\pi} \cdot g(a)^2 = \frac{g'(a) \cdot \beta_\infty(a)}{S(a)}$$
 
 | Label | Meaning |
 |:------|:--------|
-| `[CODE-EXECUTED]` | Verified by Python execution in this project—highest confidence |
-| `[LLM-INFERRED]` | Based on reasoning, training data, or synthesis—moderate confidence |
-| `[EXTERNAL-SOURCE: filename]` | From a source file in the project directory—verifiable against file |
-| `[UNVERIFIED-LLM]` | From LLM training data, not verified against a source file—unverified |
+| `` | Verified by Python execution in this project—highest confidence |
+| `` | Based on reasoning, training data, or synthesis—moderate confidence |
+| `` | From a source file in the project directory—verifiable against file |
+| `` | From LLM training data, not verified against a source file—unverified |
 
 ### Appendix D: Deliverables Index
 
