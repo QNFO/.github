@@ -98,7 +98,7 @@ $$d_C(a, c) \leq \max(d_C(a, b), d_C(b, c))$$
 
 **Theorem (Triadic rigidity):** For any three leaves, the two largest pairwise cophenetic distances are equal. `[DOI: 10.5281/zenodo.20213043]`
 
-The cophenetic distance IS the ultrametric distance on the Bruhat–Tits tree. The distinction between “Bruhat–Tits trees” and “cophenetic trees” is a framing choice — they are the same mathematical structure. The tree is Bruhat–Tits; the distance function is cophenetic. `[LLM-INFERRED — see q-pna/0.1.md §4 for full argument]`
+The cophenetic distance IS the ultrametric distance on the Bruhat–Tits tree. The distinction between “Bruhat–Tits trees” and “cophenetic trees” is a framing choice — they are the same mathematical structure. The tree is Bruhat–Tits; the distance function is cophenetic. `[LLM-INFERRED — see q-pna/[source file] §4 for full argument]`
 
 ### 2.3 $p$-Adic Valuation Encoding
 
@@ -142,7 +142,7 @@ The syntactic token calculus is built on Spencer-Brown’s Laws of Form (1969) p
 
 2. **Crossing (Involution):** `[[A]]` $\to$ A — an enclosure containing only another enclosure cancels. To cross a boundary twice is to uncross it. Corresponds to $\neg\neg A = A$.
 
-**Key insight (Q5 from `Ultrametric Intelligence/0.1.md`):** The Bruhat–Tits tree $\mathcal{T}_p$ is isomorphic to the set of all finite bracket expressions under Spencer-Brown’s calculus. Every token path in the tree is a normal form of some distinction expression. The LCA of two leaves is the longest common prefix of their normal forms. This means the distinction calculus IS the formal verification substrate for operations on the Bruhat–Tits tree.
+**Key insight (Q5 from `Ultrametric Intelligence/[source file]`):** The Bruhat–Tits tree $\mathcal{T}_p$ is isomorphic to the set of all finite bracket expressions under Spencer-Brown’s calculus. Every token path in the tree is a normal form of some distinction expression. The LCA of two leaves is the longest common prefix of their normal forms. This means the distinction calculus IS the formal verification substrate for operations on the Bruhat–Tits tree.
 
 ---
 
@@ -645,7 +645,7 @@ Both Q-PNA (AI) and UQC (Quantum Computing) operate on the same mathematical str
 - ✅ Ultrametric attention with $p$-adic valuation encoding: demonstrated in working Streamlit app (`ultrametric-ai-poc`)
 - ✅ Cophenetic distance ultrametric inequality: proven and computationally verified (`Tree Distance Cophenetic.md`)
 - ✅ Syntactic token calculus: book-length formal treatment exists (STC v2, v3)
-- ✅ Distinction calculus primitives: formalized (Spencer-Brown 1969, STC 0.1.md)
+- ✅ Distinction calculus primitives: formalized (Spencer-Brown 1969, STC [source file])
 - ✅ Cocycle verification: implemented and tested (`cocycle.py`)
 - ✅ Quantum side: two published papers with computational validation of error confinement
 
@@ -665,7 +665,7 @@ Both Q-PNA (AI) and UQC (Quantum Computing) operate on the same mathematical str
 
 7. **Hybrid architectures:** Can Q-PNA be combined with standard neural components? E.g., CNN for feature extraction $\to$ Q-PNA for classification with glass-box audit trail?
 
-8. **Distinction calculus bridge:** The five open questions from `Ultrametric Intelligence/0.1.md` remain open — the formal bridge between Spencer-Brown primitives and ultrametric attention has not been completed.
+8. **Distinction calculus bridge:** The five open questions from `Ultrametric Intelligence/[source file]` remain open — the formal bridge between Spencer-Brown primitives and ultrametric attention has not been completed.
 
 9. **Batch semantics:** The STC assumes single-token operations. Batch computation semantics for training efficiency have not been defined.
 
