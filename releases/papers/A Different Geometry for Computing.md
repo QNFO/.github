@@ -789,12 +789,12 @@ This document is a synthesis of six prior drafts produced during the development
 |:---|:---|:---|
 | `0.1.1.md` | Structured Findings | Systematic search of 12 publications; claims evidence matrix (Appendix B) |
 | `0.1.2.md` | Comprehensive Rebuttal | Claim-by-claim refutation; publication inventory (Appendix A) |
-| `0.2.md` | Rebuttal v2 | Parallel rebuttal (redundant with 0.1.2.md; provided alternate formatting) |
-| `0.3.md` | Consilience of Independent Lines | Formal six-line convergence argument; theorem catalog (Appendix C) |
+| `[source file]` | Rebuttal v2 | Parallel rebuttal (redundant with 0.1.2.md; provided alternate formatting) |
+| `[source file]` | Consilience of Independent Lines | Formal six-line convergence argument; theorem catalog (Appendix C) |
 | `0.3.1.md` | A Different Geometry for Computing | Early accessible version; contributed analogies and accessible framing |
-| `0.4.md` | A Different Geometry for Computing (Complete) | Primary narrative source; comprehensive introduction and six-roads synthesis |
+| `[source file]` | A Different Geometry for Computing (Complete) | Primary narrative source; comprehensive introduction and six-roads synthesis |
 
-**Note on `0.1.md` and `0.2.1.md`:** These documents were produced during a stress-testing phase designed to pressure-test the QWAV portfolio and identify weaknesses in the ultrametric computing framework. They served a valuable diagnostic function—the six claims in `0.1.md` provided the specification against which subsequent publications were developed. Their content is excluded from this compilation, which focuses on the scientific synthesis proper.
+**Note on `[source file]` and `0.2.1.md`:** These documents were produced during a stress-testing phase designed to pressure-test the QWAV portfolio and identify weaknesses in the ultrametric computing framework. They served a valuable diagnostic function—the six claims in `[source file]` provided the specification against which subsequent publications were developed. Their content is excluded from this compilation, which focuses on the scientific synthesis proper.
 
 *This document is self-contained. No prior knowledge of quantum computing, number theory, or any specialized field is assumed. Every term is defined before use. If a sentence would not make sense to someone who has never taken a quantum mechanics course, that sentence was revised or removed.*
 
