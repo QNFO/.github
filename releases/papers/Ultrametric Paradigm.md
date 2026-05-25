@@ -154,7 +154,7 @@ Different readers will find different entry points into this document. The follo
 
 **For physicists:** Begin with Chapter 1 (the measurement choice), then jump to Chapter 7 (quantum mechanics without probabilities) and Chapter 9 (from trees to spacetime). Return to Chapters 3–5 for the mathematical machinery once the physical motivation is clear. Chapter 8 (intrinsic fault tolerance) provides the connection to quantum computing.
 
-**For mathematicians:** Start with §1.2–§1.3 (the two ways to satisfy the triangle inequality) and Proceed directly to Chapters 3–5 for the Bruhat–Tits tree, Monna projection, and adele ring. Chapter 6 (prime distribution) will be immediately accessible. Chapter 12.2 (open problems) identifies several directions for mathematical development.
+**For mathematicians:** Start with §1.2–§1.3 (the two ways to satisfy the triangle inequality) and Continue directly to Chapters 3–5 for the Bruhat–Tits tree, Monna projection, and adele ring. Chapter 6 (prime distribution) will be immediately accessible. Chapter 12.2 (open problems) identifies several directions for mathematical development.
 
 **For computer scientists and engineers:** Chapter 2 (the threshold principle) and Chapter 8 (intrinsic fault tolerance) are your primary entry points. The worked Monna example in §4.2 demonstrates the projection mechanism that underlies the scrambling of computation-relevant information. Chapter 11.2 connects the tree structure to the architecture of meaning and computation.
 
