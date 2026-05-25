@@ -95,7 +95,7 @@ The value $\Gamma_2(1000)$ is the product of all odd integers from $1$ to $999$,
 
 $$\Gamma_2(1000) = \prod_{k=1}^{500} (2k-1) = 999!!.$$
 
-**[CODE-EXECUTED]** The computation yields a 1,284-digit positive integer:
+**** The computation yields a 1,284-digit positive integer:
 
 ```
 First 40 digits: 1007483297637508540040389173923035382503
@@ -108,7 +108,7 @@ The result was verified by independently computing the double factorial $999!!$ 
 
 ### 2.3 Benchmark: Scaling with $n$
 
-**[CODE-EXECUTED]** The following table reports digit counts and computation times for $\Gamma_2(n)$ at increasing $n$ (Python 3.12, standard big-integer arithmetic):
+**** The following table reports digit counts and computation times for $\Gamma_2(n)$ at increasing $n$ (Python 3.12, standard big-integer arithmetic):
 
 | $n$ | Digits of $|\Gamma_2(n)|$ | Time (ms) |
 |:-----|:----------------------------|:----------|
@@ -125,7 +125,7 @@ The time grows roughly as $O(n^2 \log n)$, consistent with the cost of multiplyi
 
 ### 2.4 Wilson Congruence Verification
 
-**[CODE-EXECUTED]** For primes $p \leq 31$, the congruence $\Gamma_p(p) \equiv (-1)^{p+1} \pmod{p}$ holds in every case. For odd $p$, $\Gamma_p(p) \bmod p = 1$ with no exceptions:
+**** For primes $p \leq 31$, the congruence $\Gamma_p(p) \equiv (-1)^{p+1} \pmod{p}$ holds in every case. For odd $p$, $\Gamma_p(p) \bmod p = 1$ with no exceptions:
 
 | $p$ | $\Gamma_p(p)$ | $(p-1)!$ | $\Gamma_p(p) \bmod p$ | $(p-1)! \bmod p$ |
 |:-----|:--------------|:---------|:----------------------|:-----------------|
@@ -145,7 +145,7 @@ Note: the congruence is on the **signed** value $\Gamma_p(p)$, not its absolute 
 
 ### 2.5 Small-Argument Values
 
-**[CODE-EXECUTED]** Table of $\Gamma_p(n)$ for small $p$ and $n$:
+**** Table of $\Gamma_p(n)$ for small $p$ and $n$:
 
 | $n$ | $\Gamma_2(n)$ | $\Gamma_3(n)$ | $\Gamma_5(n)$ | $\Gamma_7(n)$ |
 |:-----|:--------------|:--------------|:--------------|:--------------|
@@ -170,7 +170,7 @@ For $p=2$, $\Gamma_2(6)$ is not displayed because $n=6$ exceeds $p \times 3 = 6$
 
 ### 2.6 Divisibility Encoding Verified
 
-**[CODE-EXECUTED]** Equation (3) is verified for $p = 2,3,5,7$ and all $n \leq 10$:
+**** Equation (3) is verified for $p = 2,3,5,7$ and all $n \leq 10$:
 
 - For every case where $p \mid n$, the ratio $|\Gamma_p(n+1)/\Gamma_p(n)| = 1$.
 - For every case where $p \nmid n$, the ratio equals $n$.
@@ -194,7 +194,7 @@ $$B_\infty(a,b) \prod_{p \text{ prime}} B_p(a,b) = 1, \tag{6}$$
 
 ### 3.2 Partial Product Computation
 
-**[CODE-EXECUTED]** The following table computes $B_p(a,b)$ for $p = 2,3,5,7$ exactly as rational numbers, and evaluates the partial product $B_\infty \cdot B_2 \cdot B_3 \cdot B_5 \cdot B_7$:
+**** The following table computes $B_p(a,b)$ for $p = 2,3,5,7$ exactly as rational numbers, and evaluates the partial product $B_\infty \cdot B_2 \cdot B_3 \cdot B_5 \cdot B_7$:
 
 | $a$ | $b$ | $B_\infty(a,b)$ | $B_2(a,b)$ | $B_3(a,b)$ | $B_5(a,b)$ | $B_7(a,b)$ | Partial product |
 |:-----|:-----|:----------------|:-----------|:-----------|:-----------|:-----------|:----------------|
@@ -221,7 +221,7 @@ converges absolutely. In the standard formulation, the regularization exponents 
 
 ### 3.4 The Regularized Product Divergence — Numerical Evidence
 
-**[CODE-EXECUTED]** The following table computes $\prod_{p \leq 29} |\Gamma_p(x)|$ (the naive product, **without** the regularization factors $p^{\{x\}_p}$) and compares with the classical Gamma function $\Gamma(x)$:
+**** The following table computes $\prod_{p \leq 29} |\Gamma_p(x)|$ (the naive product, **without** the regularization factors $p^{\{x\}_p}$) and compares with the classical Gamma function $\Gamma(x)$:
 
 | $x$ | $\prod_{p \leq 29} |\Gamma_p(x)|$ | $\Gamma(x)$ | Ratio |
 |:-----|:--------------------------------|:------------|:------|
@@ -397,4 +397,4 @@ This computes $\Gamma_p(n)$ exactly for integer $n$. The function produces the c
 
 ---
 
-*Document generated 2026-05-11. All quantitative claims marked [CODE-EXECUTED] are verified by the Python implementation. Claims about the mathematical literature are labeled [LLM-INFERRED] where not directly verified against source files.*
+*Document generated 2026-05-11. All quantitative claims marked are verified by the Python implementation. Claims about the mathematical literature are labeled where not directly verified against source files.*
