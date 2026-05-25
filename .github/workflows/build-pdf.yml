@@ -18,6 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install eisvogel template
+        run: |
+          mkdir -p ~/.local/share/pandoc/templates
+          wget -q https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex \
+            -O ~/.local/share/pandoc/templates/eisvogel.latex
+
       - name: Build PDF
         uses: docker://pandoc/latex:latest
         with:
