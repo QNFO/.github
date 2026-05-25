@@ -136,7 +136,7 @@ The p-based world has no meaningful linear order—it is organized like a **tree
 
 A fundamental theorem (proved by Alexander Ostrowski in 1916) states that the real-number line and the p-based completions for each prime p are **all** the possible ways to complete the rational numbers into a system where every sequence that should converge actually does converge. There are no others. This means that to fully understand the fractions, you must consider the real line and all the p-based trees together—you cannot get away with just one.
 
-*Provenance: Ostrowski’s Theorem (1916). Standard number theory; see any graduate text on algebraic number theory. The numerical example using 12 is verified in source files 0.1.md through 0.14.md.*
+*Provenance: Ostrowski’s Theorem (1916). Standard number theory; see any graduate text on algebraic number theory. The numerical example using 12 is verified in source files [source file] through [source file].*
 
 ### 2.2 The Tree Structure in More Detail
 
@@ -189,7 +189,7 @@ This is the law of conservation of existence: if the total measure across all me
 
 Product: (12/5) × (1/4) × (1/3) × 5 = (12 × 1 × 1 × 5) / (5 × 4 × 3 × 1) = 60/60 = 1. ✓
 
-*Provenance: The product formula is a standard theorem in algebraic number theory. The numerical verification for 12/5 appears in source files 0.1.md, 0.2.md, and all subsequent versions. The characterization as a “conservation law” is an interpretive framing introduced in 0.1.md.*
+*Provenance: The product formula is a standard theorem in algebraic number theory. The numerical verification for 12/5 appears in source files [source file], [source file], and all subsequent versions. The characterization as a “conservation law” is an interpretive framing introduced in [source file].*
 
 ### 2.5 The Consistency Condition
 
@@ -224,7 +224,7 @@ This is a sub-exponential complexity: it grows faster than any polynomial in log
 
 We will now walk through each stage of this method and show how it instantiates the geometric picture described in Section 2. The core insight: **the Number Field Method works by collecting views from a finite set of prime-based measurement systems within a bounded continuous region, then reassembling the global picture using the reassembly theorem.**
 
-*Provenance: The Number Field Method (GNFS) was developed through a series of advances: the rational sieve, the quadratic sieve (Carl Pomerance, 1980s), and the number field sieve (John Pollard, 1988; developed by many researchers including Arjen Lenstra, Hendrik Lenstra, Mark Manasse, and others). The complexity constant (64/9)^(1/3) ≈ 1.923 is the standard heuristic estimate. The adelic interpretation is original to this document series (0.1.md onward).*
+*Provenance: The Number Field Method (GNFS) was developed through a series of advances: the rational sieve, the quadratic sieve (Carl Pomerance, 1980s), and the number field sieve (John Pollard, 1988; developed by many researchers including Arjen Lenstra, Hendrik Lenstra, Mark Manasse, and others). The complexity constant (64/9)^(1/3) ≈ 1.923 is the standard heuristic estimate. The adelic interpretation is original to this document series ([source file] onward).*
 
 ### 3.2 Stage 0: Choosing Which Measurement Systems to Inspect (Polynomial Selection)
 
@@ -297,7 +297,7 @@ The history of factoring algorithms can be seen as a progression toward fuller a
 
 Each advance improved the exponent in the complexity formula by accessing more of the complete-number structure more efficiently. The trajectory points toward a machine that accesses this structure natively.
 
-*Provenance: The historical progression is a standard narrative in computational number theory. The trajectory interpretation is original to this document series (0.4.md §5.10).*
+*Provenance: The historical progression is a standard narrative in computational number theory. The trajectory interpretation is original to this document series ([source file] §5.10).*
 
 ### 3.8 A Small Illustration
 
@@ -313,7 +313,7 @@ This is the adelic signature: collect local data from each measurement system, t
 
 The Number Field Method does not merely happen to work well. It works well **because** it approximates walking through the complete-number landscape. The algorithm did not invent this geometry. It discovered it. The adelic interpretation is a unifying narrative that explains *why* the method has the structure it has, and *why* the complexity takes the specific form it does—as an equilibrium between continuous and discrete contributions.
 
-*Provenance: The claim “the algorithm discovered the geometry, it did not invent it” is an interpretive framing from 0.2.md §3.6, reviewed and affirmed as “aesthetically/philosophically valid, not mathematically provable” in REVIEW_AND_ROADMAP.md §1.2.*
+*Provenance: The claim “the algorithm discovered the geometry, it did not invent it” is an interpretive framing from [source file] §3.6, reviewed and affirmed as “aesthetically/philosophically valid, not mathematically provable” in REVIEW_AND_ROADMAP.md §1.2.*
 
 ---
 
@@ -351,7 +351,7 @@ The mathematical tool that connects the discrete tree to the continuous line is 
 
 **The measurement analogy.** When we “measure” a physical system, we are applying a projection of this type: we take a discrete state (a specific tree vertex) and project it onto a continuous readout (a real number on a dial). The projection is lossy—many different tree vertices produce the same measurement reading. After the measurement, we cannot recover the exact tree vertex. We can only say: the system was in one of the vertices that project to the observed reading. This uncertainty is not a fact about reality—it is a fact about our measurement process. The reality was definite. Our knowledge of it is not.
 
-*Provenance: The projection map (Monna map) was studied by A. F. Monna and others in the context of p-adic analysis. Its properties—continuity, surjectivity, measure preservation, non-injectivity, and nowhere-differentiability—are mathematically established. The interpretation of this map as a measurement model is original to this document series (first appearing in 0.1.1.md, developed in 0.3.md §4.3).*
+*Provenance: The projection map (Monna map) was studied by A. F. Monna and others in the context of p-adic analysis. Its properties—continuity, surjectivity, measure preservation, non-injectivity, and nowhere-differentiability—are mathematically established. The interpretation of this map as a measurement model is original to this document series (first appearing in 0.1.1.md, developed in [source file] §4.3).*
 
 ### 4.4 Superposition as Coarse-Graining: The Seven-Step Argument
 
@@ -410,7 +410,7 @@ The tree-based picture has structural similarities to several existing interpret
 
 The tree picture is closest to the Spekkens toy theory, in which an epistemic restriction generates quantum-like behavior. In our case, the epistemic restriction is the conservation law: the total measure across all measurement systems must be 1. This constraint on knowledge creates the appearance of superposition, interference, and uncertainty, even though the underlying reality is deterministic and tree-based.
 
-*Provenance: The tree ontology and the seven-step argument are original to this document series (first appearing in 0.3.md §4). The comparison to Bohm, Spekkens, Everett, and Rovelli is developed in 0.4.md §4.8 and 0.7.md §4.8.*
+*Provenance: The tree ontology and the seven-step argument are original to this document series (first appearing in [source file] §4). The comparison to Bohm, Spekkens, Everett, and Rovelli is developed in [source file] §4.8 and [source file] §4.8.*
 
 ---
 
@@ -480,7 +480,7 @@ The inequalities discovered by John Bell in 1964 are violated in the tree pictur
 
 The theorem is evaded because one of its essential premises does not hold in the tree picture. The violation arises not from an ad hoc fix but from the core architectural feature of the theory: the conservation law that links all measurement perspectives.
 
-*Provenance: The PBR theorem is from Pusey, Barrett, and Rudolph, Nature Physics 8, 475-478 (2012). The tree ontology’s response—violation of PIP via the product formula—is original to this document series (first appearing in 0.5.md §1). The comparison to Spekkens’ toy theory is in 0.5.md §1.5. The structural analysis comparing the cost to Bohmian nonlocality is in 0.5.md §1.6.*
+*Provenance: The PBR theorem is from Pusey, Barrett, and Rudolph, Nature Physics 8, 475-478 (2012). The tree ontology’s response—violation of PIP via the product formula—is original to this document series (first appearing in [source file] §1). The comparison to Spekkens’ toy theory is in [source file] §1.5. The structural analysis comparing the cost to Bohmian nonlocality is in [source file] §1.6.*
 
 ### 5.6 Deriving the Probability Rule from Tree Geometry
 
@@ -510,7 +510,7 @@ This is the natural probability rule for any model where states encode knowledge
 
 **Verification for complete ignorance.** If the epistemic set is the entire tree (complete ignorance—the maximally mixed state), then the probability of outcome I equals the measure of the set of vertices projecting to I, which equals the length of I (by the measure-preservation property of the projection map). This is the uniform distribution—the correct prediction.
 
-*Provenance: The measure-theoretic probability rule is derived in 0.5.md §2.2. The verification for uniform preparation uses the established measure-preservation property of the projection map.*
+*Provenance: The measure-theoretic probability rule is derived in [source file] §2.2. The verification for uniform preparation uses the established measure-preservation property of the projection map.*
 
 #### 5.6.3 From Measure Ratios to Squared Amplitudes
 
@@ -550,7 +550,7 @@ In the tree model, this requires the epistemic sets for these two states to be d
 
 The tree model can accommodate this by choosing the epistemic sets appropriately. The challenge—and this is an open problem—is to derive the specific subset structures from first principles without assuming the Hilbert space formalism.
 
-*Provenance: The constructive approach for qubits is developed in 0.5.md §2.3. The phase problem analysis is in 0.5.md §2.3 and expanded in 0.14.md §5.5.*
+*Provenance: The constructive approach for qubits is developed in [source file] §2.3. The phase problem analysis is in [source file] §2.3 and expanded in [source file] §5.5.*
 
 #### 5.6.5 The Path to Complex Amplitudes: Tree Symmetries
 
@@ -571,7 +571,7 @@ This connects to the deepest unification program in mathematics (discussed in Se
 
 This is a research program, not a completed derivation. But it provides a mathematically well-defined path from the tree model to complex amplitudes.
 
-*Provenance: The connection between tree automorphisms (PGL(2,Q_p)) and complex amplitudes is developed in 0.5.md §2.5 and significantly expanded in 0.12.md §5.5, 0.13.md, and 0.14.md §5.5. The representation theory of the tree’s symmetry group is standard mathematics.*
+*Provenance: The connection between tree automorphisms (PGL(2,Q_p)) and complex amplitudes is developed in [source file] §2.5 and significantly expanded in [source file] §5.5, [source file], and [source file] §5.5. The representation theory of the tree’s symmetry group is standard mathematics.*
 
 #### 5.6.6 Summary Table: What Is Derived vs. What Is Constructed
 
@@ -585,7 +585,7 @@ This is a research program, not a completed derivation. But it provides a mathem
 
 The tree picture currently reproduces the probability rule as a theorem about an epistemic model, not as a prediction from first principles. The missing step is the full derivation of complex amplitudes from the tree’s symmetry structure.
 
-*Provenance: This summary table is from 0.5.md §2.6, with status updates reflecting developments in 0.14.md §5.5.*
+*Provenance: This summary table is from [source file] §2.6, with status updates reflecting developments in [source file] §5.5.*
 
 ---
 
@@ -597,7 +597,7 @@ The tree-based picture makes a strong claim: that the complete-number geometry u
 
 We present seven independent lines of evidence, plus an eighth (bonus) line that emerged in later development. For each line, we assess its strength and its degree of independence from the others.
 
-*Provenance: The consilience method is from Whewell (1840). The seven-line structure was introduced in 0.4.md §5 and refined through all subsequent versions. The eighth line (Automorphic Fourier Transform) was added in 0.12.md.*
+*Provenance: The consilience method is from Whewell (1840). The seven-line structure was introduced in [source file] §5 and refined through all subsequent versions. The eighth line (Automorphic Fourier Transform) was added in [source file].*
 
 ### 6.2 Line 1: The Best Factoring Algorithm Accesses the Complete-Number Structure
 
@@ -615,7 +615,7 @@ The algorithm’s complexity emerges from the equilibrium between continuous and
 
 **Independence:** This line comes from algorithm design and computational number theory. It was developed independently of any physical considerations.
 
-*Provenance: The GNFS-to-adelic mapping is developed in 0.2.md §3 and refined through all subsequent versions. Reviewed in REVIEW_AND_ROADMAP.md §1.2.*
+*Provenance: The GNFS-to-adelic mapping is developed in [source file] §3 and refined through all subsequent versions. Reviewed in REVIEW_AND_ROADMAP.md §1.2.*
 
 ### 6.3 Line 2: The Projection Map as a Measurement Theory
 
@@ -631,7 +631,7 @@ The projection map was discovered by mathematicians studying p-based analysis, n
 
 **Independence:** This line comes from p-adic analysis, a field of pure mathematics developed without reference to quantum foundations.
 
-*Provenance: The projection map (Monna map) was studied by A. F. Monna and others in p-adic analysis. The measurement interpretation is developed in 0.3.md §4.3 and refined through subsequent versions. Reviewed in REVIEW_AND_ROADMAP.md §1.3.*
+*Provenance: The projection map (Monna map) was studied by A. F. Monna and others in p-adic analysis. The measurement interpretation is developed in [source file] §4.3 and refined through subsequent versions. Reviewed in REVIEW_AND_ROADMAP.md §1.3.*
 
 ### 6.4 Line 3: The Conservation Law Appears in Physics Independently
 
@@ -659,7 +659,7 @@ This is significant because holography is one of the most important ideas in con
 
 **Independence:** This line comes from holography and quantum gravity, fields developed independently of factoring algorithms and quantum foundations.
 
-*Provenance: Gubser et al., Journal of High Energy Physics (2017). The connection to our framework is developed in 0.4.md §5.5 and 0.7.md §7.4. Reviewed in REVIEW_AND_ROADMAP.md §1.4.*
+*Provenance: Gubser et al., Journal of High Energy Physics (2017). The connection to our framework is developed in [source file] §5.5 and [source file] §7.4. Reviewed in REVIEW_AND_ROADMAP.md §1.4.*
 
 ### 6.6 Line 5: A Mathematical Construction Provides a Hardware Blueprint
 
@@ -679,7 +679,7 @@ The conservation law provides a hardware constraint: the physical product of all
 
 **Independence:** This line comes from abstract algebra (Witt’s 1936 construction). Its interpretation as a hardware blueprint is original to this document series.
 
-*Provenance: Witt vectors were introduced by Ernst Witt in 1936. The hardware interpretation is developed in 0.4.md §5.6 and 0.7.md §6. Reviewed critically in REVIEW_AND_ROADMAP.md §1.5.*
+*Provenance: Witt vectors were introduced by Ernst Witt in 1936. The hardware interpretation is developed in [source file] §5.6 and [source file] §6. Reviewed critically in REVIEW_AND_ROADMAP.md §1.5.*
 
 ### 6.7 Line 6: The Local-to-Global Principle as Information Theory
 
@@ -698,7 +698,7 @@ In the context of factoring: the problem is to determine a number’s prime fact
 
 **Independence:** This line combines number theory with information theory. It is conceptually distinct from the physical lines.
 
-*Provenance: The information-theoretic interpretation of the Hasse principle is developed in 0.4.md §5.7 and 0.7.md §5.7. Reviewed in REVIEW_AND_ROADMAP.md §1.4.*
+*Provenance: The information-theoretic interpretation of the Hasse principle is developed in [source file] §5.7 and [source file] §5.7. Reviewed in REVIEW_AND_ROADMAP.md §1.4.*
 
 ### 6.8 Line 7: The Computational Complexity Landscape
 
@@ -715,7 +715,7 @@ An alternative quantum factoring method that uses discrete, prime-based methods 
 
 **Independence:** This line comes from computational complexity theory and the history of algorithms.
 
-*Provenance: The complexity landscape analysis is in 0.4.md §5.8 and 0.7.md §5.8. Critically reviewed in REVIEW_AND_ROADMAP.md §1.4.*
+*Provenance: The complexity landscape analysis is in [source file] §5.8 and [source file] §5.8. Critically reviewed in REVIEW_AND_ROADMAP.md §1.4.*
 
 ### 6.9 Line 8 (Bonus): The Symmetry-Based Frequency Transformation
 
@@ -732,7 +732,7 @@ In a tree-based computing device, this transform would be a native gate primitiv
 
 **Independence:** This line comes from representation theory and the theory of automorphic forms, developed independently of factoring algorithms.
 
-*Provenance: The Automorphic Fourier Transform as a native gate was introduced in 0.12.md §8.6, extended to more general symmetry groups in 0.14.md §8.7.*
+*Provenance: The Automorphic Fourier Transform as a native gate was introduced in [source file] §8.6, extended to more general symmetry groups in [source file] §8.7.*
 
 ### 6.10 Convergent Evidence: Summary Assessment
 
@@ -749,7 +749,7 @@ In a tree-based computing device, this transform would be a native gate primitiv
 
 **Overall assessment:** The convergence is genuine but not decisive. All eight lines point toward the same geometric structure because that structure (the complete-number ring) is fundamental to the mathematics of fractions. The question is whether this mathematical structure has physical and computational significance beyond what is already known. The evidence is strongest for the algorithmic interpretation (Line 1) and the mathematical facts (Lines 3, 4, 8). It is weakest for the physical and engineering claims (Lines 2, 5, 7). The consilience argument is best understood as a research program, not a completed proof.
 
-*Provenance: This summary assessment is from REVIEW_AND_ROADMAP.md §1.4, with the eighth line added to reflect developments in 0.12.md and 0.14.md.*
+*Provenance: This summary assessment is from REVIEW_AND_ROADMAP.md §1.4, with the eighth line added to reflect developments in [source file] and [source file].*
 
 ---
 
@@ -783,7 +783,7 @@ These registers are not independent. They are coupled by the **hardware conserva
 
 **Important caveat:** This complexity estimate is heuristic and depends on assumptions about the efficiency of the divisor preparation step that have not been rigorously justified. The estimate should be treated as a target, not an achieved result.
 
-*Provenance: The AFA algorithm outline is from 0.5.md §3, refined in 0.7.md §6, 0.10.md §7, and 0.14.md §7. The complexity comparison with Shor is in 0.5.md §4 and 0.7.md §5.8.*
+*Provenance: The AFA algorithm outline is from [source file] §3, refined in [source file] §6, [source file] §7, and [source file] §7. The complexity comparison with Shor is in [source file] §4 and [source file] §5.8.*
 
 ### 7.3 A Small Illustrative Example: Factoring 15
 
@@ -795,7 +795,7 @@ The resonance-based preparation would drive the system so that only the tree ver
 
 **Note:** This is a conceptual illustration. No physical device implementing this has been built or simulated with verified data. The resonance-based preparation (Section 7.6) is a proposal, not an experimentally validated protocol.
 
-*Provenance: The N=15 illustration appears in multiple versions (0.5.md §3.3, 0.7.md §6.3, 0.10.md §7.3).*
+*Provenance: The N=15 illustration appears in multiple versions ([source file] §3.3, [source file] §6.3, [source file] §7.3).*
 
 ### 7.4 Complexity Comparison
 
@@ -807,7 +807,7 @@ The resonance-based preparation would drive the system so that only the tree ver
 
 The tree-based algorithm, if realized, would be quadratically faster than Shor’s in the number of operations as a function of the bit-length of N. However, this comparison is between an implemented and analyzed algorithm (Shor’s, 1994) and a conceptual proposal. The comparison should be treated as aspirational, not established.
 
-*Provenance: Complexity comparison table from 0.7.md §5.8, updated in 0.10.md §7.4 and 0.14.md §7.4.*
+*Provenance: Complexity comparison table from [source file] §5.8, updated in [source file] §7.4 and [source file] §7.4.*
 
 ### 7.5 Comparison with Shor’s Algorithm: Different Access Paths
 
@@ -819,7 +819,7 @@ Shor’s algorithm and the proposed tree-based algorithm access the multiplicati
 
 The tree-based approach is closer in spirit to the Number Field Method (which also works by collecting local prime-based data) but with the crucial difference that the tree-based machine accesses all prime-based measurement systems simultaneously and enforces the conservation law as a hardware constraint, eliminating the need for the scanning and linear algebra stages.
 
-*Provenance: Comparison with Shor is developed in 0.7.md §5.8, 0.10.md §7.5, and 0.14.md §7.5.*
+*Provenance: Comparison with Shor is developed in [source file] §5.8, [source file] §7.5, and [source file] §7.5.*
 
 ### 7.6 Resonance-Based Divisor Preparation (Conceptual Proposal)
 
@@ -833,7 +833,7 @@ This is analogous to how a radio receiver selects a specific station: the drivin
 
 **Current status.** This is a conceptual proposal. The specific parameters of the driving signal (amplitudes, phases, ramp times) have been worked out on paper for the simple case of N = 15, but no physical experiment or verified numerical simulation has validated this approach. The proposal should be treated as a direction for research, not an established method.
 
-*Provenance: The DIVPREP (Divisor Preparation) concept is developed in 0.10.md §7.6, with parameter derivations in 0.13.md §7.8 and experimental protocols in 0.14.md §7.9. These derivations and protocols are theoretical proposals; no experimental or simulation data have independently verified them.*
+*Provenance: The DIVPREP (Divisor Preparation) concept is developed in [source file] §7.6, with parameter derivations in [source file] §7.8 and experimental protocols in [source file] §7.9. These derivations and protocols are theoretical proposals; no experimental or simulation data have independently verified them.*
 
 ---
 
@@ -873,7 +873,7 @@ There is a deeper geometric connection. In 2007, Anton Kapustin and Edward Witte
 
 This suggests that the building tree is not merely a discrete analog of continuous geometry but a setting in which the full geometric unification program has a natural, computable realization. In a tree-based computing device built on this geometry, the operations of the unification program—the correspondence between arithmetic and harmonic analysis—would be native computational primitives.
 
-*Provenance: The Langlands connection is introduced in 0.7.md §7.5, developed in 0.8.2.md §3, and expanded in 0.10.md §8 and 0.14.md §8. The geometric Langlands connection (Kapustin-Witten) is noted in 0.8.2.md and 0.14.md.*
+*Provenance: The Langlands connection is introduced in [source file] §7.5, developed in 0.8.2.md §3, and expanded in [source file] §8 and [source file] §8. The geometric Langlands connection (Kapustin-Witten) is noted in 0.8.2.md and [source file].*
 
 ### 8.5 Research Directions
 
@@ -885,7 +885,7 @@ The connection between our tree-based framework and the unification program open
 
 3. **The geometric unification as a computational resource.** If the correspondence between arithmetic and harmonic analysis is a native computational primitive, what problems besides factoring can it solve?
 
-*Provenance: Research directions from 0.10.md §8.5 and 0.14.md §8.5.*
+*Provenance: Research directions from [source file] §8.5 and [source file] §8.5.*
 
 ---
 
@@ -910,7 +910,7 @@ W_2 = x_0^4 + 2×x_1^2 + 4×x_2
 
 These polynomials define how information flows between layers: the value at layer k is determined by the values at all previous layers through these polynomial relations.
 
-*Provenance: Witt vectors are standard mathematics (Witt, 1936). The hardware interpretation is developed in 0.7.md §6 and 0.10.md §9. The Witt polynomials are standard and can be found in any text on p-adic algebra.*
+*Provenance: Witt vectors are standard mathematics (Witt, 1936). The hardware interpretation is developed in [source file] §6 and [source file] §9. The Witt polynomials are standard and can be found in any text on p-adic algebra.*
 
 ### 9.2 Candidate Physical Platforms
 
@@ -926,7 +926,7 @@ Several physical platforms could potentially realize the hierarchical architectu
 
 **Important caveat:** No physical system has been demonstrated to have p stable states with the exact algebraic structure of the finite field required by the Witt construction. The platforms listed above are candidates for exploration, not demonstrated implementations. This remains the most significant engineering challenge.
 
-*Provenance: Candidate platforms are discussed in 0.7.md §6.5 and 0.10.md §9.2.*
+*Provenance: Candidate platforms are discussed in [source file] §6.5 and [source file] §9.2.*
 
 ### 9.3 The Conservation Law as a Physical Constraint
 
@@ -936,7 +936,7 @@ This provides intrinsic error protection: any physical process that would produc
 
 **Experimental signature.** If the conservation law holds as a physical constraint, then direct measurement of the product of register magnitudes should always yield 1, within experimental precision. Any deviation would indicate either a measurement error or a violation of the proposed physical model. An experiment to test this is proposed in the experimental protocols (Section 10).
 
-*Provenance: The product formula as hardware constraint is proposed in 0.7.md §6.4 and 0.10.md §9.3.*
+*Provenance: The product formula as hardware constraint is proposed in [source file] §6.4 and [source file] §9.3.*
 
 ### 9.4 The Experimental Pathway
 
@@ -956,7 +956,7 @@ The path from concept to device involves several stages:
 
 **Current status (May 2026):** Stage 1 is within reach of current superconducting qubit technology. Stages 2-6 are proposals requiring significant engineering development. No experimental data exist for stages 2-6.
 
-*Provenance: The experimental pathway is outlined in 0.10.md §9.4 and elaborated in 0.12.md §10.4, 0.13.md §9.7, and 0.14.md §10.7-10.8.*
+*Provenance: The experimental pathway is outlined in [source file] §9.4 and elaborated in [source file] §10.4, [source file] §9.7, and [source file] §10.7-10.8.*
 
 ---
 
@@ -986,7 +986,7 @@ The following problems must be solved for the tree-based picture to advance from
 
 **Problem 5: Connection to the unification program.** The connection to the deepest unification program (Section 8) is gestured at but not developed in mathematical detail. A rigorous connection would require: identifying specific automorphic forms corresponding to physical states, deriving the probability rule from automorphic spectral theory, and showing that the symmetry-based frequency transform is the correct computational primitive for the correspondence.
 
-*Provenance: Open problems are catalogued in 0.5.md §5, 0.7.md §8, 0.10.md §10.2, and 0.14.md §10.2. Reviewed and expanded in REVIEW_AND_ROADMAP.md §2.*
+*Provenance: Open problems are catalogued in [source file] §5, [source file] §8, [source file] §10.2, and [source file] §10.2. Reviewed and expanded in REVIEW_AND_ROADMAP.md §2.*
 
 ### 10.3 Experimental Predictions
 
@@ -1000,7 +1000,7 @@ The tree-based picture makes the following falsifiable predictions:
 
 **Falsifiability.** Each prediction is falsifiable: a negative result would decisively rule out the corresponding aspect of the tree picture. A positive result would provide strong evidence for the tree-based ontology.
 
-*Provenance: Experimental predictions are developed in 0.7.md §8.3, expanded in 0.12.md §10.3-10.4, and elaborated with protocols in 0.14.md §10.4, 10.7, and 10.8.*
+*Provenance: Experimental predictions are developed in [source file] §8.3, expanded in [source file] §10.3-10.4, and elaborated with protocols in [source file] §10.4, 10.7, and 10.8.*
 
 ### 10.4 Honest Admissions
 
@@ -1018,7 +1018,7 @@ The following limitations should be frankly acknowledged:
 
 6. **Comparison with Shor’s algorithm is between an implemented algorithm and a proposal.** Shor’s algorithm (1994) has been analyzed, optimized, and partially implemented (for small numbers). The tree-based algorithm exists only on paper. Direct complexity comparison is therefore premature.
 
-*Provenance: Honest admissions are in 0.5.md §5, 0.7.md §8.5, 0.10.md §10.5, and 0.14.md §10.5. Reviewed and endorsed in REVIEW_AND_ROADMAP.md Executive Summary.*
+*Provenance: Honest admissions are in [source file] §5, [source file] §8.5, [source file] §10.5, and [source file] §10.5. Reviewed and endorsed in REVIEW_AND_ROADMAP.md Executive Summary.*
 
 ### 10.5 The Trajectory
 
@@ -1038,7 +1038,7 @@ The development of this research program can be traced through a sequence of inc
 
 **Next stage (Version 0.20 and beyond):** Consolidation into a standalone document. Submission for peer review. Pursuit of the simplest experimental test (hierarchical decoherence measurement).
 
-*Provenance: The trajectory is traced in 0.7.md §8.6, 0.10.md §10.6, and 0.14.md §10.6.*
+*Provenance: The trajectory is traced in [source file] §8.6, [source file] §10.6, and [source file] §10.6.*
 
 ---
 
@@ -1112,35 +1112,35 @@ G:\My Drive\Obsidian\projects\Adelic Geometry and the Architecture of Factorizat
 
 | Claim | Source File(s) | Section in Source | Status |
 |---|---|---|---|
-| Forest metaphor (adelic number system) | 0.1.md, 0.2.md | §1.1-1.3 | Original to this series |
-| Product formula as conservation law | 0.1.md, 0.2.md | §2.1-2.3 | Standard theorem; interpretive framing original |
-| Numerical example: 12/5 product formula verification | 0.1.md, 0.2.md | §1.2, §2.1 | Verified by direct calculation |
-| GNFS as adelic algorithm | 0.2.md | §3.1-3.8 | Interpretive mapping; GNFS is standard |
-| Adelic signature of GNFS | 0.2.md, 0.3.md | §3.5 | Original to this series |
-| Tree ontology (superposition as epistemic) | 0.3.md | §4.1-4.4 | Original to this series |
-| Projection map as measurement model | 0.3.md, 0.4.md | §4.3 | Map is standard; interpretation original |
-| Seven-step argument | 0.3.md, 0.4.md | §4.4 | Original to this series |
-| PBR theorem response (violation of preparation independence) | 0.5.md | §1.1-1.7 | Original to this series |
-| Measure-based probability rule | 0.5.md | §2.1-2.2 | Original derivation |
-| Constructive qubit model | 0.5.md | §2.3 | Original construction |
-| Complex amplitudes from tree symmetries | 0.5.md, 0.14.md | §2.5, §5.5 | Path identified; not fully derived |
-| Seven-line consilience argument | 0.4.md | §5.1-5.9 | Original synthesis |
-| Freund-Witten product formula | 0.4.md, 0.7.md | §5.4 | Verifiable published result |
-| p-adic holography (Gubser et al.) | 0.4.md, 0.7.md | §5.5 | Verifiable published result |
-| Witt vectors as hardware blueprint | 0.4.md, 0.7.md | §5.6, §6 | Witt vectors are standard; hardware interpretation original |
-| Hasse principle as information theory | 0.4.md, 0.7.md | §5.7 | Original reformulation |
-| Complexity comparison table | 0.5.md, 0.7.md | §4, §5.8 | Heuristic estimates; Shor’s data is verifiable |
-| Tree-based factoring algorithm (AFA) | 0.5.md, 0.7.md | §3, §6 | Original proposal |
-| DIVPREP resonance selection | 0.10.md, 0.14.md | §7.6-7.9 | Original proposal; no experimental validation |
-| Symmetry-based frequency transform | 0.12.md, 0.14.md | §8.6-8.7 | Mathematical existence established; gate interpretation original |
-| Langlands connection | 0.7.md, 0.8.2.md, 0.14.md | §7.5, §3, §8 | Connection proposed; not rigorously derived |
-| Ultrametric error model | 0.12.md, 0.14.md | §9.5 | Original proposal; needs experimental validation |
-| Fault-tolerance threshold analysis | 0.13.md, 0.14.md | §9.6, §9.8 | Original analysis; simulation data not independently verified |
-| Engineering specifications | 0.13.md | §9.7 | Conceptual specifications; no physical implementation |
-| Experimental protocols | 0.12.md, 0.14.md | §10.4, §10.7-10.8 | Proposed protocols; no experiments performed |
-| Open problems catalogue | 0.5.md, 0.7.md, 0.10.md | §5, §8, §10 | Original compilation |
-| Honest admissions | 0.5.md, 0.7.md, 0.10.md | §5, §8.5, §10.5 | Original self-assessment |
-| Historical progression of factoring algorithms | 0.4.md, 0.7.md | §3.7 | Standard narrative; trajectory interpretation original |
+| Forest metaphor (adelic number system) | [source file], [source file] | §1.1-1.3 | Original to this series |
+| Product formula as conservation law | [source file], [source file] | §2.1-2.3 | Standard theorem; interpretive framing original |
+| Numerical example: 12/5 product formula verification | [source file], [source file] | §1.2, §2.1 | Verified by direct calculation |
+| GNFS as adelic algorithm | [source file] | §3.1-3.8 | Interpretive mapping; GNFS is standard |
+| Adelic signature of GNFS | [source file], [source file] | §3.5 | Original to this series |
+| Tree ontology (superposition as epistemic) | [source file] | §4.1-4.4 | Original to this series |
+| Projection map as measurement model | [source file], [source file] | §4.3 | Map is standard; interpretation original |
+| Seven-step argument | [source file], [source file] | §4.4 | Original to this series |
+| PBR theorem response (violation of preparation independence) | [source file] | §1.1-1.7 | Original to this series |
+| Measure-based probability rule | [source file] | §2.1-2.2 | Original derivation |
+| Constructive qubit model | [source file] | §2.3 | Original construction |
+| Complex amplitudes from tree symmetries | [source file], [source file] | §2.5, §5.5 | Path identified; not fully derived |
+| Seven-line consilience argument | [source file] | §5.1-5.9 | Original synthesis |
+| Freund-Witten product formula | [source file], [source file] | §5.4 | Verifiable published result |
+| p-adic holography (Gubser et al.) | [source file], [source file] | §5.5 | Verifiable published result |
+| Witt vectors as hardware blueprint | [source file], [source file] | §5.6, §6 | Witt vectors are standard; hardware interpretation original |
+| Hasse principle as information theory | [source file], [source file] | §5.7 | Original reformulation |
+| Complexity comparison table | [source file], [source file] | §4, §5.8 | Heuristic estimates; Shor’s data is verifiable |
+| Tree-based factoring algorithm (AFA) | [source file], [source file] | §3, §6 | Original proposal |
+| DIVPREP resonance selection | [source file], [source file] | §7.6-7.9 | Original proposal; no experimental validation |
+| Symmetry-based frequency transform | [source file], [source file] | §8.6-8.7 | Mathematical existence established; gate interpretation original |
+| Langlands connection | [source file], 0.8.2.md, [source file] | §7.5, §3, §8 | Connection proposed; not rigorously derived |
+| Ultrametric error model | [source file], [source file] | §9.5 | Original proposal; needs experimental validation |
+| Fault-tolerance threshold analysis | [source file], [source file] | §9.6, §9.8 | Original analysis; simulation data not independently verified |
+| Engineering specifications | [source file] | §9.7 | Conceptual specifications; no physical implementation |
+| Experimental protocols | [source file], [source file] | §10.4, §10.7-10.8 | Proposed protocols; no experiments performed |
+| Open problems catalogue | [source file], [source file], [source file] | §5, §8, §10 | Original compilation |
+| Honest admissions | [source file], [source file], [source file] | §5, §8.5, §10.5 | Original self-assessment |
+| Historical progression of factoring algorithms | [source file], [source file] | §3.7 | Standard narrative; trajectory interpretation original |
 | Source audit (0.8.1, 0.8.2) | 0.8.1.md, 0.8.2.md | Full | Verified against vault contents |
 | Critical review and roadmap | REVIEW_AND_ROADMAP.md | Full | Independent review by AI assistant |
 
@@ -1151,7 +1151,7 @@ G:\My Drive\Obsidian\projects\Adelic Geometry and the Architecture of Factorizat
 ---
 
 *Document compiled May 4, 2026, from 16 source files in the project vault:*
-`0.1.md, 0.1.1.md, 0.2.md, 0.3.md, 0.4.md, 0.5.md, 0.6.md, 0.7.md, 0.8.1.md, 0.8.2.md, 0.9.md, 0.10.md, 0.12.md, 0.13.md, 0.14.md, REVIEW_AND_ROADMAP.md`
+`[source file], 0.1.1.md, [source file], [source file], [source file], [source file], [source file], [source file], 0.8.1.md, 0.8.2.md, [source file], [source file], [source file], [source file], [source file], REVIEW_AND_ROADMAP.md`
 
 *All source files verified to exist at: `G:\My Drive\Obsidian\projects\Adelic Geometry and the Architecture of Factorization\`*
 
