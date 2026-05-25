@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,24 +23,12 @@ jobs:
       - name: Install dependencies
         run: pip install markdown
 
-      - name: Determine changed papers
-        id: changed
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "files=$(ls releases/papers/*.md 2>/dev/null | grep -v index.md | jq -R -s -c 'split(\"\n\")[:-1]')" >> $GITHUB_OUTPUT
-          else
-            git diff --name-only ${{ github.event.before }} ${{ github.event.after }} -- 'releases/papers/**.md' | grep -v index.md > /tmp/changed.txt
-            echo "files=$(cat /tmp/changed.txt | jq -R -s -c 'split(\"\n\")[:-1]')" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Build PDFs
+      - name: Build PDFs for all papers
         run: |
           mkdir -p releases/papers/pdf
-          echo '${{ steps.changed.outputs.files }}' | jq -r '.[]' | while read paper; do
-            if [ -f "$paper" ]; then
-              echo "Building PDF for: $paper"
-              python scripts/build_pdf.py --input "$paper" --output "releases/papers/pdf/$(basename "$paper" .md).pdf" --style academic 2>&1 || echo "PDF build failed for $paper"
-            fi
+          find releases/papers -maxdepth 1 -name '*.md' ! -name 'index.md' -print0 | while IFS= read -r -d '' paper; do
+            echo "Building PDF for: $paper"
+            python scripts/build_pdf.py --input "$paper" --output "releases/papers/pdf/$(basename "$paper" .md).pdf" --style academic 2>&1 || echo "PDF build failed for $paper"
           done
 
       - name: Upload PDF artifacts
