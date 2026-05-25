@@ -69,16 +69,16 @@ We do not prove this hypothesis. We clarify what it means, what would constitute
 This document supersedes:
 - $0.1.2.md$ --- Original synthesis (reader-tested, 8 issues found)
 - $0.1.3.md$ --- Revised synthesis
-- $0.9.md$ --- Definitive synthesis (11 sections, canonical through Sprint 7)
+- $0.9.md$ --- Definitive synthesis (11 sections, canonical through development phase)
 
 It incorporates findings from all companion explorations ($0.2.md$ through $0.15.md$).
 
 ### 1.5 Provenance of Claims
 
 Throughout this document:
-- $[CODE-EXECUTED]$ --- Verified by Python execution ($0.2.py$, 242 lines, 6/6 checks pass)
-- $[EXTERNAL-SOURCE]$ --- Traced to cited references (CODATA 2018, published literature)
-- $[LLM-INFERRED]$ --- Interpretive synthesis, not independently verified
+- $$ --- Verified by Python execution ($0.2.py$, 242 lines, 6/6 checks pass)
+- $$ --- Traced to cited references (CODATA 2018, published literature)
+- $$ --- Interpretive synthesis, not independently verified
 
 ---
 
@@ -95,7 +95,7 @@ $$e = 1.602176634 \times 10^{-19}\ \text{C} \quad \text{(elementary charge, exac
 
 From these, plus the vacuum permittivity $\varepsilon_0$, we construct the fine-structure constant:
 
-$$\alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c} \approx \frac{1}{137.035999084} \quad [CODE-EXECUTED]$$
+$$\alpha = \frac{e^2}{4\pi\varepsilon_0 \hbar c} \approx \frac{1}{137.035999084} \quad $$
 
 $\alpha$ is dimensionless --- it has the same value in any system of units. This is why it matters: it cannot be “scaled away” by choosing different meters or seconds. It is a pure number that nature has chosen.
 
@@ -107,11 +107,11 @@ From $c$, $\hbar$, $m_e$, and $\alpha$, three length scales emerge that define t
 $$l_{Pl} = \sqrt{\frac{\hbar G}{c^3}} \approx 1.616 \times 10^{-35}\ \text{m}$$
 
 **Compton wavelength** (quantum field theory scale --- where pair creation becomes inevitable):
-$$\bar{\lambda}_C = \frac{\hbar}{m_e c} = 3.8615926796 \times 10^{-13}\ \text{m} \quad [CODE-EXECUTED]$$
-$$\lambda_C = \frac{h}{m_e c} = 2\pi\bar{\lambda}_C = 2.4263102389 \times 10^{-12}\ \text{m} \quad [CODE-EXECUTED]$$
+$$\bar{\lambda}_C = \frac{\hbar}{m_e c} = 3.8615926796 \times 10^{-13}\ \text{m} \quad $$
+$$\lambda_C = \frac{h}{m_e c} = 2\pi\bar{\lambda}_C = 2.4263102389 \times 10^{-12}\ \text{m} \quad $$
 
 **Bohr radius** (atomic physics scale --- characteristic size of hydrogen):
-$$a_0 = \frac{4\pi\varepsilon_0 \hbar^2}{m_e e^2} = \frac{\hbar}{\alpha m_e c} = 5.2917721090 \times 10^{-11}\ \text{m} \quad [CODE-EXECUTED]$$
+$$a_0 = \frac{4\pi\varepsilon_0 \hbar^2}{m_e e^2} = \frac{\hbar}{\alpha m_e c} = 5.2917721090 \times 10^{-11}\ \text{m} \quad $$
 
 These three lengths form a hierarchy spanning 24 orders of magnitude:
 
@@ -138,11 +138,11 @@ The Compton wavelength has two standard definitions, and the distinction matters
 
 The Bohr radius expressed in reduced Compton wavelengths:
 
-$$\frac{a_0}{\bar{\lambda}_C} = \frac{\hbar/(\alpha m_e c)}{\hbar/(m_e c)} = \frac{1}{\alpha} \approx 137.036 \quad [CODE-EXECUTED]$$
+$$\frac{a_0}{\bar{\lambda}_C} = \frac{\hbar/(\alpha m_e c)}{\hbar/(m_e c)} = \frac{1}{\alpha} \approx 137.036 \quad $$
 
 Using the full Compton wavelength gives a different number:
 
-$$\frac{a_0}{\lambda_C} = \frac{1}{2\pi\alpha} \approx 21.809 \quad [CODE-EXECUTED]$$
+$$\frac{a_0}{\lambda_C} = \frac{1}{2\pi\alpha} \approx 21.809 \quad $$
 
 The number 137 --- central to this project --- depends on using the **reduced** Compton wavelength.
 
@@ -150,11 +150,11 @@ The number 137 --- central to this project --- depends on using the **reduced** 
 
 The orbital period in the Bohr model (ground state, $n = 1$):
 
-$$T = \frac{2\pi a_0}{v} = \frac{2\pi a_0}{\alpha c} = 1.5198 \times 10^{-16}\ \text{s} \quad [CODE-EXECUTED]$$
+$$T = \frac{2\pi a_0}{v} = \frac{2\pi a_0}{\alpha c} = 1.5198 \times 10^{-16}\ \text{s} \quad $$
 
 The ratio of this orbital period to the Compton time:
 
-$$\frac{T}{\tau_C} = \frac{2\pi a_0/(\alpha c)}{h/(m_e c^2)} = \frac{1}{\alpha^2} \approx 18{,}778.9 \quad [CODE-EXECUTED]$$
+$$\frac{T}{\tau_C} = \frac{2\pi a_0/(\alpha c)}{h/(m_e c^2)} = \frac{1}{\alpha^2} \approx 18{,}778.9 \quad $$
 
 The number 18,800 uses the **full** Compton time (not the reduced).
 
@@ -588,7 +588,7 @@ Layer 2 --- emergence of $SU(3)_C \times SU(2)_L \times U(1)_Y$ from the quantum
 - **Grand unification:** $SU(5)$, $SO(10)$ --- symmetry breaking, not emergence
 - **Non-commutative geometry (Connes):** SM from spectral action (algebraic, not statistical)
 
-### 13.4 Speculative Pathways $[LLM-INFERRED]$
+### 13.4 Speculative Pathways $$
 
 1. **Entanglement structure:** Gauge symmetries as robust entanglement patterns surviving coarse-graining
 2. **RG attractors:** Gauge groups as statistical attractors under RG flow
@@ -751,6 +751,6 @@ A theory substantiating the statistical genesis hypothesis would need to:
 
 ---
 
-*All numerical values are $[CODE-EXECUTED]$ via $0.2.py$ (CODATA 2018). All interpretative claims are $[LLM-INFERRED]$ --- proposed, not proven. This document is the capstone synthesis of the Statistical Genesis of Appearance project. It supersedes $0.9.md$ and all prior synthesis documents.*
+*All numerical values are $$ via $0.2.py$ (CODATA 2018). All interpretative claims are $$ --- proposed, not proven. This document is the capstone synthesis of the Statistical Genesis of Appearance project. It supersedes $0.9.md$ and all prior synthesis documents.*
 
 *The core thesis --- that dimensionless physical constants encode effective sample sizes of a cosmic statistical process --- remains unproven. This document has clarified what it means, what would support it, what would refute it, and what gaps must be filled for it to advance from structural analogy to physical theory.*
