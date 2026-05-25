@@ -19,16 +19,16 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build PDF
-        uses: docker://pandoc/latex:latest
-        with:
-          args: >
-            ${{ github.event.inputs.paper_path }}
-            --from=markdown+yaml_metadata_block+tex_math_dollars
-            --to=pdf
-            --pdf-engine=xelatex
-            --metadata=colorlinks:true
-            --metadata=linkcolor:blue
-            --metadata=title:"${{ github.event.inputs.title || github.event.inputs.paper_path }}"
+        run: |
+          PAPER="${{ github.event.inputs.paper_path }}"
+          docker run --rm -v "${PWD}:/data" -w /data pandoc/latex:latest \
+            "${PAPER}" \
+            --from=markdown+yaml_metadata_block+tex_math_dollars \
+            --to=pdf \
+            --pdf-engine=xelatex \
+            --metadata=colorlinks:true \
+            --metadata=linkcolor:blue \
+            --metadata=title="${{ github.event.inputs.title || github.event.inputs.paper_path }}" \
             --output=publication.pdf
 
       - name: Upload PDF
