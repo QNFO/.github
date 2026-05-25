@@ -105,7 +105,7 @@ If $\alpha = r_e/\bar{\lambda}_C$ is just an algebraic identity, what is gained 
 
 **Second, the reframing connects to projective geometry.** The ratio of two lengths can be embedded as a *cross-ratio* on the projective line—a mathematical object with well-understood invariance properties. This embedding reveals that $\alpha$ inherits its unit-independence from a deeper mathematical principle: projective invariance under Möbius transformations.
 
-**Third, the reframing illuminates experimental methodology.** The highest-precision measurements of $\alpha$ (quantum Hall effect, Penning trap g-2) proceed by counting—integer filling factors $\nu = p/q$, integer cycle counts $N_s/N_c$. The length-ratio framing makes the connection between $\alpha$ and counting experiments natural: if $\alpha$ is fundamentally a ratio, then measuring it by counting ratios is the conceptually appropriate method.
+**Third, the reframing illuminates experimental methodology.** The highest-precision measurements of $\alpha$ (quantum Hall effect, Penning trap g-2) Proceed by counting—integer filling factors $\nu = p/q$, integer cycle counts $N_s/N_c$. The length-ratio framing makes the connection between $\alpha$ and counting experiments natural: if $\alpha$ is fundamentally a ratio, then measuring it by counting ratios is the conceptually appropriate method.
 
 In short: the coupling-constant framing answers “what is $\alpha?$” with “the strength of electromagnetism”—a true but opaque answer. The length-ratio framing answers with “the ratio of the electron’s electromagnetic size to its quantum size”—a geometrically revealing answer.
 
@@ -173,7 +173,7 @@ Note that $\alpha$ is already known to be dimensionless, and dimensionless numbe
 
 ## 4. Quantitative Verification
 
-All numerical results in this section are produced by self-contained Python code (see Appendix A). The code is re-executable and all values are `[CODE-EXECUTED]`.
+All numerical results in this section are produced by self-contained Python code (see Appendix A). The code is re-executable and all values are ``.
 
 ### 4.1 Fundamental Constants and Length Scales
 
@@ -483,7 +483,7 @@ This document has argued for a reframing: $\alpha$ is naturally understood as th
 
 1. **Reveals geometric structure:** $\alpha$ inherits its invariance properties from projective geometry—the cross-ratio is the fundamental invariant of four collinear points under Möbius transformations.
 
-2. **Connects to experiment:** The highest-precision measurements of $\alpha$ (quantum Hall effect, Penning trap) proceed by *counting*—measuring rational filling factors $\nu = p/q$ and frequency ratios $N_s/N_c$. The cross-ratio framing makes this connection natural.
+2. **Connects to experiment:** The highest-precision measurements of $\alpha$ (quantum Hall effect, Penning trap) Proceed by *counting*—measuring rational filling factors $\nu = p/q$ and frequency ratios $N_s/N_c$. The cross-ratio framing makes this connection natural.
 
 3. **Integrates five formalisms:** Adelic, projective, topological, syntactic, and hierarchical approaches illuminate complementary aspects of $\alpha$’s cross-ratio nature. Together they form a coherent picture: why $\alpha$ must be a cross-ratio, what cross-ratio it is, how it is measured, why its standard presentation obscures it, and where it fits in the hierarchy of physical scales.
 
