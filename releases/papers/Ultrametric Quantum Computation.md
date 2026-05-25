@@ -923,7 +923,7 @@ Conversely, if CMB analysis suggests $p=13$, noise spectroscopy suggests $p=2$, 
 |---------|-----------|--------|
 | **Confirmed detection** | $\Delta\chi^2 > 50$ (global $3\sigma$) for $p=2$, consistent across multiple datasets | Publication; framework strengthened |
 | **Marginal signal** | $\Delta\chi^2 \approx 20$–$50$ for $p=2$ (global $2\sigma$) | Publish constraints; await CMB-S4 |
-| **Null result** | No template with $A > 0.01$ and global $>2\sigma$ at any $p$ | Publish upper bounds; proceed to E2/E3 |
+| **Null result** | No template with $A > 0.01$ and global $>2\sigma$ at any $p$ | Publish upper bounds; Proceed to E2/E3 |
 
 ### 19.5 Budget and Timeline
 
