@@ -1,0 +1,98 @@
+name: Release Pipeline
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      paper_path:
+        description: "Path to markdown file (e.g., publications/2026/05/Paper.md)"
+        required: false
+        type: string
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Determine paper path
+        id: path
+        run: |
+          if [ -n "${{ github.event.inputs.paper_path }}" ]; then
+            echo "paper=${{ github.event.inputs.paper_path }}" >> $GITHUB_OUTPUT
+          else
+            echo "paper=README.md" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build PDF with Pandoc
+        uses: docker://pandoc/latex:latest
+        with:
+          args: >
+            ${{ steps.path.outputs.paper }}
+            --from=markdown+yaml_metadata_block+tex_math_dollars
+            --to=pdf
+            --pdf-engine=xelatex
+            --template=eisvogel
+            --metadata=colorlinks:true
+            --metadata=linkcolor:blue
+            --output=publication.pdf
+
+      - name: Upload PDF to Release
+        if: github.event_name == "release"
+        uses: softprops/action-gh-release@v2
+        with:
+          files: publication.pdf
+
+      - name: Upload PDF as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-pdf
+          path: publication.pdf
+
+  zenodo-publish:
+    needs: build-pdf
+    uses: QNFO/.github/.github/workflows/zenodo-publish.yml@master
+    with:
+      title: ${{ github.event.release.name || 'Manual Publication' }}
+      author: "Quni-Gudzinas, Rowan Brad"
+      file_path: "publication.pdf"
+      abstract: "${{ github.event.release.body || 'Open-access research publication from QNFO.' }}"
+      keywords: "ultrametric,quantum-computing,QWAV"
+    secrets:
+      ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+
+  update-readme:
+    needs: zenodo-publish
+    runs-on: ubuntu-latest
+    if: needs.zenodo-publish.outputs.doi != ""
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add DOI badge
+        run: |
+          DOI="${{ needs.zenodo-publish.outputs.doi }}"
+          BADGE="[![DOI](https://zenodo.org/badge/DOI/${DOI}.svg)](https://doi.org/${DOI})"
+
+          if ! grep -qF "$DOI" README.md; then
+            echo "" >> README.md
+            echo "$BADGE" >> README.md
+            git config user.name "QNFO Bot"
+            git config user.email "bot@qnfo.org"
+            git add README.md
+            git commit -m "docs: add DOI badge ${DOI}"
+            git push origin master
+          else
+            echo "DOI badge already present"
+          fi
+
+  trigger-gitbook:
+    needs: zenodo-publish
+    runs-on: ubuntu-latest
+    if: needs.zenodo-publish.outputs.doi != ""
+    steps:
+      - name: Dispatch GitBook sync
+        run: |
+          gh workflow run sync-publications.yml --repo QNFO/gitbook --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
