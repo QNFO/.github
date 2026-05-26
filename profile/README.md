@@ -1,13 +1,11 @@
-# QNFO -- Scientific Research for the Collective Benefit of All
+﻿# QNFO -- Scientific Research for the Collective Benefit of All
 
 **QNFO's ultimate aim is to advance scientific understanding and catalyze positive,
 systemic global change for the collective benefit of all.**
 
 ---
 
-QNFO is a **scientific research incubator** -- the research identity of
-[Empowering Change](https://empoweringchange.org), a U.S.-based organization
-founded and directed by Rowan Brad Quni-Gudzinas. We investigate the fundamentals
+QNFO is a **scientific research incubator** founded and directed by Rowan Brad Quni-Gudzinas. We investigate the fundamentals
 of reality at the intersection of physics, information theory, philosophy of science,
 and artificial intelligence, leveraging AI-accelerated exploration to drive discovery.
 
