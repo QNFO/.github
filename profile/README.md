@@ -1,4 +1,4 @@
-﻿# QNFO -- Scientific Research for the Collective Benefit of All
+# QNFO -- Scientific Research for the Collective Benefit of All
 
 **QNFO's ultimate aim is to advance scientific understanding and catalyze positive,
 systemic global change for the collective benefit of all.**
