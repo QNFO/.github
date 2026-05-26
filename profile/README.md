@@ -6,12 +6,12 @@ systemic global change for the collective benefit of all.**
 ---
 
 QNFO is a **scientific research incubator** -- the research identity of
-[Empowering Change](https://empoweringchange.org), a U.S. 501(c)(3) non-profit
+[Empowering Change](https://empoweringchange.org), a U.S.-based organization
 founded and directed by Rowan Brad Quni-Gudzinas. We investigate the fundamentals
 of reality at the intersection of physics, information theory, philosophy of science,
 and artificial intelligence, leveraging AI-accelerated exploration to drive discovery.
 
-All research is conducted for **public good, not private profit**. Everything we
+All research is conducted for the **collective benefit of all**. Everything we
 produce is governed by the [QNFO Content License Agreement](LICENSE) -- non-commercial
 use only, attribution required. Our [Code of Conduct](CODE_OF_CONDUCT.md) defines
 the values that govern all QNFO spaces.
@@ -94,7 +94,7 @@ Our work is guided by principles articulated in the [Code of Conduct](CODE_OF_CO
 4. **Intellectual Rigor** -- Evidence, falsifiability, and honest labeling of speculation
 5. **Interdisciplinary Respect** -- Insights from all domains are valued
 6. **Constructive Collaboration** -- Good faith in all interactions. Critique ideas, not people.
-7. **Non-Commercial Foundation** -- Research for public good, not private profit
+7. **Open-Research Foundation** — Research for collective benefit
 
 ---
 
@@ -128,7 +128,7 @@ and AI, with a career spanning:
 - **Published thought leadership:** Authored books and papers exploring the
   nexus of physics, philosophy, AI, and information
 
-The non-profit structure (Empowering Change 501c3) ensures our motivation remains
+The structure ensures our motivation remains
 scientific advancement and societal benefit.
 
 ---
@@ -155,7 +155,7 @@ All papers are open-access on Zenodo with registered DOIs. See the
 
 | Feature | Link |
 |:--------|:-----|
-| **QWAV Wiki** | [10 pages -- architecture, modules, publications](https://github.com/QNFO/QWAV/wiki) |
+| **QWAV Wiki** | [18+ pages — architecture, manufacturing, lessons, more](https://github.com/QNFO/QWAV/wiki) |
 | **Discussions** | [Session records, sprint reports](https://github.com/QNFO/QWAV/discussions) |
 | **Kanban Board** | [Cross-project tracking](https://github.com/orgs/QNFO/projects/1) |
 | **Issues** | [Open issues across repos](https://github.com/QNFO/QWAV/issues) |
@@ -176,3 +176,4 @@ All papers are open-access on Zenodo with registered DOIs. See the
 
 *QNFO -- advancing scientific understanding for the collective benefit of all.
 Everything open. Everything accountable. Everything for the good.*
+
