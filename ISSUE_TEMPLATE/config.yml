@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: QNFO Research
+    url: https://papers.qnfo.org
+    about: Read QNFO research papers
+  - name: QWAV Platform
+    url: https://github.com/QNFO/qwav-platform
+    about: QWAV platform infrastructure
