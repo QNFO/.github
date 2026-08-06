@@ -111,6 +111,22 @@ Our work is guided by principles articulated in the [Code of Conduct](CODE_OF_CO
 
 ---
 
+## Working Demos — Verified Executable Research
+
+Our research isn't just published — it executes. Each demo below is a working
+computational proof, wired to real computation and verified by an automated
+Chrome test suite (15/15 checks) against its deployed URL.
+
+| Demo | Status | Try it | Source |
+|:-----|:-------|:-------|:-------|
+| **Bruhat–Tits QEC: Staircase Redundancy** — interactive proof that on an ultrametric (p-adic) code, redundancy grows in discrete staircase steps (not the smooth Archimedean curve), creating QEC–Darwinism coexistence windows. Companion to [DOI 10.5281/zenodo.21817596](https://doi.org/10.5281/zenodo.21817596) | ✅ LIVE · VERIFIED (Chrome 15/15) | [GitHub Pages](https://qnfo.github.io/qwav-demo-bt-qec/) · [Cloudflare Pages](https://qwav-demo-bt-qec.pages.dev) | [Source + Tests](https://github.com/QNFO/qwav-demo-bt-qec) |
+
+Additional demos are listed here only after passing the full verification gate
+(computation engine golden-value tests + Chrome click-through suite + deployed-URL
+checks + zero console errors).
+
+---
+
 ## Organization
 
 QNFO is a solo deep-tech research program founded and directed by
