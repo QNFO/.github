@@ -57,6 +57,28 @@ publications:
 
 ---
 
+
+### QNFO Program Taxonomy (WBS)
+
+Canonical program codes (per [WBS.TAXONOMY.md](https://github.com/QNFO/qnfo-ops/blob/main/WBS/WBS.TAXONOMY.md))
+guide every research line, branch, and publication. Keyword taxonomy v1.0 drives
+monitoring (arXiv/OpenAlex), SEO, and GitHub star classification:
+
+| WBS | Program | Repo | Focus |
+|:----|:--------|:-----|:------|
+| **UMP** | Ultrametric Physics | [ultrametric-physics](https://github.com/QNFO/ultrametric-physics) | p-adic/adelic physics, Ostrowski, Bruhat-Tits geometry |
+| **SLB** | Laws of Form | [laws-of-form](https://github.com/QNFO/laws-of-form) | Spencer-Brown calculus of indications, primary algebra |
+| **INM** | Infomatics | [infomatics](https://github.com/QNFO/infomatics) | Information as fundamental; Landauer-Bekenstein bounds; Adelic Shannon |
+| **CFE** | CFPE / Paradigm Engineering | [cfpe](https://github.com/QNFO/cfpe) | Technology forecasting, post-silicon computing roadmaps |
+| **RES** | QNFO Research | [qnfo-research](https://github.com/QNFO/qnfo-research) | Cross-domain consilience, measurement stratigraphy, Ruliad |
+| **PLT** | QWAV Platform | [QWAV](https://github.com/QNFO/QWAV) | Ultrametric quantum computing & glass-box AI (flagship) |
+| **DEM** | QWAV Demos | [qwav-demos](https://github.com/QNFO/qwav-demos) | Interactive Bruhat-Tits / p-adic scientific visualizations |
+
+**Discoverability:** [papers.qnfo.org](https://papers.qnfo.org/papers) (all publications) ·
+[qwav.tech](https://qwav.tech) (QWAV marquee) · [qnfo.github.io/QWAV](https://qnfo.github.io/QWAV/) (technical hub) ·
+[LLM guide](https://github.com/QNFO/QWAV/blob/main/llms.txt)
+
+---
 ## Our Approach: Interdisciplinary Rigor, AI Collaboration, Openness
 
 QNFO employs a distinct research methodology characterized by:
@@ -152,7 +174,7 @@ scientific advancement and societal benefit.
 All papers are open-access on Zenodo with registered DOIs. See the
 [full publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html)
 (35+ publications, filterable by domain). Community archive:
-[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (145+ records).
+[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (89 records). QNFO subject-tagged corpus: [185 records](https://zenodo.org/search?q=QNFO).
 
 **Representative publications:**
 
