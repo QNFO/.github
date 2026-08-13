@@ -174,7 +174,7 @@ scientific advancement and societal benefit.
 All papers are open-access on Zenodo with registered DOIs. See the
 [full publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html)
 (35+ publications, filterable by domain). Community archive:
-[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (89 records). QNFO subject-tagged corpus: [185 records](https://zenodo.org/search?q=QNFO).
+[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (92 records). QNFO subject-tagged corpus: [867 records](https://zenodo.org/search?q=QNFO).
 
 **Representative publications:**
 
@@ -206,7 +206,7 @@ QNFO is the primary research initiative of **Empowering Change**, a U.S.-registe
 - **Open ledger.** Program status, milestones, issues, pull requests, and releases are tracked publicly across this organization. The [Public Program Board](https://github.com/orgs/QNFO/projects/7) is the single public status view for all programs, the QWAV platform, governance, and the grants & funding pipeline.
 - **Funding posture.** QNFO is currently self-funded. Grant applications and funding requests, when filed, are recorded on the public board — funders and reviewers can verify activity directly from the public record. No funding entries are fabricated: an entry appears only after a real submission exists.
 - **Canonical infrastructure.** Research data and services run on Cloudflare (D1, R2, Workers, Pages, AI Gateway). GitHub is the public activity ledger and open-source mirror — every program has a public repository with public issues, PRs, and releases.
-- **Publications.** All papers are deposited on Zenodo with DOIs: [community archive](https://zenodo.org/communities/qwav/) (89 records), [QNFO-tagged corpus](https://zenodo.org/search?q=QNFO) (185 records).
+- **Publications.** All papers are deposited on Zenodo with DOIs: [community archive](https://zenodo.org/communities/qwav/) (92 records), [QNFO-tagged corpus](https://zenodo.org/search?q=QNFO) (867 records).
 - **Provenance & verification.** AI assistance is disclosed in publications; verification pipelines (citation audits, red-team adversarial reviews, automated demo test suites) run as part of every release.
 - **Governance.** [Standards](STANDARDS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [License](LICENSE) · [Contact](CONTACT.md)
 
