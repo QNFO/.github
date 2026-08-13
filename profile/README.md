@@ -64,15 +64,31 @@ Canonical program codes (per [WBS.TAXONOMY.md](https://github.com/QNFO/qnfo-ops/
 guide every research line, branch, and publication. Keyword taxonomy v1.0 drives
 monitoring (arXiv/OpenAlex), SEO, and GitHub star classification:
 
-| WBS | Program | Repo | Focus |
-|:----|:--------|:-----|:------|
-| **UMP** | Ultrametric Physics | [ultrametric-physics](https://github.com/QNFO/ultrametric-physics) | p-adic/adelic physics, Ostrowski, Bruhat-Tits geometry |
-| **SLB** | Laws of Form | [laws-of-form](https://github.com/QNFO/laws-of-form) | Spencer-Brown calculus of indications, primary algebra |
-| **INM** | Infomatics | [infomatics](https://github.com/QNFO/infomatics) | Information as fundamental; Landauer-Bekenstein bounds; Adelic Shannon |
-| **CFE** | CFPE / Paradigm Engineering | [cfpe](https://github.com/QNFO/cfpe) | Technology forecasting, post-silicon computing roadmaps |
-| **RES** | QNFO Research | [qnfo-research](https://github.com/QNFO/qnfo-research) | Cross-domain consilience, measurement stratigraphy, Ruliad |
-| **PLT** | QWAV Platform | [QWAV](https://github.com/QNFO/QWAV) | Ultrametric quantum computing & glass-box AI (flagship) |
-| **DEM** | QWAV Demos | [qwav-demos](https://github.com/QNFO/qwav-demos) | Interactive Bruhat-Tits / p-adic scientific visualizations |
+| WBS | Program | Repo | Status |
+|:----|:--------|:-----|:-------|
+| **SR** | Silent Radix Cryptography | — | active |
+| **ADL** | Adelic Physics | [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory) | active · DOI 10.5281/zenodo.21336099 |
+| **PBO** | Pattern-Based Ontology (Autaxys) | — | active |
+| **QD** | The Qubit Delusion | — | active |
+| **UF** | Ultrametric Foundations | — | active · DOI 10.5281/zenodo.21046993 |
+| **CON** | Cross-Pillar Consilience | [wbs-6-synthesis](https://github.com/QNFO/wbs-6-synthesis) | active |
+| **CMP** | Computing Machines | [computing-machines](https://github.com/QNFO/computing-machines) | active |
+| **JPC** | JPCub Validation | [jpcub-validation](https://github.com/QNFO/jpcub-validation) | active |
+| **ODR** | ODR Thesis | [odr-thesis](https://github.com/QNFO/odr-thesis) | active · DOI 10.5281/zenodo.21780909 |
+| **CGS** | Consilient Gap Synthesis | [consilient-gap-synthesis](https://github.com/QNFO/consilient-gap-synthesis) | active |
+| **SLB** | Laws of Form | [laws-of-form](https://github.com/QNFO/laws-of-form) | active |
+| **GOV** | Governance & Public Transparency | [.github](https://github.com/QNFO/.github) | active |
+| **INM** | Infomatics | [infomatics](https://github.com/QNFO/infomatics) | active |
+| **CFE** | CFPE / Paradigm Engineering | [cfpe](https://github.com/QNFO/cfpe) | active |
+| **UMP** | Ultrametric Physics | [ultrametric-physics](https://github.com/QNFO/ultrametric-physics) | active |
+| **RES** | QNFO Research Archive | [qnfo-research](https://github.com/QNFO/qnfo-research) | active |
+| **PLT** | QWAV Platform | [qwav-platform](https://github.com/QNFO/qwav-platform) · flagship [QWAV](https://github.com/QNFO/QWAV) | active |
+| **DEM** | QWAV Interactive Demos | [qwav-demos](https://github.com/QNFO/qwav-demos) | active |
+| *(KG)* | ACRP — Adelic Core Research Program | — | active (ACRP-01..08) |
+| *(KG)* | KEPLER Program (master roadmap) | — | active (10 phases / 48 tasks) |
+
+**Full inventory** — all 150 projects, 77 KEPLER tasks, 21 phases, and 21 ongoing open items →
+**[PORTFOLIO.md](PORTFOLIO.md)**. Live status → **[Public Program Board](https://github.com/orgs/QNFO/projects/7)**.
 
 **Discoverability:** [papers.qnfo.org](https://papers.qnfo.org/papers) (all publications) ·
 [qwav.tech](https://qwav.tech) (QWAV marquee) · [qnfo.github.io/QWAV](https://qnfo.github.io/QWAV/) (technical hub) ·
