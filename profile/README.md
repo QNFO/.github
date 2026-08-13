@@ -193,9 +193,22 @@ All papers are open-access on Zenodo with registered DOIs. See the
 |:--------|:-----|
 | **QWAV Wiki** | [18+ pages — architecture, manufacturing, lessons, more](https://github.com/QNFO/QWAV/wiki) |
 | **Discussions** | [Session records, sprint reports](https://github.com/QNFO/QWAV/discussions) |
-| **Kanban Board** | [Cross-project tracking](https://github.com/orgs/QNFO/projects/1) |
+| **Public Program Board** | [Program status, grants & funding — public](https://github.com/orgs/QNFO/projects/7) |
 | **Issues** | [Open issues across repos](https://github.com/QNFO/QWAV/issues) |
 | **Releases** | [QWAV releases](https://github.com/QNFO/QWAV/releases) |
+
+---
+
+## Funding & Transparency
+
+QNFO is the primary research initiative of **Empowering Change**, a U.S.-registered 501(c)(3) non-profit.
+
+- **Open ledger.** Program status, milestones, issues, pull requests, and releases are tracked publicly across this organization. The [Public Program Board](https://github.com/orgs/QNFO/projects/7) is the single public status view for all programs, the QWAV platform, governance, and the grants & funding pipeline.
+- **Funding posture.** QNFO is currently self-funded. Grant applications and funding requests, when filed, are recorded on the public board — funders and reviewers can verify activity directly from the public record. No funding entries are fabricated: an entry appears only after a real submission exists.
+- **Canonical infrastructure.** Research data and services run on Cloudflare (D1, R2, Workers, Pages, AI Gateway). GitHub is the public activity ledger and open-source mirror — every program has a public repository with public issues, PRs, and releases.
+- **Publications.** All papers are deposited on Zenodo with DOIs: [community archive](https://zenodo.org/communities/qwav/) (89 records), [QNFO-tagged corpus](https://zenodo.org/search?q=QNFO) (185 records).
+- **Provenance & verification.** AI assistance is disclosed in publications; verification pipelines (citation audits, red-team adversarial reviews, automated demo test suites) run as part of every release.
+- **Governance.** [Standards](STANDARDS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [License](LICENSE) · [Contact](CONTACT.md)
 
 ---
 
