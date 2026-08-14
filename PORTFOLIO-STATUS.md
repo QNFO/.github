@@ -1,6 +1,6 @@
 # QNFO / QWAV — Portfolio Status (Public Transparency Ledger)
 
-> **Generated:** 2026-08-14 03:59 UTC  
+> **Generated:** 2026-08-14 04:19 UTC  
 > **Source of truth:** Cloudflare canonical (D1 living-paper, Knowledge Graph, R2). This file is the public mirror — GitHub is the activity ledger; Cloudflare remains canonical.
 > **Board:** [QNFO Public Program Board](https://github.com/orgs/QNFO/projects/7) · [Org profile](https://github.com/QNFO) · [Board view](https://github.com/orgs/QNFO/projects/7/views/1)
 
@@ -14,7 +14,7 @@
 | &nbsp;&nbsp;— duplicate | 1 | D1 |
 | &nbsp;&nbsp;— external_preprint | 1 | D1 |
 | KG nodes | 8279 | KG |
-| KG edges | 8416 | KG |
+| KG edges | 8417 | KG |
 | KG programs | 21 | KG |
 | KG projects | 150 | KG |
 | KG tasks | 77 | KG |
