@@ -210,6 +210,7 @@ All papers are open-access on Zenodo with registered DOIs. See the
 | **QWAV Wiki** | [18+ pages — architecture, manufacturing, lessons, more](https://github.com/QNFO/QWAV/wiki) |
 | **Discussions** | [Session records, sprint reports](https://github.com/QNFO/QWAV/discussions) |
 | **Public Program Board** | [Program status, grants & funding — public](https://github.com/orgs/QNFO/projects/7) |
+| **Portfolio Status Ledger** | [Auto-generated from Cloudflare canonical (D1 + KG)](PORTFOLIO-STATUS.md) — regenerated weekly |
 | **Issues** | [Open issues across repos](https://github.com/QNFO/QWAV/issues) |
 | **Releases** | [QWAV releases](https://github.com/QNFO/QWAV/releases) |
 
