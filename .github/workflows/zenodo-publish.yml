@@ -32,6 +32,8 @@ on:
     secrets:
       ZENODO_TOKEN:
         required: true
+      ZENODO_SANDBOX_TOKEN:
+        required: false
     outputs:
       doi:
         value: ${{ jobs.publish.outputs.doi }}
@@ -75,6 +77,7 @@ jobs:
         id: retry
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
         run: |
           # Repair 2026-09-24 (three defects in the previous revision):
           #  1. `$ARGS` was expanded unquoted, so the escaped quotes became
@@ -90,7 +93,19 @@ jobs:
           #     grep could never match and a dispatch run could never pass.
           set -uo pipefail
 
-          ARGS=( --token "$ZENODO_TOKEN" )
+          # A Zenodo SANDBOX token is a SEPARATE credential from the production
+          # token. Presenting a production token to sandbox.zenodo.org returns
+          # HTTP 403 "Permission denied." Select explicitly so a missing sandbox
+          # credential fails with an actionable message rather than a bare 403.
+          if [ "${{ inputs.sandbox }}" = "true" ]; then
+            if [ -z "${ZENODO_SANDBOX_TOKEN:-}" ]; then
+              echo "::error::A sandbox run was requested but ZENODO_SANDBOX_TOKEN is not configured. Mint one at https://sandbox.zenodo.org/account/settings/applications/ and add it as the ZENODO_SANDBOX_TOKEN repository secret."
+              exit 1
+            fi
+            ARGS=( --token "$ZENODO_SANDBOX_TOKEN" )
+          else
+            ARGS=( --token "$ZENODO_TOKEN" )
+          fi
           ARGS+=( --title "${{ inputs.title }}" )
           ARGS+=( --author "${{ inputs.author }}" )
           ARGS+=( --file "source-repo/${{ inputs.file_path }}" )

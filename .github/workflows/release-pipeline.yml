@@ -68,6 +68,7 @@ jobs:
       sandbox: ${{ github.event_name == 'workflow_dispatch' }}
     secrets:
       ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+      ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
 
   update-readme:
     needs: zenodo-publish
@@ -113,17 +114,20 @@ jobs:
     steps:
       - name: Create failure issue
         run: |
-          gh issue create \
-            --repo QNFO/.github \
-            --title "Release pipeline failure — $(date -u +'%Y-%m-%d')" \
-            --label "bug,P1" \
-            --body "## Release pipeline failed
+          TITLE="Release pipeline failure — $(date -u +'%Y-%m-%d')"
+          BODY="## Release pipeline failed
 
           **Release:** ${{ github.event.release.tag_name || 'Manual' }}
           **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           **Failed jobs:** Check run log above
 
           Automated failure notification from release-pipeline.yml."
+          # A notifier must not itself fail: if the requested labels are absent
+          # (they were: `P1` is not defined in QNFO/.github), retry unlabelled
+          # rather than losing the failure notification.
+          gh issue create --repo QNFO/.github --title "$TITLE" --label "bug,P1" --body "$BODY" \
+            || { echo "::warning::labelled issue create failed (missing label?); retrying without labels"; \
+                 gh issue create --repo QNFO/.github --title "$TITLE" --body "$BODY"; }
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
