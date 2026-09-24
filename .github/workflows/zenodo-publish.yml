@@ -55,6 +55,18 @@ jobs:
         with:
           path: source-repo
 
+      # The calling workflow builds the PDF in its build-pdf job and uploads it
+      # as the `publication-pdf` artifact; it is NOT committed to the repo, so
+      # the reusable workflow must fetch it back before `--file` can resolve.
+      # Repair 2026-09-24: without this the publish step failed on a missing
+      # `source-repo/publication.pdf`.
+      - name: Fetch built PDF artifact
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: publication-pdf
+          path: source-repo
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -64,35 +76,55 @@ jobs:
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
         run: |
-          ARGS="--token $ZENODO_TOKEN"
-          ARGS="$ARGS --title \"${{ inputs.title }}\""
-          ARGS="$ARGS --author \"${{ inputs.author }}\""
-          ARGS="$ARGS --file \"source-repo/${{ inputs.file_path }}\""
-          [ -n "${{ inputs.abstract }}" ] && ARGS="$ARGS --abstract \"${{ inputs.abstract }}\""
-          [ -n "${{ inputs.keywords }}" ] && ARGS="$ARGS --keywords \"${{ inputs.keywords }}\""
-          [ -n "${{ inputs.communities }}" ] && ARGS="$ARGS --communities \"${{ inputs.communities }}\""
-          [ "${{ inputs.sandbox }}" = "true" ] && ARGS="$ARGS --sandbox"
+          # Repair 2026-09-24 (three defects in the previous revision):
+          #  1. `$ARGS` was expanded unquoted, so the escaped quotes became
+          #     literal characters and argparse saw e.g. --title '"Manual'
+          #     followed by a stray positional -> exit 2 on attempt 1.
+          #     Fixed by using a bash array and "${ARGS[@]}".
+          #  2. `OUTPUT=$(...)` under `set -e` aborted the whole step on the
+          #     first non-zero exit, so attempts 2/3 never ran and the captured
+          #     output was never echoed. Fixed by disabling `-e` around the call
+          #     and capturing $? explicitly.
+          #  3. In sandbox mode the client prints "[SANDBOX] ... Testing
+          #     complete" and never the word "published"/"DOI:", so the success
+          #     grep could never match and a dispatch run could never pass.
+          set -uo pipefail
+
+          ARGS=( --token "$ZENODO_TOKEN" )
+          ARGS+=( --title "${{ inputs.title }}" )
+          ARGS+=( --author "${{ inputs.author }}" )
+          ARGS+=( --file "source-repo/${{ inputs.file_path }}" )
+          if [ -n "${{ inputs.abstract }}" ]; then ARGS+=( --abstract "${{ inputs.abstract }}" ); fi
+          if [ -n "${{ inputs.keywords }}" ]; then ARGS+=( --keywords "${{ inputs.keywords }}" ); fi
+          # NOTE: the client (zenodo_publish.py) defines no --communities flag;
+          # passing it would abort argparse with exit 2, so the declared input is
+          # intentionally not forwarded.
+          if [ "${{ inputs.sandbox }}" = "true" ]; then ARGS+=( --sandbox ); fi
 
           for i in 1 2 3; do
             echo "=== Attempt $i/3 ==="
-            OUTPUT=$(python zenodo-automation/zenodo_publish.py $ARGS 2>&1)
+            set +e
+            OUTPUT=$(python zenodo-automation/zenodo_publish.py "${ARGS[@]}" 2>&1)
+            rc=$?
+            set -e
             echo "$OUTPUT" | tee zenodo_output.txt
 
-            if echo "$OUTPUT" | grep -qi "published\|DOI:"; then
-              DOI=$(echo "$OUTPUT" | grep -oP 'doi\.org/\K10\.\d{4,9}/zenodo\.\d+' || echo "")
-              [ -z "$DOI" ] && DOI=$(echo "$OUTPUT" | grep -oP 'DOI:?\s*\K10\.\d{4,9}/zenodo\.\d+' || echo "")
-              echo "doi=$DOI" >> $GITHUB_OUTPUT
-              ZID=$(echo "$DOI" | grep -oP '\d+$' || echo "")
-              echo "zenodo_id=$ZID" >> $GITHUB_OUTPUT
-              echo "SUCCESS: DOI=$DOI"
+            if [ "$rc" -eq 0 ] && echo "$OUTPUT" | grep -qiE "published|doi:|testing complete|deposition id:"; then
+              DOI=$(echo "$OUTPUT" | grep -oP 'doi\.org/\K10\.\d{4,9}/zenodo\.\d+' || true)
+              [ -z "$DOI" ] && DOI=$(echo "$OUTPUT" | grep -oP 'DOI:?\s*\K10\.\d{4,9}/zenodo\.\d+' || true)
+              ZID=$(echo "$OUTPUT" | grep -oP 'Deposition ID:\s*\K\d+' || true)
+              [ -z "$ZID" ] && ZID=$(echo "$DOI" | grep -oP '\d+$' || true)
+              echo "doi=$DOI" >> "$GITHUB_OUTPUT"
+              echo "zenodo_id=$ZID" >> "$GITHUB_OUTPUT"
+              echo "SUCCESS: rc=$rc doi=${DOI:-<sandbox>} zenodo_id=${ZID:-<none>}"
               exit 0
             fi
 
-            if [ $i -eq 3 ]; then
-              echo "FATAL: Zenodo publish failed after 3 attempts"
-              echo "::error::Zenodo publication failed — check token scopes and file path"
+            if [ "$i" -eq 3 ]; then
+              echo "FATAL: Zenodo publish failed after 3 attempts (last rc=$rc)"
+              echo "::error::Zenodo publication failed — see the captured output above"
               exit 1
             fi
-            echo "Attempt $i failed, retrying in 15s..."
+            echo "Attempt $i failed (rc=$rc), retrying in 15s..."
             sleep 15
           done

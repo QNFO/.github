@@ -36,7 +36,7 @@ jobs:
               "$PAPER" \
               --from=markdown+yaml_metadata_block+tex_math_dollars \
               --to=pdf --pdf-engine=xelatex \
-              --metadata=colorlinks:true --metadata=linkcolor:blue \
+              --metadata=colorlinks:true --metadata=linkcolor=blue \
               --output=publication.pdf 2>&1; then
               [ -f publication.pdf ] && [ "$(stat -c%s publication.pdf 2>/dev/null || echo 0)" -gt 1000 ] && break
             fi
@@ -63,7 +63,7 @@ jobs:
       title: ${{ github.event.release.name || 'Manual Publication' }}
       author: "Quni-Gudzinas, Rowan Brad"
       file_path: "publication.pdf"
-      abstract: "${{ github.event.release.body || 'Open-access research publication from QNFO.' }}"
+      abstract: ${{ github.event.release.body || 'Open-access research publication from QNFO.' }}
       keywords: "ultrametric,quantum-computing,QWAV"
       sandbox: ${{ github.event_name == 'workflow_dispatch' }}
     secrets:
@@ -73,6 +73,8 @@ jobs:
     needs: zenodo-publish
     runs-on: ubuntu-latest
     if: needs.zenodo-publish.outputs.doi != ''
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -98,6 +100,16 @@ jobs:
     needs: [build-pdf, zenodo-publish, update-readme]
     if: failure()
     runs-on: ubuntu-latest
+    # Repair 2026-09-24: this job previously used
+    #   GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+    # The fine-grained GH_PAT violates the org policy
+    # ("QNFO forbids fine-grained PATs whose lifetime exceeds 366 days"), so
+    # every failure notification died with a GraphQL error on the PAT. Issue
+    # creation in the same repository needs no PAT — the run-scoped GITHUB_TOKEN
+    # plus an explicit `issues: write` grant is sufficient.
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Create failure issue
         run: |
@@ -113,7 +125,7 @@ jobs:
 
           Automated failure notification from release-pipeline.yml."
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   trigger-gitbook:
     needs: zenodo-publish
