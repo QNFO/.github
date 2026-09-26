@@ -9,6 +9,11 @@ on:
         description: "Path to markdown file"
         required: false
         type: string
+      sandbox:
+        description: "Publish to Zenodo SANDBOX (requires ZENODO_SANDBOX_TOKEN). Default false. sandbox:true fails closed if the token is absent."
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   build-pdf:
@@ -65,7 +70,7 @@ jobs:
       file_path: "publication.pdf"
       abstract: ${{ github.event.release.body || 'Open-access research publication from QNFO.' }}
       keywords: "ultrametric,quantum-computing,QWAV"
-      sandbox: ${{ github.event_name == 'workflow_dispatch' }}
+      sandbox: ${{ github.event_name == 'workflow_dispatch' && inputs.sandbox }}
     secrets:
       ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
       ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
