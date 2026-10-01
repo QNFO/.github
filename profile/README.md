@@ -42,6 +42,24 @@ Our mission integrates deep scientific inquiry with a commitment to tangible hum
 
 ---
 
+<!-- PORTFOLIO-LIVE:BEGIN -->
+_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-10-01). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
+
+| Tier | Meaning | Repositories |
+|---|---|---|
+| platform | the fleet, its tooling and infrastructure (charter pillar core) | 14 |
+| governance | organisation profile, licence and documentation (pillar autonomy) | 3 |
+| research | active research programs and papers (pillar research) | 14 |
+| demo | interactive demonstrations and sites (pillar reach) | 8 |
+| client-config | private client configuration and backups (pillar personal; never public) | 3 |
+| fork | forks of upstream tooling kept for reference (pillar core) | 10 |
+| archived | completed or superseded work, read-only (pillar research) | 75 |
+| **all** | 10 private (counted, never listed) | **127** |
+
+Active research programs with a repository: [qnfo-research](https://github.com/QNFO/qnfo-research), [QWAV](https://github.com/QNFO/QWAV), [ultrametric-physics](https://github.com/QNFO/ultrametric-physics), [cwi-qec-poster-2026](https://github.com/QNFO/cwi-qec-poster-2026), [revolutionary-quantum-guide](https://github.com/QNFO/revolutionary-quantum-guide), [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory), [consilient-gap-synthesis](https://github.com/QNFO/consilient-gap-synthesis), [qec-darwinism-ultrametric](https://github.com/QNFO/qec-darwinism-ultrametric), [reentrant-distinctions](https://github.com/QNFO/reentrant-distinctions), [laws-of-form](https://github.com/QNFO/laws-of-form), [informational-universe](https://github.com/QNFO/informational-universe), [odr-thesis](https://github.com/QNFO/odr-thesis), [infomatics](https://github.com/QNFO/infomatics), [cfpe](https://github.com/QNFO/cfpe).
+
+<!-- PORTFOLIO-LIVE:END -->
+
 ## Research Portfolio
 
 QNFO's work spans multiple domains. Each initiative is a distinct line of inquiry,
