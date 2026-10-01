@@ -5,7 +5,7 @@ systemic global change for the collective benefit of all.**
 
 ---
 
-QNFO is a **scientific research incubator** founded and directed by Rowan Brad Quni-Gudzinas. We investigate the fundamentals
+QNFO is an **independent research imprint** founded and run by Rowan Brad Quni-Gudzinas. We investigate the fundamentals
 of reality at the intersection of physics, information theory, philosophy of science,
 and artificial intelligence, leveraging AI-accelerated exploration to drive discovery.
 
@@ -190,11 +190,11 @@ QNFO is a solo deep-tech research program founded and directed by
 Rowan operates at the intersection of physics, information science, data science,
 and AI, with a career spanning:
 
-- **National-scale data initiatives:** Managed the AARP Livability Index and
-  co-directed the $10M US DOT National Household Travel Survey (NHTS)
-- **Patented quantum computing technology:** Holds foundational US patents
-- **AI & data science leadership:** Led predictive analytics deployments at
-  Deloitte and Publicis
+- **National data and policy research:** led the AARP Livability Index and managed a $1.5M federal research
+  portfolio at the U.S. DOT Federal Highway Administration
+- **AI & data science:** analytics and machine-learning engagements at Deloitte; product management at Epsilon
+  (Publicis Groupe) and iManage
+- **Research systems:** built and runs QNFO's AI-assisted research pipeline on Cloudflare
 - **Published thought leadership:** Authored books and papers exploring the
   nexus of physics, philosophy, AI, and information
 
@@ -207,17 +207,18 @@ scientific advancement and societal benefit.
 
 All papers are open-access on Zenodo with registered DOIs. See the
 [full publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html)
-(35+ publications, filterable by domain). Community archive:
-[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/) (92 records). QNFO subject-tagged corpus: [867 records](https://zenodo.org/search?q=QNFO).
+(filterable by domain). Community archive:
+[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/). QNFO subject-tagged corpus: [zenodo.org/search?q=QNFO](https://zenodo.org/search?q=QNFO).
 
-**Representative publications:**
+**Selected work** (STRATEGY-1 s2.4):
 
-- [Computational Validation of Ultrametric Error Confinement](https://doi.org/10.5281/zenodo.20134944) (2026-05-12)
-- [Ultrametric Quantum Computing Foundations](https://doi.org/10.5281/zenodo.20154557) (2026-05-15)
-- [Symmetric Extension -- Ternary Tree Architecture](https://doi.org/10.5281/zenodo.20208437) (2026-05-16)
-- [Q-PNA Research Specification v2.0](https://doi.org/10.5281/zenodo.20287742) (2026-05-19)
-- [Convergence, Consilience, and the Hierarchical Architecture of Reality](https://doi.org/10.5281/zenodo.20302276) (2026-05-20)
-- [The Tree Is Real](https://doi.org/10.5281/zenodo.20325850) (2026-05-21)
+- [The Joules-per-Solution Metric](https://doi.org/10.5281/zenodo.21637028)
+- [Error Correction Is a Landauer Machine](https://doi.org/10.5281/zenodo.22261547)
+- [JPCUB Competitive Landscape v2.0](https://doi.org/10.5281/zenodo.21821767)
+- [Joules-per-Solution for Stochastic and Agentic Inference](https://doi.org/10.5281/zenodo.21945415)
+- [The Universal Ignorance Audit](https://doi.org/10.5281/zenodo.21901984)
+- [Epistemic Legibility in AI-Assisted Science](https://doi.org/10.5281/zenodo.22026592)
+- [Operating the Quniverse Fleet](https://doi.org/10.5281/zenodo.23079905)
 
 ---
 
@@ -229,7 +230,6 @@ All papers are open-access on Zenodo with registered DOIs. See the
 | **Discussions** | [Session records, sprint reports](https://github.com/QNFO/QWAV/discussions) |
 | **Public Program Board** | [Program status, grants & funding — public](https://github.com/orgs/QNFO/projects/7) |
 | **Portfolio Status Ledger** | [Auto-generated from Cloudflare canonical (D1 + KG)](PORTFOLIO-STATUS.md) — regenerated weekly |
-| **Portfolio Status Ledger** | [Auto-generated from Cloudflare canonical (D1 + KG)](PORTFOLIO-STATUS.md) — regenerated weekly |
 | **Issues** | [Open issues across repos](https://github.com/QNFO/QWAV/issues) |
 | **Releases** | [QWAV releases](https://github.com/QNFO/QWAV/releases) |
 
@@ -237,12 +237,12 @@ All papers are open-access on Zenodo with registered DOIs. See the
 
 ## Funding & Transparency
 
-QNFO is the primary research initiative of **Empowering Change**, a U.S.-registered 501(c)(3) non-profit.
+QNFO is an independent research imprint: one researcher and an AI-assisted pipeline.
 
 - **Open ledger.** Program status, milestones, issues, pull requests, and releases are tracked publicly across this organization. The [Public Program Board](https://github.com/orgs/QNFO/projects/7) is the single public status view for all programs, the QWAV platform, governance, and the grants & funding pipeline.
 - **Funding posture.** QNFO is currently self-funded. Grant applications and funding requests, when filed, are recorded on the public board — funders and reviewers can verify activity directly from the public record. No funding entries are fabricated: an entry appears only after a real submission exists.
 - **Canonical infrastructure.** Research data and services run on Cloudflare (D1, R2, Workers, Pages, AI Gateway). GitHub is the public activity ledger and open-source mirror — every program has a public repository with public issues, PRs, and releases.
-- **Publications.** All papers are deposited on Zenodo with DOIs: [community archive](https://zenodo.org/communities/qwav/) (92 records), [QNFO-tagged corpus](https://zenodo.org/search?q=QNFO) (867 records).
+- **Publications.** All papers are deposited on Zenodo with DOIs: [community archive](https://zenodo.org/communities/qwav/), [QNFO-tagged corpus](https://zenodo.org/search?q=QNFO).
 - **Provenance & verification.** AI assistance is disclosed in publications; verification pipelines (citation audits, red-team adversarial reviews, automated demo test suites) run as part of every release.
 - **Governance.** [Standards](STANDARDS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [License](LICENSE) · [Contact](CONTACT.md)
 
