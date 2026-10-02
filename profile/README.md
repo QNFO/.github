@@ -43,7 +43,7 @@ Our mission integrates deep scientific inquiry with a commitment to tangible hum
 ---
 
 <!-- PORTFOLIO-LIVE:BEGIN -->
-_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-10-01). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
+_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-10-02). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
 
 | Tier | Meaning | Repositories |
 |---|---|---|
