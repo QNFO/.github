@@ -47,13 +47,13 @@ _Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-10-06). F
 
 | Tier | Meaning | Repositories |
 |---|---|---|
-| platform | the fleet, its tooling and infrastructure (charter pillar core) | 14 |
+| platform | the fleet, its tooling and infrastructure (charter pillar core) | 13 |
 | governance | organisation profile, licence and documentation (pillar autonomy) | 3 |
 | research | active research programs and papers (pillar research) | 14 |
 | demo | interactive demonstrations and sites (pillar reach) | 8 |
 | client-config | private client configuration and backups (pillar personal; never public) | 3 |
 | fork | forks of upstream tooling kept for reference (pillar core) | 10 |
-| archived | completed or superseded work, read-only (pillar research) | 75 |
+| archived | completed or superseded work, read-only (pillar research) | 76 |
 | **all** | 10 private (counted, never listed) | **127** |
 
 Active research programs with a repository: [ultrametric-physics](https://github.com/QNFO/ultrametric-physics), [reentrant-distinctions](https://github.com/QNFO/reentrant-distinctions), [qnfo-research](https://github.com/QNFO/qnfo-research), [qec-darwinism-ultrametric](https://github.com/QNFO/qec-darwinism-ultrametric), [odr-thesis](https://github.com/QNFO/odr-thesis), [laws-of-form](https://github.com/QNFO/laws-of-form), [informational-universe](https://github.com/QNFO/informational-universe), [infomatics](https://github.com/QNFO/infomatics), [cwi-qec-poster-2026](https://github.com/QNFO/cwi-qec-poster-2026), [consilient-gap-synthesis](https://github.com/QNFO/consilient-gap-synthesis), [cfpe](https://github.com/QNFO/cfpe), [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory), [QWAV](https://github.com/QNFO/QWAV), [revolutionary-quantum-guide](https://github.com/QNFO/revolutionary-quantum-guide).
