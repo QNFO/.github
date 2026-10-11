@@ -85,14 +85,14 @@ monitoring (arXiv/OpenAlex), SEO, and GitHub star classification:
 | WBS | Program | Repo | Status |
 |:----|:--------|:-----|:-------|
 | **SR** | Silent Radix Cryptography | — | active |
-| **ADL** | Adelic Physics | [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory) | active · DOI 10.5281/zenodo.21336099 |
+| **ADL** | Adelic Physics | [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory) | active |
 | **PBO** | Pattern-Based Ontology (Autaxys) | — | active |
 | **QD** | The Qubit Delusion | — | active |
-| **UF** | Ultrametric Foundations | — | active · DOI 10.5281/zenodo.21046993 |
+| **UF** | Ultrametric Foundations | — | active |
 | **CON** | Cross-Pillar Consilience | [wbs-6-synthesis](https://github.com/QNFO/wbs-6-synthesis) | active |
 | **CMP** | Computing Machines | [computing-machines](https://github.com/QNFO/computing-machines) | active |
 | **JPC** | JPCub Validation | [jpcub-validation](https://github.com/QNFO/jpcub-validation) | active |
-| **ODR** | ODR Thesis | [odr-thesis](https://github.com/QNFO/odr-thesis) | active · DOI 10.5281/zenodo.21780909 |
+| **ODR** | ODR Thesis | [odr-thesis](https://github.com/QNFO/odr-thesis) | active |
 | **CGS** | Consilient Gap Synthesis | [consilient-gap-synthesis](https://github.com/QNFO/consilient-gap-synthesis) | active |
 | **SLB** | Laws of Form | [laws-of-form](https://github.com/QNFO/laws-of-form) | active |
 | **GOV** | Governance & Public Transparency | [.github](https://github.com/QNFO/.github) | active |
@@ -155,13 +155,11 @@ Our work is guided by principles articulated in the [Code of Conduct](CODE_OF_CO
 ## Key Results
 
 - **Zero logical errors at depth 7** -- ternary Bruhat-Tits tree quantum encoding,
-  validated at physical error rates up to 40%. DOI: [10.5281/zenodo.20134944](https://doi.org/10.5281/zenodo.20134944)
+  validated at physical error rates up to 40%.
 - **48x error reduction** -- at zero additional qubit cost via $q$-ary scatter.
-  DOI: [10.5281/zenodo.20208437](https://doi.org/10.5281/zenodo.20208437)
 - **Glass-box AI outperforms transformers** -- 6.6x on hierarchical classification
-  with 100% verification detection. DOI: [10.5281/zenodo.20287742](https://doi.org/10.5281/zenodo.20287742)
+  with 100% verification detection.
 - **The Tree Is Real** -- Scale-free network evidence from 673-node knowledge graph.
-  DOI: [10.5281/zenodo.20325850](https://doi.org/10.5281/zenodo.20325850)
 - **40-atom neutral atom hardware specification** -- within demonstrated experimental
   capabilities (Harvard, Caltech, PASQAL)
 
@@ -175,7 +173,7 @@ Chrome test suite (15/15 checks) against its deployed URL.
 
 | Demo | Status | Try it | Source |
 |:-----|:-------|:-------|:-------|
-| **Bruhat–Tits QEC: Staircase Redundancy** — interactive proof that on an ultrametric (p-adic) code, redundancy grows in discrete staircase steps (not the smooth Archimedean curve), creating QEC–Darwinism coexistence windows. Companion to [DOI 10.5281/zenodo.21817596](https://doi.org/10.5281/zenodo.21817596) | ✅ LIVE · VERIFIED (Chrome 15/15) | [GitHub Pages](https://qnfo.github.io/qwav-demo-bt-qec/) · [Cloudflare Pages](https://qwav-demo-bt-qec.pages.dev) | [Source + Tests](https://github.com/QNFO/qwav-demo-bt-qec) |
+| **Bruhat–Tits QEC: Staircase Redundancy** — interactive proof that on an ultrametric (p-adic) code, redundancy grows in discrete staircase steps (not the smooth Archimedean curve), creating QEC–Darwinism coexistence windows. | ✅ LIVE · VERIFIED (Chrome 15/15) | [GitHub Pages](https://qnfo.github.io/qwav-demo-bt-qec/) · [Cloudflare Pages](https://qwav-demo-bt-qec.pages.dev) | [Source + Tests](https://github.com/QNFO/qwav-demo-bt-qec) |
 
 Additional demos are listed here only after passing the full verification gate
 (computation engine golden-value tests + Chrome click-through suite + deployed-URL
@@ -205,20 +203,19 @@ scientific advancement and societal benefit.
 
 ## Publications
 
-All papers are open-access on Zenodo with registered DOIs. See the
+All papers are open access at [papers.qnfo.org](https://papers.qnfo.org/papers). See the
 [full publication catalog](https://qnfo.github.io/ultrametric-tree-universality/pub-hub.html)
-(filterable by domain). Community archive:
-[zenodo.org/communities/qwav/](https://zenodo.org/communities/qwav/). QNFO subject-tagged corpus: [zenodo.org/search?q=QNFO](https://zenodo.org/search?q=QNFO).
+(filterable by domain).
 
 **Selected work** (STRATEGY-1 s2.4):
 
-- [The Joules-per-Solution Metric](https://doi.org/10.5281/zenodo.21637028)
-- [Error Correction Is a Landauer Machine](https://doi.org/10.5281/zenodo.22261547)
-- [JPCUB Competitive Landscape v2.0](https://doi.org/10.5281/zenodo.21821767)
-- [Joules-per-Solution for Stochastic and Agentic Inference](https://doi.org/10.5281/zenodo.21945415)
-- [The Universal Ignorance Audit](https://doi.org/10.5281/zenodo.21901984)
-- [Epistemic Legibility in AI-Assisted Science](https://doi.org/10.5281/zenodo.22026592)
-- [Operating the Quniverse Fleet](https://doi.org/10.5281/zenodo.23079905)
+- [The Joules-per-Solution Metric](https://papers.qnfo.org/papers/joules-per-solution-metric)
+- [Error Correction Is a Landauer Machine](https://papers.qnfo.org/papers/jpcub-qec-landauer)
+- [JPCUB Competitive Landscape v2.0](https://papers.qnfo.org/papers/jpcub-competitive-landscape)
+- [Joules-per-Solution for Stochastic and Agentic Inference](https://papers.qnfo.org/papers/jpcub-llm-energy)
+- [The Universal Ignorance Audit](https://papers.qnfo.org/papers/universal-ignorance-audit)
+- [Epistemic Legibility in AI-Assisted Science](https://papers.qnfo.org/papers/ai4metascience-ignorance-audit)
+- [Operating the Quniverse Fleet](https://papers.qnfo.org/papers/quniverse-fleet-lessons)
 
 ---
 
@@ -242,7 +239,7 @@ QNFO is an independent research imprint: one researcher and an AI-assisted pipel
 - **Open ledger.** Program status, milestones, issues, pull requests, and releases are tracked publicly across this organization. The [Public Program Board](https://github.com/orgs/QNFO/projects/7) is the single public status view for all programs, the QWAV platform, governance, and the grants & funding pipeline.
 - **Funding posture.** QNFO is currently self-funded. Grant applications and funding requests, when filed, are recorded on the public board — funders and reviewers can verify activity directly from the public record. No funding entries are fabricated: an entry appears only after a real submission exists.
 - **Canonical infrastructure.** Research data and services run on Cloudflare (D1, R2, Workers, Pages, AI Gateway). GitHub is the public activity ledger and open-source mirror — every program has a public repository with public issues, PRs, and releases.
-- **Publications.** All papers are deposited on Zenodo with DOIs: [community archive](https://zenodo.org/communities/qwav/), [QNFO-tagged corpus](https://zenodo.org/search?q=QNFO).
+- **Publications.** All papers are open access at [papers.qnfo.org](https://papers.qnfo.org/papers).
 - **Provenance & verification.** AI assistance is disclosed in publications; verification pipelines (citation audits, red-team adversarial reviews, automated demo test suites) run as part of every release.
 - **Governance.** [Standards](STANDARDS.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [License](LICENSE) · [Contact](CONTACT.md)
 
