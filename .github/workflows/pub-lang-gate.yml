@@ -36,7 +36,11 @@ jobs:
           import os, re, sys, base64
 
           VIOLATIONS = [
-              (re.compile(r'\b(Module\s+\d+|Task\s+\d+|SPRINT|PROCEED|RESUME)\b', re.IGNORECASE), 'INTERNAL: sprint/task reference'),
+              (re.compile(r'\b(Module\s+\d+|Task\s+\d+|SPRINT)\b', re.IGNORECASE), 'INTERNAL: sprint/task reference'),
+              # PROCEED/RESUME are status TOKENS, not prose. Case-insensitively they flagged ordinary
+              # English -- "We proceed by induction" in 'Bruhat-Tits Tree as a Unifying Geometric Object.md'
+              # (measured 2026-10-17, the whole of a 2-violation failure). Uppercase only now.
+              (re.compile(r'\b(?:PROCEED|RESUME)\b'), 'INTERNAL: sprint/task reference'),
               (re.compile(r'\b0\.\d+\.(?:md|py)\b'), 'INTERNAL: versioned filename'),
               (re.compile(r'\[(?:LLM-INFERRED|CODE-EXECUTED|EXTERNAL-SOURCE|UNVERIFIED-LLM)\](?!\()', re.IGNORECASE), 'STYLE: generation artifact'),
               (re.compile(r'\b(?:cp1252|Unicode box)\b', re.IGNORECASE), 'INTERNAL: tooling reference'),
