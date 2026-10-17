@@ -54,7 +54,22 @@ jobs:
           git add releases/papers/pdf/
           if git diff --cached --quiet; then
             echo "No PDF changes to commit"
-          else
-            git commit -m "auto: Build legacy paper PDFs [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "auto: Build legacy paper PDFs [skip ci]"
+          # COMMITBACK-PUSH-RACE-1 (2026-10-17): a bare `git push` into a shared branch loses the race
+          # whenever another writer lands first, and the whole run then fails AFTER doing the work.
+          # Measured 15:01:49Z: "! [rejected] master -> master (fetch first)" with 77 rebuilt PDFs
+          # staged, so every one of them was discarded and the run went red. Rebase onto the new tip
+          # and retry, bounded -- the pattern qnfo-workers already uses for its commit-back steps.
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin master >/dev/null 2>&1 || true
+            if git push origin HEAD:master; then
+              echo "pushed on attempt $i"
+              exit 0
+            fi
+            echo "push attempt $i rejected by a concurrent writer; retrying"
+            sleep $((i * 5))
+          done
+          echo "PUSH FAILED after 5 attempts -- COMMITBACK-PUSH-RACE-1"
+          exit 1
