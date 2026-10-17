@@ -15,10 +15,22 @@ on:
         type: boolean
         default: false
 
+# WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
+# branch queues behind the first instead of racing it. Publishing pipelines must never be
+# cancelled mid-flight (a half-published DOI is worse than a late one), so this queues.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # WORKFLOW-PERMS-1 (2026-10-17): softprops/action-gh-release attaches publication.pdf to the
+    # release, which is a contents write. The org default GITHUB_TOKEN is read-only now, so this
+    # grant is explicit -- without it the release asset upload is refused on every release event.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -78,6 +90,8 @@ jobs:
   update-readme:
     needs: zenodo-publish
     runs-on: ubuntu-latest
+    # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
+    timeout-minutes: 30
     if: needs.zenodo-publish.outputs.doi != ''
     permissions:
       contents: write
@@ -106,6 +120,8 @@ jobs:
     needs: [build-pdf, zenodo-publish, update-readme]
     if: failure()
     runs-on: ubuntu-latest
+    # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
+    timeout-minutes: 30
     # Repair 2026-09-24: this job previously used
     #   GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
     # The fine-grained GH_PAT violates the org policy
@@ -139,6 +155,8 @@ jobs:
   trigger-gitbook:
     needs: zenodo-publish
     runs-on: ubuntu-latest
+    # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
+    timeout-minutes: 30
     if: needs.zenodo-publish.outputs.doi != ''
     steps:
       - name: Dispatch GitBook sync
