@@ -283,11 +283,11 @@ mjx-container{overflow-x:auto;max-width:100%}mjx-container[display="true"]{displ
 5. The leaf’s associated label/action is the output. The path from root to leaf IS the audit trail.</p>
 <p><strong>The decision path IS the explanation.</strong> No post-hoc interpretability method (LIME, SHAP) is needed. Every decision is a geometric path whose meaning is grounded in the tree structure — the shared LCA relationships with training examples, the semantic primes activated at each branch, and the token history that produced the leaf activation.</p>
 <hr />
-<p><strong>From attention to leaf activations:</strong> The attended valuation vectors $\vec{v}^{\text{out}}<em>i$ produced by ultrametric attention (§3.3) are aggregated into a leaf activation vector $\mathbf{a} \in [0,1]^L$ as follows: each valuation vector $\vec{v}^{\text{out}}_i$ is mapped to its corresponding leaf $\ell(i)$ in $\mathcal{T}_p$, and the leaf activation is the sum of attention weights directed to that leaf: $a</em>\ell = \sum_{i: \ell(i) = \ell} \sum_j A_{ji}$. This aggregated leaf activation vector is what the cophenetic loss (§4) compares against the target encoding $\mathbf{a}^*$.</p>
+<p><strong>From attention to leaf activations:</strong> The attended valuation vectors $\vec{v}^{\text{out}}<em ji="ji">i$ produced by ultrametric attention (§3.3) are aggregated into a leaf activation vector $\mathbf{a} \in [0,1]^L$ as follows: each valuation vector $\vec{v}^{\text{out}}<em _ell_i_="\ell(i)" i:="i:">i$ is mapped to its corresponding leaf $\ell(i)$ in $\mathcal{T}<em>p$, and the leaf activation is the sum of attention weights directed to that leaf: $a</em>\ell = \sum</em> \sum_j A</em>^*$.}$. This aggregated leaf activation vector is what the cophenetic loss (§4) compares against the target encoding $\mathbf{a</p>
 <h2>4. Loss Function on Ultrametric Trees</h2>
 <h3>4.1 Cophenetic Loss</h3>
 <p><code>[QWAV-INTERNAL: Q-PNA v0.1 specification]</code></p>
-<p>For a training example with input encoding $\mathbf{a} = (a_1, \ldots, a_L)$ (leaf activations) and target encoding $\mathbf{a}^<em> = (a_1^</em>, \ldots, a_L^<em>)$, the </em><em>expected cophenetic distance</em>* is:</p>
+<p>For a training example with input encoding $\mathbf{a} = (a_1, \ldots, a_L)$ (leaf activations) and target encoding $\mathbf{a}^* = (a_1^<em>, \ldots, a_L^</em>)$, the <strong>expected cophenetic distance</strong> is:</p>
 <p>$$D_C(\mathbf{a}, \mathbf{a}^<em>) = \sum_{i=1}^{L} \sum_{j=1}^{L} a_i a_j^</em> \cdot d_C(i, j)$$</p>
 <p>where $d_C(i, j) = h(\operatorname{lca}(\text{leaf}_i, \text{leaf}_j))$ is the cophenetic distance between leaves $i$ and $j$.</p>
 <p><strong>Cophenetic loss:</strong></p>
