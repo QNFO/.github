@@ -6,9 +6,18 @@ on:
       - 'releases/papers/**.md'
   workflow_dispatch:
 
+# WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
+# branch queues behind the first instead of racing it. Publishing pipelines must never be
+# cancelled mid-flight (a half-published DOI is worse than a late one), so this queues.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-pdfs:
     runs-on: ubuntu-latest
+    # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
