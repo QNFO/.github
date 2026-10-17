@@ -15,6 +15,13 @@ on:
 env:
   PANDOC_IMAGE: pandoc/latex:latest
 
+# WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
+# branch queues behind the first instead of racing it. Publishing pipelines must never be
+# cancelled mid-flight (a half-published DOI is worse than a late one), so this queues.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
