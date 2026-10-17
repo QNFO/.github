@@ -10,6 +10,14 @@ on:
     branches-ignore:
       - master
   workflow_dispatch:
+  # GATE-DORMANT-1 (2026-10-17): measured before this line existed -- the gate had ZERO runs. Its
+  # only triggers were pull_request and a push to releases/papers/**.md that excludes master, and
+  # nothing has opened a PR against this repo, so the check that is supposed to stop process
+  # language from reaching a published paper had never executed once. It fails on real content
+  # when run by hand, which is exactly why it must run on a clock rather than on an event that
+  # never happens. Monday 05:17 UTC, ahead of the weekly publication cycle.
+  schedule:
+    - cron: '17 5 * * 1'
 
 # WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
 # branch queues behind the first instead of racing it. Publishing pipelines must never be
