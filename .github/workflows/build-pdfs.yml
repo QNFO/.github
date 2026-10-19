@@ -2,15 +2,22 @@ name: Build PDFs from Legacy Papers
 
 on:
   push:
+    branches: [master]
     paths:
       - 'releases/papers/**.md'
   workflow_dispatch:
+
+# GHA-AUDIT-DOTGITHUB-1 (2026-10-19, QNFO/qnfo-workers agent_issues 2507): a read-only default token; ONE concurrency group shared with catalog-regen.yml (the two
+# workflows both commit to master on the same push and raced each other); the push trigger is limited to master; a PDF that fails to
+# build fails the run (`|| echo` hid every failure) after the PDFs that did build are committed.
+permissions:
+  contents: read
 
 # WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
 # branch queues behind the first instead of racing it. Publishing pipelines must never be
 # cancelled mid-flight (a half-published DOI is worse than a late one), so this queues.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: legacy-papers-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -22,10 +29,10 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
 
@@ -33,19 +40,27 @@ jobs:
         run: pip install markdown
 
       - name: Build PDFs for all papers
+        id: build
         run: |
           mkdir -p releases/papers/pdf
-          find releases/papers -maxdepth 1 -name '*.md' ! -name 'index.md' -print0 | while IFS= read -r -d '' paper; do
+          FAILED=0
+          # process substitution keeps the loop in this shell, so FAILED survives it (a pipe ran it in a subshell)
+          while IFS= read -r -d '' paper; do
             echo "Building PDF for: $paper"
-            python scripts/build_pdf.py --input "$paper" --output "releases/papers/pdf/$(basename "$paper" .md).pdf" --style academic 2>&1 || echo "PDF build failed for $paper"
-          done
+            if ! python scripts/build_pdf.py --input "$paper" --output "releases/papers/pdf/$(basename "$paper" .md).pdf" --style academic 2>&1; then
+              echo "::error::PDF build failed for $paper"
+              FAILED=$((FAILED + 1))
+            fi
+          done < <(find releases/papers -maxdepth 1 -name '*.md' ! -name 'index.md' -print0)
+          echo "failed=${FAILED}" >> "$GITHUB_OUTPUT"
 
       - name: Upload PDF artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: legacy-paper-pdfs
           path: releases/papers/pdf/*.pdf
           retention-days: 90
+          if-no-files-found: warn
 
       - name: Commit PDFs to repo
         run: |
@@ -72,4 +87,12 @@ jobs:
             sleep $((i * 5))
           done
           echo "PUSH FAILED after 5 attempts -- COMMITBACK-PUSH-RACE-1"
+          exit 1
+
+      - name: Fail when a PDF did not build
+        if: always() && steps.build.outputs.failed != '0' && steps.build.outputs.failed != ''
+        env:
+          FAILED: ${{ steps.build.outputs.failed }}
+        run: |
+          echo "::error::${FAILED} PDF build(s) failed; the PDFs that built were committed above"
           exit 1
