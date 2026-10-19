@@ -15,6 +15,11 @@ on:
 env:
   PANDOC_IMAGE: pandoc/latex:latest
 
+# GHA-AUDIT-DOTGITHUB-1 (2026-10-19, QNFO/qnfo-workers agent_issues 2507): dispatch inputs reach bash through env: and are quoted; Node 24
+# action majors; read-only token (the job only uploads an artifact).
+permissions:
+  contents: read
+
 # WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
 # branch queues behind the first instead of racing it. Publishing pipelines must never be
 # cancelled mid-flight (a half-published DOI is worse than a late one), so this queues.
@@ -27,11 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Validate input
+        env:
+          IN_PAPER_PATH: ${{ github.event.inputs.paper_path }}
         run: |
-          FILE="${{ github.event.inputs.paper_path }}"
+          FILE="$IN_PAPER_PATH"
           if [ ! -f "$FILE" ]; then
             echo "ERROR: File not found: $FILE"
             exit 1
@@ -43,10 +50,13 @@ jobs:
           echo "File validated: $FILE ($(wc -c < "$FILE") bytes)"
 
       - name: Build PDF
+        env:
+          IN_PAPER_PATH: ${{ github.event.inputs.paper_path }}
+          IN_TITLE: ${{ github.event.inputs.title }}
         run: |
-          PAPER="${{ github.event.inputs.paper_path }}"
-          TITLE="${{ github.event.inputs.title || github.event.inputs.paper_path }}"
-          
+          PAPER="$IN_PAPER_PATH"
+          TITLE="${IN_TITLE:-$IN_PAPER_PATH}"
+
           # Run pandoc with retry on docker pull failures
           for i in 1 2 3; do
             echo "Attempt $i/3..."
@@ -85,7 +95,7 @@ jobs:
           echo "PDF verified: $SIZE bytes"
 
       - name: Upload PDF
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: publication-pdf
           path: publication.pdf
