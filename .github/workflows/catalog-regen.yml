@@ -8,11 +8,16 @@ on:
       - master
   workflow_dispatch:
 
+# GHA-AUDIT-DOTGITHUB-1 (2026-10-19, QNFO/qnfo-workers agent_issues 2507): a read-only default token; the concurrency group is shared with build-pdfs.yml
+# (both commit to master on the same push), and the commit-back rebases onto the new tip before it pushes.
+permissions:
+  contents: read
+
 # WORKFLOW-CONCURRENCY-1 (2026-10-17): a second run of the same workflow on the same
 # branch queues behind the first instead of racing it. Publishing pipelines must never be
 # cancelled mid-flight (a half-published DOI is worse than a late one), so this queues.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: legacy-papers-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -23,8 +28,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: '3.12'
       - name: Generate catalog index.md
@@ -69,5 +74,16 @@ jobs:
             echo 'No catalog changes'
           else
             git commit -m 'auto: Regenerate publication catalog [skip ci]'
-            git push
+            # a bare push loses the race to build-pdfs.yml (COMMITBACK-PUSH-RACE-1 in that file): rebase onto the new tip and retry, bounded
+            for i in 1 2 3 4 5; do
+              git pull --rebase --autostash origin master >/dev/null 2>&1 || true
+              if git push origin HEAD:master; then
+                echo "pushed on attempt $i"
+                exit 0
+              fi
+              echo "push attempt $i rejected by a concurrent writer; retrying"
+              sleep $((i * 5))
+            done
+            echo "PUSH FAILED after 5 attempts"
+            exit 1
           fi
