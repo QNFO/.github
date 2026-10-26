@@ -1,4 +1,5 @@
 name: Release Pipeline
+# NOZ-DOI-1: no registry stage
 
 on:
   release:
@@ -9,11 +10,6 @@ on:
         description: "Path to markdown file"
         required: false
         type: string
-      sandbox:
-        description: "Publish to Zenodo SANDBOX (requires ZENODO_SANDBOX_TOKEN). Default false. sandbox:true fails closed if the token is absent."
-        required: false
-        type: boolean
-        default: false
 
 # GHA-AUDIT-DOTGITHUB-1 (2026-10-19, QNFO/qnfo-workers agent_issues 2507): release and dispatch values reach bash through env: and are quoted (a release
 # tag or a paper path with a quote or $( used to run as code); Node 24 action majors; a read-only default token (each job that writes keeps
@@ -83,53 +79,8 @@ jobs:
           name: publication-pdf
           path: publication.pdf
 
-  zenodo-publish:
-    needs: build-pdf
-    uses: QNFO/.github/.github/workflows/zenodo-publish.yml@master
-    with:
-      title: ${{ github.event.release.name || 'Manual Publication' }}
-      author: "Quni-Gudzinas, Rowan Brad"
-      file_path: "publication.pdf"
-      abstract: ${{ github.event.release.body || 'Open-access research publication from QNFO.' }}
-      keywords: "ultrametric,quantum-computing,QWAV"
-      sandbox: ${{ github.event_name == 'workflow_dispatch' && inputs.sandbox }}
-    secrets:
-      ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-      ZENODO_SANDBOX_TOKEN: ${{ secrets.ZENODO_SANDBOX_TOKEN }}
-
-  update-readme:
-    needs: zenodo-publish
-    runs-on: ubuntu-latest
-    # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
-    timeout-minutes: 30
-    if: needs.zenodo-publish.outputs.doi != ''
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: Add DOI badge
-        env:
-          ZENODO_DOI: ${{ needs.zenodo-publish.outputs.doi }}
-        run: |
-          DOI="$ZENODO_DOI"
-          BADGE="[![DOI](https://zenodo.org/badge/DOI/${DOI}.svg)](https://doi.org/${DOI})"
-          if ! grep -qF "$DOI" README.md; then
-            echo "" >> README.md
-            echo "$BADGE" >> README.md
-            git config user.name "QNFO Bot"
-            git config user.email "bot@qnfo.org"
-            git add README.md
-            git commit -m "docs: add DOI badge ${DOI}"
-            for i in 1 2 3; do
-              if git push origin master 2>&1; then break; fi
-              [ $i -eq 3 ] && echo "::warning::Failed to push DOI badge after 3 attempts"
-              sleep 10
-            done
-          fi
-
   report-failure:
-    needs: [build-pdf, zenodo-publish, update-readme]
+    needs: [build-pdf]
     if: failure()
     runs-on: ubuntu-latest
     # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
@@ -167,11 +118,10 @@ jobs:
                  gh issue create --repo QNFO/.github --title "$TITLE" --body "$BODY"; }
 
   trigger-gitbook:
-    needs: zenodo-publish
+    needs: build-pdf
     runs-on: ubuntu-latest
     # WORKFLOW-TIMEOUT-1 (2026-10-17): bound a hung runner.
     timeout-minutes: 30
-    if: needs.zenodo-publish.outputs.doi != ''
     steps:
       - name: Dispatch GitBook sync
         env:
