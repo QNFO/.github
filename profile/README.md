@@ -47,13 +47,13 @@ _Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-10-29). F
 
 | Tier | Meaning | Repositories |
 |---|---|---|
-| platform | the fleet, its tooling and infrastructure (charter pillar core) | 12 |
+| platform | the fleet, its tooling and infrastructure (charter pillar core) | 10 |
 | governance | organisation profile, licence and documentation (pillar autonomy) | 3 |
 | research | active research programs and papers (pillar research) | 17 |
 | demo | interactive demonstrations and sites (pillar reach) | 8 |
 | client-config | private client configuration and backups (pillar personal; never public) | 3 |
 | fork | forks of upstream tooling kept for reference (pillar core) | 10 |
-| archived | completed or superseded work, read-only (pillar research) | 77 |
+| archived | completed or superseded work, read-only (pillar research) | 79 |
 | **all** | 10 private (counted, never listed) | **130** |
 
 Active research programs with a repository: [qnfo-research](https://github.com/QNFO/qnfo-research), [QWAV](https://github.com/QNFO/QWAV), [ignorance-audit](https://github.com/QNFO/ignorance-audit), [reentrant-distinctions](https://github.com/QNFO/reentrant-distinctions), [informational-universe](https://github.com/QNFO/informational-universe), [qec-darwinism-ultrametric](https://github.com/QNFO/qec-darwinism-ultrametric), [cfpe](https://github.com/QNFO/cfpe), [laws-of-form](https://github.com/QNFO/laws-of-form), [ultrametric-physics](https://github.com/QNFO/ultrametric-physics), [odr-thesis](https://github.com/QNFO/odr-thesis), [cwi-qec-poster-2026](https://github.com/QNFO/cwi-qec-poster-2026), [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory), [consilient-gap-synthesis](https://github.com/QNFO/consilient-gap-synthesis), [infomatics](https://github.com/QNFO/infomatics), [revolutionary-quantum-guide](https://github.com/QNFO/revolutionary-quantum-guide), [ultrametric-lean](https://github.com/QNFO/ultrametric-lean), [agentic-collapse](https://github.com/QNFO/agentic-collapse).
