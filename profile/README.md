@@ -10,7 +10,7 @@ of reality at the intersection of physics, information theory, philosophy of sci
 and artificial intelligence, leveraging AI-accelerated exploration to drive discovery.
 
 All research is conducted for the **collective benefit of all**. Everything we
-produce is governed by the [QNFO Content License Agreement](LICENSE) -- non-commercial
+produce is governed by the [QNFO Unified License Agreement v2.1](LICENSE) -- non-commercial
 use only, attribution required. Our [Code of Conduct](CODE_OF_CONDUCT.md) defines
 the values that govern all QNFO spaces.
 
@@ -250,7 +250,7 @@ QNFO is an independent research imprint: one researcher and an AI-assisted pipel
 - **Home:** [qnfo.org](https://qnfo.org)
 - **QWAV Technical Hub:** [qnfo.github.io/QWAV](https://qnfo.github.io/QWAV/)
 - **QWAV Marquee:** [qwav.tech](https://qwav.tech)
-- **License:** [QNFO Content License Agreement v1.1](LICENSE)
+- **License:** [QNFO Unified License Agreement v2.1](LICENSE)
 - **Code of Conduct:** [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - **Contact:** rowan.quni@qnfo.org
 
