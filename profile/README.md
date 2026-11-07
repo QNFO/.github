@@ -49,14 +49,14 @@ _Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-11-07). F
 |---|---|---|
 | platform | the fleet, its tooling and infrastructure (charter pillar core) | 6 |
 | governance | organisation profile, licence and documentation (pillar autonomy) | 3 |
-| research | active research programs and papers (pillar research) | 6 |
+| research | active research programs and papers (pillar research) | 7 |
 | demo | interactive demonstrations and sites (pillar reach) | 8 |
 | client-config | private client configuration and backups (pillar personal; never public) | 3 |
 | fork | forks of upstream tooling kept for reference (pillar core) | 0 |
 | archived | completed or superseded work, read-only (pillar research) | 105 |
-| **all** | 11 private (counted, never listed) | **131** |
+| **all** | 12 private (counted, never listed) | **132** |
 
-Active research programs with a repository: [ultrametric-lean](https://github.com/QNFO/ultrametric-lean), [ignorance-audit](https://github.com/QNFO/ignorance-audit), [agentic-collapse](https://github.com/QNFO/agentic-collapse), [qnfo-research](https://github.com/QNFO/qnfo-research), [QWAV](https://github.com/QNFO/QWAV).
+Active research programs with a repository: [qnfo-research](https://github.com/QNFO/qnfo-research), [agentic-collapse](https://github.com/QNFO/agentic-collapse), [QWAV](https://github.com/QNFO/QWAV), [ultrametric-lean](https://github.com/QNFO/ultrametric-lean), [ignorance-audit](https://github.com/QNFO/ignorance-audit).
 
 <!-- PORTFOLIO-LIVE:END -->
 
