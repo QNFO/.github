@@ -43,20 +43,20 @@ Our mission integrates deep scientific inquiry with a commitment to tangible hum
 ---
 
 <!-- PORTFOLIO-LIVE:BEGIN -->
-_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-11-04). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
+_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-11-07). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
 
 | Tier | Meaning | Repositories |
 |---|---|---|
-| platform | the fleet, its tooling and infrastructure (charter pillar core) | 10 |
+| platform | the fleet, its tooling and infrastructure (charter pillar core) | 6 |
 | governance | organisation profile, licence and documentation (pillar autonomy) | 3 |
-| research | active research programs and papers (pillar research) | 17 |
+| research | active research programs and papers (pillar research) | 6 |
 | demo | interactive demonstrations and sites (pillar reach) | 8 |
 | client-config | private client configuration and backups (pillar personal; never public) | 3 |
-| fork | forks of upstream tooling kept for reference (pillar core) | 10 |
-| archived | completed or superseded work, read-only (pillar research) | 79 |
-| **all** | 10 private (counted, never listed) | **130** |
+| fork | forks of upstream tooling kept for reference (pillar core) | 0 |
+| archived | completed or superseded work, read-only (pillar research) | 105 |
+| **all** | 11 private (counted, never listed) | **131** |
 
-Active research programs with a repository: [qnfo-research](https://github.com/QNFO/qnfo-research), [agentic-collapse](https://github.com/QNFO/agentic-collapse), [ultrametric-lean](https://github.com/QNFO/ultrametric-lean), [ignorance-audit](https://github.com/QNFO/ignorance-audit), [QWAV](https://github.com/QNFO/QWAV), [infomatics](https://github.com/QNFO/infomatics), [adelic-shannon-theory](https://github.com/QNFO/adelic-shannon-theory), [laws-of-form](https://github.com/QNFO/laws-of-form), [cwi-qec-poster-2026](https://github.com/QNFO/cwi-qec-poster-2026), [qec-darwinism-ultrametric](https://github.com/QNFO/qec-darwinism-ultrametric), [cfpe](https://github.com/QNFO/cfpe), [odr-thesis](https://github.com/QNFO/odr-thesis), [ultrametric-physics](https://github.com/QNFO/ultrametric-physics), [consilient-gap-synthesis](https://github.com/QNFO/consilient-gap-synthesis), [revolutionary-quantum-guide](https://github.com/QNFO/revolutionary-quantum-guide), [informational-universe](https://github.com/QNFO/informational-universe), [reentrant-distinctions](https://github.com/QNFO/reentrant-distinctions).
+Active research programs with a repository: [ultrametric-lean](https://github.com/QNFO/ultrametric-lean), [ignorance-audit](https://github.com/QNFO/ignorance-audit), [agentic-collapse](https://github.com/QNFO/agentic-collapse), [qnfo-research](https://github.com/QNFO/qnfo-research), [QWAV](https://github.com/QNFO/QWAV).
 
 <!-- PORTFOLIO-LIVE:END -->
 
