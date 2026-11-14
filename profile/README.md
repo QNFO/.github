@@ -43,20 +43,20 @@ Our mission integrates deep scientific inquiry with a commitment to tangible hum
 ---
 
 <!-- PORTFOLIO-LIVE:BEGIN -->
-_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-11-07). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
+_Portfolio index, generated daily by the fleet (PORTFOLIO-LOOP-1, 2026-11-14). Full inventory: [PORTFOLIO.md](PORTFOLIO.md). Policy and charter: [qnfo-workers/docs](https://github.com/QNFO/qnfo-workers/tree/main/docs)._
 
 | Tier | Meaning | Repositories |
 |---|---|---|
-| platform | the fleet, its tooling and infrastructure (charter pillar core) | 6 |
+| platform | the fleet, its tooling and infrastructure (charter pillar core) | 5 |
 | governance | organisation profile, licence and documentation (pillar autonomy) | 3 |
-| research | active research programs and papers (pillar research) | 6 |
-| demo | interactive demonstrations and sites (pillar reach) | 8 |
-| client-config | private client configuration and backups (pillar personal; never public) | 3 |
+| research | active research programs and papers (pillar research) | 11 |
+| demo | interactive demonstrations and sites (pillar reach) | 1 |
+| client-config | private client configuration and backups (pillar personal; never public) | 1 |
 | fork | forks of upstream tooling kept for reference (pillar core) | 0 |
-| archived | completed or superseded work, read-only (pillar research) | 105 |
-| **all** | 11 private (counted, never listed) | **131** |
+| archived | completed or superseded work, read-only (pillar research) | 119 |
+| **all** | 14 private (counted, never listed) | **140** |
 
-Active research programs with a repository: [ultrametric-lean](https://github.com/QNFO/ultrametric-lean), [ignorance-audit](https://github.com/QNFO/ignorance-audit), [agentic-collapse](https://github.com/QNFO/agentic-collapse), [qnfo-research](https://github.com/QNFO/qnfo-research), [QWAV](https://github.com/QNFO/QWAV).
+Active research programs with a repository: [qnfo-research](https://github.com/QNFO/qnfo-research), [paper-demo-llm-convergence-gate](https://github.com/QNFO/paper-demo-llm-convergence-gate), [paper-demo-unfalsifiability-ess](https://github.com/QNFO/paper-demo-unfalsifiability-ess), [paper-demo-agent-deadlock](https://github.com/QNFO/paper-demo-agent-deadlock), [paper-demo-subliminal-learning](https://github.com/QNFO/paper-demo-subliminal-learning), [paper-demo-agentic-collapse](https://github.com/QNFO/paper-demo-agentic-collapse), [paper-demo-hallucination-monna-map](https://github.com/QNFO/paper-demo-hallucination-monna-map), [QWAV](https://github.com/QNFO/QWAV).
 
 <!-- PORTFOLIO-LIVE:END -->
 
